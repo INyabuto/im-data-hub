@@ -1,0 +1,90 @@
+--- 
+title: "Impact Malaria Data Hub Specifications"
+author: "Cristina Lussiana"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+github-repo: rstudio/bookdown-demo
+description: "This is a technical specification of the Impact Malaria Data Hub."
+---
+
+# Preface {-} 
+## What is this guide? 
+This guide provides information about the technical specifications of the Impact Malaria (IM) Data Hub. It's meant to guide the development, testing & customization of the database for IM indicator data.
+
+## Who should read this guide?
+
+This guide is aimed at two main audiences. 
+
+- System Administrators who are involved in the administration or the daily operation of IM Data Hub.
+- Project teams & M&E staff interested to learn more about the IM Data Hub. You will find this helpful in understanding the overall system set up and how different components work together in the system.
+
+## What is covered.
+
+The guide is divided into seven chapters.
+
+1. Introduction - offers some background information and how to quickly get started on IM Data Hub.
+2. Components - describes the IM Data Hub main components and how they are set up.
+3. Data Specification - `builds on the main components description and talks about the IM indicators and data reporting. 
+4. Metadata Specifications - dives into the data specification and the system components and talks about what lies at the bottom, the metadata. 
+5. Customization & Troubleshooting - Provides guidance on customization, testing and troubleshooting the IM Data Hub. 
+6. Security and Access Model - Explains the security mechanisms and access model.
+7. Appendix - Lists down worksheets and some other the materials used in the IM Data Hub.
+
+## Conventions
+
+This guide follows the following document conventions. 
+
+
+Abbreviation                   |In Full
+----------------------------- |:---------------------------
+CR                             | Case Reporting
+IM                             |Impact Malaria
+SS                             |Supportive Supervision
+TR                             |Training
+TL                             |Technical Leadership
+SMC                            |Seasonal Malaria Chemoprophylaxis
+DX                             |Diagnosis
+TX                             |Treatment
+MIP | Malaria In Pregnancy
+CS  |Country Specific
+RE  |Reporting
+PMP |Performance Management Plan
+
+### Data Sets 
+Data set: [`country ISO code`] [`program`]: 
+
+Examples;
+
+- GH Supportive Supervision
+- CD Case Reporting |Data set: [country ISO code] [Data entry form name]
+
+### Data Elements 
+
+DEs: [`country ISO code`] [`program abbreviation`] - [`section abbreviation`] [`DE Form name`]:
+
+Examples;
+
+- GH CR - DX Cases confirmed 
+- CD TL - DX Does this province have national malaria diagnostic supervision tools that adhere to global standards? 
+
+
+### Indicators 
+
+Indicators: [`country ISO code`] [`PMP`] - [`section abbreviation`] [`Indicator name`]:
+
+Example;
+
+CD PMP - DX Percentage of health workers demonstrating competence in malaria microscopy 
+
+## Acknowledgement
+
+
+
+
+
+
