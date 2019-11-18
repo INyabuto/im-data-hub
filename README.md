@@ -1,5 +1,5 @@
 
-# Imapct Malaria Data Hub
+# Impact Malaria Data Hub - Tech Specs. 
 
 ## Background
 
