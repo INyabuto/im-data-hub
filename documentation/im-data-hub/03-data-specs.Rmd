@@ -1,0 +1,10 @@
+# Impact Malaria Data Specification
+
+## Introduction 
+
+IM data is specified through the use indicators. Indicators consist of a numerator, denominator, and a count. The numerator and denominator are data elements, and the count specifies the applied operation. Counts can be a percentage, a number, or a ratio. 
+
+In this chapter, we are going to explore the IM indicators and how they are constructed in the Data Hub. 
+
+We’ll start by a short introduction to data elements and how they form the base/source of the IM indicators. We’ll then explore the different counts and wind up by showing you all the IM indicators. 
+

@@ -40,3 +40,23 @@ The easiest way to get started to IM Data Hub is to log in at the test server at
 
 The landing page!
 
+```{r, echo=FALSE}
+
+knitr::include_graphics("./images/landing-page.png")
+```
+
+
+Countries doing data entry or testings can log in with the following credentials based on their country ISO codes. 
+
+
+
+Country |username ; password
+--------|:-----------------------------
+Congo   |`CDdemo`;`Temp1234!`
+Cameroon|`CMdemo`;`Temp1234!`
+Ghana | `GHdemo`;`Temp1234!`
+Kenya |`KEdemo`;`Temp1234!`
+Mali  |`MLdemo`;`Temp1234!`
+Niger |`NEdemo`;`Temp1234!`
+
+

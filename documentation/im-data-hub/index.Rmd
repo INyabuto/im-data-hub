@@ -1,6 +1,6 @@
 --- 
 title: "Impact Malaria Data Hub Specifications"
-author: "Cristina Lussiana"
+author: "Isaiah Nyabuto, Cristina Lussiana"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
@@ -11,6 +11,24 @@ link-citations: yes
 github-repo: rstudio/bookdown-demo
 description: "This is a technical specification of the Impact Malaria Data Hub."
 ---
+
+# Welcome {-}
+
+This is a technical guide for the IM Data Hub, __a work currently in progress by BAO systems intended for official release in [production](imdatahub.org) by ______
+
+
+[IM Data Hub](imdatahub.org) is a warehouse for Impact Malaria indicator data. It houses all the IM indicator data for project performance monitoring and use. It is primarily designed with data users in mind, and it comes with several tools specifically designed to promote the use of IM data. 
+
+To date, IM Data Hub is active in 11 countries in Africa, and it collects a tremendous amount of data in the following tracks; 
+
+1. case management
+2. Malaria in Pregnancy
+3. Seasonal Malaria Chemoprevention
+4. Global Technical Leadership.
+
+It is used by multiple partners at different levels, from donors (PMI), Implementers (PSI, Jhpiego, UCSF, e.t.c), and government ministries of health in tracking country performance.
+
+<!--  Start of the preface -->
 
 # Preface {-} 
 ## What is this guide? 

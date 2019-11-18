@@ -1,0 +1,10 @@
+#  Metadata Specification
+
+## Introduction
+
+In the previous chapters, we learned about the IM & PMP indicators and how they are stored and constructed in the Data Hub. That is essential knowledge for you to start monitoring IM indicator data from the source to how they are presented in the IM Data Hub.
+
+In this chapter, we'll dive deep to the bottom and explore what lies underneath beneath the IM Data Hub, the metadata. Metadata is data about data. Interesting?
+
+Let's get started!
+
