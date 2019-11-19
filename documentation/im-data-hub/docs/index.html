@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Impact Malaria Data Hub Specifications</title>
+  <meta name="description" content="This is a technical specification of the Impact Malaria Data Hub." />
+  <meta name="generator" content="bookdown 0.13.2 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Impact Malaria Data Hub Specifications" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is a technical specification of the Impact Malaria Data Hub." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Impact Malaria Data Hub Specifications" />
+  
+  <meta name="twitter:description" content="This is a technical specification of the Impact Malaria Data Hub." />
+  
+
+<meta name="author" content="Isaiah Nyabuto, Cristina Lussiana" />
+
+
+<meta name="date" content="2019-11-19" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+<link rel="next" href="preface.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">IM Data Hub Tech Specs</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a></li>
+<li class="chapter" data-level="" data-path="preface.html"><a href="preface.html"><i class="fa fa-check"></i>Preface</a><ul>
+<li class="chapter" data-level="0.1" data-path="preface.html"><a href="preface.html#what-is-this-guide"><i class="fa fa-check"></i><b>0.1</b> What is this guide?</a></li>
+<li class="chapter" data-level="0.2" data-path="preface.html"><a href="preface.html#who-should-read-this-guide"><i class="fa fa-check"></i><b>0.2</b> Who should read this guide?</a></li>
+<li class="chapter" data-level="0.3" data-path="preface.html"><a href="preface.html#what-is-covered."><i class="fa fa-check"></i><b>0.3</b> What is covered.</a></li>
+<li class="chapter" data-level="0.4" data-path="preface.html"><a href="preface.html#conventions"><i class="fa fa-check"></i><b>0.4</b> Conventions</a><ul>
+<li class="chapter" data-level="0.4.1" data-path="preface.html"><a href="preface.html#data-sets"><i class="fa fa-check"></i><b>0.4.1</b> Data Sets</a></li>
+<li class="chapter" data-level="0.4.2" data-path="preface.html"><a href="preface.html#data-elements"><i class="fa fa-check"></i><b>0.4.2</b> Data Elements</a></li>
+<li class="chapter" data-level="0.4.3" data-path="preface.html"><a href="preface.html#indicators"><i class="fa fa-check"></i><b>0.4.3</b> Indicators</a></li>
+</ul></li>
+<li class="chapter" data-level="0.5" data-path="preface.html"><a href="preface.html#acknowledgement"><i class="fa fa-check"></i><b>0.5</b> Acknowledgement</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#background"><i class="fa fa-check"></i><b>1.1</b> Background</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="intro.html"><a href="intro.html#purpose"><i class="fa fa-check"></i><b>1.1.1</b> Purpose</a></li>
+<li class="chapter" data-level="1.1.2" data-path="intro.html"><a href="intro.html#servers"><i class="fa fa-check"></i><b>1.1.2</b> Servers</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#getting-started"><i class="fa fa-check"></i><b>1.2</b> Getting Started</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="understanding-im-data-hub.html"><a href="understanding-im-data-hub.html"><i class="fa fa-check"></i><b>2</b> Understanding IM Data Hub</a><ul>
+<li class="chapter" data-level="2.1" data-path="understanding-im-data-hub.html"><a href="understanding-im-data-hub.html#introduction"><i class="fa fa-check"></i><b>2.1</b> Introduction</a></li>
+<li class="chapter" data-level="2.2" data-path="understanding-im-data-hub.html"><a href="understanding-im-data-hub.html#reporting-component"><i class="fa fa-check"></i><b>2.2</b> Reporting Component</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="understanding-im-data-hub.html"><a href="understanding-im-data-hub.html#global-datasets"><i class="fa fa-check"></i><b>2.2.1</b> Global datasets</a></li>
+<li class="chapter" data-level="2.2.2" data-path="understanding-im-data-hub.html"><a href="understanding-im-data-hub.html#country-specific-datasets"><i class="fa fa-check"></i><b>2.2.2</b> Country Specific Datasets</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="impact-malaria-data-specification.html"><a href="impact-malaria-data-specification.html"><i class="fa fa-check"></i><b>3</b> Impact Malaria Data Specification</a><ul>
+<li class="chapter" data-level="3.1" data-path="impact-malaria-data-specification.html"><a href="impact-malaria-data-specification.html#introduction-1"><i class="fa fa-check"></i><b>3.1</b> Introduction</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="metadata-specification.html"><a href="metadata-specification.html"><i class="fa fa-check"></i><b>4</b> Metadata Specification</a><ul>
+<li class="chapter" data-level="4.1" data-path="metadata-specification.html"><a href="metadata-specification.html#introduction-2"><i class="fa fa-check"></i><b>4.1</b> Introduction</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="customization-troubleshooting-im-data-hub.html"><a href="customization-troubleshooting-im-data-hub.html"><i class="fa fa-check"></i><b>5</b> Customization &amp; Troubleshooting IM Data Hub</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Impact Malaria Data Hub Specifications</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Impact Malaria Data Hub Specifications</h1>
+<p class="author"><em>Isaiah Nyabuto, Cristina Lussiana</em></p>
+<p class="date"><em>2019-11-19</em></p>
+</div>
+<div id="welcome" class="section level1 unnumbered">
+<h1>Welcome</h1>
+<p>This is a technical guide for the IM Data Hub, <strong>a work currently in progress by BAO systems intended for official release in <a href="imdatahub.org">production</a> by </strong>____</p>
+<p><a href="imdatahub.org">IM Data Hub</a> is a warehouse for Impact Malaria indicator data. It houses all the IM indicator data for project performance monitoring and use. It is primarily designed with data users in mind, and it comes with several tools specifically designed to promote the use of IM data.</p>
+<p>To date, IM Data Hub is active in 11 countries in Africa, and it collects a tremendous amount of data in the following tracks;</p>
+<ol style="list-style-type: decimal">
+<li>case management</li>
+<li>Malaria in Pregnancy</li>
+<li>Seasonal Malaria Chemoprevention</li>
+<li>Global Technical Leadership.</li>
+</ol>
+<p>It is used by multiple partners at different levels, from donors (PMI), Implementers (PSI, Jhpiego, UCSF, e.t.c), and government ministries of health in tracking country performance.</p>
+<!--  Start of the preface -->
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="preface.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/index.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["im-data-hub.pdf", "im-data-hub.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
