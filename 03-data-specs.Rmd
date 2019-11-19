@@ -1,4 +1,4 @@
-# Impact Malaria Data Specification
+# Impact Malaria Data Specification {#data}
 
 ## Introduction 
 

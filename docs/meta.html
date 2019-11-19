@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>References | Impact Malaria Data Hub Specifications</title>
+  <title>Chapter 4 Metadata Specification | Impact Malaria Data Hub Specifications</title>
   <meta name="description" content="This is a technical specification of the Impact Malaria Data Hub." />
   <meta name="generator" content="bookdown 0.13.2 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="References | Impact Malaria Data Hub Specifications" />
+  <meta property="og:title" content="Chapter 4 Metadata Specification | Impact Malaria Data Hub Specifications" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="References | Impact Malaria Data Hub Specifications" />
+  <meta name="twitter:title" content="Chapter 4 Metadata Specification | Impact Malaria Data Hub Specifications" />
   
   <meta name="twitter:description" content="This is a technical specification of the Impact Malaria Data Hub." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="customization-troubleshooting-im-data-hub.html"/>
-
+<link rel="prev" href="data.html"/>
+<link rel="next" href="customization-troubleshooting-im-data-hub.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -68,15 +68,16 @@
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a></li>
 <li class="chapter" data-level="" data-path="preface.html"><a href="preface.html"><i class="fa fa-check"></i>Preface</a><ul>
-<li class="chapter" data-level="0.1" data-path="preface.html"><a href="preface.html#what-is-this-guide"><i class="fa fa-check"></i><b>0.1</b> What is this guide?</a></li>
+<li class="chapter" data-level="0.1" data-path="preface.html"><a href="preface.html#what-is-im-data-hub"><i class="fa fa-check"></i><b>0.1</b> What is IM Data Hub?</a></li>
 <li class="chapter" data-level="0.2" data-path="preface.html"><a href="preface.html#who-should-read-this-guide"><i class="fa fa-check"></i><b>0.2</b> Who should read this guide?</a></li>
-<li class="chapter" data-level="0.3" data-path="preface.html"><a href="preface.html#what-is-covered."><i class="fa fa-check"></i><b>0.3</b> What is covered.</a></li>
-<li class="chapter" data-level="0.4" data-path="preface.html"><a href="preface.html#conventions"><i class="fa fa-check"></i><b>0.4</b> Conventions</a><ul>
-<li class="chapter" data-level="0.4.1" data-path="preface.html"><a href="preface.html#data-sets"><i class="fa fa-check"></i><b>0.4.1</b> Data Sets</a></li>
-<li class="chapter" data-level="0.4.2" data-path="preface.html"><a href="preface.html#data-elements"><i class="fa fa-check"></i><b>0.4.2</b> Data Elements</a></li>
-<li class="chapter" data-level="0.4.3" data-path="preface.html"><a href="preface.html#indicators"><i class="fa fa-check"></i><b>0.4.3</b> Indicators</a></li>
+<li class="chapter" data-level="0.3" data-path="preface.html"><a href="preface.html#what-is-covered-in-this-guide."><i class="fa fa-check"></i><b>0.3</b> What is covered in this guide.</a></li>
+<li class="chapter" data-level="0.4" data-path="preface.html"><a href="preface.html#what-is-not-covered-in-this-guide."><i class="fa fa-check"></i><b>0.4</b> What is not covered in this guide.</a></li>
+<li class="chapter" data-level="0.5" data-path="preface.html"><a href="preface.html#conventions"><i class="fa fa-check"></i><b>0.5</b> Conventions</a><ul>
+<li class="chapter" data-level="0.5.1" data-path="preface.html"><a href="preface.html#data-sets"><i class="fa fa-check"></i><b>0.5.1</b> Data Sets</a></li>
+<li class="chapter" data-level="0.5.2" data-path="preface.html"><a href="preface.html#data-elements"><i class="fa fa-check"></i><b>0.5.2</b> Data Elements</a></li>
+<li class="chapter" data-level="0.5.3" data-path="preface.html"><a href="preface.html#indicators"><i class="fa fa-check"></i><b>0.5.3</b> Indicators</a></li>
 </ul></li>
-<li class="chapter" data-level="0.5" data-path="preface.html"><a href="preface.html#acknowledgement"><i class="fa fa-check"></i><b>0.5</b> Acknowledgement</a></li>
+<li class="chapter" data-level="0.6" data-path="preface.html"><a href="preface.html#acknowledgement"><i class="fa fa-check"></i><b>0.6</b> Acknowledgement</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
 <li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#background"><i class="fa fa-check"></i><b>1.1</b> Background</a><ul>
@@ -85,21 +86,23 @@
 </ul></li>
 <li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#getting-started"><i class="fa fa-check"></i><b>1.2</b> Getting Started</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="understanding-im-data-hub.html"><a href="understanding-im-data-hub.html"><i class="fa fa-check"></i><b>2</b> Understanding IM Data Hub</a><ul>
-<li class="chapter" data-level="2.1" data-path="understanding-im-data-hub.html"><a href="understanding-im-data-hub.html#introduction"><i class="fa fa-check"></i><b>2.1</b> Introduction</a></li>
-<li class="chapter" data-level="2.2" data-path="understanding-im-data-hub.html"><a href="understanding-im-data-hub.html#reporting-component"><i class="fa fa-check"></i><b>2.2</b> Reporting Component</a><ul>
-<li class="chapter" data-level="2.2.1" data-path="understanding-im-data-hub.html"><a href="understanding-im-data-hub.html#global-datasets"><i class="fa fa-check"></i><b>2.2.1</b> Global datasets</a></li>
-<li class="chapter" data-level="2.2.2" data-path="understanding-im-data-hub.html"><a href="understanding-im-data-hub.html#country-specific-datasets"><i class="fa fa-check"></i><b>2.2.2</b> Country Specific Datasets</a></li>
+<li class="chapter" data-level="2" data-path="understanding-im-data-hub-comp.html"><a href="understanding-im-data-hub-comp.html"><i class="fa fa-check"></i><b>2</b> Understanding IM Data Hub (#comp)</a><ul>
+<li class="chapter" data-level="2.1" data-path="understanding-im-data-hub-comp.html"><a href="understanding-im-data-hub-comp.html#introduction"><i class="fa fa-check"></i><b>2.1</b> Introduction</a></li>
+<li class="chapter" data-level="2.2" data-path="understanding-im-data-hub-comp.html"><a href="understanding-im-data-hub-comp.html#reporting-component"><i class="fa fa-check"></i><b>2.2</b> Reporting Component</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="understanding-im-data-hub-comp.html"><a href="understanding-im-data-hub-comp.html#global-dataset"><i class="fa fa-check"></i><b>2.2.1</b> Global datasets</a></li>
+<li class="chapter" data-level="2.2.2" data-path="understanding-im-data-hub-comp.html"><a href="understanding-im-data-hub-comp.html#country-dataset"><i class="fa fa-check"></i><b>2.2.2</b> Country Specific Datasets</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="understanding-im-data-hub-comp.html"><a href="understanding-im-data-hub-comp.html#data-mining-component"><i class="fa fa-check"></i><b>2.3</b> Data Mining Component</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="understanding-im-data-hub-comp.html"><a href="understanding-im-data-hub-comp.html#pivot"><i class="fa fa-check"></i><b>2.3.1</b> Pivot Tables</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="impact-malaria-data-specification.html"><a href="impact-malaria-data-specification.html"><i class="fa fa-check"></i><b>3</b> Impact Malaria Data Specification</a><ul>
-<li class="chapter" data-level="3.1" data-path="impact-malaria-data-specification.html"><a href="impact-malaria-data-specification.html#introduction-1"><i class="fa fa-check"></i><b>3.1</b> Introduction</a></li>
+<li class="chapter" data-level="3" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>3</b> Impact Malaria Data Specification</a><ul>
+<li class="chapter" data-level="3.1" data-path="data.html"><a href="data.html#introduction-1"><i class="fa fa-check"></i><b>3.1</b> Introduction</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="metadata-specification.html"><a href="metadata-specification.html"><i class="fa fa-check"></i><b>4</b> Metadata Specification</a><ul>
-<li class="chapter" data-level="4.1" data-path="metadata-specification.html"><a href="metadata-specification.html#introduction-2"><i class="fa fa-check"></i><b>4.1</b> Introduction</a></li>
+<li class="chapter" data-level="4" data-path="meta.html"><a href="meta.html"><i class="fa fa-check"></i><b>4</b> Metadata Specification</a><ul>
+<li class="chapter" data-level="4.1" data-path="meta.html"><a href="meta.html#introduction-2"><i class="fa fa-check"></i><b>4.1</b> Introduction</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="customization-troubleshooting-im-data-hub.html"><a href="customization-troubleshooting-im-data-hub.html"><i class="fa fa-check"></i><b>5</b> Customization &amp; Troubleshooting IM Data Hub</a></li>
-<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -120,17 +123,23 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="references" class="section level1 unnumbered">
-<h1>References</h1>
+<div id="meta" class="section level1">
+<h1><span class="header-section-number">Chapter 4</span> Metadata Specification</h1>
+<div id="introduction-2" class="section level2">
+<h2><span class="header-section-number">4.1</span> Introduction</h2>
+<p>In the previous chapters, we learned about the IM &amp; PMP indicators and how they are stored and constructed in the Data Hub. That is essential knowledge for you to start monitoring IM indicator data from the source to how they are presented in the IM Data Hub.</p>
+<p>In this chapter, we’ll dive deep to the bottom and explore what lies underneath beneath the IM Data Hub, the metadata. Metadata is data about data. Interesting?</p>
+<p>Let’s get started!</p>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="customization-troubleshooting-im-data-hub.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="customization-troubleshooting-im-data-hub.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -160,7 +169,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/06-security.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/04-metadata-specs.Rmd",
 "text": "Edit"
 },
 "history": {

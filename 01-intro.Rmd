@@ -2,7 +2,7 @@
 
 ## Background
 
-Impact Maria (IM) Data Hub is a web-based project monitoring system used to collect, analyze, and report indicator data for Impact Malaria Project. IM is a five-year project by the US President’s Malaria Initiative (PMI) global service to reduce malaria mortality and morbidity.
+Impact Maria (IM) Data Hub is a web-based project monitoring system used to collect, analyze, and report IM indicator data. IM is a five-year project by the US President’s Malaria Initiative (PMI) global service to reduce malaria mortality and morbidity.
 
 The BAO system implements it in an ST-3 plan that began on Nov 27th, 2018. 
 
@@ -47,7 +47,6 @@ knitr::include_graphics("./images/landing-page.png")
 
 
 Countries doing data entry or testings can log in with the following credentials based on their country ISO codes. 
-
 
 
 Country |username ; password
