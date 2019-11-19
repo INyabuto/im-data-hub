@@ -34,7 +34,7 @@ IM Data Hub is available at the following instances;
 
 ## Getting Started
 
-The easiest way to get started to IM Data Hub is to log in at the test server at https://im-dev.psi-mis.org/ with the following credentials. 
+The easiest way to get started on IM Data Hub is to log in at the test server at https://im-dev.psi-mis.org/ with the following credentials. 
 
 `Username :`**`demoUser`** `and Password :` **`Temp1234!`**
 
