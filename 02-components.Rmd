@@ -1,4 +1,11 @@
-# Understanding IM Data Hub (#comp)
+---
+output:
+  bookdown::html_book:
+    includes:
+      in_header: style.css
+---
+
+# Understanding IM Data Hub {#comp}
 
 ## Introduction
 
@@ -148,10 +155,13 @@ In the following subsection, we are going to access and tabulate a sample of IM 
 As an example, we tabulate and pivot `IM Confirmed vs. Suspected Malaria Cases.` for last 12 months at the global level (world)
 
 
-Please refresh your browser  or login with the demo account below if you have not.
+Please refresh your browser or login with the demo account below if you have not.
 
+```{block, type = 'FOO'}
+[IM Data Hub demo](https://im-dev.psi-mis.org/dhis-web-dataentry/index.action)
 
-
+`Username` :**`demoUser`** and `Password` : **`Temp1234!`**
+```
 
 
 
