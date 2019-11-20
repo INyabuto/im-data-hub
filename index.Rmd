@@ -10,6 +10,7 @@ biblio-style: apalike
 link-citations: yes
 github-repo: rstudio/bookdown-demo
 description: "This is a technical specification of the Impact Malaria Data Hub."
+always_allow_html: yes
 ---
 
 # Welcome {-}
