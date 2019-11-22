@@ -1,10 +1,126 @@
+---
+output:
+  bookdown::html_book:
+    includes:
+      in_header: style.css
+---
+
 #  Metadata Specification {#meta}
 
 ## Introduction
 
-In the previous chapters, we learned about the IM & PMP indicators and how they are stored and constructed in the Data Hub. That is essential knowledge for you to start monitoring IM indicator data from the source to how they are presented in the IM Data Hub.
+In the previous chapter, we learned about the IM & PMP indicators and how they are stored and constructed in the Data Hub. That is essential knowledge for you to start monitoring IM indicator data from the source to how they are presented in the IM Data Hub.
 
-In this chapter, we'll dive deep to the bottom and explore what lies underneath beneath the IM Data Hub, the metadata. Metadata is data about data. Interesting?
+In this chapter, we'll dive deep to the bottom and explore what lies beneath the IM Data Hub, the metadata. Metadata is data about data. 
 
 Let's get started!
+
+First, I'd say anything in the data hub contains metadata. Metadata defines what, why, where, and how parts are set up in the data hub. They provide references to different objects in the data hub.
+
+Already you are familiar with datasets, data elements, or you might have heard of sections in the other chapters. All these are essentially metadata themselves. 
+
+IM Data Hub Metadata are specified in either CSV, JSON or XML formats are available at the metadata API endpoint:
+
+`https://im-dev.psi-mis.org/api/metadata`
+
+Metadata has a name, uid, code that uniquely identifies the object in the hub. It also has a sharing setting that defines the access group. We’ll talk about the access group in the following chapter. 
+
+All IM Data Hub metadata can be accessed individually by specifying their names or ids on the API endpoint. For example, the metadata for a data element with the short name `suspected malaria cases` is accessed at:
+
+```{block, type = 'FOO'}
+
+https://im-dev.psi-mis.org/api/29/dataElements/eHWYhy8vO8q.json
+```
+
+In the following sections we discuss IM Data Hub metadata in three main groups; 
+
+1. Organization Unit stores information about the location where IM indicator data is reported, analyzed, or presented. 
+2. Metadata that specifies what, why, and how IM Data Hub components are set up. They include; datasets, data elements, sections, data elements groups & group sets, organization unit groups & group sets, indicators, indicator groups, categories, categories, combo, & combinations. e.t.c
+3. Core Metadata - any metadata that is shared publicly for re-usability across the data hub.
+
+## Organization Units (OU)
+
+Organization Units specifies the location or where IM indicators are collected, analyzed, or presented on a dashboard. 
+
+There are two main types of OUs in the data hub.
+
+1. Test - a list of OUs for development and testing objects in the data hub. This is where we have been doing our practices. 
+2. World - a list of OUs for production or real use in the data hub.
+
+The main master list is accessible [here]("https://docs.google.com/spreadsheets/d/1fgdpfbVcn0ywUekA8AuXsnxYpDWGk2Safblyom0EWGo/edit#gid=40684118") 
+
+They are structured in the form of a tree or through a hierarchy to allow entries, data processing, and drill downs/ups on the dashboard. They also define access levels in the data hub. We’ll discuss access levels in chapter 5.
+
+IM Data Hub OUs are grouped into OU groups and group sets for disaggregation of IM indicators data. We discuss the groups in section \@ref{ougroup}
+
+### OU Trees
+
+As we mentioned above, IM Data Hub OUs are organized in a tree-like structure that provides different levels for reporting, data processing, and presentation of IM data; in this section, we describe the OU structure by country (Fig X).
+
+The structure is in the form hierarchy and begins with the country to subnational level 4.
+
+
+Country| Subnational level 1| Subnational level 2| Subnational level 3| Subnational level 4 |
+-------|:-------------------|:-------------------|:-------------------|:--------------------|
+Cameroon| Region |District| Aire de santé| Facility
+Cote d’Ivoire| Region| District| Facility| /
+DRC| Province| Zone de santé | Aire de santé | Facility
+Kenya
+County
+Sub-county
+Ward
+Facility
+Ghana
+Region
+District
+Sub-district
+Facility
+Mali
+Region
+District
+Aire de santé
+Facility
+Niger
+
+
+
+
+
+
+
+
+Sierra Leone
+Province
+District
+Chiefdom
+Facility
+Zambia
+Province
+District
+Facility
+/
+
+
+
+
+
+
+
+## Metadata
+
+Metadata have `name`,  `uid`,  `code` at the minimum for uniquely identifying them in the hub. Others also contain `short names` for unique identification. 
+
+In the following sections, we discuss the `names`,  `uid`,  `code`,  `short name` and `sharing setting` for different kinds of metadata in the data hub.
+
+###' data elements
+
+```{r, echo=FALSE}
+
+```
+
+
+
+
+
+
 

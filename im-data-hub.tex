@@ -3262,11 +3262,157 @@ Denid : 1
 \hypertarget{introduction-2}{%
 \section{Introduction}\label{introduction-2}}
 
-In the previous chapters, we learned about the IM \& PMP indicators and how they are stored and constructed in the Data Hub. That is essential knowledge for you to start monitoring IM indicator data from the source to how they are presented in the IM Data Hub.
+In the previous chapter, we learned about the IM \& PMP indicators and how they are stored and constructed in the Data Hub. That is essential knowledge for you to start monitoring IM indicator data from the source to how they are presented in the IM Data Hub.
 
-In this chapter, we'll dive deep to the bottom and explore what lies underneath beneath the IM Data Hub, the metadata. Metadata is data about data. Interesting?
+In this chapter, we'll dive deep to the bottom and explore what lies beneath the IM Data Hub, the metadata. Metadata is data about data.
 
 Let's get started!
+
+First, I'd say anything in the data hub contains metadata. Metadata defines what, why, where, and how parts are set up in the data hub. They provide references to different objects in the data hub.
+
+Already you are familiar with datasets, data elements, or you might have heard of sections in the other chapters. All these are essentially metadata themselves.
+
+IM Data Hub Metadata are specified in either CSV, JSON or XML formats are available at the metadata API endpoint:
+
+\texttt{https://im-dev.psi-mis.org/api/metadata}
+
+Metadata has a name, uid, code that uniquely identifies the object in the hub. It also has a sharing setting that defines the access group. We'll talk about the access group in the following chapter.
+
+All IM Data Hub metadata can be accessed individually by specifying their names or ids on the API endpoint. For example, the metadata for a data element with the short name \texttt{suspected\ malaria\ cases} is accessed at:
+
+\begin{FOO}
+\url{https://im-dev.psi-mis.org/api/29/dataElements/eHWYhy8vO8q.json}
+\end{FOO}
+
+In the following sections we discuss IM Data Hub metadata in three main groups;
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Organization Unit stores information about the location where IM indicator data is reported, analyzed, or presented.
+\item
+  Metadata that specifies what, why, and how IM Data Hub components are set up. They include; datasets, data elements, sections, data elements groups \& group sets, organization unit groups \& group sets, indicators, indicator groups, categories, categories, combo, \& combinations. e.t.c
+\item
+  Core Metadata - any metadata that is shared publicly for re-usability across the data hub.
+\end{enumerate}
+
+\hypertarget{organization-units-ou}{%
+\section{Organization Units (OU)}\label{organization-units-ou}}
+
+Organization Units specifies the location or where IM indicators are collected, analyzed, or presented on a dashboard.
+
+There are two main types of OUs in the data hub.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Test - a list of OUs for development and testing objects in the data hub. This is where we have been doing our practices.
+\item
+  World - a list of OUs for production or real use in the data hub.
+\end{enumerate}
+
+The main master list is accessible \href{\%22https://docs.google.com/spreadsheets/d/1fgdpfbVcn0ywUekA8AuXsnxYpDWGk2Safblyom0EWGo/edit\#gid=40684118\%22}{here}
+
+They are structured in the form of a tree or through a hierarchy to allow entries, data processing, and drill downs/ups on the dashboard. They also define access levels in the data hub. We'll discuss access levels in chapter 5.
+
+IM Data Hub OUs are grouped into OU groups and group sets for disaggregation of IM indicators data. We discuss the groups in section @ref\{ougroup\}
+
+\hypertarget{ou-trees}{%
+\subsection{OU Trees}\label{ou-trees}}
+
+As we mentioned above, IM Data Hub OUs are organized in a tree-like structure that provides different levels for reporting, data processing, and presentation of IM data; in this section, we describe the OU structure by country (Fig X).
+
+The structure is in the form hierarchy and begins with the country to subnational level 4.
+
+\begin{longtable}[]{@{}lllll@{}}
+\toprule
+\begin{minipage}[b]{0.07\columnwidth}\raggedright
+Country\strut
+\end{minipage} & \begin{minipage}[b]{0.20\columnwidth}\raggedright
+Subnational level 1\strut
+\end{minipage} & \begin{minipage}[b]{0.20\columnwidth}\raggedright
+Subnational level 2\strut
+\end{minipage} & \begin{minipage}[b]{0.20\columnwidth}\raggedright
+Subnational level 3\strut
+\end{minipage} & \begin{minipage}[b]{0.20\columnwidth}\raggedright
+Subnational level 4\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.07\columnwidth}\raggedright
+Cameroon\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
+Region\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
+District\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
+Aire de santé\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
+Facility\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.07\columnwidth}\raggedright
+Cote d'Ivoire\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
+Region\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
+District\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
+Facility\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
+/\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.07\columnwidth}\raggedright
+DRC\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
+Province\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
+Zone de santé\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
+Aire de santé\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
+Facility\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
+Kenya
+County
+Sub-county
+Ward
+Facility
+Ghana
+Region
+District
+Sub-district
+Facility
+Mali
+Region
+District
+Aire de santé
+Facility
+Niger
+
+Sierra Leone
+Province
+District
+Chiefdom
+Facility
+Zambia
+Province
+District
+Facility
+/
+
+\hypertarget{metadata}{%
+\section{Metadata}\label{metadata}}
+
+Metadata have \texttt{name}, \texttt{uid}, \texttt{code} at the minimum for uniquely identifying them in the hub. Others also contain \texttt{short\ names} for unique identification.
+
+In the following sections, we discuss the \texttt{names}, \texttt{uid}, \texttt{code}, \texttt{short\ name} and \texttt{sharing\ setting} for different kinds of metadata in the data hub.
+
+\#\#\#' data elements
 
 \hypertarget{access}{%
 \chapter{Security Mechanism \& Access Model}\label{access}}
@@ -3403,6 +3549,34 @@ Data entry for programs (Event capture, DHIS2 Android Capture)\strut
 \end{minipage}\tabularnewline
 \bottomrule
 \end{longtable}
+
+\hypertarget{custom}{%
+\chapter{Customization \& Troubleshooting IM Datahub}\label{custom}}
+
+\hypertarget{introduction-4}{%
+\section{Introduction}\label{introduction-4}}
+
+As IM datahub continues to be rolled out or used actively in multiple countries, data requirements increase, and so does the need to customize and maintain objects in the datahub.
+
+Customization involves setting up new objects or components, while maintenance, this case refers to the process of taking care of the already existing objects or components in the datahub.
+
+Maintenance requires an assessment of the current set up to detect flaws or breakages. It is for the overall improvement of the system.
+
+In this chapter, we cover the process of adding new objects and troubleshooting or maintaining existing objects in the data hub. We'll also discuss getting help on IM datahub.
+
+\hypertarget{adding-new-objects-in-the-datahub.}{%
+\section{Adding new objects in the datahub.}\label{adding-new-objects-in-the-datahub.}}
+
+There are two ways you can add new objects in the data hub.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  From the user interface
+\item
+  Using blueprints
+\end{enumerate}
 
 \bibliography{book.bib,packages.bib}
 

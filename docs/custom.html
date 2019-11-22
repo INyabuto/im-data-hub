@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 4 Metadata Specification | Impact Malaria Data Hub Specifications</title>
+  <title>Chapter 6 Customization &amp; Troubleshooting IM Datahub | Impact Malaria Data Hub Specifications</title>
   <meta name="description" content="This is a technical specification of the Impact Malaria Data Hub." />
   <meta name="generator" content="bookdown 0.13.2 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 4 Metadata Specification | Impact Malaria Data Hub Specifications" />
+  <meta property="og:title" content="Chapter 6 Customization &amp; Troubleshooting IM Datahub | Impact Malaria Data Hub Specifications" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="INyabuto/im-data-hub" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 4 Metadata Specification | Impact Malaria Data Hub Specifications" />
+  <meta name="twitter:title" content="Chapter 6 Customization &amp; Troubleshooting IM Datahub | Impact Malaria Data Hub Specifications" />
   
   <meta name="twitter:description" content="This is a technical specification of the Impact Malaria Data Hub." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="data.html"/>
-<link rel="next" href="access.html"/>
+<link rel="prev" href="access.html"/>
+
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -146,120 +146,22 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="meta" class="section level1">
-<h1><span class="header-section-number">Chapter 4</span> Metadata Specification</h1>
-<div id="introduction-2" class="section level2">
-<h2><span class="header-section-number">4.1</span> Introduction</h2>
-<p>In the previous chapter, we learned about the IM &amp; PMP indicators and how they are stored and constructed in the Data Hub. That is essential knowledge for you to start monitoring IM indicator data from the source to how they are presented in the IM Data Hub.</p>
-<p>In this chapter, we’ll dive deep to the bottom and explore what lies beneath the IM Data Hub, the metadata. Metadata is data about data.</p>
-<p>Let’s get started!</p>
-<p>First, I’d say anything in the data hub contains metadata. Metadata defines what, why, where, and how parts are set up in the data hub. They provide references to different objects in the data hub.</p>
-<p>Already you are familiar with datasets, data elements, or you might have heard of sections in the other chapters. All these are essentially metadata themselves.</p>
-<p>IM Data Hub Metadata are specified in either CSV, JSON or XML formats are available at the metadata API endpoint:</p>
-<p><code>https://im-dev.psi-mis.org/api/metadata</code></p>
-<p>Metadata has a name, uid, code that uniquely identifies the object in the hub. It also has a sharing setting that defines the access group. We’ll talk about the access group in the following chapter.</p>
-<p>All IM Data Hub metadata can be accessed individually by specifying their names or ids on the API endpoint. For example, the metadata for a data element with the short name <code>suspected malaria cases</code> is accessed at:</p>
-<div class="FOO">
-<p>
-<a href="https://im-dev.psi-mis.org/api/29/dataElements/eHWYhy8vO8q.json" class="uri">https://im-dev.psi-mis.org/api/29/dataElements/eHWYhy8vO8q.json</a>
-</p>
+<div id="custom" class="section level1">
+<h1><span class="header-section-number">Chapter 6</span> Customization &amp; Troubleshooting IM Datahub</h1>
+<div id="introduction-4" class="section level2">
+<h2><span class="header-section-number">6.1</span> Introduction</h2>
+<p>As IM datahub continues to be rolled out or used actively in multiple countries, data requirements increase, and so does the need to customize and maintain objects in the datahub.</p>
+<p>Customization involves setting up new objects or components, while maintenance, this case refers to the process of taking care of the already existing objects or components in the datahub.</p>
+<p>Maintenance requires an assessment of the current set up to detect flaws or breakages. It is for the overall improvement of the system.</p>
+<p>In this chapter, we cover the process of adding new objects and troubleshooting or maintaining existing objects in the data hub. We’ll also discuss getting help on IM datahub.</p>
 </div>
-<p>In the following sections we discuss IM Data Hub metadata in three main groups;</p>
+<div id="adding-new-objects-in-the-datahub." class="section level2">
+<h2><span class="header-section-number">6.2</span> Adding new objects in the datahub.</h2>
+<p>There are two ways you can add new objects in the data hub.</p>
 <ol style="list-style-type: decimal">
-<li>Organization Unit stores information about the location where IM indicator data is reported, analyzed, or presented.</li>
-<li>Metadata that specifies what, why, and how IM Data Hub components are set up. They include; datasets, data elements, sections, data elements groups &amp; group sets, organization unit groups &amp; group sets, indicators, indicator groups, categories, categories, combo, &amp; combinations. e.t.c</li>
-<li>Core Metadata - any metadata that is shared publicly for re-usability across the data hub.</li>
+<li>From the user interface</li>
+<li>Using blueprints</li>
 </ol>
-</div>
-<div id="organization-units-ou" class="section level2">
-<h2><span class="header-section-number">4.2</span> Organization Units (OU)</h2>
-<p>Organization Units specifies the location or where IM indicators are collected, analyzed, or presented on a dashboard.</p>
-<p>There are two main types of OUs in the data hub.</p>
-<ol style="list-style-type: decimal">
-<li>Test - a list of OUs for development and testing objects in the data hub. This is where we have been doing our practices.</li>
-<li>World - a list of OUs for production or real use in the data hub.</li>
-</ol>
-<p>The main master list is accessible <a href="%22https://docs.google.com/spreadsheets/d/1fgdpfbVcn0ywUekA8AuXsnxYpDWGk2Safblyom0EWGo/edit#gid=40684118%22">here</a></p>
-<p>They are structured in the form of a tree or through a hierarchy to allow entries, data processing, and drill downs/ups on the dashboard. They also define access levels in the data hub. We’ll discuss access levels in chapter 5.</p>
-<p>IM Data Hub OUs are grouped into OU groups and group sets for disaggregation of IM indicators data. We discuss the groups in section @ref{ougroup}</p>
-<div id="ou-trees" class="section level3">
-<h3><span class="header-section-number">4.2.1</span> OU Trees</h3>
-<p>As we mentioned above, IM Data Hub OUs are organized in a tree-like structure that provides different levels for reporting, data processing, and presentation of IM data; in this section, we describe the OU structure by country (Fig X).</p>
-<p>The structure is in the form hierarchy and begins with the country to subnational level 4.</p>
-<table>
-<colgroup>
-<col width="7%" />
-<col width="22%" />
-<col width="22%" />
-<col width="22%" />
-<col width="23%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Country</th>
-<th align="left">Subnational level 1</th>
-<th align="left">Subnational level 2</th>
-<th align="left">Subnational level 3</th>
-<th align="left">Subnational level 4</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Cameroon</td>
-<td align="left">Region</td>
-<td align="left">District</td>
-<td align="left">Aire de santé</td>
-<td align="left">Facility</td>
-</tr>
-<tr class="even">
-<td>Cote d’Ivoire</td>
-<td align="left">Region</td>
-<td align="left">District</td>
-<td align="left">Facility</td>
-<td align="left">/</td>
-</tr>
-<tr class="odd">
-<td>DRC</td>
-<td align="left">Province</td>
-<td align="left">Zone de santé</td>
-<td align="left">Aire de santé</td>
-<td align="left">Facility</td>
-</tr>
-</tbody>
-</table>
-<p>Kenya
-County
-Sub-county
-Ward
-Facility
-Ghana
-Region
-District
-Sub-district
-Facility
-Mali
-Region
-District
-Aire de santé
-Facility
-Niger</p>
-<p>Sierra Leone
-Province
-District
-Chiefdom
-Facility
-Zambia
-Province
-District
-Facility
-/</p>
-</div>
-</div>
-<div id="metadata" class="section level2">
-<h2><span class="header-section-number">4.3</span> Metadata</h2>
-<p>Metadata have <code>name</code>, <code>uid</code>, <code>code</code> at the minimum for uniquely identifying them in the hub. Others also contain <code>short names</code> for unique identification.</p>
-<p>In the following sections, we discuss the <code>names</code>, <code>uid</code>, <code>code</code>, <code>short name</code> and <code>sharing setting</code> for different kinds of metadata in the data hub.</p>
-<p>###’ data elements</p>
 
 </div>
 </div>
@@ -268,8 +170,8 @@ Facility
           </div>
         </div>
       </div>
-<a href="data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="access.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="access.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -299,7 +201,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/INyabuto/im-data-hub/edit/master/04-metadata-specs.Rmd",
+"link": "https://github.com/INyabuto/im-data-hub/edit/master/06-customization.Rmd",
 "text": "Edit"
 },
 "history": {
