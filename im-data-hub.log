@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2019.9.16)  22 NOV 2019 10:52
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2019.9.16)  22 NOV 2019 15:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -743,15 +743,25 @@ Package hyperref Warning: Rerun to get /PageLabels entry.
 
 [3] [4
 
-] [5] [6
+]
+File: ./images/logo1.png Graphic file (type bmp)
+<./images/logo1.png>
+File: ./images/logo2.png Graphic file (type bmp)
+<./images/logo2.png>
 
-] [7]
+Overfull \hbox (83.56096pt too wide) in paragraph at lines 111--112
+[][] 
+ []
+
+[5] [6] [7
+
+]
 
 Package longtable Warning: Column widths have changed
-(longtable)                in table 1 on input line 210.
+(longtable)                in table 1 on input line 214.
 
 
-Overfull \hbox (0.725pt too wide) in paragraph at lines 230--231
+Overfull \hbox (0.725pt too wide) in paragraph at lines 234--235
 \TU/lmr/m/n/10 DEs: [\TU/lmtt/m/n/10 country ISO code\TU/lmr/m/n/10 ] [\TU/lmtt
 /m/n/10 program abbreviation\TU/lmr/m/n/10 ] - [\TU/lmtt/m/n/10 section abbrevi
 ation\TU/lmr/m/n/10 ]
@@ -762,46 +772,46 @@ ation\TU/lmr/m/n/10 ]
 ]
 Chapter 1.
 [11]
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 312.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 316.
 
 (/Users/isaiahnyabuto/Library/TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 312.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 316.
 
 (/Users/isaiahnyabuto/Library/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 312
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 316
 .
 (/Users/isaiahnyabuto/Library/TinyTeX/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 312
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 316
 .
 (/Users/isaiahnyabuto/Library/TinyTeX/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 312.
+(Font)              <10> on input line 316.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 312.
+(Font)              <7> on input line 316.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 312.
-LaTeX Font Info:    Try loading font information for U+msa on input line 312.
+(Font)              <5> on input line 316.
+LaTeX Font Info:    Try loading font information for U+msa on input line 316.
 (/Users/isaiahnyabuto/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 312.
+LaTeX Font Info:    Try loading font information for U+msb on input line 316.
 (/Users/isaiahnyabuto/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 322.
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 326.
 File: ./images/landing-page.png Graphic file (type bmp)
 <./images/landing-page.png>
 
-Overfull \hbox (727.24706pt too wide) in paragraph at lines 326--327
+Overfull \hbox (727.24706pt too wide) in paragraph at lines 330--331
 [][] 
  []
 
@@ -811,52 +821,52 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [12] [13]
 
 Package longtable Warning: Column widths have changed
-(longtable)                in table 1.1 on input line 342.
+(longtable)                in table 1.1 on input line 346.
 
 [14]
 Chapter 2.
 
-LaTeX Warning: Reference `intro' on page 15 undefined on input line 352.
+LaTeX Warning: Reference `intro' on page 15 undefined on input line 356.
 
 [15
 
 ]
 
 LaTeX Warning: Reference `global-dataset' on page 16 undefined on input line 37
-3.
+7.
 
 
 LaTeX Warning: Reference `country-dataset' on page 16 undefined on input line 3
-75.
+79.
 
 
 LaTeX Warning: Reference `fig:data-entry-app' on page 16 undefined on input lin
-e 378.
+e 382.
 
 File: ./images/data-entry-app.png Graphic file (type bmp)
 <./images/data-entry-app.png>
 
 LaTeX Warning: Reference `fig:im-datasets' on page 16 undefined on input line 3
-89.
+93.
 
 File: ./images/im datasets.png Graphic file (type bmp)
 <./images/im datasets.png>
 
-Overfull \hbox (485.61679pt too wide) in paragraph at lines 392--392
+Overfull \hbox (485.61679pt too wide) in paragraph at lines 396--396
 []\TU/lmr/m/n/10 datasets.bb [] 
  []
 
 
-LaTeX Warning: Float too large for page by 24.06325pt on input line 393.
+LaTeX Warning: Float too large for page by 24.06325pt on input line 397.
 
 
-LaTeX Warning: Reference `meta' on page 16 undefined on input line 414.
+LaTeX Warning: Reference `meta' on page 16 undefined on input line 418.
 
 [16] [17]
 File: ./images/data-entry-app2.png Graphic file (type bmp)
 <./images/data-entry-app2.png>
 
-Overfull \hbox (207.09795pt too wide) in paragraph at lines 438--439
+Overfull \hbox (207.09795pt too wide) in paragraph at lines 442--443
 [][] 
  []
 
@@ -869,51 +879,51 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 File: ./images/im-reporting.png Graphic file (type bmp)
 <./images/im-reporting.png>
 
-Overfull \hbox (282.37444pt too wide) in paragraph at lines 458--459
+Overfull \hbox (282.37444pt too wide) in paragraph at lines 462--463
 [][] 
  []
 
 
 LaTeX Warning: Reference `fig:data-entry' on page 19 undefined on input line 46
-5.
+9.
 
 File: ./images/data-entry.png Graphic file (type bmp)
 <./images/data-entry.png>
 
-Overfull \hbox (1191.91238pt too wide) in paragraph at lines 469--469
+Overfull \hbox (1191.91238pt too wide) in paragraph at lines 473--473
 [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 24.07414pt on input line 470.
+LaTeX Warning: Float too large for page by 24.07414pt on input line 474.
 
 [19] [20]
 
 LaTeX Warning: Reference `fig:pmp-datasets' on page 21 undefined on input line 
-481.
+485.
 
 File: ./images/pmp datasets.png Graphic file (type bmp)
 <./images/pmp datasets.png>
 
-Overfull \hbox (107.44647pt too wide) in paragraph at lines 484--484
+Overfull \hbox (107.44647pt too wide) in paragraph at lines 488--488
 []\TU/lmr/m/n/10 datasets.bb [] 
  []
 
 
-LaTeX Warning: Float too large for page by 24.0413pt on input line 485.
+LaTeX Warning: Float too large for page by 24.0413pt on input line 489.
 
 
 LaTeX Warning: Reference `access-global-datasets' on page 21 undefined on input
- line 493.
+ line 497.
 
 
-LaTeX Warning: Reference `pivot' on page 21 undefined on input line 522.
+LaTeX Warning: Reference `pivot' on page 21 undefined on input line 526.
 
 
-LaTeX Warning: Reference `visualizer' on page 21 undefined on input line 522.
+LaTeX Warning: Reference `visualizer' on page 21 undefined on input line 526.
 
 
-LaTeX Warning: Reference `map' on page 21 undefined on input line 522.
+LaTeX Warning: Reference `map' on page 21 undefined on input line 526.
 
 [21] [22]
 
@@ -923,13 +933,13 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.537 \begin{FOO}
+l.541 \begin{FOO}
                   
 Here is how much of TeX's memory you used:
- 22788 strings out of 494894
- 431207 string characters out of 6173843
+ 22796 strings out of 494894
+ 431359 string characters out of 6173843
  514428 words of memory out of 5000000
- 26528 multiletter control sequences out of 15000+600000
+ 26534 multiletter control sequences out of 15000+600000
  545073 words of font info for 56 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  45i,5n,47p,808b,429s stack positions out of 5000i,500n,10000p,200000b,80000s

@@ -106,6 +106,10 @@
 \chapter*{Welcome}\label{welcome}}
 \addcontentsline{toc}{chapter}{Welcome}
 
+\includegraphics[width=2.78in]{./images/logo1}
+
+\includegraphics[width=5.93in]{./images/logo2}
+
 This is a technical guide for the IM Data Hub, \textbf{a work currently in progress by BAO systems intended for official release in \href{imdatahub.org}{production} by }\_\_\_\_
 
 \href{imdatahub.org}{\textbf{IM Data Hub}} is a warehouse for Impact Malaria indicator data. It houses all the IM indicator data for project monitoring and use. It is primarily designed with data users in mind, and so it comes with several tools specifically designed to enable monitoring and promote the use of IM data.
@@ -3374,45 +3378,198 @@ Aire de santé\strut
 \end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
 Facility\strut
 \end{minipage}\tabularnewline
+\begin{minipage}[t]{0.07\columnwidth}\raggedright
+Kenya\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
+County\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
+Sub-county\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
+Ward\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
+Facility\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.07\columnwidth}\raggedright
+Ghana\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
+Region\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
+District\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
+Sub-district\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
+Facility\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.07\columnwidth}\raggedright
+Mali\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
+Region\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
+District\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
+Aire de santé\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
+Facility\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.07\columnwidth}\raggedright
+Niger\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.07\columnwidth}\raggedright
+Sierra Leone\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
+Province\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
+District\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
+Chiefdom\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
+Facility\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.07\columnwidth}\raggedright
+Zambia\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
+Province\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
+District\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
+Facility\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
+/\strut
+\end{minipage}\tabularnewline
 \bottomrule
 \end{longtable}
 
-Kenya
-County
-Sub-county
-Ward
-Facility
-Ghana
-Region
-District
-Sub-district
-Facility
-Mali
-Region
-District
-Aire de santé
-Facility
-Niger
+The following is the Metadata endpoint for organization unit levels.
 
-Sierra Leone
-Province
-District
-Chiefdom
-Facility
-Zambia
-Province
-District
-Facility
-/
+\begin{FOO}
+\url{https://im-dev.psi-mis.org/api/organisationUnitLevels.json}
+\end{FOO}
+
+Next we'll talk about the OU groups and group sets.
+
+OU groups, OU group sets.
+
+IM Data Hub OUs consists of the following groups and group sets by countries and the type of facility.
+
+\label{tab:unnamed-chunk-15}A table showing OU groups and group set
+
+OU group set
+
+OU groups
+
+CM - Facility Type (OU Group set)
+
+CM CSI, CM Hopital, CM Unknown facility type, CM CMA
+
+CM - Ownership Type (OU Group set)
+
+CM Public
+
+ML - Facility Type (OU Group set)
+
+ML Hospital, ML CSCom, ML CSRef
+
+ML - Ownership Type (OU Group set)
+
+ML Public
+
+NE - Facility type
+
+NE CSI, NE Hopital
+
+NE - Ownership type
+
+NE Public
 
 \hypertarget{metadata}{%
 \section{Metadata}\label{metadata}}
 
-Metadata have \texttt{name}, \texttt{uid}, \texttt{code} at the minimum for uniquely identifying them in the hub. Others also contain \texttt{short\ names} for unique identification.
+IM Data Hub implements the following Metadata types.
 
-In the following sections, we discuss the \texttt{names}, \texttt{uid}, \texttt{code}, \texttt{short\ name} and \texttt{sharing\ setting} for different kinds of metadata in the data hub.
+\label{tab:unnamed-chunk-16}A table showing metadata types implimented in the IM Data Hub
 
-\#\#\#' data elements
+Metadata
+
+Description
+
+Data elements
+
+Description
+
+Data elements forms the basis of the IM Data Hub. They define what is recorded in the system.IM Data Hub data elements follows PSI DHIS2 standards for names and short names \& the IM Indicator matrix for the form names.
+
+For instance: IM CR - DX Suspected malaria cases is a data element that records suspected malaria cases
+
+Date element groups
+
+Description
+
+Data element groups provides a mechanism for classifying IM Data Hub data elements into a common theme.
+
+For instance: CD Supportive Supervision groups together all IM supportive supervision data elements. recorded in Congo
+
+Data sets
+
+Description
+
+Data reporting in the IM Data Hub is organized through the use of the use of data sets.
+
+A data set is a collection of data elements grouped together for data collection.
+
+For instance: IM Case Reporting is a data set used to report case reporting data globally
+
+Sections
+
+Description
+
+Section are used to split the IM Data Hub data sets into small reportable chunks known as modules.
+
+They allow for a bit more flexibility when it comes to using the tabular forms in DHIS2 and are quick and simple to design.
+
+For instance: Diagnosis, Treatment, MIP and Reporting are section within the IM Case Reporting data set
+
+Category combos
+
+Description
+
+Category combos are used to apply IM disaggregation onto the data elements and indicators.They allow multiple categories to be combined into a related set.
+
+For instance: IM PMP DX 1 - Percentage of confirmed malaria cases (NP) is disaggregated according to the following categories; CORE - Sex \textbar{} CORE - Parasitological test \textbar{} CORE - Age-group
+
+Periods
+
+Description
+
+IM Data Hub supports DHIS2 standard period types to report and analyze performance over time.
+
+For instance: 201901 to report on January of 2019
+
+Indicator
+
+Description
+
+Indicators allows the computation of IM data. They consist of a numerator, a denominator and a data element
+
+Indicator groups
+
+Description
+
+Similar to data elements groups, indicator groups - groups together IM indicator to allow easy access from the analytical tools
+
+For instance: KE PMP is an indicator group with all PMP indicators for Kenya
+
+\hypertarget{core-metadata}{%
+\section{Core Metadata}\label{core-metadata}}
+
+The following is a list of all IM data hub core metadata.
 
 \hypertarget{access}{%
 \chapter{Security Mechanism \& Access Model}\label{access}}

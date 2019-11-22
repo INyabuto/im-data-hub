@@ -7,6 +7,45 @@ output:
 
 #  Metadata Specification {#meta}
 
+```{r set up, include=FALSE}
+
+source("/Users/isaiahnyabuto/Documents/Workspace/utils.R")
+library(knitr)
+library(kableExtra)
+library(dplyr)
+library(plyr)
+
+
+baseurl <- "https://im-dev.psi-mis.org/"
+base <- substr(baseurl,9,26)
+usr <- keyringr::get_kc_account(base,type = "internet")
+pwd <- keyringr::decrypt_kc_pw(base, type = "internet")
+
+loginDHIS2(baseurl,usr,pwd)
+
+ou_group_set <- function(){
+  r <- GET(paste0(baseurl,"api/organisationUnitGroupSets?fields=name,organisationUnitGroups[name]"))
+  
+  set <- fromJSON(content(r,"text"))$organisationUnitGroupSets
+  
+  if (!is.null(set)){
+    # covert df to a string
+    set$organisationUnitGroups <- substring(as.character(set$organisationUnitGroups), regexpr("['\"']",
+                                                                                    as.character(set$organisationUnitGroups))+1)
+    
+    set$organisationUnitGroups <- str_remove_all(set$organisationUnitGroups,"[()\"']")
+    
+    names(set) <- c("OU group set", "OU groups")
+    set
+  }else{
+    ""
+  }
+
+  
+}
+
+```
+
 ## Introduction
 
 In the previous chapter, we learned about the IM & PMP indicators and how they are stored and constructed in the Data Hub. That is essential knowledge for you to start monitoring IM indicator data from the source to how they are presented in the IM Data Hub.
@@ -65,62 +104,69 @@ Country| Subnational level 1| Subnational level 2| Subnational level 3| Subnatio
 Cameroon| Region |District| Aire de santé| Facility
 Cote d’Ivoire| Region| District| Facility| /
 DRC| Province| Zone de santé | Aire de santé | Facility
-Kenya
-County
-Sub-county
-Ward
-Facility
-Ghana
-Region
-District
-Sub-district
-Facility
-Mali
-Region
-District
-Aire de santé
-Facility
-Niger
+Kenya | County | Sub-county | Ward | Facility
+Ghana | Region | District | Sub-district | Facility 
+Mali | Region | District | Aire de santé |Facility
+Niger | | | | 
+Sierra Leone | Province | District | Chiefdom | Facility
+Zambia | Province | District | Facility | /
 
+The following is the Metadata endpoint for organization unit levels.
+```{block, type = 'FOO'}
+https://im-dev.psi-mis.org/api/organisationUnitLevels.json
+```
 
+Next we’ll talk about the OU groups and group sets. 
 
+OU groups, OU group sets.
 
-
-
-
-
-Sierra Leone
-Province
-District
-Chiefdom
-Facility
-Zambia
-Province
-District
-Facility
-/
-
-
-
-
-
-
-
-## Metadata
-
-Metadata have `name`,  `uid`,  `code` at the minimum for uniquely identifying them in the hub. Others also contain `short names` for unique identification. 
-
-In the following sections, we discuss the `names`,  `uid`,  `code`,  `short name` and `sharing setting` for different kinds of metadata in the data hub.
-
-###' data elements
+IM Data Hub OUs consists of the following groups and group sets by countries and the type of facility.
 
 ```{r, echo=FALSE}
+
+#ou_groups <- data.frame(`Country (# of units)` = c("CD (<b>114</b>):", "CI (<b>777</b>):", "CM (<b>751</b>):",
+#                                                   "KE  (<b>1775</b>):", "GH (<b>7,948</b>):", "ML (<b>410</b>):",
+#"SL (<b>303</b>):", "ZM (<b>227</b>)"))
+
+kable(ou_group_set(), caption = "A table showing OU groups and group set") %>% kable_styling()
+
+
 
 ```
 
 
 
 
+## Metadata
 
+IM Data Hub implements the following Metadata types.
+
+```{r, echo=FALSE}
+
+metadata_types <- data.frame(`Metadata` = c("Data elements","Date element groups","Data sets",
+                                                 "Sections","Category combos","Periods", "Indicator", "Indicator groups"),
+                             `Description` = c("<h3>Description</h3></p>Data elements forms the basis of the IM Data Hub. They define what is recorded in the system.</p></p>IM Data Hub data elements follows PSI DHIS2 standards for names and short names & the IM Indicator matrix for the form names.</p><p>For instance: <em>IM CR - DX Suspected malaria cases</em> is a data element that records suspected malaria cases</p>
+",
+"<h3>Description</h3><p>Data element groups provides a mechanism for classifying IM Data Hub data elements into a common theme.</p></p>For instance: <em>CD Supportive Supervision</em> groups together all IM supportive supervision data elements. recorded in Congo</p>",
+"<h3>Description</h3></p>Data reporting in the IM Data Hub is organized through the use of the use of data sets.</p><p> A data set is a collection of data elements grouped together for data collection.</p><p> For instance: <em>IM Case Reporting</em> is a data set used to report case reporting data globally</p>
+",
+"<h3>Description</h3><p>Section are used to split the IM Data Hub data sets into small reportable chunks known as modules.</p> <p>They allow for a bit more flexibility when it comes to using the tabular forms in DHIS2 and are quick and simple to design.</p><p> For instance: <em>Diagnosis, Treatment, MIP and Reporting</em> are section within the IM Case Reporting data set</p>",
+"<h3>Description</h3><p>Category combos are used to apply IM disaggregation onto the data elements and indicators.They allow multiple categories to be combined into a related set.</p><p> For instance: <em>IM PMP DX 1  - Percentage of confirmed malaria cases (NP)</em> is disaggregated according to the following categories; <em>CORE - Sex | CORE - Parasitological test | CORE - Age-group</em>
+",
+"<h3>Description</h3><p>IM Data Hub supports DHIS2 standard period types to report and analyze performance over time.</p><p> For instance: <em>201901</em> to report on January of 2019 </p>
+",
+"<h3>Description</h3><p>Indicators allows the computation of IM data. They consist of a numerator, a denominator and a data element</p><p>",
+
+"<h3>Description</h3><p>Similar to data elements groups, indicator groups - groups together IM indicator to allow easy access from the analytical tools </p><p> For instance: <em>KE PMP</em> is an indicator group with all PMP indicators for Kenya </p>"),
+
+stringsAsFactors = F)
+
+kable(metadata_types, caption = "A table showing metadata types implimented in the IM Data Hub", escape = F) %>% kable_styling()
+```
+
+
+## Core Metadata
+
+The following is a list of all IM data hub core metadata.
 
 

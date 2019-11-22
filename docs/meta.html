@@ -112,6 +112,7 @@
 <li class="chapter" data-level="4.2.1" data-path="meta.html"><a href="meta.html#ou-trees"><i class="fa fa-check"></i><b>4.2.1</b> OU Trees</a></li>
 </ul></li>
 <li class="chapter" data-level="4.3" data-path="meta.html"><a href="meta.html#metadata"><i class="fa fa-check"></i><b>4.3</b> Metadata</a></li>
+<li class="chapter" data-level="4.4" data-path="meta.html"><a href="meta.html#core-metadata"><i class="fa fa-check"></i><b>4.4</b> Core Metadata</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="access.html"><a href="access.html"><i class="fa fa-check"></i><b>5</b> Security Mechanism &amp; Access Model</a><ul>
 <li class="chapter" data-level="5.1" data-path="access.html"><a href="access.html#introduction-3"><i class="fa fa-check"></i><b>5.1</b> Introduction</a></li>
@@ -225,41 +226,277 @@
 <td align="left">Aire de santé</td>
 <td align="left">Facility</td>
 </tr>
+<tr class="even">
+<td>Kenya</td>
+<td align="left">County</td>
+<td align="left">Sub-county</td>
+<td align="left">Ward</td>
+<td align="left">Facility</td>
+</tr>
+<tr class="odd">
+<td>Ghana</td>
+<td align="left">Region</td>
+<td align="left">District</td>
+<td align="left">Sub-district</td>
+<td align="left">Facility</td>
+</tr>
+<tr class="even">
+<td>Mali</td>
+<td align="left">Region</td>
+<td align="left">District</td>
+<td align="left">Aire de santé</td>
+<td align="left">Facility</td>
+</tr>
+<tr class="odd">
+<td>Niger</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td>Sierra Leone</td>
+<td align="left">Province</td>
+<td align="left">District</td>
+<td align="left">Chiefdom</td>
+<td align="left">Facility</td>
+</tr>
+<tr class="odd">
+<td>Zambia</td>
+<td align="left">Province</td>
+<td align="left">District</td>
+<td align="left">Facility</td>
+<td align="left">/</td>
+</tr>
 </tbody>
 </table>
-<p>Kenya
-County
-Sub-county
-Ward
-Facility
-Ghana
-Region
-District
-Sub-district
-Facility
-Mali
-Region
-District
-Aire de santé
-Facility
-Niger</p>
-<p>Sierra Leone
-Province
-District
-Chiefdom
-Facility
-Zambia
-Province
-District
-Facility
-/</p>
+The following is the Metadata endpoint for organization unit levels.
+<div class="FOO">
+<p>
+<a href="https://im-dev.psi-mis.org/api/organisationUnitLevels.json" class="uri">https://im-dev.psi-mis.org/api/organisationUnitLevels.json</a>
+</p>
+</div>
+<p>Next we’ll talk about the OU groups and group sets.</p>
+<p>OU groups, OU group sets.</p>
+<p>IM Data Hub OUs consists of the following groups and group sets by countries and the type of facility.</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-15">Table 4.1: </span>A table showing OU groups and group set
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+OU group set
+</th>
+<th style="text-align:left;">
+OU groups
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+CM - Facility Type (OU Group set)
+</td>
+<td style="text-align:left;">
+CM CSI, CM Hopital, CM Unknown facility type, CM CMA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CM - Ownership Type (OU Group set)
+</td>
+<td style="text-align:left;">
+CM Public
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ML - Facility Type (OU Group set)
+</td>
+<td style="text-align:left;">
+ML Hospital, ML CSCom, ML CSRef
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ML - Ownership Type (OU Group set)
+</td>
+<td style="text-align:left;">
+ML Public
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NE - Facility type
+</td>
+<td style="text-align:left;">
+NE CSI, NE Hopital
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NE - Ownership type
+</td>
+<td style="text-align:left;">
+NE Public
+</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <div id="metadata" class="section level2">
 <h2><span class="header-section-number">4.3</span> Metadata</h2>
-<p>Metadata have <code>name</code>, <code>uid</code>, <code>code</code> at the minimum for uniquely identifying them in the hub. Others also contain <code>short names</code> for unique identification.</p>
-<p>In the following sections, we discuss the <code>names</code>, <code>uid</code>, <code>code</code>, <code>short name</code> and <code>sharing setting</code> for different kinds of metadata in the data hub.</p>
-<p>###’ data elements</p>
+<p>IM Data Hub implements the following Metadata types.</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-16">Table 4.2: </span>A table showing metadata types implimented in the IM Data Hub
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Metadata
+</th>
+<th style="text-align:left;">
+Description
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Data elements
+</td>
+<td style="text-align:left;">
+<h3>
+Description
+</h3>
+Data elements forms the basis of the IM Data Hub. They define what is recorded in the system.IM Data Hub data elements follows PSI DHIS2 standards for names and short names &amp; the IM Indicator matrix for the form names.
+<p>
+For instance: <em>IM CR - DX Suspected malaria cases</em> is a data element that records suspected malaria cases
+</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Date element groups
+</td>
+<td style="text-align:left;">
+<h3>
+Description
+</h3>
+<p>
+Data element groups provides a mechanism for classifying IM Data Hub data elements into a common theme.
+</p>
+For instance: <em>CD Supportive Supervision</em> groups together all IM supportive supervision data elements. recorded in Congo
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Data sets
+</td>
+<td style="text-align:left;">
+<h3>
+Description
+</h3>
+Data reporting in the IM Data Hub is organized through the use of the use of data sets.
+<p>
+A data set is a collection of data elements grouped together for data collection.
+</p>
+<p>
+For instance: <em>IM Case Reporting</em> is a data set used to report case reporting data globally
+</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Sections
+</td>
+<td style="text-align:left;">
+<h3>
+Description
+</h3>
+<p>
+Section are used to split the IM Data Hub data sets into small reportable chunks known as modules.
+</p>
+<p>
+They allow for a bit more flexibility when it comes to using the tabular forms in DHIS2 and are quick and simple to design.
+</p>
+<p>
+For instance: <em>Diagnosis, Treatment, MIP and Reporting</em> are section within the IM Case Reporting data set
+</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Category combos
+</td>
+<td style="text-align:left;">
+<h3>
+Description
+</h3>
+<p>
+Category combos are used to apply IM disaggregation onto the data elements and indicators.They allow multiple categories to be combined into a related set.
+</p>
+<p>
+For instance: <em>IM PMP DX 1 - Percentage of confirmed malaria cases (NP)</em> is disaggregated according to the following categories; <em>CORE - Sex | CORE - Parasitological test | CORE - Age-group</em>
+</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Periods
+</td>
+<td style="text-align:left;">
+<h3>
+Description
+</h3>
+<p>
+IM Data Hub supports DHIS2 standard period types to report and analyze performance over time.
+</p>
+<p>
+For instance: <em>201901</em> to report on January of 2019
+</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Indicator
+</td>
+<td style="text-align:left;">
+<h3>
+Description
+</h3>
+<p>
+Indicators allows the computation of IM data. They consist of a numerator, a denominator and a data element
+</p>
+<p>
+</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Indicator groups
+</td>
+<td style="text-align:left;">
+<h3>
+Description
+</h3>
+<p>
+Similar to data elements groups, indicator groups - groups together IM indicator to allow easy access from the analytical tools
+</p>
+<p>
+For instance: <em>KE PMP</em> is an indicator group with all PMP indicators for Kenya
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="core-metadata" class="section level2">
+<h2><span class="header-section-number">4.4</span> Core Metadata</h2>
+<p>The following is a list of all IM data hub core metadata.</p>
 
 </div>
 </div>
