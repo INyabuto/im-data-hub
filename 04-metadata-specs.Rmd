@@ -1,10 +1,3 @@
----
-output:
-  bookdown::html_book:
-    includes:
-      in_header: style.css
----
-
 #  Metadata Specification {#meta}
 
 ```{r set up, include=FALSE}
@@ -66,10 +59,7 @@ Metadata has a name, uid, code that uniquely identifies the object in the hub. I
 
 All IM Data Hub metadata can be accessed individually by specifying their names or ids on the API endpoint. For example, the metadata for a data element with the short name `suspected malaria cases` is accessed at:
 
-```{block, type = 'FOO'}
-
-https://im-dev.psi-mis.org/api/29/dataElements/eHWYhy8vO8q.json
-```
+`https://im-dev.psi-mis.org/api/29/dataElements/eHWYhy8vO8q.json`
 
 In the following sections we discuss IM Data Hub metadata in three main groups; 
 
@@ -112,9 +102,8 @@ Sierra Leone | Province | District | Chiefdom | Facility
 Zambia | Province | District | Facility | /
 
 The following is the Metadata endpoint for organization unit levels.
-```{block, type = 'FOO'}
-https://im-dev.psi-mis.org/api/organisationUnitLevels.json
-```
+`https://im-dev.psi-mis.org/api/organisationUnitLevels.json`
+
 
 Next we’ll talk about the OU groups and group sets. 
 
@@ -137,8 +126,6 @@ kable(ou_group, caption = "A table showing OU groups and group set") %>% kable_s
 
 
 ```
-
-
 
 
 ## Metadata
@@ -172,5 +159,4 @@ kable(metadata_types, caption = "A table showing metadata types implimented in t
 ## Core Metadata
 
 The following is a list of all IM data hub core metadata.
-
 

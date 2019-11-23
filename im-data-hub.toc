@@ -1,0 +1,53 @@
+\contentsline {chapter}{Welcome}{5}{chapter*.2}% 
+\contentsline {chapter}{Preface}{7}{chapter*.3}% 
+\contentsline {section}{\numberline {0.1}What is IM Data Hub?}{7}{section.0.1}% 
+\contentsline {section}{\numberline {0.2}Who should read this guide?}{7}{section.0.2}% 
+\contentsline {section}{\numberline {0.3}What is covered in this guide.}{7}{section.0.3}% 
+\contentsline {section}{\numberline {0.4}What is not covered in this guide.}{8}{section.0.4}% 
+\contentsline {section}{\numberline {0.5}Conventions}{8}{section.0.5}% 
+\contentsline {subsection}{\numberline {0.5.1}Data Sets}{8}{subsection.0.5.1}% 
+\contentsline {subsection}{\numberline {0.5.2}Data Elements}{8}{subsection.0.5.2}% 
+\contentsline {subsection}{\numberline {0.5.3}Indicators}{9}{subsection.0.5.3}% 
+\contentsline {section}{\numberline {0.6}Acknowledgement}{9}{section.0.6}% 
+\contentsline {chapter}{\numberline {1}Introduction}{11}{chapter.1}% 
+\contentsline {section}{\numberline {1.1}Background}{11}{section.1.1}% 
+\contentsline {subsection}{\numberline {1.1.1}Purpose}{11}{subsection.1.1.1}% 
+\contentsline {subsection}{\numberline {1.1.2}Servers}{12}{subsection.1.1.2}% 
+\contentsline {section}{\numberline {1.2}Getting Started}{12}{section.1.2}% 
+\contentsline {chapter}{\numberline {2}Understanding IM Data Hub}{15}{chapter.2}% 
+\contentsline {section}{\numberline {2.1}Introduction}{15}{section.2.1}% 
+\contentsline {section}{\numberline {2.2}Reporting Component}{15}{section.2.2}% 
+\contentsline {subsection}{\numberline {2.2.1}Global datasets}{16}{subsection.2.2.1}% 
+\contentsline {subsubsection}{\numberline {2.2.1.1}Accessing Global Datasets}{18}{subsubsection.2.2.1.1}% 
+\contentsline {subsection}{\numberline {2.2.2}Country Specific Datasets}{19}{subsection.2.2.2}% 
+\contentsline {subsubsection}{\numberline {2.2.2.1}Accessing Country Specific Datasets}{21}{subsubsection.2.2.2.1}% 
+\contentsline {section}{\numberline {2.3}Data Mining Component}{21}{section.2.3}% 
+\contentsline {subsection}{\numberline {2.3.1}Pivot Tables}{21}{subsection.2.3.1}% 
+\contentsline {chapter}{\numberline {3}Impact Malaria Data Specification}{25}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}Introduction}{25}{section.3.1}% 
+\contentsline {section}{\numberline {3.2}Data Elements}{25}{section.3.2}% 
+\contentsline {section}{\numberline {3.3}Counts}{26}{section.3.3}% 
+\contentsline {section}{\numberline {3.4}Indicators}{26}{section.3.4}% 
+\contentsline {subsection}{\numberline {3.4.1}Global IM indicators}{26}{subsection.3.4.1}% 
+\contentsline {subsection}{\numberline {3.4.2}Country IM indicators}{43}{subsection.3.4.2}% 
+\contentsline {subsubsection}{\numberline {3.4.2.1}Kenya}{43}{subsubsection.3.4.2.1}% 
+\contentsline {subsubsection}{\numberline {3.4.2.2}Ghana}{52}{subsubsection.3.4.2.2}% 
+\contentsline {subsubsection}{\numberline {3.4.2.3}Congo}{64}{subsubsection.3.4.2.3}% 
+\contentsline {subsubsection}{\numberline {3.4.2.4}Mali}{66}{subsubsection.3.4.2.4}% 
+\contentsline {chapter}{\numberline {4}Metadata Specification}{79}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}Introduction}{79}{section.4.1}% 
+\contentsline {section}{\numberline {4.2}Organization Units (OU)}{80}{section.4.2}% 
+\contentsline {subsection}{\numberline {4.2.1}OU Trees}{80}{subsection.4.2.1}% 
+\contentsline {section}{\numberline {4.3}Metadata}{81}{section.4.3}% 
+\contentsline {section}{\numberline {4.4}Core Metadata}{83}{section.4.4}% 
+\contentsline {chapter}{\numberline {5}Security Mechanism \& Access Model}{85}{chapter.5}% 
+\contentsline {section}{\numberline {5.1}Introduction}{85}{section.5.1}% 
+\contentsline {section}{\numberline {5.2}Security Mechanism}{85}{section.5.2}% 
+\contentsline {subsection}{\numberline {5.2.1}Authentication Mechanisms}{85}{subsection.5.2.1}% 
+\contentsline {subsubsection}{\numberline {5.2.1.1}Basic Authentication}{86}{subsubsection.5.2.1.1}% 
+\contentsline {subsubsection}{\numberline {5.2.1.2}OAuth 2 Authentication}{86}{subsubsection.5.2.1.2}% 
+\contentsline {section}{\numberline {5.3}Access Model}{86}{section.5.3}% 
+\contentsline {subsection}{\numberline {5.3.1}User roles}{86}{subsection.5.3.1}% 
+\contentsline {chapter}{\numberline {6}Customization \& Troubleshooting IM Datahub}{89}{chapter.6}% 
+\contentsline {section}{\numberline {6.1}Introduction}{89}{section.6.1}% 
+\contentsline {section}{\numberline {6.2}Adding new objects in the datahub.}{89}{section.6.2}% 
