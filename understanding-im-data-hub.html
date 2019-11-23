@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 2 Understanding IM Data Hub | Impact Malaria Data Hub Specifications</title>
+  <meta name="description" content="This is a technical specification of the Impact Malaria Data Hub." />
+  <meta name="generator" content="bookdown 0.13.2 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 2 Understanding IM Data Hub | Impact Malaria Data Hub Specifications" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is a technical specification of the Impact Malaria Data Hub." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 2 Understanding IM Data Hub | Impact Malaria Data Hub Specifications" />
+  
+  <meta name="twitter:description" content="This is a technical specification of the Impact Malaria Data Hub." />
+  
+
+<meta name="author" content="Isaiah Nyabuto, Cristina Lussiana" />
+
+
+<meta name="date" content="2019-11-18" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="intro.html"/>
+<link rel="next" href="impact-malaria-data-specification.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">IM Data Hub Tech Specs</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a></li>
+<li class="chapter" data-level="" data-path="preface.html"><a href="preface.html"><i class="fa fa-check"></i>Preface</a><ul>
+<li class="chapter" data-level="0.1" data-path="preface.html"><a href="preface.html#what-is-this-guide"><i class="fa fa-check"></i><b>0.1</b> What is this guide?</a></li>
+<li class="chapter" data-level="0.2" data-path="preface.html"><a href="preface.html#who-should-read-this-guide"><i class="fa fa-check"></i><b>0.2</b> Who should read this guide?</a></li>
+<li class="chapter" data-level="0.3" data-path="preface.html"><a href="preface.html#what-is-covered."><i class="fa fa-check"></i><b>0.3</b> What is covered.</a></li>
+<li class="chapter" data-level="0.4" data-path="preface.html"><a href="preface.html#conventions"><i class="fa fa-check"></i><b>0.4</b> Conventions</a><ul>
+<li class="chapter" data-level="0.4.1" data-path="preface.html"><a href="preface.html#data-sets"><i class="fa fa-check"></i><b>0.4.1</b> Data Sets</a></li>
+<li class="chapter" data-level="0.4.2" data-path="preface.html"><a href="preface.html#data-elements"><i class="fa fa-check"></i><b>0.4.2</b> Data Elements</a></li>
+<li class="chapter" data-level="0.4.3" data-path="preface.html"><a href="preface.html#indicators"><i class="fa fa-check"></i><b>0.4.3</b> Indicators</a></li>
+</ul></li>
+<li class="chapter" data-level="0.5" data-path="preface.html"><a href="preface.html#acknowledgement"><i class="fa fa-check"></i><b>0.5</b> Acknowledgement</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#background"><i class="fa fa-check"></i><b>1.1</b> Background</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="intro.html"><a href="intro.html#purpose"><i class="fa fa-check"></i><b>1.1.1</b> Purpose</a></li>
+<li class="chapter" data-level="1.1.2" data-path="intro.html"><a href="intro.html#servers"><i class="fa fa-check"></i><b>1.1.2</b> Servers</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#getting-started"><i class="fa fa-check"></i><b>1.2</b> Getting Started</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="understanding-im-data-hub.html"><a href="understanding-im-data-hub.html"><i class="fa fa-check"></i><b>2</b> Understanding IM Data Hub</a><ul>
+<li class="chapter" data-level="2.1" data-path="understanding-im-data-hub.html"><a href="understanding-im-data-hub.html#introduction"><i class="fa fa-check"></i><b>2.1</b> Introduction</a></li>
+<li class="chapter" data-level="2.2" data-path="understanding-im-data-hub.html"><a href="understanding-im-data-hub.html#reporting-component"><i class="fa fa-check"></i><b>2.2</b> Reporting Component</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="understanding-im-data-hub.html"><a href="understanding-im-data-hub.html#global-datasets"><i class="fa fa-check"></i><b>2.2.1</b> Global datasets</a></li>
+<li class="chapter" data-level="2.2.2" data-path="understanding-im-data-hub.html"><a href="understanding-im-data-hub.html#country-specific-datasets"><i class="fa fa-check"></i><b>2.2.2</b> Country Specific Datasets</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="impact-malaria-data-specification.html"><a href="impact-malaria-data-specification.html"><i class="fa fa-check"></i><b>3</b> Impact Malaria Data Specification</a><ul>
+<li class="chapter" data-level="3.1" data-path="impact-malaria-data-specification.html"><a href="impact-malaria-data-specification.html#introduction-1"><i class="fa fa-check"></i><b>3.1</b> Introduction</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="metadata-specification.html"><a href="metadata-specification.html"><i class="fa fa-check"></i><b>4</b> Metadata Specification</a><ul>
+<li class="chapter" data-level="4.1" data-path="metadata-specification.html"><a href="metadata-specification.html#introduction-2"><i class="fa fa-check"></i><b>4.1</b> Introduction</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="customization-troubleshooting-im-data-hub.html"><a href="customization-troubleshooting-im-data-hub.html"><i class="fa fa-check"></i><b>5</b> Customization &amp; Troubleshooting IM Data Hub</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Impact Malaria Data Hub Specifications</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="understanding-im-data-hub" class="section level1">
+<h1><span class="header-section-number">Chapter 2</span> Understanding IM Data Hub</h1>
+<div id="introduction" class="section level2">
+<h2><span class="header-section-number">2.1</span> Introduction</h2>
+<p>Now that you’re already started and you’ve got some essential background about IM Data Hub, we are going to explore the details/components that form IM Data Hub.</p>
+<p>As we saw in the previous chapter, IM Data Hub is not just a database; it’s a project monitoring system. It’s divided into components; whose primary goal is to monitor IM indicator data for action.</p>
+<p>We’ll dive deeper into the components and understand how they are set up in the Hub.</p>
+<p>Understanding IM Data Hub components will allow you to report, analyse, and monitor IM indicators more effectively.</p>
+<p>I’ll start by showing the you reporting component, IM Data Hub uses data sets to collect indicator data. We will discuss them briefly in the next section. We will then walk through the data mining piece, and how the different outputs are pulled together on a dashboard for the project use. We’ll wind up by exploring the data quality component and how the IM indicator data pass through the quality checks.</p>
+<!-- Reporting Component --->
+</div>
+<div id="reporting-component" class="section level2">
+<h2><span class="header-section-number">2.2</span> Reporting Component</h2>
+<p>Reporting is organized through the use of data sets. A data set is simply a list of data elements that are grouped for data collection. We’ll talk more about data elements in the next chapter.</p>
+<p>A data set has a reporting period and an organization unit. The reporting period specifies how the data is reported, i.e., monthly, or quarterly, while the organization unit determines the location “where” the information is collected.</p>
+<p>IM Data Hub has two main types of data sets;</p>
+<ol style="list-style-type: decimal">
+<li>Global data sets for reporting IM indicators. You will learn more about this in section 2.3</li>
+<li>Country specific data set for reporting PMP indicators. You will learn more about this in section 2.4</li>
+</ol>
+<p>The data sets are accessible through the data entry app, and they appear as forms. They are designed to mimic the paper forms to allow ease of data entry/reporting process.</p>
+<p><img src="images/data-entry-app.png" width="118" /></p>
+<div id="global-datasets" class="section level3">
+<h3><span class="header-section-number">2.2.1</span> Global datasets</h3>
+<p>Global datasets are accessible at a global level and are used to report IM indicators on a monthly and quarterly basis.</p>
+<p>They consist of five data sets, which all begin with the [project code] followed by the [data set name] as shown below in yellow. (Fig 2)</p>
+<p><img src="images/im%20datasets.png" width="485" /></p>
+<p>Global datasets are divided into sections (in grey) that groups IM data elements into multiple subheadings for ease of data collection.</p>
+<p>There are five main sections:</p>
+<ol style="list-style-type: decimal">
+<li>Diagnosis</li>
+<li>Treatment</li>
+<li>MIP</li>
+<li>Technical leadership</li>
+<li>Seasonal Malaria Chemoprevention</li>
+</ol>
+<p>We will talk about them in chapter 4.</p>
+<div id="accessing-global-datasets." class="section level4">
+<h4><span class="header-section-number">2.2.1.1</span> Accessing Global Datasets.</h4>
+<ol style="list-style-type: decimal">
+<li>If you haven’t already logged in yet, please log in now at:</li>
+</ol>
+<p><a href="https://im-dev.psi-mis.org/dhis-web-dataentry/index.action">IM Data Hub demo</a></p>
+<p><code>Username</code> :<strong><code>demoUser</code></strong> and <code>Password</code> : <strong><code>Temp1234!</code></strong></p>
+<ol start="2" style="list-style-type: decimal">
+<li><p>Search for the Data Entry App from Apps
+<img src="images/data-entry-app2.png" width="550" /></p></li>
+<li><p>Click on the test world on top left if not already selected</p></li>
+<li><p>Select <code>IM Case Reporting</code> data set and the period to report; this case October 2019.</p></li>
+<li><p>Wait for the data entry form to load, and check that you can see the same screen as in Fig. 5 below. Congratulations! You can now start reporting..</p></li>
+</ol>
+<p>Before completing the records, please notice the <code>Run validation</code> button at the top right. We will talk about this in section 6.</p>
+<p>The complete button submits the records into the data hub.</p>
+</div>
+</div>
+<div id="country-specific-datasets" class="section level3">
+<h3><span class="header-section-number">2.2.2</span> Country Specific Datasets</h3>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="impact-malaria-data-specification.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/02-components.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["im-data-hub.pdf", "im-data-hub.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
