@@ -13,6 +13,8 @@ script:
   - ./_build.sh
   - ./_deploy.sh
 
+sudo: false
+
 cache:
   packages: yes
   directories:

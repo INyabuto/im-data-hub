@@ -1,20 +1,21 @@
 # Impact Malaria Data Specification {#data}
 <!-- SET UP -->
 ```{r setup, include=FALSE}
-
-source("/Users/isaiahnyabuto/Documents/Workspace/utils.R")
+load("./hub.RData")
+# source("/Users/isaiahnyabuto/Documents/Workspace/utils.R")
 library(knitr)
 library(kableExtra)
 library(dplyr)
-library(plyr)
+library(stringr)
+#library(plyr)
 
-
-baseurl <- "https://im-dev.psi-mis.org/"
-base <- substr(baseurl,9,26)
-usr <- keyringr::get_kc_account(base,type = "internet")
-pwd <- keyringr::decrypt_kc_pw(base, type = "internet")
-
-loginDHIS2(baseurl,usr,pwd)
+# 
+# baseurl <- "https://im-dev.psi-mis.org/"
+# base <- substr(baseurl,9,26)
+# usr <- keyringr::get_kc_account(base,type = "internet")
+# pwd <- keyringr::decrypt_kc_pw(base, type = "internet")
+# 
+# loginDHIS2(baseurl,usr,pwd)
 
 pack <- function(x, pattern){
   x <- which(str_detect(x,pattern))
@@ -83,20 +84,23 @@ We present to you a list of all the IM indicators in section \@ref(global-ind)
 
 ```{r, echo=FALSE}
 
-r <- GET(paste0(baseurl,"api/indicators.json?filter=name:ilike:PMP&paging=false&fields=name,shortName,code,numeratorDescription,numerator,denominatorDescription,denominator,indicatorType[name]"))
+# r <- GET(paste0(baseurl,"api/indicators.json?filter=name:ilike:PMP&paging=false&fields=name,shortName,code,numeratorDescription,numerator,denominatorDescription,denominator,indicatorType[name]"))
+# 
+# im_ind <- fromJSON(content(r,"text"))$indicators
+# 
+# im_ind$count <- im_ind$indicatorType$name
 
-im_ind <- fromJSON(content(r,"text"))$indicators
+# save(im_ind, file = "./hub.RData")
+load("./hub.RData")
 
-im_ind$count <- im_ind$indicatorType$name
-
-im_ind <- im_ind %>%
-  mutate(numerator2 = paste("id", numerator, sep = " : "))  %>%
-  mutate(numerator3 = paste(numeratorDescription, numerator2, sep = "<br/>")) %>%
-  mutate(denominator2 = paste("id", denominator, sep = " : "))  %>%
-  mutate(denominator3 = paste(denominatorDescription, denominator2, sep = "<br/>")) %>%
-  select(code,name,shortName,numerator3,denominator3,count)
-
-names(im_ind) <- c("code","name","shortName","numerator","denominator","count")
+# im_ind <- im_ind %>%
+#   mutate(numerator2 = paste("id", numerator, sep = " : "))  %>%
+#   mutate(numerator3 = paste(numeratorDescription, numerator2, sep = "<br/>")) %>%
+#   mutate(denominator2 = paste("id", denominator, sep = " : "))  %>%
+#   mutate(denominator3 = paste(denominatorDescription, denominator2, sep = "<br/>")) %>%
+#   select(code,name,shortName,numerator3,denominator3,count)
+# 
+# names(im_ind) <- c("code","name","shortName","numerator","denominator","count")
 
 im_ind_global <- im_ind %>%
   filter(startsWith(name, "IM"))
@@ -123,6 +127,8 @@ kable(im_ind_global, escape = F) %>%
 #### Kenya
 
 ```{r, echo=FALSE}
+load("./hub.RData")
+
 im_ind_kenya <- im_ind %>%
   filter(startsWith(name,"KE"))
 
@@ -140,6 +146,7 @@ im_ind_kenya %>%
 #### Ghana
 
 ```{r, echo=FALSE}
+load("./hub.RData")
 
 im_ind_ghana <- im_ind %>%
   filter(startsWith(name,"GH"))
@@ -158,6 +165,8 @@ im_ind_ghana %>%
 #### Congo
 
 ```{r, echo=FALSE}
+load("./hub.RData")
+
 im_ind_congo <- im_ind %>%
   filter(startsWith(name,"CD"))
 
@@ -175,6 +184,8 @@ im_ind_congo %>%
 #### Mali
 
 ```{r, echo=FALSE}
+
+load("./hub.RData")
 
 im_ind_mali <- im_ind %>%
   filter(startsWith(name,"ML"))

@@ -8,41 +8,41 @@ output:
 #  Metadata Specification {#meta}
 
 ```{r set up, include=FALSE}
-
+load("./hub.RData")
 source("/Users/isaiahnyabuto/Documents/Workspace/utils.R")
 library(knitr)
 library(kableExtra)
 library(dplyr)
-library(plyr)
+#library(plyr)
 
 
-baseurl <- "https://im-dev.psi-mis.org/"
-base <- substr(baseurl,9,26)
-usr <- keyringr::get_kc_account(base,type = "internet")
-pwd <- keyringr::decrypt_kc_pw(base, type = "internet")
-
-loginDHIS2(baseurl,usr,pwd)
-
-ou_group_set <- function(){
-  r <- GET(paste0(baseurl,"api/organisationUnitGroupSets?fields=name,organisationUnitGroups[name]"))
-  
-  set <- fromJSON(content(r,"text"))$organisationUnitGroupSets
-  
-  if (!is.null(set)){
-    # covert df to a string
-    set$organisationUnitGroups <- substring(as.character(set$organisationUnitGroups), regexpr("['\"']",
-                                                                                    as.character(set$organisationUnitGroups))+1)
-    
-    set$organisationUnitGroups <- str_remove_all(set$organisationUnitGroups,"[()\"']")
-    
-    names(set) <- c("OU group set", "OU groups")
-    set
-  }else{
-    ""
-  }
-
-  
-}
+# baseurl <- "https://im-dev.psi-mis.org/"
+# base <- substr(baseurl,9,26)
+# usr <- keyringr::get_kc_account(base,type = "internet")
+# pwd <- keyringr::decrypt_kc_pw(base, type = "internet")
+# 
+# loginDHIS2(baseurl,usr,pwd)
+# 
+# ou_group_set <- function(){
+#   r <- GET(paste0(baseurl,"api/organisationUnitGroupSets?fields=name,organisationUnitGroups[name]"))
+# 
+#   set <- fromJSON(content(r,"text"))$organisationUnitGroupSets
+# 
+#   if (!is.null(set)){
+#     # covert df to a string
+#     set$organisationUnitGroups <- substring(as.character(set$organisationUnitGroups), regexpr("['\"']",
+#                                                                                     as.character(set$organisationUnitGroups))+1)
+# 
+#     set$organisationUnitGroups <- str_remove_all(set$organisationUnitGroups,"[()\"']")
+# 
+#     names(set) <- c("OU group set", "OU groups")
+#     set
+#   }else{
+#     ""
+#   }
+# 
+# 
+# }
 
 ```
 
@@ -123,12 +123,16 @@ OU groups, OU group sets.
 IM Data Hub OUs consists of the following groups and group sets by countries and the type of facility.
 
 ```{r, echo=FALSE}
-
+load("./hub.RData")
 #ou_groups <- data.frame(`Country (# of units)` = c("CD (<b>114</b>):", "CI (<b>777</b>):", "CM (<b>751</b>):",
 #                                                   "KE  (<b>1775</b>):", "GH (<b>7,948</b>):", "ML (<b>410</b>):",
 #"SL (<b>303</b>):", "ZM (<b>227</b>)"))
 
-kable(ou_group_set(), caption = "A table showing OU groups and group set") %>% kable_styling()
+# ou_group <- ou_group_set()
+# save(ou_group, file = "./hub.RData")
+
+resave(ou_group,file = "./hub.RData")
+kable(ou_group, caption = "A table showing OU groups and group set") %>% kable_styling()
 
 
 
