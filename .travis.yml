@@ -3,7 +3,7 @@ pandoc_version: 1.19.2.1
 
 env:
   global:
-    - secure: A_LONG_ENCRYPTED_STRING
+    - secure: "MJXPFNtwQb+4D45cFH9UgmrbkqtRC997dkH5sBohSgJlWYBdtv7esyEaQVXOCnhg5bEKMNmjHhQ+XasgdCuqe/lVu3OVMWrrTLh5b3DpEAAEuf3cN06ZqYfdooaHjRxfTJEegmw1vlAZQ6XDoADdyv5w93x1GKnq01lE02Z37YIhBXRMXQBBiooUMKgGj4vJymwq25rvUV8xLiiNYJ9mDHrUowtGZgJiB+oVyVA3bndd7H83fVD57XTCRWuDIjgT/EBUitaQ3O8HmxtVnd7cwQU6dDJ2H/t/cywY4mM7RbZFFbr/JHcRtR2308oGyvdmItwMRKi1Gg4ooAHQLmMuJveWHkqVPrcWQAaRbGSBXvJnqHQl959lyNnESFDMIBM/9H2NqrNA8JYYCHoLSTtGOCUH4uolT9YY5Cl1KXm28hP6eh24voIU2MX6SV8WEpK3BAgdzlBdUyRjGkZ4uAQyL9qIb1YoEFxqqVE349mTxv/qvJJb7YdO81kfPXmoFogACaCmiN3W0mJPWGGPh2oE+oTteFt8koLPH8da6sKXqf263ZRrMz+rucHj4VWPSxb2xXvKII3roPntTA4j42K7rS1ikIrEaJ2E4tBbhZMb+fn33Dmkmt1QcSufoWIj2lihmAKrBfhhH7jr02JyKIM6TyX4ChYrx2c3QJJpaJbAZtY="
 
 before_script:
   - chmod +x ./_build.sh
@@ -12,3 +12,8 @@ before_script:
 script:
   - ./_build.sh
   - ./_deploy.sh
+
+cache:
+  packages: yes
+  directories:
+    - $TRAVIS_BUILD_DIR/_bookdown_files
