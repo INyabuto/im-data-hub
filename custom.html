@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Preface | Impact Malaria Data Hub Specifications</title>
+  <title>6 Customization &amp; Troubleshooting IM Datahub | Impact Malaria Data Hub Specifications</title>
   <meta name="description" content="This is a technical specification of the Impact Malaria Data Hub." />
   <meta name="generator" content="bookdown 0.16.1 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Preface | Impact Malaria Data Hub Specifications" />
+  <meta property="og:title" content="6 Customization &amp; Troubleshooting IM Datahub | Impact Malaria Data Hub Specifications" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="INyabuto/im-data-hub" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Preface | Impact Malaria Data Hub Specifications" />
+  <meta name="twitter:title" content="6 Customization &amp; Troubleshooting IM Datahub | Impact Malaria Data Hub Specifications" />
   
   <meta name="twitter:description" content="This is a technical specification of the Impact Malaria Data Hub." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="intro.html"/>
+<link rel="prev" href="access.html"/>
+
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -150,126 +150,22 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="preface" class="section level1 unnumbered">
-<h1>Preface</h1>
-<div id="what-is-im-data-hub" class="section level2">
-<h2><span class="header-section-number">0.1</span> What is IM Data Hub?</h2>
-<p>Impact Maria (IM) Data Hub is a project monitoring system used to collect, analyze, and report Impact Malaria indicator data. IM Data Hub is where all the IM data lives.</p>
-<p>It’s built on DHIS2 core software, and it supports HNQIS (1.4) compatibility.</p>
+<div id="custom" class="section level1">
+<h1><span class="header-section-number">6</span> Customization &amp; Troubleshooting IM Datahub</h1>
+<div id="introduction-4" class="section level2">
+<h2><span class="header-section-number">6.1</span> Introduction</h2>
+<p>As IM datahub continues to be rolled out or used actively in multiple countries, data requirements increase, and so does the need to customize and maintain objects in the datahub.</p>
+<p>Customization involves setting up new objects or components, while maintenance, this case refers to the process of taking care of the already existing objects or components in the datahub.</p>
+<p>Maintenance requires an assessment of the current set up to detect flaws or breakages. It is for the overall improvement of the system.</p>
+<p>In this chapter, we cover the process of adding new objects and troubleshooting or maintaining existing objects in the data hub. We’ll also discuss getting help on IM datahub.</p>
 </div>
-<div id="who-should-read-this-guide" class="section level2">
-<h2><span class="header-section-number">0.2</span> Who should read this guide?</h2>
-<p>This guide is aimed at two main audiences.</p>
-<ul>
-<li>System Administrators who are involved in the administration or the daily operation of IM Data Hub.</li>
-<li>Project teams &amp; M&amp;E staff interested to learn more about the IM Data Hub. You will find this helpful in understanding the overall system set up and how different components work together in the system.</li>
-</ul>
-</div>
-<div id="what-is-covered-in-this-guide." class="section level2">
-<h2><span class="header-section-number">0.3</span> What is covered in this guide.</h2>
-<p>The guide is divided into seven chapters.</p>
+<div id="adding-new-objects-in-the-datahub." class="section level2">
+<h2><span class="header-section-number">6.2</span> Adding new objects in the datahub.</h2>
+<p>There are two ways you can add new objects in the data hub.</p>
 <ol style="list-style-type: decimal">
-<li>Introduction - offers some background information, basic setup, and how to get started on IM Data Hub quickly.</li>
-<li>Understanding IM Data Hub Components - explores the basic set up to provide an understanding of the different components and how they function.</li>
-<li>Data Specification - `builds on the understanding of IM Data Hub components and talks about the IM indicators and data reporting.</li>
-<li>Metadata Specifications - dives into the data specification and the system components and talks about what lies at the bottom, the metadata.</li>
-<li>Security and Access Model - Explains the security mechanisms and access model.</li>
-<li>Customization &amp; Troubleshooting - Guides the customization, troubleshooting, and how to get help on IM Data Hub.</li>
-<li>Appendix -</li>
+<li>From the user interface</li>
+<li>Using blueprints</li>
 </ol>
-</div>
-<div id="what-is-not-covered-in-this-guide." class="section level2">
-<h2><span class="header-section-number">0.4</span> What is not covered in this guide.</h2>
-<p>The focus of this guide is to walk you through the technical specification of the IM Data Hub. We attempt to showcase some best practices in configuring, testing, troubleshooting, reporting, monitoring, or use of data in the IM Data Hub. However, still, you need other references to master these essential skill sets.</p>
-</div>
-<div id="conventions" class="section level2">
-<h2><span class="header-section-number">0.5</span> Conventions</h2>
-<p>This guide follows the following document conventions.</p>
-<table>
-<thead>
-<tr class="header">
-<th>Abbreviation</th>
-<th align="left">In Full</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>CR</td>
-<td align="left">Case Reporting</td>
-</tr>
-<tr class="even">
-<td>IM</td>
-<td align="left">Impact Malaria</td>
-</tr>
-<tr class="odd">
-<td>SS</td>
-<td align="left">Supportive Supervision</td>
-</tr>
-<tr class="even">
-<td>TR</td>
-<td align="left">Training</td>
-</tr>
-<tr class="odd">
-<td>TL</td>
-<td align="left">Technical Leadership</td>
-</tr>
-<tr class="even">
-<td>SMC</td>
-<td align="left">Seasonal Malaria Chemoprophylaxis</td>
-</tr>
-<tr class="odd">
-<td>DX</td>
-<td align="left">Diagnosis</td>
-</tr>
-<tr class="even">
-<td>TX</td>
-<td align="left">Treatment</td>
-</tr>
-<tr class="odd">
-<td>MIP</td>
-<td align="left">Malaria In Pregnancy</td>
-</tr>
-<tr class="even">
-<td>CS</td>
-<td align="left">Country Specific</td>
-</tr>
-<tr class="odd">
-<td>RE</td>
-<td align="left">Reporting</td>
-</tr>
-<tr class="even">
-<td>PMP</td>
-<td align="left">Performance Management Plan</td>
-</tr>
-</tbody>
-</table>
-<div id="data-sets" class="section level3">
-<h3><span class="header-section-number">0.5.1</span> Data Sets</h3>
-<p>Data set: [<code>country ISO code</code>] [<code>program</code>]:</p>
-<p>Examples;</p>
-<ul>
-<li>GH Supportive Supervision</li>
-<li>CD Case Reporting |Data set: [country ISO code] [Data entry form name]</li>
-</ul>
-</div>
-<div id="data-elements" class="section level3">
-<h3><span class="header-section-number">0.5.2</span> Data Elements</h3>
-<p>DEs: [<code>country ISO code</code>] [<code>program abbreviation</code>] - [<code>section abbreviation</code>] [<code>DE Form name</code>]:</p>
-<p>Examples;</p>
-<ul>
-<li>GH CR - DX Cases confirmed</li>
-<li>CD TL - DX Does this province have national malaria diagnostic supervision tools that adhere to global standards?</li>
-</ul>
-</div>
-<div id="indicators" class="section level3">
-<h3><span class="header-section-number">0.5.3</span> Indicators</h3>
-<p>Indicators: [<code>country ISO code</code>] [<code>PMP</code>] - [<code>section abbreviation</code>] [<code>Indicator name</code>]:</p>
-<p>Example;</p>
-<p>CD PMP - DX Percentage of health workers demonstrating competence in malaria microscopy</p>
-</div>
-</div>
-<div id="acknowledgement" class="section level2">
-<h2><span class="header-section-number">0.6</span> Acknowledgement</h2>
 
 </div>
 </div>
@@ -278,8 +174,8 @@
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="intro.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="access.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -310,7 +206,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/INyabuto/im-data-hub/edit/master/index.Rmd",
+"link": "https://github.com/INyabuto/im-data-hub/edit/master/06-customization.Rmd",
 "text": "Edit"
 },
 "history": {

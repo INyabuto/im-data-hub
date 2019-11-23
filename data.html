@@ -1,0 +1,4700 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>3 Impact Malaria Data Specification | Impact Malaria Data Hub Specifications</title>
+  <meta name="description" content="This is a technical specification of the Impact Malaria Data Hub." />
+  <meta name="generator" content="bookdown 0.16.1 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="3 Impact Malaria Data Specification | Impact Malaria Data Hub Specifications" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is a technical specification of the Impact Malaria Data Hub." />
+  <meta name="github-repo" content="INyabuto/im-data-hub" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="3 Impact Malaria Data Specification | Impact Malaria Data Hub Specifications" />
+  
+  <meta name="twitter:description" content="This is a technical specification of the Impact Malaria Data Hub." />
+  
+
+<meta name="author" content="Isaiah Nyabuto, Cristina Lussiana" />
+
+
+<meta name="date" content="2019-11-23" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="comp.html"/>
+<link rel="next" href="meta.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">IM Data Hub Tech Specs</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a></li>
+<li class="chapter" data-level="" data-path="preface.html"><a href="preface.html"><i class="fa fa-check"></i>Preface</a><ul>
+<li class="chapter" data-level="0.1" data-path="preface.html"><a href="preface.html#what-is-im-data-hub"><i class="fa fa-check"></i><b>0.1</b> What is IM Data Hub?</a></li>
+<li class="chapter" data-level="0.2" data-path="preface.html"><a href="preface.html#who-should-read-this-guide"><i class="fa fa-check"></i><b>0.2</b> Who should read this guide?</a></li>
+<li class="chapter" data-level="0.3" data-path="preface.html"><a href="preface.html#what-is-covered-in-this-guide."><i class="fa fa-check"></i><b>0.3</b> What is covered in this guide.</a></li>
+<li class="chapter" data-level="0.4" data-path="preface.html"><a href="preface.html#what-is-not-covered-in-this-guide."><i class="fa fa-check"></i><b>0.4</b> What is not covered in this guide.</a></li>
+<li class="chapter" data-level="0.5" data-path="preface.html"><a href="preface.html#conventions"><i class="fa fa-check"></i><b>0.5</b> Conventions</a><ul>
+<li class="chapter" data-level="0.5.1" data-path="preface.html"><a href="preface.html#data-sets"><i class="fa fa-check"></i><b>0.5.1</b> Data Sets</a></li>
+<li class="chapter" data-level="0.5.2" data-path="preface.html"><a href="preface.html#data-elements"><i class="fa fa-check"></i><b>0.5.2</b> Data Elements</a></li>
+<li class="chapter" data-level="0.5.3" data-path="preface.html"><a href="preface.html#indicators"><i class="fa fa-check"></i><b>0.5.3</b> Indicators</a></li>
+</ul></li>
+<li class="chapter" data-level="0.6" data-path="preface.html"><a href="preface.html#acknowledgement"><i class="fa fa-check"></i><b>0.6</b> Acknowledgement</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#background"><i class="fa fa-check"></i><b>1.1</b> Background</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="intro.html"><a href="intro.html#purpose"><i class="fa fa-check"></i><b>1.1.1</b> Purpose</a></li>
+<li class="chapter" data-level="1.1.2" data-path="intro.html"><a href="intro.html#servers"><i class="fa fa-check"></i><b>1.1.2</b> Servers</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#getting-started"><i class="fa fa-check"></i><b>1.2</b> Getting Started</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="comp.html"><a href="comp.html"><i class="fa fa-check"></i><b>2</b> Understanding IM Data Hub</a><ul>
+<li class="chapter" data-level="2.1" data-path="comp.html"><a href="comp.html#introduction"><i class="fa fa-check"></i><b>2.1</b> Introduction</a></li>
+<li class="chapter" data-level="2.2" data-path="comp.html"><a href="comp.html#reporting-component"><i class="fa fa-check"></i><b>2.2</b> Reporting Component</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="comp.html"><a href="comp.html#global-dataset"><i class="fa fa-check"></i><b>2.2.1</b> Global datasets</a></li>
+<li class="chapter" data-level="2.2.2" data-path="comp.html"><a href="comp.html#country-dataset"><i class="fa fa-check"></i><b>2.2.2</b> Country Specific Datasets</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="comp.html"><a href="comp.html#data-mining-component"><i class="fa fa-check"></i><b>2.3</b> Data Mining Component</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="comp.html"><a href="comp.html#pivot"><i class="fa fa-check"></i><b>2.3.1</b> Pivot Tables</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>3</b> Impact Malaria Data Specification</a><ul>
+<li class="chapter" data-level="3.1" data-path="data.html"><a href="data.html#introduction-1"><i class="fa fa-check"></i><b>3.1</b> Introduction</a></li>
+<li class="chapter" data-level="3.2" data-path="data.html"><a href="data.html#data-elements-1"><i class="fa fa-check"></i><b>3.2</b> Data Elements</a></li>
+<li class="chapter" data-level="3.3" data-path="data.html"><a href="data.html#counts"><i class="fa fa-check"></i><b>3.3</b> Counts</a></li>
+<li class="chapter" data-level="3.4" data-path="data.html"><a href="data.html#ind"><i class="fa fa-check"></i><b>3.4</b> Indicators</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="data.html"><a href="data.html#global-ind"><i class="fa fa-check"></i><b>3.4.1</b> Global IM indicators</a></li>
+<li class="chapter" data-level="3.4.2" data-path="data.html"><a href="data.html#country-ind"><i class="fa fa-check"></i><b>3.4.2</b> Country IM indicators</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="meta.html"><a href="meta.html"><i class="fa fa-check"></i><b>4</b> Metadata Specification</a><ul>
+<li class="chapter" data-level="4.1" data-path="meta.html"><a href="meta.html#introduction-2"><i class="fa fa-check"></i><b>4.1</b> Introduction</a></li>
+<li class="chapter" data-level="4.2" data-path="meta.html"><a href="meta.html#organization-units-ou"><i class="fa fa-check"></i><b>4.2</b> Organization Units (OU)</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="meta.html"><a href="meta.html#ou-trees"><i class="fa fa-check"></i><b>4.2.1</b> OU Trees</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="meta.html"><a href="meta.html#metadata"><i class="fa fa-check"></i><b>4.3</b> Metadata</a></li>
+<li class="chapter" data-level="4.4" data-path="meta.html"><a href="meta.html#core-metadata"><i class="fa fa-check"></i><b>4.4</b> Core Metadata</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="access.html"><a href="access.html"><i class="fa fa-check"></i><b>5</b> Security Mechanism &amp; Access Model</a><ul>
+<li class="chapter" data-level="5.1" data-path="access.html"><a href="access.html#introduction-3"><i class="fa fa-check"></i><b>5.1</b> Introduction</a></li>
+<li class="chapter" data-level="5.2" data-path="access.html"><a href="access.html#security-mechanism"><i class="fa fa-check"></i><b>5.2</b> Security Mechanism</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="access.html"><a href="access.html#authentication-mechanisms"><i class="fa fa-check"></i><b>5.2.1</b> Authentication Mechanisms</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="access.html"><a href="access.html#access-model"><i class="fa fa-check"></i><b>5.3</b> Access Model</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="access.html"><a href="access.html#user-roles"><i class="fa fa-check"></i><b>5.3.1</b> User roles</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="custom.html"><a href="custom.html"><i class="fa fa-check"></i><b>6</b> Customization &amp; Troubleshooting IM Datahub</a><ul>
+<li class="chapter" data-level="6.1" data-path="custom.html"><a href="custom.html#introduction-4"><i class="fa fa-check"></i><b>6.1</b> Introduction</a></li>
+<li class="chapter" data-level="6.2" data-path="custom.html"><a href="custom.html#adding-new-objects-in-the-datahub."><i class="fa fa-check"></i><b>6.2</b> Adding new objects in the datahub.</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Impact Malaria Data Hub Specifications</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="data" class="section level1">
+<h1><span class="header-section-number">3</span> Impact Malaria Data Specification</h1>
+<!-- SET UP -->
+<div id="introduction-1" class="section level2">
+<h2><span class="header-section-number">3.1</span> Introduction</h2>
+<p>IM data is specified through the use indicators. Indicators consist of a numerator, denominator, and a count. The numerator and denominator are data elements, and the count specifies the applied operation. Counts can be a percentage, a number, or a ratio.</p>
+<p>In this chapter, we are going to explore the IM indicators and how they are constructed in the Data Hub.</p>
+<p>We’ll start by a short introduction to data elements and how they form the base/source of the IM indicators. We’ll then explore the different counts and wind up by showing you all the IM indicators.</p>
+</div>
+<div id="data-elements-1" class="section level2">
+<h2><span class="header-section-number">3.2</span> Data Elements</h2>
+<p>Data elements form the base of IM indicators. As we mentioned in the previous chapter, they define how IM data are collected and stored in the Data Hub.</p>
+<p>IM Data hub consists of: Global data elements - are shared across a number of countries. Country specific data elements - used by specified country data sets.</p>
+<p>IM data elements are grouped by country and programs for easy access from the pivot table, data visualizer and maps app.</p>
+<p>The data elements have the following key fields;</p>
+<ol style="list-style-type: decimal">
+<li><code>uid, name, shortName, and code</code> for uniquely identifying the data element in the data hub.</li>
+<li><code>description</code> to document more information about the data point.</li>
+<li><code>formName</code> that appears on the data entry form.</li>
+<li><code>domainType</code> that specifies the data model - aggregate or tracker.</li>
+<li><code>aggregationType</code> defines how data is stored in the data hub.</li>
+</ol>
+<p>More about data elements can be found at.</p>
+<p><code>http://im-dev.psi-mis.org/api/schemas/dataElement.json</code></p>
+<p>For now please note the <code>uid,name,shortName and formName</code> we will discuss these in section <a href="data.html#global-ind">3.4.1</a> and section <a href="data.html#country-ind">3.4.2</a>.</p>
+</div>
+<div id="counts" class="section level2">
+<h2><span class="header-section-number">3.3</span> Counts</h2>
+<p>Counts define the operation applied to IM indicators calculations.</p>
+<p>There are four main types of operations;</p>
+<ol style="list-style-type: decimal">
+<li><code>1 - Atomic (number)</code> - absolute numbers</li>
+<li><code>1 - Ratio</code> - a fraction of the numerator and denominator</li>
+<li><code>100 - percent</code> - a ratio multiplied by 100 percent.</li>
+<li><code>1000 - per thousand</code> - a ratio multiplied by 1000</li>
+</ol>
+</div>
+<div id="ind" class="section level2">
+<h2><span class="header-section-number">3.4</span> Indicators</h2>
+<p>Remember that an indicator has a numerator, a denominator and a count. In this section, you will notice that similar to data elements, indicators also have the uid, short name and code to uniquely identifying them in the hub.</p>
+<p>IM Data Hub indicators are grtouped into two;</p>
+<p>Global IM indicators - computes PMP data for global access. Country Specific (PMP) indicators - computes PMP data for country access.</p>
+<p>We present to you a list of all the IM indicators in section <a href="data.html#global-ind">3.4.1</a></p>
+<div id="global-ind" class="section level3">
+<h3><span class="header-section-number">3.4.1</span> Global IM indicators</h3>
+<table class="table" style="font-size: 7px; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+code
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+name
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+shortName
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+numerator
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+denominator
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+count
+</th>
+</tr>
+</thead>
+<tbody>
+<tr grouplength="18">
+<td colspan="6" style="border-bottom: 1px solid;">
+<strong>DX indicators</strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+IM PMP DX 01
+</td>
+<td style="text-align:left;">
+IM PMP DX 01 - Percentage of confirmed malaria cases
+</td>
+<td style="text-align:left;">
+IM PMP DX 01 - % of confirmed cases
+</td>
+<td style="text-align:left;">
+Number of cases confirmed as malaria by a parasitological test (RDT or microscopy)<br>id : #{UFGPsP6p9mm} + #{cZuXXzQuEL6} + #{EIkFrm5x8Sf} + #{gIFzQQKCMjb}
+</td>
+<td style="text-align:left;">
+Total number of suspected malaria cases who received a parasitological test<br>id : #{N6j1f9LZiLf} + #{zsUZQV4CAd6} + #{BAZd7D3zQHN} + #{Rf40G3xMCqI}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+IM PMP DX 01 NP
+</td>
+<td style="text-align:left;">
+IM PMP DX 01 - Percentage of confirmed malaria cases (NP)
+</td>
+<td style="text-align:left;">
+IM PMP DX 01 - % of confirmed cases (NP)
+</td>
+<td style="text-align:left;">
+Number of cases confirmed as malaria by a parasitological test (RDT or microscopy)<br>id : #{sZoMIJ8KFiw}
+</td>
+<td style="text-align:left;">
+Total number of suspected malaria cases who received a parasitological test<br>id : #{uZWRcBbXVO5}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+IM PMP DX 01 P
+</td>
+<td style="text-align:left;">
+IM PMP DX 01 - Percentage of confirmed malaria cases (P)
+</td>
+<td style="text-align:left;">
+IM PMP DX 01 - % of confirmed cases (P)
+</td>
+<td style="text-align:left;">
+Number of cases confirmed as malaria by a parasitological test (RDT or microscopy)<br>id : #{CrV5hkFVvdH}
+</td>
+<td style="text-align:left;">
+Total number of suspected malaria cases who received a parasitological test<br>id : #{hoGKdACnBUs}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+IM PMP DX 02
+</td>
+<td style="text-align:left;">
+IM PMP DX 02 - Percentage of patients with suspected malaria who received a parasitological test
+</td>
+<td style="text-align:left;">
+IM PMP DX 02 - % of suspected cases tested
+</td>
+<td style="text-align:left;">
+Number of suspected malaria cases who received a parasitological test<br>id : #{N6j1f9LZiLf} + #{BAZd7D3zQHN} + #{zsUZQV4CAd6} + #{Rf40G3xMCqI}
+</td>
+<td style="text-align:left;">
+Total number of suspected cases of malaria<br>id : #{eHWYhy8vO8q} + #{euw633Z8zIo} + #{m2CdUYVjGe5} + #{LMMJ97M5sVl}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+IM PMP DX 02 NP
+</td>
+<td style="text-align:left;">
+IM PMP DX 02 - Percentage of patients with suspected malaria who received a parasitological test (NP)
+</td>
+<td style="text-align:left;">
+IM PMP DX 02 - % of suspected cases tested (NP)
+</td>
+<td style="text-align:left;">
+Number of suspected malaria cases who received a parasitological test<br>id : #{uZWRcBbXVO5}
+</td>
+<td style="text-align:left;">
+Total number of suspected cases of malaria<br>id : #{DGZDsRtmqL7}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+IM PMP DX 02 P
+</td>
+<td style="text-align:left;">
+IM PMP DX 02- Percentage of patients with suspected malaria who received a parasitological test (P)
+</td>
+<td style="text-align:left;">
+IM PMP DX 02 - % of suspected cases tested (P)
+</td>
+<td style="text-align:left;">
+Number of suspected malaria cases who received a parasitological test<br>id : #{hoGKdACnBUs}
+</td>
+<td style="text-align:left;">
+Total number of suspected cases of malaria<br>id : #{erW9vdRJVSE}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+IM PMP DX 03
+</td>
+<td style="text-align:left;">
+IM PMP DX 03 - Percentage of health workers demonstrating competence in correctly classifying cases as not malaria, uncomplicated malaria, and severe malaria
+</td>
+<td style="text-align:left;">
+IM PMP DX 03 - % of HWs able to classify cases
+</td>
+<td style="text-align:left;">
+Number of health workers who demonstrate correct procedures for correctly classifying cases according to global standards<br>id : #{Grnm6jdzAJI} + #{t1vdNH0vIE2} + #{cVUt7HK83ag} + #{vXZ2RDwuyzA}
+</td>
+<td style="text-align:left;">
+Total number of health workers targeted during the reporting period<br>id : #{SZKdCBFJd96} + #{blbz5pmEqoF} + #{pgsaevmKtbM} + #{ytbfyxZr1Ya}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+IM PMP DX 04
+</td>
+<td style="text-align:left;">
+IM PMP DX 04 - Percentage of health workers demonstrating competence in malaria RDTs
+</td>
+<td style="text-align:left;">
+IM PMP DX 04 - % of HWs competent in RDTs
+</td>
+<td style="text-align:left;">
+Number of health workers who score 90% or greater in preparation and reading of RDTs during the training post-test<br>id : #{Mfkn1qCEQEL} + #{TDBa7IcPJAN} + #{eEWSWmY9ghg} + #{s5Ys2ABMGgE}
+</td>
+<td style="text-align:left;">
+Total number of health workers who completed a post-test during a training<br>id : #{bWQoETmKYEh} + #{rSn9x2JQPJe} + #{soWdw75XP5d} + #{QniAsU4SnZr}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+IM PMP DX 05
+</td>
+<td style="text-align:left;">
+IM PMP DX 05 - Percentage of health workers demonstrating competence in malaria microscopy
+</td>
+<td style="text-align:left;">
+IM PMP DX 05 - % of HWs competent in microscopy
+</td>
+<td style="text-align:left;">
+Number of health workers who score 90% or greater in slide preparation and parasite detection during the training post-test<br>id : #{mYlff5bXuZB} + #{x7CZVlQSaE6} + #{JygaBsHMOQ0} + #{jf8nKluaF2h}
+</td>
+<td style="text-align:left;">
+Total number of health workers who completed a post-test during a training<br>id : #{f959MLmYSiX} + #{VdW9y4M8WAK} + #{XenaBO47ky4} + #{om6201JM4BF}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+PMP DX 06
+</td>
+<td style="text-align:left;">
+IM PMP DX 06 - Percentage of targeted facilities that meet standards (including appropriate materials, documentation, and qualified staff) for quality diagnosis of malaria
+</td>
+<td style="text-align:left;">
+IM PMP DX 06 - % of facilities with quality DX
+</td>
+<td style="text-align:left;">
+Number of targeted facilities that meet 90% of greater on facility checklists for diagnosis during supervisory visits<br>id : #{DTdMcXDeHFj} + #{Gj8mqX5twDU} + #{VQT4EOtPiwC} + #{uykAN5XlXKK} + #{TLuXiPIlTDu} + #{lYVEbBi1otu}
+</td>
+<td style="text-align:left;">
+Total number of targeted facilities who received a supervisory visit during the reporting period<br>id : #{aRCKf2dnCpw} + #{oVIXBtQccHN} + #{teWZva5EkPM}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+PMP DX 07 MC
+</td>
+<td style="text-align:left;">
+IM PMP DX 07 - Percentage of targeted facilities with at least one provider trained in malaria diagnosis (microscopy)
+</td>
+<td style="text-align:left;">
+IM PMP DX 07 - % of facilities trained (microsc)
+</td>
+<td style="text-align:left;">
+0<br>id : #{JJ9yeyBfn5V} + #{RjcTcWjtJEh}
+</td>
+<td style="text-align:left;">
+0<br>id : #{VX2UY9s7UTQ}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+PMP DX 07 RDT
+</td>
+<td style="text-align:left;">
+IM PMP DX 07 - Percentage of targeted facilities with at least one provider trained in malaria diagnosis (RDT)
+</td>
+<td style="text-align:left;">
+IM PMP DX 07 - % of facilities trained on RDT
+</td>
+<td style="text-align:left;">
+Number of targeted facilities with one or more health workers trained in malaria diagnosis<br>id : #{GFDsEzfZdjr} + #{N6oAUOjFBF0} + #{g1KI3UhtDoJ}
+</td>
+<td style="text-align:left;">
+Total number of targeted facilities<br>id : #{VX2UY9s7UTQ} + #{YpbUdDBZjlA} + #{tWSq7bigbmf}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+PMP DX 08 MC
+</td>
+<td style="text-align:left;">
+IM PMP DX 08 - Percentage of targeted health workers trained in malaria laboratory diagnostics (microscopy)
+</td>
+<td style="text-align:left;">
+IM PMP DX 08 - % of HWs trained on (microscopy)
+</td>
+<td style="text-align:left;">
+Number of health workers who complete the training course in malaria laboratory diagnostics (microscopy)<br>id : #{f959MLmYSiX} + #{GCSv8Ni4KhE} + #{VdW9y4M8WAK} + #{XenaBO47ky4}
+</td>
+<td style="text-align:left;">
+Total number of targeted health workers<br>id : #{opuW5lGx2Cc} + #{CX09R9Mdsj9} + #{VcPN46GIkwA} + #{a2RpS8B1eCM}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+PMP DX 08 RDT
+</td>
+<td style="text-align:left;">
+IM PMP DX 08 - Percentage of targeted health workers trained in malaria laboratory diagnostics (RDT)
+</td>
+<td style="text-align:left;">
+IM PMP DX 08 - % of HWs trained on RDT
+</td>
+<td style="text-align:left;">
+Number of health workers who complete the training course in malaria laboratory diagnostics<br>id : #{bWQoETmKYEh} + #{rSn9x2JQPJe} + #{QniAsU4SnZr} + #{soWdw75XP5d}
+</td>
+<td style="text-align:left;">
+Total number of targeted health workers<br>id : #{opuW5lGx2Cc} + #{a2RpS8B1eCM} + #{CX09R9Mdsj9} + #{VcPN46GIkwA}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+PMP DX 09 MC
+</td>
+<td style="text-align:left;">
+IM PMP DX 09 - Percentage of targeted supervisors trained in supervision of malaria diagnostics (microscopy)
+</td>
+<td style="text-align:left;">
+IM PMP DX 09 - % of SUPVs trained on microscopy
+</td>
+<td style="text-align:left;">
+Number of supervisors trained in supervision of malaria diagnostics<br>id : #{RnEg1HPF7IR} + #{hbEgIBy1bIf} + #{zlWYhVAouup} + #{PgAauebV15e} + #{vg88HQNpSXz}
+</td>
+<td style="text-align:left;">
+Total number of targeted supervisors<br>id : #{cGXuIzDaAEP} + #{MFpS8w5h9XS} + #{pVyN8ZZT7TA} + #{aZpDapygzg1} + #{O8ilhnRgkRW}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+PMP DX 09 RDT
+</td>
+<td style="text-align:left;">
+IM PMP DX 09 - Percentage of targeted supervisors trained in supervision of malaria diagnostics (RDT)
+</td>
+<td style="text-align:left;">
+IM PMP DX 09 - % of SUPVs trained on RDT
+</td>
+<td style="text-align:left;">
+Number of supervisors trained in supervision of malaria diagnostics<br>id : #{rvPl8m8kted} + #{sRz3zlhaJrH} + #{jZmH2n22eJf} + #{oFiMCwBOYLU}
+</td>
+<td style="text-align:left;">
+Total number of targeted supervisors<br>id : #{cGXuIzDaAEP} + #{MFpS8w5h9XS} + #{pVyN8ZZT7TA} + #{aZpDapygzg1}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+PMP DX 10
+</td>
+<td style="text-align:left;">
+IM PMP DX 10 - Percentage of targeted countries with national malaria diagnostic supervision tools that adhere to global standards
+</td>
+<td style="text-align:left;">
+IM PMP DX 10 - % of countries with DX tools
+</td>
+<td style="text-align:left;">
+Number of targeted countries whose national malaria diagnostic supervision tools adhere to global standards<br>id : #{y2aPasQa1gl}
+</td>
+<td style="text-align:left;">
+Total number of targeted countries<br>id : #{y2aPasQa1gl} &gt;= 0
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+PMP DX 11
+</td>
+<td style="text-align:left;">
+IM PMP DX 11 - Percentage of targeted countries with national guidelines for malaria diagnosis that meet global standards
+</td>
+<td style="text-align:left;">
+IM PMP DX 11 - % of countries with DX guidelines
+</td>
+<td style="text-align:left;">
+Number of targeted countries with national guidelines for malaria diagnosis that meet global standards/<br>id : #{MUKvaz7q2CD}
+</td>
+<td style="text-align:left;">
+Total number of targeted countries<br>id : #{MUKvaz7q2CD} &gt;= 0
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr grouplength="9">
+<td colspan="6" style="border-bottom: 1px solid; padding-left: 2em;" indentlevel="1">
+<strong>MIP indicators</strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+PMP MIP 25
+</td>
+<td style="text-align:left;">
+IM PMP MIP 25 - Percentage of pregnant women who received an ITN during routine ANC
+</td>
+<td style="text-align:left;">
+IM PMP MIP 25 - % of pregnant women received ITN
+</td>
+<td style="text-align:left;">
+Number of pregnant women who received an insecticide-treated net (ITN) during routine antenatal care (ANC)<br>id : #{p4bKkXlEOtC} + #{jmLXEBQDZAy} + #{mEuLOT08NfK} + #{kZAWqatScJ9}
+</td>
+<td style="text-align:left;">
+Total number of pregnant women attending antenatal visits (Number of first ANC visits as proxy in most countries’ RHIS)<br>id : #{jNJNr4i82le} + #{IGyPotenyO2} + #{WdEGVnuWiDf} + #{KBe7hShEYAK}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+PMP MIP 26
+</td>
+<td style="text-align:left;">
+IM PMP MIP 26 - Percentage of pregnant women who received three or more doses of IPTp
+</td>
+<td style="text-align:left;">
+IM PMP MIP 26 - % of pregnant women with IPTp &gt;=3
+</td>
+<td style="text-align:left;">
+Number of pregnant women who received three or more doses of IPTp (IPT3)<br>id : #{IGhCODoV6YY} + #{RS90YaqGgUN} + #{lVRMHcwVnDf} + #{CFaVHFhbS4v}
+</td>
+<td style="text-align:left;">
+Total number of pregnant women attending antenatal visits (Number of first ANC visits as proxy in most countries’ RHIS)<br>id : #{jNJNr4i82le} + #{IGyPotenyO2} + #{WdEGVnuWiDf} + #{KBe7hShEYAK}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+PMP MIP 27
+</td>
+<td style="text-align:left;">
+IM PMP MIP 27 - Percentage of pregnant women who received two doses of IPTp
+</td>
+<td style="text-align:left;">
+IM PMP MIP 27 - % of pregnant women with IPTp = 2
+</td>
+<td style="text-align:left;">
+Number of pregnant women who received two doses of IPTp (IPT2)<br>id : #{Y73pLgWXfTh} + #{LF9PqTGXhBc} + #{inFlJdtBRGo} + #{SZgN28ZELh9}
+</td>
+<td style="text-align:left;">
+Total number of pregnant women attending antenatal visits (Number of first ANC visits as proxy in most countries’ RHIS)<br>id : #{jNJNr4i82le} + #{IGyPotenyO2} + #{WdEGVnuWiDf} + #{SZgN28ZELh9}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+PMP MIP 28
+</td>
+<td style="text-align:left;">
+IM PMP MIP 28 - Percentage of pregnant women who received one dose of IPTp
+</td>
+<td style="text-align:left;">
+IM PMP MIP 28 - % of pregnant women with IPTp = 1
+</td>
+<td style="text-align:left;">
+Number of pregnant women who received one dose of IPTp (IPT1)<br>id : #{i5xgliv1YDl} + #{qk8A67ySRR0} + #{jrvQeHC4vrr} + #{uuWSsTIrVtU}
+</td>
+<td style="text-align:left;">
+Total number of pregnant women attending antenatal visits (Number of first ANC visits as proxy in most countries’ RHIS)<br>id : #{jNJNr4i82le} + #{IGyPotenyO2} + #{WdEGVnuWiDf} + #{KBe7hShEYAK}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+PMP MIP 29
+</td>
+<td style="text-align:left;">
+IM PMP MIP 29 - Percentage of targeted health workers demonstrating competence in treatment of MiP
+</td>
+<td style="text-align:left;">
+IM PMP MIP 29 - % of HWs competent in MiP (TX)
+</td>
+<td style="text-align:left;">
+Number of health workers who score a pass mark on supervisory or quality improvement checklists measuring case management of MiP<br>id : #{vKOVZ3Jckex} + #{AkJUjEErkX5} + #{RJVSWuXI87o} + #{S2sRLkbN81y}
+</td>
+<td style="text-align:left;">
+Total number of targeted health workers who received a supervisory visit during the reporting period<br>id : #{t7LA2WZducS} + #{yOXzK6ElVJr} + #{gnjJPPJNSJF} + #{fJIele1NEHo}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+PMP MIP 30
+</td>
+<td style="text-align:left;">
+IM PMP MIP 30 - Percentage of targeted health workers demonstrating competence in prevention of MiP
+</td>
+<td style="text-align:left;">
+IM PMP MIP 30 - % of HWs competent in MiP (PREV)
+</td>
+<td style="text-align:left;">
+Number of health workers who score a pass mark on supervisory or quality improvement checklists measuring IPTp and counselling for MiP<br>id : #{aOenVQmDtkc}
+</td>
+<td style="text-align:left;">
+Total number of targeted health workers who received a supervisory visit during the reporting period<br>id : #{fpDelOtHjG4}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+PMP MIP 31
+</td>
+<td style="text-align:left;">
+IM PMP MIP 31 - Percentage of health workers trained in IPTp
+</td>
+<td style="text-align:left;">
+IM PMP MIP 31 - % of HWs trained on IPTp
+</td>
+<td style="text-align:left;">
+Number of health workers who complete the training course on IPTp<br>id : #{yQ11Q5pQ2lx} + #{CxioZ7hV8e9} + #{eEITioVuAGg} + #{jKtX2TrReqh}
+</td>
+<td style="text-align:left;">
+Total number of targeted health workers<br>id : #{yoNR9Ct37gT} + #{FVF9sYgBAH2} + #{wHuGUXeSGM8} + #{bf7z94n1SLP}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+PMP MIP 32
+</td>
+<td style="text-align:left;">
+IM PMP MIP 32 - Percentage of targeted countries with national guidelines for prevention and treatment of MiP that meet global standards
+</td>
+<td style="text-align:left;">
+IM PMP MIP 32 - % of countries with MiP guides
+</td>
+<td style="text-align:left;">
+Number of targeted countries with national guidelines for prevention and treatment of MiP that meet global standards<br>id : #{C0UniRKgGAG}
+</td>
+<td style="text-align:left;">
+Total number of targeted countries<br>id : #{C0UniRKgGAG}&gt;=0
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+PMP MIP 33
+</td>
+<td style="text-align:left;">
+IM PMP MIP 33 - Functional active RMNCH/MiP/ANC/community health Working Group
+</td>
+<td style="text-align:left;">
+IM PMP MIP 33 - Active HWGs
+</td>
+<td style="text-align:left;">
+Functional/active malaria/MiP/ANC/community health or RMNCH Working Group with a MiP lens that meets periodically<br>id : #{wHtxPnCGqBV}
+</td>
+<td style="text-align:left;">
+Functional/active malaria/MiP/ANC/community health or RMNCH Working Group with a MiP lens that meets periodically<br>id : #{wHtxPnCGqBV}&gt;=0
+</td>
+<td style="text-align:left;">
+1 - Atomic (number)
+</td>
+</tr>
+<tr grouplength="8">
+<td colspan="6" style="border-bottom: 1px solid;">
+<strong>SMC indicators</strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+PMP SMC 34
+</td>
+<td style="text-align:left;">
+IM PMP SMC 34 - Percentage of targeted children who receive all 4 doses of SMC in a round in intervention area (or all 3 per national guidance where only 3 doses are indicated)
+</td>
+<td style="text-align:left;">
+IM PMP SMC 34 - % of children received 4 doses
+</td>
+<td style="text-align:left;">
+Number of targeted children receiving all recommended SMC doses during a campaign, in the intervention area<br>id : #{ioU1w8yCIWv}
+</td>
+<td style="text-align:left;">
+Number of children in target age range in the intervention area<br>id : #{jAD6Dh7z1d1}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+PMP SMC 35
+</td>
+<td style="text-align:left;">
+IM PMP SMC 35 - Percentage of targeted children who receive a dose of SMC in intervention area
+</td>
+<td style="text-align:left;">
+IM PMP SMC 35 - % of children dosed
+</td>
+<td style="text-align:left;">
+Number of targeted children receiving a dose of SMC in the intervention area<br>id : #{cOBjDRbvsyW}
+</td>
+<td style="text-align:left;">
+Number of children in target age range in the intervention area<br>id : #{wr0GInmvDcB}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+PMP SMC 36
+</td>
+<td style="text-align:left;">
+IM PMP SMC 36 - Percentage of targeted children who receive a dose of SMC in the first cycle
+</td>
+<td style="text-align:left;">
+IM PMP SMC 36 - % of children dosed (cy. 1)
+</td>
+<td style="text-align:left;">
+Number of targeted children who received a dose of SMC during the first cycle<br>id : #{HaSIpoMB2ub}
+</td>
+<td style="text-align:left;">
+Number of children in target age range in the intervention area<br>id : #{pW2ZZhtd9Lz}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+PMP SMC 37
+</td>
+<td style="text-align:left;">
+IM PMP SMC 37 - Percentage of targeted children who receive a dose of SMC in the second cycle
+</td>
+<td style="text-align:left;">
+IM PMP SMC 37 - % of children dosed (cy. 2)
+</td>
+<td style="text-align:left;">
+Number of targeted children who received a dose of SMC during the second cycle<br>id : #{wot02J4aRZm}
+</td>
+<td style="text-align:left;">
+Number of children in target age range in the intervention area<br>id : #{AiA5kpzCOVw}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+PMP SMC 38
+</td>
+<td style="text-align:left;">
+IM PMP SMC 38 - Percentage of targeted children who receive a dose of SMC in the third cycle
+</td>
+<td style="text-align:left;">
+IM PMP SMC 38 - % of children dosed (cy. 3)
+</td>
+<td style="text-align:left;">
+Number of targeted children who received a dose of SMC during the third cycle<br>id : #{ZCibgANrNQq}
+</td>
+<td style="text-align:left;">
+Number of children in target age range in the intervention area<br>id : #{Q0hsAMcsvkm}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+PMP SMC 39
+</td>
+<td style="text-align:left;">
+IM PMP SMC 39 - Percentage of targeted children who receive a dose of SMC in the fourth cycle
+</td>
+<td style="text-align:left;">
+IM PMP SMC 39 - % of children dosed (cy. 4)
+</td>
+<td style="text-align:left;">
+Number of targeted children who received a dose of SMC during the fourth cycle<br>id : #{Q71hAveCSGo}
+</td>
+<td style="text-align:left;">
+Number of children in target age range in the intervention area<br>id : #{InNkmkUawo7}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+PMP SMC 40
+</td>
+<td style="text-align:left;">
+IM PMP SMC 40 - Percentage of health workers trained to deliver SMC according to national guidelines
+</td>
+<td style="text-align:left;">
+IM PMP SMC 40 - % of HWs trained on SMC
+</td>
+<td style="text-align:left;">
+Number of health workers who complete the training course on delivering SMC<br>id : #{y6qGAzE5DRa}
+</td>
+<td style="text-align:left;">
+Total number of targeted health workers<br>id : #{nE14FEYzkVX}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+PMP SMC 41
+</td>
+<td style="text-align:left;">
+IM PMP SMC 41 - Percentage of targeted countries with annual SMC implementation plans
+</td>
+<td style="text-align:left;">
+IM PMP SMC 41 - % of countries with ANN SMC plans
+</td>
+<td style="text-align:left;">
+Number of countries with annual operational SMC implementation plans<br>id : #{hBYYaPLEFFf}
+</td>
+<td style="text-align:left;">
+Total number of targeted countries anticipated to have plans<br>id : #{gN3w6Jx7q5h}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr grouplength="3">
+<td colspan="6" style="border-bottom: 1px solid;">
+<strong>TL indicators</strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+PMP TL 42
+</td>
+<td style="text-align:left;">
+IM PMP TL 42 - Contribution to national, regional or global guidance/policy documents related to malaria (including RH)
+</td>
+<td style="text-align:left;">
+IM PMP TL 42 - Contribution
+</td>
+<td style="text-align:left;">
+Contribution to national, regional guidance/policy documents or related to malaria (including RH)<br>id : #{tJXmW64MUxf}
+</td>
+<td style="text-align:left;">
+Contribution to national, regional guidance/policy documents or related to malaria (including RH)<br>id : 1
+</td>
+<td style="text-align:left;">
+1 - Atomic (number)
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+PMP TL 43
+</td>
+<td style="text-align:left;">
+IM PMP TL 43 - Number of program activity outputs disseminated to the global health community
+</td>
+<td style="text-align:left;">
+IM PMP TL 43 - Outputs to GH community
+</td>
+<td style="text-align:left;">
+By type of output (activity reports, operational research/evaluation reports, technical briefs, learning briefs, synthesis brief, discussion brief, infographic, case studies, peer-reviewed publications, webinars, oral/poster presentations, blog posts, short video clips, photos) By dissemination channel<br>id : #{P4YDP2FNh3X}
+</td>
+<td style="text-align:left;">
+By type of output (activity reports, operational research/evaluation reports, technical briefs, learning briefs, synthesis brief, discussion brief, infographic, case studies, peer-reviewed publications, webinars, oral/poster presentations, blog posts, short video clips, photos) By dissemination channel<br>id : 1
+</td>
+<td style="text-align:left;">
+1 - Atomic (number)
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+PMP TL 44
+</td>
+<td style="text-align:left;">
+IM PMP TL 44 - Participation in targeted national, regional or global level Working group(s) and/or taskforce(s)
+</td>
+<td style="text-align:left;">
+IM PMP TL 44 - Participation in TWGs.
+</td>
+<td style="text-align:left;">
+Participation in national, regional or global working group(s) or taskforce(s) related to malaria (including RH)<br>id : #{XxfoDreiw9Z}
+</td>
+<td style="text-align:left;">
+Participation in national, regional or global working group(s) or taskforce(s) related to malaria (including RH)<br>id : 1
+</td>
+<td style="text-align:left;">
+1 - Atomic (number)
+</td>
+</tr>
+<tr grouplength="18">
+<td colspan="6" style="border-bottom: 1px solid;">
+<strong>TX indicators</strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+PMP TX 12
+</td>
+<td style="text-align:left;">
+IM PMP TX 12 - Percentage of children under 5 appropriately treated for fever according to iCCM or country algorithms by community health workers
+</td>
+<td style="text-align:left;">
+IM PMP TX 12 - % of CU5 fever treated
+</td>
+<td style="text-align:left;">
+Number of children under 5 correctly treated for malaria fever by community health worker<br>id : #{sYGiQi29bny} + #{sHbqsn1y9zL}
+</td>
+<td style="text-align:left;">
+Number of CU5 presented to CHWs with fever<br>id : #{jQCXu21pwiA} + #{pGLrWpOTB1m}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+PMP TX 13
+</td>
+<td style="text-align:left;">
+IM PMP TX 13 - Percentage of confirmed severe malaria cases that were appropriately managed according to national guidelines
+</td>
+<td style="text-align:left;">
+IM PMP TX 13 - % of confirmed severe cases
+</td>
+<td style="text-align:left;">
+Number of confirmed severe malaria cases that were appropriately managed according to national guidelines<br>id : #{WY24SnaT4l7}
+</td>
+<td style="text-align:left;">
+Number of severe malaria cases reviewed<br>id : #{WY24SnaT4l7}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+PMP TX 13 NP
+</td>
+<td style="text-align:left;">
+IM PMP TX 13 - Percentage of confirmed severe malaria cases that were appropriately managed according to national guidelines (NP)
+</td>
+<td style="text-align:left;">
+IM PMP TX 13 - % of confirmed severe cases (NP)
+</td>
+<td style="text-align:left;">
+Number of confirmed severe malaria cases that were appropriately managed according to national guidelines (NP)<br>id : #{W6NdGzWJurN}
+</td>
+<td style="text-align:left;">
+Number of severe malaria cases reviewed (NP)<br>id : #{W6NdGzWJurN}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+PMP TX 13 P
+</td>
+<td style="text-align:left;">
+IM PMP TX 13 - Percentage of confirmed severe malaria cases that were appropriately managed according to national guidelines (P)
+</td>
+<td style="text-align:left;">
+IM PMP TX 13 - % of confirmed severe cases (P)
+</td>
+<td style="text-align:left;">
+Number of confirmed severe malaria cases that were appropriately managed according to national guidelines (P)<br>id : #{h5toMEwrcCi}
+</td>
+<td style="text-align:left;">
+Number of severe malaria cases reviewed (P)<br>id : #{h5toMEwrcCi}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+PMP TX 14
+</td>
+<td style="text-align:left;">
+IM PMP TX 14 - Percentage of uncomplicated malaria cases that received first-line antimalarial treatment according to national guidelines
+</td>
+<td style="text-align:left;">
+IM PMP TX 14 - % of uncomplicated cases
+</td>
+<td style="text-align:left;">
+Number of reported uncomplicated malaria cases that receive the appropriate first-line antimalarial treatment<br>id : #{Aj2LczZnc35} + #{JLxVyp3qGve} + #{V6CvG07Copy} + #{i4BsFSVy41V}
+</td>
+<td style="text-align:left;">
+Total number of reported malaria cases during reporting period<br>id : #{UFGPsP6p9mm} + #{PoyoVEewRIq} + #{EIkFrm5x8Sf} + #{cZuXXzQuEL6} + #{gIFzQQKCMjb} + #{y8geJquiy1f} + #{E04lKfKFlKc}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+PMP TX 14 NP
+</td>
+<td style="text-align:left;">
+IM PMP TX 14 - Percentage of uncomplicated malaria cases that received first-line antimalarial treatment according to national guidelines (NP)
+</td>
+<td style="text-align:left;">
+IM PMP TX 14 - % of uncomplicated cases (NP)
+</td>
+<td style="text-align:left;">
+Number of reported uncomplicated malaria cases that receive the appropriate first-line antimalarial treatment (NP)<br>id : #{RYl937S07k0} + #{n9YAgSwzX8J} + #{Jz05wiLIOae}
+</td>
+<td style="text-align:left;">
+Total number of reported malaria cases during reporting period<br>id : #{sZoMIJ8KFiw}+#{RnZK9U6WoAm}+ #{WuWNNgy0A1Z} + #{rKatBh8TmW2} + #{KcMPvVefT1h}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+PMP TX 14 P
+</td>
+<td style="text-align:left;">
+IM PMP TX 14 - Percentage of uncomplicated malaria cases that received first-line antimalarial treatment according to national guidelines (P)
+</td>
+<td style="text-align:left;">
+IM PMP TX 14 - % of uncomplicated cases (P)
+</td>
+<td style="text-align:left;">
+Number of reported uncomplicated malaria cases that receive the appropriate first-line antimalarial treatment<br>id : #{Ldvf3MSggqO} + #{KZHiYuvgkMm} + #{PfB1cg2ktB9}
+</td>
+<td style="text-align:left;">
+Total number of reported malaria cases during reporting period<br>id : #{CrV5hkFVvdH} + #{qXQ0d9NKQtI} + #{AmUi4XKbJ6X} + #{HiIx2iQ8Wxy} + #{YMiDfYBOpWk} + #{RfziOIqzJCP}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+PMP TX 14 P (CL)
+</td>
+<td style="text-align:left;">
+IM PMP TX 14 - Percentage of uncomplicated malaria cases that received first-line antimalarial treatment according to national guidelines (P) (CL)
+</td>
+<td style="text-align:left;">
+IM PMP TX 14 - % of uncomplicated cases (P) (CL)
+</td>
+<td style="text-align:left;">
+Number of reported uncomplicated malaria cases that receive the appropriate first-line antimalarial treatment<br>id : #{Ldvf3MSggqO}
+</td>
+<td style="text-align:left;">
+Total number of reported malaria cases during reporting period<br>id : #{CrV5hkFVvdH} + #{qXQ0d9NKQtI}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+PMP TX 15
+</td>
+<td style="text-align:left;">
+IM PMP TX 15 - Percentage of targeted health workers demonstrating competence in management of severe malaria
+</td>
+<td style="text-align:left;">
+IM PMP TX 15 - % of HWs competent in severe cases
+</td>
+<td style="text-align:left;">
+Number of health workers who score a pass mark on supervisory or quality improvement checklists measuring the diagnosis and management of severe malaria<br>id : #{QYPXt95CyCY} + #{es8NwgtSAsX} + #{lomzmDp50ZG} + #{Ct1pZ0T1x2R}
+</td>
+<td style="text-align:left;">
+Health workers assessed on diagnosis and management of severe malaria<br>id : #{W4wiC7ioFKS} + #{b3GBk3DB8ou} + #{g0OQgJCDs0U} + #{WNhkeZnc1XT}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+PMP TX 16
+</td>
+<td style="text-align:left;">
+IM PMP TX 16 - Percentage of targeted health workers demonstrating competence in management of uncomplicated malaria
+</td>
+<td style="text-align:left;">
+IM PMP TX 16 - % of HWs competent (uncomp cases)
+</td>
+<td style="text-align:left;">
+Number of health workers who score a pass mark on supervisory or quality improvement checklists measuring the diagnosis and treatment of uncomplicated malaria<br>id : #{gmsvdmKMmP1} + #{l4uAwIXVrPp} + #{HsD3L7BZa5T} + #{umfGv9oznIa}
+</td>
+<td style="text-align:left;">
+Health workers assessed on diagnosis and management of uncomplicated malaria<br>id : #{HcmlwDCmBSZ} + #{uNnp6IHODyP} + #{GtohCrGevVV} + #{Wq1oBD43sCc}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+PMP TX 17
+</td>
+<td style="text-align:left;">
+IM PMP TX 17 - Percentage of targeted health workers demonstrating compliance to treatment with WHO guidelines for cases with positive malaria test results
+</td>
+<td style="text-align:left;">
+IM PMP TX 17 - % of HWs adhered (+ve cases)
+</td>
+<td style="text-align:left;">
+Number of health workers who comply to treatment with a WHO-recommended antimalarial for cases with positive malaria test results during clinical assessment visits measured through direct observation during supervision visits<br>id : #{Do9KBfS22qD} + #{eJSUmK8XCOw} + #{wVlGTvl4xvH} + #{E77z4UQBHJE}
+</td>
+<td style="text-align:left;">
+Health workers assessed on management of positive malaria cases<br>id : #{Bli6iNQMtP5} + #{w1gYh10blt1} + #{ibu7rlMvF7s} + #{YCsROGVIXGz}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+PMP TX 18
+</td>
+<td style="text-align:left;">
+IM PMP TX 18 - Percentage of health workers demonstrating adherence to negative test results according to global standards
+</td>
+<td style="text-align:left;">
+IM PMP TX 18 - % of HWs adhered (-ve cases)
+</td>
+<td style="text-align:left;">
+Number of health workers demonstrating adherence to negative test results according to global standards measured through direct observation through supervision visits<br>id : #{jhcbf1Yfhr5} + #{yChCRfBYBx2} + #{u6hbx56NqZQ} + #{Y0IgOx4kim8}
+</td>
+<td style="text-align:left;">
+Health workers assessed on management of negative malaria cases<br>id : #{vskYxCrS9Hk} + #{FORs5r9LYU3} + #{oV5ypvYLOjj} + #{WvrndytTbHq}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+PMP TX 19
+</td>
+<td style="text-align:left;">
+IM PMP TX 19 - Percentage of targeted facilities that meet standards (including appropriate materials, documentation, and qualified staff) for quality malaria case management
+</td>
+<td style="text-align:left;">
+IM PMP TX 19 - % of facilities with CM standards
+</td>
+<td style="text-align:left;">
+Number of targeted facilities that meet 90% or greater on facility checklists for quality case management during supervisory visits<br>id : #{Bjg3UQZTo7O} + #{vsI12KXd1od}
+</td>
+<td style="text-align:left;">
+Total number of targeted facilities who received a supervisory visit during the reporting period<br>id : #{TpcOpmZBdLf} + #{XY77QRYfFiA}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+PMP TX 20
+</td>
+<td style="text-align:left;">
+IM PMP TX 20 - Percentage of targeted health facilities regularly reporting routine malaria case data
+</td>
+<td style="text-align:left;">
+IM PMP TX 20 - % of facilities reporting cases
+</td>
+<td style="text-align:left;">
+Number of health facilities reporting monthly routine malaria case load data on diagnosis and treatment within an agreed timescale at least 2 months in the past 3 months<br>id : #{xV85TQT3GEj}
+</td>
+<td style="text-align:left;">
+Total number of target health facilities scheduled to report monthly routine malaria case load data during the reporting period<br>id : #{pDisUBYkiUY}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+PMP TX 21
+</td>
+<td style="text-align:left;">
+IM PMP TX 21 - Percentage of targeted health facilities that receive a supervisory visit
+</td>
+<td style="text-align:left;">
+IM PMP TX 21 - % of facilities with SUPV visits
+</td>
+<td style="text-align:left;">
+Number of health facilities that receive a supervisory visit that covers malaria case management and/or malaria in pregnancy (MiP)<br>id : #{TpcOpmZBdLf}
+</td>
+<td style="text-align:left;">
+Total number of health facilities targeted for supervision during the reporting period<br>id : #{RncgLNY0xwy}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+PMP TX 22
+</td>
+<td style="text-align:left;">
+IM PMP TX 22 - Percentage of health workers trained in management of severe malaria
+</td>
+<td style="text-align:left;">
+IM PMP TX 22 - % of HWs trained on severe malaria
+</td>
+<td style="text-align:left;">
+Number of health workers who complete the training course on severe malaria case management<br>id : #{Ly61ha78oUu}
+</td>
+<td style="text-align:left;">
+Total number of health workers targeted<br>id : #{DoyuoVEARPV}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+PMP TX 23
+</td>
+<td style="text-align:left;">
+IM PMP TX 23 - Percentage of targeted health workers trained according to national guidelines in malaria case management with ACTs
+</td>
+<td style="text-align:left;">
+IM PMP TX 23 - % of HWs trained on ACTs
+</td>
+<td style="text-align:left;">
+Number of health workers who complete the national training course on malaria case management with ACTs<br>id : #{wfxNAGkIedf}
+</td>
+<td style="text-align:left;">
+Total number of health workers targeted<br>id : #{cqKHdgtfjID}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+PMP TX 24
+</td>
+<td style="text-align:left;">
+IM PMP TX 24 - Percentage of targeted countries with national guidelines for malaria treatment that meet global standards
+</td>
+<td style="text-align:left;">
+IM PMP TX 24 - % of countries with TX guidelines
+</td>
+<td style="text-align:left;">
+Number of targeted countries with national guidelines for malaria treatment that meet global standards<br>id : #{YVLRuSGpePK}
+</td>
+<td style="text-align:left;">
+Total number of targeted countries<br>id : #{YVLRuSGpePK}&gt;0
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+IM PMP Tx 2 - Percentage of severe malaria cases appropriately managed
+</td>
+<td style="text-align:left;">
+% of severe malaria cases appropriately managed
+</td>
+<td style="text-align:left;">
+Num<br>id : #{km1lPVcORaY}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{W6NdGzWJurN}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+IM PMP Tx 3 - Percentage of uncomplicated malaria cases that received first-line antimalarial treatment according to national guidelines
+</td>
+<td style="text-align:left;">
+% of uncomplicated malaria cases managed
+</td>
+<td style="text-align:left;">
+Num<br>id : #{RYl937S07k0}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{oWhqaiv26dB}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="country-ind" class="section level3">
+<h3><span class="header-section-number">3.4.2</span> Country IM indicators</h3>
+<div id="kenya" class="section level4">
+<h4><span class="header-section-number">3.4.2.1</span> Kenya</h4>
+<table class="table" style="font-size: 7px; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+code
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+name
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+shortName
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+numerator
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+denominator
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+count
+</th>
+</tr>
+</thead>
+<tbody>
+<tr grouplength="14">
+<td colspan="6" style="border-bottom: 1px solid;">
+<strong>DX indicators</strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+KE PMP 01 - DX Percentage of patients with suspected malaria who received a parasitological test
+</td>
+<td style="text-align:left;">
+KE PMP 01 - DX % tested suspected cases
+</td>
+<td style="text-align:left;">
+Num<br>id : #{Rf40G3xMCqI}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{m2CdUYVjGe5}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+KE PMP 02 - DX Percentage of health workers demonstrating competence in malaria RDTs
+</td>
+<td style="text-align:left;">
+KE PMP 02 - DX % HWs malaria RDTs
+</td>
+<td style="text-align:left;">
+Num<br>id : #{s5Ys2ABMGgE}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{soWdw75XP5d}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+KE PMP 03 - DX Percentage of HCWs demonstrating competence in malaria microscopy
+</td>
+<td style="text-align:left;">
+KE PMP 03 - DX % HWs malaria microscopy
+</td>
+<td style="text-align:left;">
+Num<br>id : #{x7CZVlQSaE6}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{VdW9y4M8WAK}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+KE PMP 04 - DX Percentage of targeted facilities that meet standards (including appropriate materials, documentation, and qualified staff) for quality diagnosis of malaria (microscopy)
+</td>
+<td style="text-align:left;">
+KE PMP 04 - DX % HFs malaria microscopy
+</td>
+<td style="text-align:left;">
+Num<br>id : #{uykAN5XlXKK}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{HDK9LRt5rDv}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+KE PMP 04 - DX Percentage of targeted facilities that meet standards (including appropriate materials, documentation, and qualified staff) for quality diagnosis of malaria (RDT)
+</td>
+<td style="text-align:left;">
+KE PMP 04 - DX % HFs malaria RDTs
+</td>
+<td style="text-align:left;">
+Num<br>id : #{TLuXiPIlTDu}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{HDK9LRt5rDv}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+KE PMP 05 - DX Percentage of HCWs demonstrating competence or knowledgeable in correctly classifying uncomplicated and severe malaria
+</td>
+<td style="text-align:left;">
+KE PMP 05 - DX % HWs classify cases correctly
+</td>
+<td style="text-align:left;">
+Num<br>id : #{cVUt7HK83ag}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{blbz5pmEqoF}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+KE PMP 06 - DX Percentage of targeted supervisors trained in supervision of malaria diagnostics (microscopy)
+</td>
+<td style="text-align:left;">
+KE PMP 06 - DX % supervisors trained (microscopy)
+</td>
+<td style="text-align:left;">
+Num<br>id : #{PgAauebV15e}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{pVyN8ZZT7TA}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+KE PMP 06 - DX Percentage of targeted supervisors trained in supervision of malaria diagnostics (RDT)
+</td>
+<td style="text-align:left;">
+KE PMP 06 - DX % supervisors trained (RDT)
+</td>
+<td style="text-align:left;">
+Num<br>id : #{jZmH2n22eJf}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{pVyN8ZZT7TA}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+KE PMP 07 - DX Percentage of targeted counties with recommended malaria diagnostic supervision tools
+</td>
+<td style="text-align:left;">
+KE PMP 07 - DX % counties w/malaria DX tools
+</td>
+<td style="text-align:left;">
+Num<br>id : #{zTF23dP6a65}
+</td>
+<td style="text-align:left;">
+Den<br>id : R{dfroFhEbqHJ.ACTUAL_REPORTS}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+KE PMP 08 - DX DX Percentage of targeted health workers trained in malaria diagnostics (RDT)
+</td>
+<td style="text-align:left;">
+KE PMP 08 - DX % HWs trained (RDT)
+</td>
+<td style="text-align:left;">
+Num<br>id : #{soWdw75XP5d}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{a2RpS8B1eCM}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+KE PMP 08 - DX Percentage of targeted health workers trained in malaria diagnostics (microscopy)
+</td>
+<td style="text-align:left;">
+KE PMP 08 - DX % HWs trained (microscopy)
+</td>
+<td style="text-align:left;">
+Num<br>id : #{VdW9y4M8WAK}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{a2RpS8B1eCM}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+KE PMP 09 - DX Percentage of targeted facilities with at least one provider trained in RDT
+</td>
+<td style="text-align:left;">
+KE PMP 09 - DX % HFs with 1 provider trained (RDT)
+</td>
+<td style="text-align:left;">
+Num<br>id : #{g1KI3UhtDoJ}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{mZJOvYsr84U}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+KE PMP 10 - DX Percentage of targeted facilities with at least one provider trained in microscopy
+</td>
+<td style="text-align:left;">
+KE PMP 10 - DX % HFs with 1 provider trained (mic)
+</td>
+<td style="text-align:left;">
+Num<br>id : #{RjcTcWjtJEh}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{azuQmfnMNVU}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+KE PMP 11 - DX Percentage of targeted facilities with recommended guidelines/SOPs for malaria diagnosis
+</td>
+<td style="text-align:left;">
+KE PMP 11 - DX % HFs with SOPs
+</td>
+<td style="text-align:left;">
+Num<br>id : #{sjDRGLS9yjA}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{WrYkhf4k7pL}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr grouplength="12">
+<td colspan="6" style="border-bottom: 1px solid;">
+<strong>TX indicators</strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+KE PMP 12 - TX Percentage of suspected cases confirmed +ve for malaria
+</td>
+<td style="text-align:left;">
+KE PMP 12 - TX % confirmed malaria cases
+</td>
+<td style="text-align:left;">
+Num<br>id : #{gIFzQQKCMjb}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{Rf40G3xMCqI}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+KE PMP 13 - TX Percentage of confirmed uncomplicated malaria cases that received first-line antimalarial treatment according to recommended national guidelines
+</td>
+<td style="text-align:left;">
+KE PMP 13 - TX % cases correctly treated
+</td>
+<td style="text-align:left;">
+Num<br>id : #{V6CvG07Copy}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{gIFzQQKCMjb}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+KE PMP 14 - TX Percentage of laboratory confirmed severe malaria cases treated according to recommended guidelines (the administration of a recommended antimalarial)
+</td>
+<td style="text-align:left;">
+KE PMP 14 - TX % severe cases correctly treated
+</td>
+<td style="text-align:left;">
+Num<br>id : #{dumrnf9ppLQ}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{T32qa5ftQkW}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+KE PMP 15 - TX Percentage of targeted HCWs demonstrating compliance to treatment according to national guidelines for cases with positive malaria test results
+</td>
+<td style="text-align:left;">
+KE PMP 15 - TX % HWs compliance positive cases
+</td>
+<td style="text-align:left;">
+Num<br>id : #{E77z4UQBHJE}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{YCsROGVIXGz}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+KE PMP 16 - TX Percentage of HCWs demonstrating adherence to negative test results according to recommended guidelines
+</td>
+<td style="text-align:left;">
+KE PMP 16 - TX % HWs compliance negative cases
+</td>
+<td style="text-align:left;">
+Num<br>id : #{Y0IgOx4kim8}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{oV5ypvYLOjj}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+KE PMP 17 - TX Percentage of targeted HCWs demonstrating competence in management of severe malaria according to national guidelines
+</td>
+<td style="text-align:left;">
+KE PMP 17 - TX % HWs competent severe cases
+</td>
+<td style="text-align:left;">
+Num<br>id : #{Ct1pZ0T1x2R}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{WNhkeZnc1XT}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+KE PMP 18 - TX Percentage of targeted HCWs demonstrating competence in management of uncomplicated malaria according to national guidelines
+</td>
+<td style="text-align:left;">
+KE PMP 18 - TX % HWs competent unc malaria
+</td>
+<td style="text-align:left;">
+Num<br>id : #{umfGv9oznIa}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{GtohCrGevVV}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+KE PMP 19 - TX Percentage of targeted facilities that meet global standards (including appropriate materials, documentation, and qualified staff) for quality malaria case management
+</td>
+<td style="text-align:left;">
+KE PMP 19 - TX % HFs compliant quality case mngt
+</td>
+<td style="text-align:left;">
+Num<br>id : #{Sigw3MWtZ5d}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{YZCHWOIahjV}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+KE PMP 20 - TX Percentage of admitting facilities with HCWs trained in management of severe malaria
+</td>
+<td style="text-align:left;">
+KE PMP 20 - TX % HFs provider trained (severe)
+</td>
+<td style="text-align:left;">
+Num<br>id : #{JVOBcq2tayS}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{A20vEAmjRAS}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+KE PMP 21 - TX Percentage of health workers trained on malaria case management
+</td>
+<td style="text-align:left;">
+KE PMP 21 - TX % HWs trained case mngt
+</td>
+<td style="text-align:left;">
+Num<br>id : #{Y2Wizwyg2Zt}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{HKwLM21EySC}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+KE PMP 22 - TX Percentage of targeted health facilities that receive a supervisory visit
+</td>
+<td style="text-align:left;">
+KE PMP 22 - TX % HFs supervised
+</td>
+<td style="text-align:left;">
+Num<br>id : #{egcmJ7NFPBG}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{WRP6ICberkf}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+KE PMP 23 - TX Percentage of targeted health facilities regularly reporting routine malaria case data
+</td>
+<td style="text-align:left;">
+KE PMP 23 - TX % HFs reporting on time
+</td>
+<td style="text-align:left;">
+Num<br>id : #{A6is0WZ7UVI}+#{WUsfoJ01oa8}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{k0OSOd7UeDj}+#{Jz08Pq3eoMi}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr grouplength="10">
+<td colspan="6" style="border-bottom: 1px solid; padding-left: 2em;" indentlevel="1">
+<strong>MIP indicators</strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+KE PMP 24 - MIP Percentage of pregnant women receiving a free ITN during first ANC visit
+</td>
+<td style="text-align:left;">
+KE PMP 24 - MIP % pregnant women received ITN
+</td>
+<td style="text-align:left;">
+Num<br>id : #{mEuLOT08NfK}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{WdEGVnuWiDf}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+KE PMP 25 - MIP Percentage of pregnant women who received three doses of IPTp according to recommended guidelines
+</td>
+<td style="text-align:left;">
+KE PMP 25 - MIP % pregnant women IPT3
+</td>
+<td style="text-align:left;">
+Num<br>id : #{lVRMHcwVnDf}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{WdEGVnuWiDf}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+KE PMP 26 - MIP Percentage of pregnant women who received two doses of IPTp
+</td>
+<td style="text-align:left;">
+KE PMP 26 - MIP % pregnant women IPT2
+</td>
+<td style="text-align:left;">
+Num<br>id : #{inFlJdtBRGo}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{WdEGVnuWiDf}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+KE PMP 27 - MIP Percentage of pregnant women who received one dose of IPTp
+</td>
+<td style="text-align:left;">
+KE PMP 27 - MIP % pregnant women IPT1
+</td>
+<td style="text-align:left;">
+Num<br>id : #{jrvQeHC4vrr}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{WdEGVnuWiDf}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+KE PMP 28 - MIP Percentage of targeted HCWs demonstrating competence in prevention of MiP
+</td>
+<td style="text-align:left;">
+KE PMP 28 - MIP % HWs competent MIP prevention
+</td>
+<td style="text-align:left;">
+Num<br>id : #{ORROqdVXqV5}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{idmDOiFKv1Y}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+KE PMP 29 - MIP Percentage of targeted HCWs demonstrating competence in treatment of MiP
+</td>
+<td style="text-align:left;">
+KE PMP 29 - MIP % HWs competent MIP treatment
+</td>
+<td style="text-align:left;">
+Num<br>id : #{RJVSWuXI87o}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{fJIele1NEHo}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+KE PMP 30 - MIP Percentage of HCWs trained in MIP as per recommended guidelines
+</td>
+<td style="text-align:left;">
+KE PMP 30 - MIP % HWs trained MIP
+</td>
+<td style="text-align:left;">
+Num<br>id : #{jKtX2TrReqh}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{bf7z94n1SLP}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+KE PMP 31 - MIP Percentage of targeted facilities with recommended guidelines for prevention and treatment of MIP
+</td>
+<td style="text-align:left;">
+KE PMP 31 - MIP % HFs guidelines prev and treat
+</td>
+<td style="text-align:left;">
+Num<br>id : #{BTa5Qz98z3e}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{BdgvH1NHCpk}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+KE PMP 32 - MIP Functional/active MIP TWGs
+</td>
+<td style="text-align:left;">
+KE PMP 32 - MIP Functional/active MIP TWGs
+</td>
+<td style="text-align:left;">
+Num<br>id : #{iOf4wYGTQnz}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{Ou1JytOIUDS}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+KE PMP 33 - MIP Functional/active CM TWGs
+</td>
+<td style="text-align:left;">
+KE PMP 33 - MIP Functional/active CM TWGs
+</td>
+<td style="text-align:left;">
+Num<br>id : #{ISrVXrVhGWy}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{LELIkDnSPSg}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr grouplength="6">
+<td colspan="6" style="border-bottom: 1px solid;">
+<strong>TL indicators</strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+KE PMP 34 - TL Contribution to national, regional or global guidance/policy documents related to malaria (including RH)
+</td>
+<td style="text-align:left;">
+KE PMP 34 - TL Contribution to national policies
+</td>
+<td style="text-align:left;">
+Num<br>id : #{tJXmW64MUxf}
+</td>
+<td style="text-align:left;">
+Den<br>id : 1
+</td>
+<td style="text-align:left;">
+1 - Atomic (number)
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+KE PMP 35 - TL Number of program activity outputs disseminated to the global health community
+</td>
+<td style="text-align:left;">
+KE PMP 35 - TL Program outputs disseminated
+</td>
+<td style="text-align:left;">
+Num<br>id : #{P4YDP2FNh3X}
+</td>
+<td style="text-align:left;">
+Den<br>id : 1
+</td>
+<td style="text-align:left;">
+1 - Atomic (number)
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+KE PMP 36 - TL Participation in targeted national or regional level Working group(s) and/or taskforce(s)
+</td>
+<td style="text-align:left;">
+KE PMP 36 - TL Participation in WGs
+</td>
+<td style="text-align:left;">
+Num<br>id : #{XxfoDreiw9Z}
+</td>
+<td style="text-align:left;">
+Den<br>id : 1
+</td>
+<td style="text-align:left;">
+1 - Atomic (number)
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+KE PMP 37 - TL Contribution to regional or global guidance/policy documents to related to malaria
+</td>
+<td style="text-align:left;">
+KE PMP 37 - TL Contribution to guidance/policy
+</td>
+<td style="text-align:left;">
+Num<br>id : #{OneitAtRzhO}
+</td>
+<td style="text-align:left;">
+Den<br>id : 1
+</td>
+<td style="text-align:left;">
+1 - Atomic (number)
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+KE PMP 38 - TL Percentage of facilities with updated data wall charts showcasing malaria indicators
+</td>
+<td style="text-align:left;">
+KE PMP 38 - TL % HFs data-wall charts on malaria
+</td>
+<td style="text-align:left;">
+Num<br>id : #{cZbiIH1nPdE}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{qO8BdhE2NPm}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+KE PMP 39 - TL Percentage of IM focus counties conducting quarterly data-led review meetings
+</td>
+<td style="text-align:left;">
+KE PMP 39 - TL % counties data-led review meetings
+</td>
+<td style="text-align:left;">
+Num<br>id : #{EnT6cC7Kpzx}
+</td>
+<td style="text-align:left;">
+Den<br>id : R{dfroFhEbqHJ.ACTUAL_REPORTS}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="ghana" class="section level4">
+<h4><span class="header-section-number">3.4.2.2</span> Ghana</h4>
+<table class="table" style="font-size: 7px; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+code
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+name
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+shortName
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+numerator
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+denominator
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+count
+</th>
+</tr>
+</thead>
+<tbody>
+<tr grouplength="23">
+<td colspan="6" style="border-bottom: 1px solid;">
+<strong>DX indicators</strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+GH PMP 01 - DX Percentage of confirmed malaria cases
+</td>
+<td style="text-align:left;">
+GH PMP 01 - DX % confirmed malaria cases
+</td>
+<td style="text-align:left;">
+Num<br>id : #{cZuXXzQuEL6}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{zsUZQV4CAd6}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+GH PMP 01 - DX Percentage of confirmed malaria cases by test type
+</td>
+<td style="text-align:left;">
+GH PMP 01 - DX % confirmed malaria cases by test
+</td>
+<td style="text-align:left;">
+Num<br>id : #{C6fu4gyFJyt}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{PwOl1Z017wD}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+GH PMP 01 - DX Percentage of confirmed malaria cases (NP)
+</td>
+<td style="text-align:left;">
+GH PMP 01 - DX % confirmed malaria cases (NP)
+</td>
+<td style="text-align:left;">
+Num<br>id : #{rKatBh8TmW2}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{CpFbufOJ1rF}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+GH PMP 01 - DX Percentage of confirmed malaria cases (P)
+</td>
+<td style="text-align:left;">
+GH PMP 01 - DX % confirmed malaria cases (P)
+</td>
+<td style="text-align:left;">
+Num<br>id : #{YMiDfYBOpWk}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{vAjxUR9K0mp}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+GH PMP 02 - DX Percentage of patients with suspected malaria who received a parasitological test
+</td>
+<td style="text-align:left;">
+GH PMP 02 - DX % suspected cases tested
+</td>
+<td style="text-align:left;">
+Num<br>id : #{zsUZQV4CAd6}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{euw633Z8zIo}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+GH PMP 02 - DX Percentage of patients with suspected malaria who received a parasitological test by microscopy
+</td>
+<td style="text-align:left;">
+GH PMP 02 - DX % suspected cases tested (micr)
+</td>
+<td style="text-align:left;">
+Num<br>id : #{PwOl1Z017wD.LpJA6F7X60g}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{euw633Z8zIo}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+GH PMP 02 - DX Percentage of patients with suspected malaria who received a parasitological test by RDT
+</td>
+<td style="text-align:left;">
+GH PMP 02 - DX % suspected cases tested (RDT)
+</td>
+<td style="text-align:left;">
+Num<br>id : #{PwOl1Z017wD.QOpXmMLmbT4}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{euw633Z8zIo}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+GH PMP 02 - DX Percentage of patients with suspected malaria who received a parasitological test (NP)
+</td>
+<td style="text-align:left;">
+GH PMP 02 - DX % suspected cases tested (NP)
+</td>
+<td style="text-align:left;">
+Num<br>id : #{CpFbufOJ1rF}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{kpeH1yY1HA3}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+GH PMP 02 - DX Percentage of patients with suspected malaria who received a parasitological test (P)
+</td>
+<td style="text-align:left;">
+GH PMP 02 - DX % suspected cases tested (P)
+</td>
+<td style="text-align:left;">
+Num<br>id : #{vAjxUR9K0mp}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{dmDdKI5KYVQ}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+GH PMP 03 - DX Percentage of health workers demonstrating competence in malaria microscopy (parasite detection)
+</td>
+<td style="text-align:left;">
+GH PMP 03 - DX % HWs parasite detection
+</td>
+<td style="text-align:left;">
+Num<br>id : #{KGdsCrdl9ba}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{ubSPJnm2719}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+GH PMP 03 - DX Percentage of health workers demonstrating competence in malaria microscopy (slide preparation)
+</td>
+<td style="text-align:left;">
+GH PMP 03 - DX % HWs slide preparation
+</td>
+<td style="text-align:left;">
+Num<br>id : #{KSg5YQbFJY0}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{ubSPJnm2719}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+GH PMP 03 - DX Percentage of health workers demonstrating competence in malaria microscopy (species identification)
+</td>
+<td style="text-align:left;">
+GH PMP 03 - DX % HWs species identification
+</td>
+<td style="text-align:left;">
+Num<br>id : #{T0cJykJxWvk}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{ubSPJnm2719}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+GH PMP 04 - DX Percentage of health workers demonstrating competence in malaria RDTs
+</td>
+<td style="text-align:left;">
+GH PMP 04 - DX % HWs malaria RDTs
+</td>
+<td style="text-align:left;">
+Num<br>id : #{i8lD2Tc7BOM}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{olr3t0zkdUn}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+GH PMP 05 - DX Percentage of targeted facilities that meet standards (including appropriate materials, documentation, and qualified staff) for quality diagnosis of malaria (microscopy)
+</td>
+<td style="text-align:left;">
+GH PMP 05 - DX % HFs malaria microscopy
+</td>
+<td style="text-align:left;">
+Num<br>id : #{TKxb2PFjRwO}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{oVIXBtQccHN}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+GH PMP 05 - DX Percentage of targeted facilities that meet standards (including appropriate materials, documentation, and qualified staff) for quality diagnosis of malaria (RDT)
+</td>
+<td style="text-align:left;">
+GH PMP 05 - DX % HFs malaria RDTs
+</td>
+<td style="text-align:left;">
+Num<br>id : #{vvgD4UQFNye}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{oVIXBtQccHN}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+GH PMP 06 - DX Percentage of health workers demonstrating competence in correctly classifying cases as not malaria, uncomplicated malaria, and severe malaria
+</td>
+<td style="text-align:left;">
+GH PMP 06 - DX % HWs malaria case mngt
+</td>
+<td style="text-align:left;">
+Num<br>id : #{t1vdNH0vIE2}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{pgsaevmKtbM}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+GH PMP 07 - DX Percentage of targeted supervisors trained in supervision of malaria diagnostics (microscopy)
+</td>
+<td style="text-align:left;">
+GH PMP 07 - DX % supervisors trained (microscopy)
+</td>
+<td style="text-align:left;">
+Num<br>id : #{zlWYhVAouup}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{aZpDapygzg1}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+GH PMP 07 - DX Percentage of targeted supervisors trained in supervision of malaria diagnostics (RDT)
+</td>
+<td style="text-align:left;">
+GH PMP 07 - DX % supervisors trained (RDT)
+</td>
+<td style="text-align:left;">
+Num<br>id : #{oFiMCwBOYLU}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{aZpDapygzg1}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+GH PMP 08 - DX Percentage of targeted districts adhering to national malaria diagnostic supervision protocol
+</td>
+<td style="text-align:left;">
+GH PMP 08 - DX % districts adherent dx tools
+</td>
+<td style="text-align:left;">
+Num<br>id : #{tpADDhwJvm3}
+</td>
+<td style="text-align:left;">
+Den<br>id : R{jVmnSOBUkeG.ACTUAL_REPORTS}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+GH PMP 09 - DX Percentage of targeted health workers trained in malaria laboratory diagnostics (microscopy)
+</td>
+<td style="text-align:left;">
+GH PMP 09 - DX % HWs trained (microscopy)
+</td>
+<td style="text-align:left;">
+Num<br>id : #{XenaBO47ky4}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{VcPN46GIkwA}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+GH PMP 09 - DX Percentage of targeted health workers trained in malaria laboratory diagnostics (RDT)
+</td>
+<td style="text-align:left;">
+GH PMP 09 - DX % HWs trained (RDT)
+</td>
+<td style="text-align:left;">
+Num<br>id : #{QniAsU4SnZr}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{VcPN46GIkwA}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+GH PMP 10 - DX Percentage of targeted facilities with at least one provider trained in malaria parasitological diagnosis
+</td>
+<td style="text-align:left;">
+GH PMP 10 - DX % HFs with 1 provider trained
+</td>
+<td style="text-align:left;">
+Num<br>id : #{W0G6LUKSSnG}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{tWSq7bigbmf}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+GH PMP 11 - DX Percentage of targeted facilities with national guidelines for malaria diagnosis
+</td>
+<td style="text-align:left;">
+GH PMP 11 - DX % HFs with national guidelines
+</td>
+<td style="text-align:left;">
+Num<br>id : #{EU2SBKsgxLd}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{oVIXBtQccHN}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr grouplength="15">
+<td colspan="6" style="border-bottom: 1px solid;">
+<strong>TX indicators</strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+GH PMP 12 - TX Percentage of malaria cases (presumed and confirmed) that received the recommended antimalarial treatment according to national guidelines
+</td>
+<td style="text-align:left;">
+GH PMP 12 - TX % cases correctly treated
+</td>
+<td style="text-align:left;">
+Num<br>id : #{i4BsFSVy41V}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{cZuXXzQuEL6} + #{E04lKfKFlKc}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+GH PMP 12 - TX Percentage of malaria cases (presumed and confirmed) that received the recommended antimalarial treatment according to national guidelines (NP)
+</td>
+<td style="text-align:left;">
+GH PMP 12 - TX % cases correctly treated (NP)
+</td>
+<td style="text-align:left;">
+Num<br>id : #{Jz05wiLIOae}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{rKatBh8TmW2} + #{KcMPvVefT1h}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+GH PMP 12 - TX Percentage of malaria cases (presumed and confirmed) that received the recommended antimalarial treatment according to national guidelines (P)
+</td>
+<td style="text-align:left;">
+GH PMP 12 - TX % cases correctly treated (P)
+</td>
+<td style="text-align:left;">
+Num<br>id : #{PfB1cg2ktB9}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{YMiDfYBOpWk} + #{RfziOIqzJCP}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+GH PMP 13 - TX Percentage of severe malaria cases that were treated according to national guidelines
+</td>
+<td style="text-align:left;">
+GH PMP 13 - TX % severe cases correctly treated
+</td>
+<td style="text-align:left;">
+Num<br>id : #{oCpv0PXpm38}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{bi3pI9REwqS}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+GH PMP 14 - TX Percentage of children under 5 appropriately treated for fever according to CCM or country algorithms or national guidelines by community health workers (CHPS Staff)
+</td>
+<td style="text-align:left;">
+GH PMP 14 - TX % CU5 correctly treated by CHWs
+</td>
+<td style="text-align:left;">
+Num<br>id : #{F9NoFjuDa4W}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{x9V7Fnjnh3W}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+GH PMP 15 - TX Percentage of targeted health workers demonstrating compliance to treatment with WHO-recommended ACTs for cases with positive malaria test results
+</td>
+<td style="text-align:left;">
+GH PMP 15 - TX % HWs compliance positive cases
+</td>
+<td style="text-align:left;">
+Num<br>id : #{wVlGTvl4xvH}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{ibu7rlMvF7s}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+GH PMP 16 - TX Percentage of health workers demonstrating adherence to negative test results according to global standards
+</td>
+<td style="text-align:left;">
+GH PMP 16 - TX % HWs compliance negative cases
+</td>
+<td style="text-align:left;">
+Num<br>id : #{u6hbx56NqZQ}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{WvrndytTbHq}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+GH PMP 17 - TX Percentage of targeted health workers demonstrating competence in management of severe malaria according to WHO guidelines
+</td>
+<td style="text-align:left;">
+GH PMP 17 - TX % HWs competent severe cases
+</td>
+<td style="text-align:left;">
+Num<br>id : #{lomzmDp50ZG}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{g0OQgJCDs0U}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+GH PMP 18 - TX Percentage of targeted health workers demonstrating competence in management of uncomplicated malaria
+</td>
+<td style="text-align:left;">
+GH PMP 18 - TX % HWs competent unc malaria
+</td>
+<td style="text-align:left;">
+Num<br>id : #{HsD3L7BZa5T}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{Wq1oBD43sCc}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+GH PMP 19 - TX Percentage of targeted facilities that meet global standards (including appropriate materials, documentation, and qualified staff) for quality malaria case management
+</td>
+<td style="text-align:left;">
+GH PMP 19 - TX % HFs compliant quality case mngt
+</td>
+<td style="text-align:left;">
+Num<br>id : #{UVHLhFuqoVk}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{J0bw03xwqlH}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+GH PMP 20 - TX Percentage of targeted health workers trained in management of severe malaria according to national guidelines in malaria case management
+</td>
+<td style="text-align:left;">
+GH PMP 20 - TX % HWs trained severe malaria
+</td>
+<td style="text-align:left;">
+Num<br>id : #{SVODiwEcdgd}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{QCuGMfgsVaK}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+GH PMP 21 - TX Percentage of targeted health workers trained according to national guidelines in malaria case management with ACTs
+</td>
+<td style="text-align:left;">
+GH PMP 21 - TX % HWs trained case mngt ACTs
+</td>
+<td style="text-align:left;">
+Num<br>id : #{VfDLFFUYJzW}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{iQlzs8iDrPV}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+GH PMP 22 - TX Percentage of targeted health facilities that receive a quarterly/semi-annual supervisory visit
+</td>
+<td style="text-align:left;">
+GH PMP 22 - TX % HFs supervised
+</td>
+<td style="text-align:left;">
+Num<br>id : #{J0bw03xwqlH}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{nk4hdODaKK0}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+GH PMP 23 - TX Percentage of targeted health facilities regularly reporting routine malaria case data
+</td>
+<td style="text-align:left;">
+GH PMP 23 - TX % HFs reporting on time
+</td>
+<td style="text-align:left;">
+Num<br>id : #{Z0aqwa22PYb} + #{katkPagbEeB} + #{MwdunKjMqSS} + #{rGBsSAFdUmq}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{FJG59eImr6t} + #{S3oGeLMj5qW} + #{eKUPUTJnM8I} + #{t0AC67lGHwT}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+GH PMP 24 - TX Percentage of targeted districts with national guidelines for malaria treatment that meet national standards
+</td>
+<td style="text-align:left;">
+GH PMP 24 - TX % districts guidelines on tx
+</td>
+<td style="text-align:left;">
+Num<br>id : #{iiFzfmXIK3U}
+</td>
+<td style="text-align:left;">
+Den<br>id : R{jVmnSOBUkeG.ACTUAL_REPORTS}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr grouplength="9">
+<td colspan="6" style="border-bottom: 1px solid; padding-left: 2em;" indentlevel="1">
+<strong>MIP indicators</strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+GH PMP 25 - MIP Percentage of pregnant women who received an ITN during routine ANC visit/interaction
+</td>
+<td style="text-align:left;">
+GH PMP 25 - MIP % pregnant women received ITN
+</td>
+<td style="text-align:left;">
+Num<br>id : #{kZAWqatScJ9}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{KBe7hShEYAK}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+GH PMP 26 - MIP Percentage of pregnant women who received three or more doses of IPTp according to national guidelines
+</td>
+<td style="text-align:left;">
+GH PMP 26 - MIP % pregnant women IPT3
+</td>
+<td style="text-align:left;">
+Num<br>id : #{CFaVHFhbS4v}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{KBe7hShEYAK}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+GH PMP 27 - MIP Percentage of pregnant women who received two doses of IPTp
+</td>
+<td style="text-align:left;">
+GH PMP 27 - MIP % pregnant women IPT2
+</td>
+<td style="text-align:left;">
+Num<br>id : #{SZgN28ZELh9}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{KBe7hShEYAK}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+GH PMP 28 - MIP Percentage of pregnant women who received one dose of IPTp
+</td>
+<td style="text-align:left;">
+GH PMP 28 - MIP % pregnant women IPT1
+</td>
+<td style="text-align:left;">
+Num<br>id : #{uuWSsTIrVtU}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{KBe7hShEYAK}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+GH PMP 29 - MIP Percentage of targeted health workers demonstrating competence in prevention of MiP
+</td>
+<td style="text-align:left;">
+GH PMP 29 - MIP % HWs prevention MIP
+</td>
+<td style="text-align:left;">
+Num<br>id : #{aqOOzx0bgiA}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{DjbIYfqQC8i}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+GH PMP 30 - MIP Percentage of targeted health workers demonstrating competence in treatment of MiP
+</td>
+<td style="text-align:left;">
+GH PMP 30 - MIP % HWs treatment MIP
+</td>
+<td style="text-align:left;">
+Num<br>id : #{S2sRLkbN81y}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{gnjJPPJNSJF}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+GH PMP 31 - MIP Percentage of targeted health workers trained in IPTp per national guidelines
+</td>
+<td style="text-align:left;">
+GH PMP 31 - MIP % HWs trained IPTp
+</td>
+<td style="text-align:left;">
+Num<br>id : #{eEITioVuAGg}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{wHuGUXeSGM8}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+GH PMP 32 - MIP Percentage of targeted districts with national guidelines for prevention and treatment of MiP that meet national standards
+</td>
+<td style="text-align:left;">
+GH PMP 32 - MIP % districts guidelines on MIP
+</td>
+<td style="text-align:left;">
+Num<br>id : #{JNsc7SinzVA}
+</td>
+<td style="text-align:left;">
+Den<br>id : R{jVmnSOBUkeG.ACTUAL_REPORTS}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+GH PMP 33 - MIP Number of national MiP/RH/ANC Working Group participated in by IM staff
+</td>
+<td style="text-align:left;">
+GH PMP 33 - MIP # of national WGs joined
+</td>
+<td style="text-align:left;">
+Num<br>id : #{RzhqmTVkT0P}
+</td>
+<td style="text-align:left;">
+Den<br>id : 1
+</td>
+<td style="text-align:left;">
+1 - Atomic (number)
+</td>
+</tr>
+<tr grouplength="5">
+<td colspan="6" style="border-bottom: 1px solid;">
+<strong>TL indicators</strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+GH PMP 39 - TL Number of program activity outputs disseminated to the global health community
+</td>
+<td style="text-align:left;">
+GH PMP 39 - TL # of outputs disseminated
+</td>
+<td style="text-align:left;">
+Num<br>id : #{P4YDP2FNh3X}
+</td>
+<td style="text-align:left;">
+Den<br>id : 1
+</td>
+<td style="text-align:left;">
+1 - Atomic (number)
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+GH PMP 40 - TL Number of targeted national, regional or global level Working group(s) and/or taskforce(s) participated in
+</td>
+<td style="text-align:left;">
+GH PMP 40 - TL # of WGs joined
+</td>
+<td style="text-align:left;">
+Num<br>id : #{XxfoDreiw9Z}
+</td>
+<td style="text-align:left;">
+Den<br>id : 1
+</td>
+<td style="text-align:left;">
+1 - Atomic (number)
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+GH PMP 41 - TL Number of regional or global guidance/policy documents contributed to malaria related issues
+</td>
+<td style="text-align:left;">
+GH PMP 41 - TL # of documents contributed to
+</td>
+<td style="text-align:left;">
+Num<br>id : #{tJXmW64MUxf}
+</td>
+<td style="text-align:left;">
+Den<br>id : 1
+</td>
+<td style="text-align:left;">
+1 - Atomic (number)
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+GH PMP 42 - TL Percentage of facilities with updated data wall charts showcasing malaria indicators
+</td>
+<td style="text-align:left;">
+GH PMP 42 - TL % HFs data-wall charts on malaria
+</td>
+<td style="text-align:left;">
+Num<br>id : #{bJ4OXMnhmS0}
+</td>
+<td style="text-align:left;">
+Den<br>id : R{IK0bdLXmBn0.ACTUAL_REPORTS}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+GH PMP 43 - TL Percentage of IM districts conducting quarterly data-led review meetings
+</td>
+<td style="text-align:left;">
+GH PMP 43 - TL % OUs data-led review meetings
+</td>
+<td style="text-align:left;">
+Num<br>id : #{KBXEqUHeNXE}
+</td>
+<td style="text-align:left;">
+Den<br>id : R{jVmnSOBUkeG.ACTUAL_REPORTS}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="congo" class="section level4">
+<h4><span class="header-section-number">3.4.2.3</span> Congo</h4>
+<table class="table" style="font-size: 7px; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+code
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+name
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+shortName
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+numerator
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+denominator
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+count
+</th>
+</tr>
+</thead>
+<tbody>
+<tr grouplength="5">
+<td colspan="6" style="border-bottom: 1px solid;">
+<strong>DX indicators</strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+CD PMP - DX Percentage of health workers demonstrating competence in malaria microscopy
+</td>
+<td style="text-align:left;">
+CD PMP - DX % HWs competent in malaria microscopy
+</td>
+<td style="text-align:left;">
+Num<br>id : #{jf8nKluaF2h}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{om6201JM4BF}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+CD PMP - DX Percentage of targeted facilities that meet standards (including appropriate materials, documentation, and qualified staff) for quality diagnosis of malaria
+</td>
+<td style="text-align:left;">
+CD PMP - DX % HFs quality malaria dx
+</td>
+<td style="text-align:left;">
+Num<br>id : #{lYVEbBi1otu}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{jGkzcQyNUNV}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+CD PMP - DX Percentage of targeted facilities with national guidelines for malaria diagnosis that meet global standards
+</td>
+<td style="text-align:left;">
+CD PMP - DX % HFs meet global standards
+</td>
+<td style="text-align:left;">
+Num<br>id : #{XSxU2y6GXrr}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{uRPZ7FLjfLc}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+CD PMP - DX Percentage of targeted provinces with national malaria diagnostic supervision tools that adhere to global standards
+</td>
+<td style="text-align:left;">
+CD PMP - DX % provinces adhere global standards
+</td>
+<td style="text-align:left;">
+Num<br>id : #{ajqXNRgblHk}
+</td>
+<td style="text-align:left;">
+Den<br>id : R{ZCAcgsYrGTP.ACTUAL_REPORTS}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+CD PMP - DX Percentage of targeted supervisors trained in supervision of malaria diagnostics
+</td>
+<td style="text-align:left;">
+CD PMP - DX % supervisors trained in malaria dx
+</td>
+<td style="text-align:left;">
+Num<br>id : #{vg88HQNpSXz}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{O8ilhnRgkRW}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="mali" class="section level4">
+<h4><span class="header-section-number">3.4.2.4</span> Mali</h4>
+<table class="table" style="font-size: 7px; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+code
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+name
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+shortName
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+numerator
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+denominator
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+count
+</th>
+</tr>
+</thead>
+<tbody>
+<tr grouplength="18">
+<td colspan="6" style="border-bottom: 1px solid;">
+<strong>DX indicators</strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+ML PMP 01 - DX Percentage of patients with suspected malaria who received a parasitological test
+</td>
+<td style="text-align:left;">
+ML PMP 01 - DX % suspected cases tested
+</td>
+<td style="text-align:left;">
+Num<br>id : #{BAZd7D3zQHN}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{LMMJ97M5sVl}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+ML PMP 01 - DX Percentage of patients with suspected malaria who received a parasitological test (NP)
+</td>
+<td style="text-align:left;">
+ML PMP 01 - DX % suspected cases tested (NP)
+</td>
+<td style="text-align:left;">
+Num<br>id : #{OG6loaaPPta}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{sFNGVQb1U5L}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+ML PMP 01 - DX Percentage of patients with suspected malaria who received a parasitological test (P)
+</td>
+<td style="text-align:left;">
+ML PMP 01 - DX % suspected cases tested (P)
+</td>
+<td style="text-align:left;">
+Num<br>id : #{cYgEOZdVSu5}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{Lbm20lLkv6L}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+ML PMP 02 - DX Number of cases confirmed as malaria by a parasitological test (RDT or microscopy)
+</td>
+<td style="text-align:left;">
+ML PMP 02 - DX % confirmed malaria cases
+</td>
+<td style="text-align:left;">
+Num<br>id : #{EIkFrm5x8Sf}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{BAZd7D3zQHN}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+ML PMP 02 - DX Number of cases confirmed as malaria by a parasitological test (RDT or microscopy) (NP)
+</td>
+<td style="text-align:left;">
+ML PMP 02 - DX % confirmed malaria cases (NP)
+</td>
+<td style="text-align:left;">
+Num<br>id : #{WuWNNgy0A1Z}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{OG6loaaPPta}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+ML PMP 02 - DX Number of cases confirmed as malaria by a parasitological test (RDT or microscopy) (P)
+</td>
+<td style="text-align:left;">
+ML PMP 02 - DX % confirmed malaria cases (P)
+</td>
+<td style="text-align:left;">
+Num<br>id : #{AmUi4XKbJ6X}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{cYgEOZdVSu5}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+ML PMP 03 - DX Percentage of targeted health workers demonstrating competence in correctly classifying cases as negative (confirmed as not malaria), uncomplicated malaria, complicated malaria, and severe malaria
+</td>
+<td style="text-align:left;">
+ML PMP 03 - DX % HWs competent case mngt
+</td>
+<td style="text-align:left;">
+Num<br>id : #{vXZ2RDwuyzA}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{ytbfyxZr1Ya}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+ML PMP 04 - DX Percentage of health workers demonstrating competence in malaria RDTs
+</td>
+<td style="text-align:left;">
+ML PMP 04 - DX % HWs malaria RDTs
+</td>
+<td style="text-align:left;">
+Num<br>id : #{TDBa7IcPJAN}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{rSn9x2JQPJe}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+ML PMP 05 - DX Percentage of health workers demonstrating competence in malaria microscopy
+</td>
+<td style="text-align:left;">
+ML PMP 05 - DX % HWs malaria microscopy
+</td>
+<td style="text-align:left;">
+Num<br>id : #{PEOQBH2TD24}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{GCSv8Ni4KhE}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+ML PMP 06 - DX Percentage of targeted facilities that meet standards (including appropriate materials, documentation, and qualified staff) for quality diagnosis of malaria (microscopy)
+</td>
+<td style="text-align:left;">
+ML PMP 06 - DX % HFs malaria microscopy
+</td>
+<td style="text-align:left;">
+Num<br>id : #{Gj8mqX5twDU}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{teWZva5EkPM}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+ML PMP 06 - DX Percentage of targeted facilities that meet standards (including appropriate materials, documentation, and qualified staff) for quality diagnosis of malaria (RDT)
+</td>
+<td style="text-align:left;">
+ML PMP 06 - DX % HFs malaria RDTs
+</td>
+<td style="text-align:left;">
+Num<br>id : #{VQT4EOtPiwC}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{teWZva5EkPM}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+ML PMP 07 - DX Percentage of targeted facilities with at least one provider trained in malaria diagnosis
+</td>
+<td style="text-align:left;">
+ML PMP 07 - DX % HFs with 1 provider trained
+</td>
+<td style="text-align:left;">
+Num<br>id : #{N6oAUOjFBF0}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{YpbUdDBZjlA}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+ML PMP 08 - DX Percentage of targeted health workers trained in malaria laboratory diagnostics (microscopy)
+</td>
+<td style="text-align:left;">
+ML PMP 08 - DX % HWs trained (microscopy)
+</td>
+<td style="text-align:left;">
+Num<br>id : #{GCSv8Ni4KhE}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{CX09R9Mdsj9}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+ML PMP 08 - DX Percentage of targeted health workers trained in malaria laboratory diagnostics (RDT)
+</td>
+<td style="text-align:left;">
+ML PMP 08 - DX % HWs trained (RDT)
+</td>
+<td style="text-align:left;">
+Num<br>id : #{rSn9x2JQPJe}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{CX09R9Mdsj9}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+ML PMP 09 - DX Percentage of targeted supervisors trained in supervision of malaria diagnostics (microscopy)
+</td>
+<td style="text-align:left;">
+ML PMP 09 - DX % supervisors trained (microscopy)
+</td>
+<td style="text-align:left;">
+Num<br>id : #{hbEgIBy1bIf}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{MFpS8w5h9XS}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+ML PMP 09 - DX Percentage of targeted supervisors trained in supervision of malaria diagnostics (RDT)
+</td>
+<td style="text-align:left;">
+ML PMP 09 - DX % supervisors trained (RDT)
+</td>
+<td style="text-align:left;">
+Num<br>id : #{sRz3zlhaJrH}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{MFpS8w5h9XS}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+ML PMP 10 - DX Percentage of targeted health districts with national malaria diagnostic supervision tools adhere to national standards
+</td>
+<td style="text-align:left;">
+ML PMP 10 - DX % districts sup tools nat standards
+</td>
+<td style="text-align:left;">
+Num<br>id : #{fEDZSnnqQM8}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{nUyU7k7knZD}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+ML PMP 11 - DX Percentage of targeted districts with national guidelines for malaria diagnosis that meet national standards
+</td>
+<td style="text-align:left;">
+ML PMP 11 - DX % districts guideline nat standards
+</td>
+<td style="text-align:left;">
+Num<br>id : #{Iu13qrpBgfW}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{nUyU7k7knZD}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr grouplength="16">
+<td colspan="6" style="border-bottom: 1px solid;">
+<strong>TX indicators</strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+ML PMP 12 - TX Percentage of malaria cases (presumed and confirmed) that received first-line antimalarial treatment according to national guidelines
+</td>
+<td style="text-align:left;">
+ML PMP 12 - TX % cases correctly treated
+</td>
+<td style="text-align:left;">
+Num<br>id : #{x4VF1RbQzQf}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{gZNPPAuMZTv}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+ML PMP 12 - TX Percentage of malaria cases (presumed and confirmed) that received first-line antimalarial treatment according to national guidelines (NP)
+</td>
+<td style="text-align:left;">
+ML PMP 12 - TX % cases correctly treated (NP)
+</td>
+<td style="text-align:left;">
+Num<br>id : #{Nr5DUqTxNBu}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{V64pOp9iOSO}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+ML PMP 12 - TX Percentage of malaria cases (presumed and confirmed) that received first-line antimalarial treatment according to national guidelines (P)
+</td>
+<td style="text-align:left;">
+ML PMP 12 - TX % cases correctly treated (P)
+</td>
+<td style="text-align:left;">
+Num<br>id : #{gb97L4YbngN}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{VHK6rCw6nCM}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+ML PMP 13 - TX Percentage of uncomplicated malaria cases that received first-line antimalarial treatment according to national guidelines
+</td>
+<td style="text-align:left;">
+ML PMP 13 - TX % unc cases correctly treated
+</td>
+<td style="text-align:left;">
+Num<br>id : #{JLxVyp3qGve}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{DmSkJD4HLqS}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+ML PMP 13 - TX Percentage of uncomplicated malaria cases that received first-line antimalarial treatment according to national guidelines (NP)
+</td>
+<td style="text-align:left;">
+ML PMP 13 - TX % unc cases correctly treated (NP)
+</td>
+<td style="text-align:left;">
+Num<br>id : #{n9YAgSwzX8J}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{ot3qZtzsOBh}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+ML PMP 13 - TX Percentage of uncomplicated malaria cases that received first-line antimalarial treatment according to national guidelines (P)
+</td>
+<td style="text-align:left;">
+ML PMP 13 - TX % unc cases correctly treated (P)
+</td>
+<td style="text-align:left;">
+Num<br>id : #{KZHiYuvgkMm}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{yTfVdx0NIOh}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+ML PMP 14 - TX Percentage of targeted health workers demonstrating compliance to treatment with WHO-recommended ACTs for cases with positive malaria test results
+</td>
+<td style="text-align:left;">
+ML PMP 14 - TX % HWs compliance positive cases
+</td>
+<td style="text-align:left;">
+Num<br>id : #{eJSUmK8XCOw}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{w1gYh10blt1}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+ML PMP 15 - TX Percentage of targeted health workers demonstrating adherence to negative test results according to global standards
+</td>
+<td style="text-align:left;">
+ML PMP 15 - TX % HWs compliance negative cases
+</td>
+<td style="text-align:left;">
+Num<br>id : #{yChCRfBYBx2}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{FORs5r9LYU3}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+ML PMP 16 - TX Percentage of targeted health workers demonstrating competence in management of complicated or severe malaria according to WHO guidelines
+</td>
+<td style="text-align:left;">
+ML PMP 16 - TX % HWs competent sever cases
+</td>
+<td style="text-align:left;">
+Num<br>id : #{es8NwgtSAsX}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{b3GBk3DB8ou}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+ML PMP 17 - TX Percentage of targeted health workers demonstrating competence in management of uncomplicated malaria according to national guidelines
+</td>
+<td style="text-align:left;">
+ML PMP 17 - TX % HWs competent unc malaria
+</td>
+<td style="text-align:left;">
+Num<br>id : #{l4uAwIXVrPp}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{uNnp6IHODyP}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+ML PMP 18 - TX Percentage of targeted facilities that meet global standards (including appropriate materials, documentation, and qualified staff) for quality malaria case management
+</td>
+<td style="text-align:left;">
+ML PMP 18 - TX % HFs compliant quality case mngt
+</td>
+<td style="text-align:left;">
+Num<br>id : #{vsI12KXd1od}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{XY77QRYfFiA}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+ML PMP 19 - TX Percentage of targeted health workers trained in management of complicated or severe malaria according to national guidelines in malaria case
+</td>
+<td style="text-align:left;">
+ML PMP 19 - TX % HWs trained severe malaria
+</td>
+<td style="text-align:left;">
+Num<br>id : #{RO6irxovRAO}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{ddWTWat3EDS}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+ML PMP 20 - TX Percentage of health workers trained according to national guidelines in malaria case management with ACTs
+</td>
+<td style="text-align:left;">
+ML PMP 20 - TX % HWs trained case mngt ACTs
+</td>
+<td style="text-align:left;">
+Num<br>id : #{r4Gt4QQOoFD}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{rJvwXMR6FUC}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+ML PMP 21 - TX Percentage of targeted health facilities that receive a quarterly supervisory visit
+</td>
+<td style="text-align:left;">
+ML PMP 21 - TX % HFs supervised
+</td>
+<td style="text-align:left;">
+Num<br>id : #{teWZva5EkPM}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{wfz9d5EpD2c}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+ML PMP 22 - TX Percentage of targeted health facilities regularly reporting routine malaria case data
+</td>
+<td style="text-align:left;">
+ML PMP 22 - TX % HFs reporting on time
+</td>
+<td style="text-align:left;">
+Num<br>id : #{iBcwqsqDLeT}
+</td>
+<td style="text-align:left;">
+Den<br>id : R{Mzg2dfU0Sdj.ACTUAL_REPORTS}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+ML PMP 23 - TX Percentage of targeted districts with national guidelines for malaria treatment that meet national standards
+</td>
+<td style="text-align:left;">
+ML PMP 23 - TX % districts treatment guidelines
+</td>
+<td style="text-align:left;">
+Num<br>id : #{pklKswSY4dg}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{nUyU7k7knZD}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr grouplength="8">
+<td colspan="6" style="border-bottom: 1px solid; padding-left: 2em;" indentlevel="1">
+<strong>MIP indicators</strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+ML PMP 24 - MIP Percentage of pregnant women who received an ITN during routine ANC visit/interaction
+</td>
+<td style="text-align:left;">
+ML PMP 24 - MIP % pregnant women received ITN
+</td>
+<td style="text-align:left;">
+Num<br>id : #{jmLXEBQDZAy}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{IGyPotenyO2}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+ML PMP 25 - MIP Percentage of pregnant women who received three or more doses of IPTp according to national guidelines (during ANC)
+</td>
+<td style="text-align:left;">
+ML PMP 25 - MIP % pregnant women IPT3
+</td>
+<td style="text-align:left;">
+Num<br>id : #{RS90YaqGgUN}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{IGyPotenyO2}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+ML PMP 26 - MIP Percentage of pregnant women who received two doses of IPTp
+</td>
+<td style="text-align:left;">
+ML PMP 26 - MIP % pregnant women IPT2
+</td>
+<td style="text-align:left;">
+Num<br>id : #{LF9PqTGXhBc}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{IGyPotenyO2}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+ML PMP 27 - MIP Percentage of pregnant women who received one dose of IPTp
+</td>
+<td style="text-align:left;">
+ML PMP 27 - MIP % pregnant women IPT1
+</td>
+<td style="text-align:left;">
+Num<br>id : #{qk8A67ySRR0}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{IGyPotenyO2}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+ML PMP 28 - MIP Percentage of targeted health workers demonstrating competence in prevention of MiP
+</td>
+<td style="text-align:left;">
+ML PMP 28 - MIP % HWs competent MIP prevention
+</td>
+<td style="text-align:left;">
+Num<br>id : #{FGSiegFTyBL}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{YQ1zwUfv6Gx}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+ML PMP 29 - MIP Percentage of targeted health workers demonstrating competence in treatment of MiP
+</td>
+<td style="text-align:left;">
+ML PMP 29 - MIP % HWs competent MIP treatment
+</td>
+<td style="text-align:left;">
+Num<br>id : #{AkJUjEErkX5}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{yOXzK6ElVJr}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+ML PMP 30 - MIP Percentage of health workers trained in IPTp per national guidelines
+</td>
+<td style="text-align:left;">
+ML PMP 30 - MIP % HWs trained IPTp
+</td>
+<td style="text-align:left;">
+Num<br>id : #{CxioZ7hV8e9}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{FVF9sYgBAH2}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+ML PMP 31 - MIP A functional/active national MiP/MNCH/ANC Working Group
+</td>
+<td style="text-align:left;">
+ML PMP 31 - MIP functional national working group
+</td>
+<td style="text-align:left;">
+Num<br>id : #{wHtxPnCGqBV}
+</td>
+<td style="text-align:left;">
+Den<br>id : 1
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr grouplength="8">
+<td colspan="6" style="border-bottom: 1px solid;">
+<strong>SMC indicators</strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+ML PMP 32 - SMC Percentage of targeted children who receive all 4 rounds doses of SMC during a campaign, in an intervention area (or all 3 per national guidance where only 3 doses are indicated) 
+</td>
+<td style="text-align:left;">
+ML PMP 32 - SMC % CU5 who received all doses
+</td>
+<td style="text-align:left;">
+Num<br>id : #{ioU1w8yCIWv}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{jAD6Dh7z1d1}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+ML PMP 33 - SMC Number of targeted children receiving a dose of SMC in the intervention area
+</td>
+<td style="text-align:left;">
+ML PMP 33 - SMC % CU5 who received a dose
+</td>
+<td style="text-align:left;">
+Num<br>id : #{cOBjDRbvsyW}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{jAD6Dh7z1d1}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+ML PMP 34 - SMC Percentage of targeted children who receive dose of SMC in the first cycle
+</td>
+<td style="text-align:left;">
+ML PMP 34 - SMC % CU5 who received a dose 1st wave
+</td>
+<td style="text-align:left;">
+Num<br>id : #{HaSIpoMB2ub}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{jAD6Dh7z1d1}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+ML PMP 35 - SMC Percentage of targeted children who receive dose of SMC in the second cycle
+</td>
+<td style="text-align:left;">
+ML PMP 35 - SMC % CU5 who received a dose 2nd wave
+</td>
+<td style="text-align:left;">
+Num<br>id : #{wot02J4aRZm}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{jAD6Dh7z1d1}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+ML PMP 36 - SMC Percentage of targeted children who receive dose of SMC in the third cycle 
+</td>
+<td style="text-align:left;">
+ML PMP 36 - SMC % CU5 who received a dose 3rd wave
+</td>
+<td style="text-align:left;">
+Num<br>id : #{ZCibgANrNQq}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{jAD6Dh7z1d1}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+ML PMP 37 - SMC Percentage of targeted children who receive dose of SMC in the fourth cycle
+</td>
+<td style="text-align:left;">
+ML PMP 37 - SMC % CU5 who received a dose 4th wave
+</td>
+<td style="text-align:left;">
+Num<br>id : #{Q71hAveCSGo}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{jAD6Dh7z1d1}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+ML PMP 38 - SMC Percentage of health workers trained to deliver SMC according to national guidelines 
+</td>
+<td style="text-align:left;">
+ML PMP 38 - SMC % HWs trained on SMC
+</td>
+<td style="text-align:left;">
+Num<br>id : #{y6qGAzE5DRa}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{nE14FEYzkVX}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+ML PMP 39 - SMC Percentage of targeted districts with annual SMC implementation plans 
+</td>
+<td style="text-align:left;">
+ML PMP 39 - SMC % annual operational SMC plans
+</td>
+<td style="text-align:left;">
+Num<br>id : #{hBYYaPLEFFf}
+</td>
+<td style="text-align:left;">
+Den<br>id : #{gN3w6Jx7q5h}
+</td>
+<td style="text-align:left;">
+100 - Per Cent
+</td>
+</tr>
+<tr grouplength="3">
+<td colspan="6" style="border-bottom: 1px solid;">
+<strong>TL indicators</strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+ML PMP 40 - TL Contribution to regional or national guidance/policy documents related to malaria (including RH)
+</td>
+<td style="text-align:left;">
+ML PMP 40 - TL Contribution to national policies
+</td>
+<td style="text-align:left;">
+Num<br>id : #{tJXmW64MUxf}
+</td>
+<td style="text-align:left;">
+Den<br>id : 1
+</td>
+<td style="text-align:left;">
+1 - Atomic (number)
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+ML PMP 41 - TL Number of country-level program activity outputs disseminated to the national health community
+</td>
+<td style="text-align:left;">
+ML PMP 41 - TL Program outputs disseminated
+</td>
+<td style="text-align:left;">
+Num<br>id : #{P4YDP2FNh3X}
+</td>
+<td style="text-align:left;">
+Den<br>id : 1
+</td>
+<td style="text-align:left;">
+1 - Atomic (number)
+</td>
+</tr>
+<tr>
+<td style="text-align:left; padding-left: 2em;" indentlevel="1">
+NA
+</td>
+<td style="text-align:left;">
+ML PMP 42 - TL Participation in targeted regional or global level Working group(s) and/or taskforce(s)
+</td>
+<td style="text-align:left;">
+ML PMP 42 - TL Participation in WGs
+</td>
+<td style="text-align:left;">
+Num<br>id : #{XxfoDreiw9Z}
+</td>
+<td style="text-align:left;">
+Den<br>id : 1
+</td>
+<td style="text-align:left;">
+1 - Atomic (number)
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="comp.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="meta.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/INyabuto/im-data-hub/edit/master/03-data-specs.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
