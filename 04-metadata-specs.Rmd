@@ -2,7 +2,7 @@
 
 ```{r set up, include=FALSE}
 load("./hub.RData")
-source("/Users/isaiahnyabuto/Documents/Workspace/utils.R")
+#source("/Users/isaiahnyabuto/Documents/Workspace/utils.R")
 library(knitr)
 library(kableExtra)
 library(dplyr)
