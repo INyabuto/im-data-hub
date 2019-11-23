@@ -1,8 +1,0 @@
-book_filename: "im-data-hub"
-language:
-  ui:
-    chapter_name: "Chapter "
-delete_merged_file: true
-output_dir: "docs"
-view: https://github.com/INyabuto/im-data-hub/blob/master/%s
-edit: https://github.com/INyabuto/im-data-hub/edit/master/%s
