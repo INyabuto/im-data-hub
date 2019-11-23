@@ -1,0 +1,21 @@
+p.caption {
+  color: #777;
+  margin-top: 10px;
+}
+p code {
+  white-space: inherit;
+}
+pre {
+  word-break: normal;
+  word-wrap: normal;
+}
+pre code {
+  white-space: inherit;
+}
+<<<<<<< HEAD
+
+.FOO {
+  background-color:#F7F7F7;
+}
+=======
+>>>>>>> dd4566db039f537588b8078c7db437987a3eccb8
