@@ -23,7 +23,7 @@ knitr::include_graphics("./images/logo1.png")
 knitr::include_graphics("./images/logo2.png")
 ```
 
-This is a technical guide for the IM Data Hub, __a work currently in progress by BAO systems intended for official release in [production](imdatahub.org) by ______2020
+This is a technical guide for the IM Data Hub, __a work currently in progress by BAO systems intended for official release in [production](imdatahub.org) by ______
 
 
 [__IM Data Hub__](imdatahub.org) is a warehouse for Impact Malaria indicator data. It houses all the IM indicator data for project monitoring and use. It is primarily designed with data users in mind, and so it comes with several tools specifically designed to enable monitoring and promote the use of IM data.
