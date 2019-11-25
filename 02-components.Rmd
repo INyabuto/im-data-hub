@@ -150,7 +150,7 @@ As an example, we tabulate and pivot `IM Confirmed vs. Suspected Malaria Cases.`
 
 Please refresh your browser or login with the demo account below if you have not.
 
-`[IM Data Hub demo](https://im-dev.psi-mis.org/dhis-web-dataentry/index.action)`
+[IM Data Hub demo](https://im-dev.psi-mis.org/dhis-web-dataentry/index.action)
 
 `Username` :**`demoUser`** and `Password` : **`Temp1234!`**
 
