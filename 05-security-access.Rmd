@@ -53,7 +53,7 @@ Access Model defines what and how objects are shared or accessed in the IM Data 
 There are two ways of setting up the access model.
 
 User roles: Setting roles and the access level for the objects in the data hub.
-User groups: Defining groups to sharing access to objects in the data hub.
+User groups: Defining groups for sharing access to objects in the data hub.
 
 
 ### User roles
@@ -75,7 +75,45 @@ _User - Data Entry Aggregated | Data entry for data sets (Data Entry, Data Captu
 _User - Data Entry Tracker | Data entry for programs (Event capture, DHIS2 Android Capture)
 
 
+### User Groups
 
+There are two main types of user group.
+
+1. Country user group - consists of `[country ISO code] - Admin` and `[country ISO code] - Users` 
+2. Global user group - consists of `IM - Admin` and `IM - Users`
+
+
+>All metadata are shared accordingly to the level of access each User group should have.
+
+The admin groups can edit and view metadata; capture and view data while user groups can only view metadata; capture and/or view data based on user’s user roles. 
+
+
+>CORE Cat options are shared public with access to view the metadata; capture and view data `IM  - Admin` can edit and view the metadata, capture and view data.
+
+>[`country ISO code`] Cat options are shared public with access to view metadata; public capture and view data. `[country ISO code] Admin` can edit and view metadata; capture and view data. `IM - Admin` can edit and view metadata; capture and view data
+
+> CORE Categories and CORE Cat combos are shared public with access to view metadata; Public view metadata. `IM - Admin` can edit and view the metadata.
+
+> [`country ISO code`] Categories, Cat combos, DEs, DE Groups, Indicators, Indicator Groups, OU Groups and OU Group sets are shared to the country specific user groups. `[country ISO code] - Admin` can edit and view metadata while `[country ISO code] - Users` can only view the metadata.
+
+> IM DEs, DE Groups, Indicators, Indicator Groups and OU Group sets are shared to the global groups. `IM - Admin` can edit and view metadata while `IM - Users` can view metadata.
+
+>[`country ISO code`] Data sets are shared to the country user group. `[country ISO code] - Admin` can edit and view metadata; capture and view data and `[country ISO code] - Users` can view metadata; capture and view data.
+
+>IM Data sets are shared to the global user groups. `IM - Admin` can edit and view metadata; capture and view data while
+`IM - Users` can view metadata; capture and view data
+
+## Tips, Tricks and Best Practices
+
+> If a user is an Admin assign the user to the `[country ISO code] - Admin` group.
+
+>If a user does Data entry or Analytics assign the user to the `[country ISO code] - Users`
+
+### Access from country to global level access:
+In case you want a country user to have access to global metadata and/or data, do not share global metadata with the country User group the user is part of (ie do not share the Data set IM Case Reporting with GH – Admin), but rather include the user in one of the IM User groups (ie include Amos into IM – Users User group in case you want to give him access to data reported at global level)
+
+### Access from global to country level access:
+In case you want a global user to have access to country metadata and/or data, do not share country metadata with the IM User group the user is part of (ie do not share the Data set GH Case Reporting with IM – Admin), but rather include the user into one of the relevant [country ISO code] User groups (ie include Keith into the DC – Users User group if you want to give him access to data from DRC). 
 
 
 

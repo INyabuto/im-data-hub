@@ -261,13 +261,11 @@ CD PMP - DX Percentage of health workers demonstrating competence in malaria mic
 \hypertarget{background}{%
 \section{Background}\label{background}}
 
-Impact Maria (IM) Data Hub is a web-based project monitoring system used to collect, analyze, and report IM indicator data. IM is a five-year project by the US President's Malaria Initiative (PMI) global service to reduce malaria mortality and morbidity.
+The Impact Maria (IM) Data Hub is a web-based project monitoring system used to collect, analyze, monitor and report IM indicator data. {[}IMPACT Malaria {]} (impactmalaria.org) is a five year contract funded by the US President's Malaria Initiative (PMI) to work with national malaria programs to fight malaria and save lives by strengthening diagnosis, treatment, and drug-based prevention for those most at risk, particularly children and pregnant women.
 
-The BAO system implements it in an ST-3 plan that began on Nov 27th, 2018.
+The \href{imdatahub.org}{\textbf{IMPACT Malaria Data Hub}} is the IMPACT Malaria project monitoring system database for IM indicators. It is a web based database in a District Health Information Software 2 (DHIS2) instance and it houses all IM indicator data for project monitoring and use. It is primarily designed with data users in mind, and so its configuration comes with approaches specifically designed to enable monitoring and promote the use of IM data.
 
-The system hosts all the IM data. Multiple partners use it at different levels from donors (PMI), implementers (PSI, Jhpiego, UCSF,.e.tc), and government ministries of health (MOH) to track project progress and country performance.
-
-It's active in 11 countries, and collects a tremendous amount of data on;
+The IM Data Hub is used in IM countries in Africa and Asia and it collects a tremendous amount of data in the following tracks:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -282,66 +280,59 @@ It's active in 11 countries, and collects a tremendous amount of data on;
   Global Technical Leadership.
 \end{enumerate}
 
-IM Data Hub is compatible with HNQIS version 4.
+It is used by multiple partners at different levels, from Ministries of Health (MoHs), National Malaria Control Programs (NMCPs), donors like the President's Malaria Initiative (PMI), implementers (PSI, Jhpiego, University of California San Francisco (UCSF)) to track project monitoring and performance.
 
 \hypertarget{purpose}{%
 \subsection{Purpose}\label{purpose}}
 
-IM Data Hub was developed;
+The IM Data Hub was developed:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  To monitor IM indicator data.
+  To monitor IM indicator data
 \item
-  Provide access to IM indicator data at the country and global level.
+  Provide access to IM indicator data at district, country and global level
 \item
   Enable central/global level data management
 \item
   Track project progress and country performance
 \item
-  Promote data use for decision making.
+  Promote data use for decision making
 \end{enumerate}
 
 \hypertarget{servers}{%
 \subsection{Servers}\label{servers}}
 
-IM Data Hub is available at the following instances;
+The IM Data Hub has two istances:
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
+\begin{itemize}
 \tightlist
 \item
-  Development instance: Where all the developments and testing takes place. It's accessible at \url{https://im-dev.psi-mis.org/} (version 2.30 as of Jan 9, 2019): Analytics run at midnight and 12:00 UTC (EAT -3h)
+  A \textbf{development instance} at \href{https://im-dev.psi-mis.org}{im-dev.psi-mis.org} hosted on a ST-3 plan from BAO Systems since Nov 22nd, 2019 for prototyping, testing and piloting. Analytics run daily at 00:00 and 12:00 UTC (EAT -3h)
 \item
-  Production instance: Ready for use. Accessible at impactmalaria-mis.org (Version 2.30, not ready as of Aug 30, 2019):
-\end{enumerate}
+  A \textbf{production instance} at \href{https://imdatahub.org}{imdatahub.org} hosted on a ST-3 plan from BAO Systems since Nov 27th, 2018 for actual monitoring and reporting. Analytics run daily at 00:00 and 12:00 UTC (EAT -3h)
+\end{itemize}
 
 \hypertarget{getting-started}{%
 \section{Getting Started}\label{getting-started}}
 
-The easiest way to get started on IM Data Hub is to log in at the test server at \url{https://im-dev.psi-mis.org/} with the following credentials.
+The easiest way to get started on the IM Data Hub is to log in at the dev server at \url{https://im-dev.psi-mis.org/} with the IM demo credentials \texttt{demoUser} - the pw is provided by your System Admin.
 
-\texttt{Username\ :}\textbf{\texttt{demoUser}} \texttt{and\ Password\ :} \textbf{\texttt{Temp1234!}}
-
-The landing page!
-
-\includegraphics[width=46.08in]{./images/landing-page}
-
-Countries doing data entry or testings can log in with the following credentials based on their country ISO codes.
+Countries doing data entry or testings have country specific demo accounts based on their country ISO codes - the pw is provided by your System Admin.
 
 \begin{longtable}[]{@{}ll@{}}
 \toprule
-Country & username ; password\tabularnewline
+Country & username\tabularnewline
 \midrule
 \endhead
-Congo & \texttt{CDdemo};\texttt{Temp1234!}\tabularnewline
-Cameroon & \texttt{CMdemo};\texttt{Temp1234!}\tabularnewline
-Ghana & \texttt{GHdemo};\texttt{Temp1234!}\tabularnewline
-Kenya & \texttt{KEdemo};\texttt{Temp1234!}\tabularnewline
-Mali & \texttt{MLdemo};\texttt{Temp1234!}\tabularnewline
-Niger & \texttt{NEdemo};\texttt{Temp1234!}\tabularnewline
+Congo & \texttt{CDdemo}\tabularnewline
+Cameroon & \texttt{CMdemo}\tabularnewline
+Ghana & \texttt{GHdemo}\tabularnewline
+Kenya & \texttt{KEdemo}\tabularnewline
+Mali & \texttt{MLdemo}\tabularnewline
+Niger & \texttt{NEdemo}\tabularnewline
 \bottomrule
 \end{longtable}
 
@@ -3450,7 +3441,7 @@ OU groups, OU group sets.
 
 IM Data Hub OUs consists of the following groups and group sets by countries and the type of facility.
 
-\label{tab:unnamed-chunk-12}A table showing OU groups and group set
+\label{tab:unnamed-chunk-11}A table showing OU groups and group set
 
 OU group set
 
@@ -3485,7 +3476,7 @@ NE Public
 
 IM Data Hub implements the following Metadata types.
 
-\label{tab:unnamed-chunk-13}A table showing metadata types implimented in the IM Data Hub
+\label{tab:unnamed-chunk-12}A table showing metadata types implimented in the IM Data Hub
 
 Metadata
 
@@ -3578,7 +3569,7 @@ The following is a list of all IM data hub core metadata.
 \hypertarget{category}{%
 \subsection{Category}\label{category}}
 
-\label{tab:unnamed-chunk-14}A table showing core categories set in the IM Data Hub
+\label{tab:unnamed-chunk-13}A table showing core categories set in the IM Data Hub
 
 name
 
@@ -3655,7 +3646,7 @@ Supervisor, Clinical staff, Laboratory-based staff, Community-based staff, Other
 \hypertarget{category-combination}{%
 \subsection{Category Combination}\label{category-combination}}
 
-\label{tab:unnamed-chunk-15}A table showing core category combos set in the IM Data Hub
+\label{tab:unnamed-chunk-14}A table showing core category combos set in the IM Data Hub
 
 name
 
@@ -3847,7 +3838,7 @@ Access Model defines what and how objects are shared or accessed in the IM Data 
 There are two ways of setting up the access model.
 
 User roles: Setting roles and the access level for the objects in the data hub.
-User groups: Defining groups to sharing access to objects in the data hub.
+User groups: Defining groups for sharing access to objects in the data hub.
 
 \hypertarget{user-roles}{%
 \subsection{User roles}\label{user-roles}}
@@ -3912,6 +3903,76 @@ Data entry for programs (Event capture, DHIS2 Android Capture)\strut
 \end{minipage}\tabularnewline
 \bottomrule
 \end{longtable}
+
+\hypertarget{user-groups}{%
+\subsection{User Groups}\label{user-groups}}
+
+There are two main types of user group.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Country user group - consists of \texttt{{[}country\ ISO\ code{]}\ -\ Admin} and \texttt{{[}country\ ISO\ code{]}\ -\ Users}
+\item
+  Global user group - consists of \texttt{IM\ -\ Admin} and \texttt{IM\ -\ Users}
+\end{enumerate}
+
+\begin{quote}
+All metadata are shared accordingly to the level of access each User group should have.
+\end{quote}
+
+The admin groups can edit and view metadata; capture and view data while user groups can only view metadata; capture and/or view data based on user's user roles.
+
+\begin{quote}
+CORE Cat options are shared public with access to view the metadata; capture and view data \texttt{IM\ \ -\ Admin} can edit and view the metadata, capture and view data.
+\end{quote}
+
+\begin{quote}
+{[}\texttt{country\ ISO\ code}{]} Cat options are shared public with access to view metadata; public capture and view data. \texttt{{[}country\ ISO\ code{]}\ Admin} can edit and view metadata; capture and view data. \texttt{IM\ -\ Admin} can edit and view metadata; capture and view data
+\end{quote}
+
+\begin{quote}
+CORE Categories and CORE Cat combos are shared public with access to view metadata; Public view metadata. \texttt{IM\ -\ Admin} can edit and view the metadata.
+\end{quote}
+
+\begin{quote}
+{[}\texttt{country\ ISO\ code}{]} Categories, Cat combos, DEs, DE Groups, Indicators, Indicator Groups, OU Groups and OU Group sets are shared to the country specific user groups. \texttt{{[}country\ ISO\ code{]}\ -\ Admin} can edit and view metadata while \texttt{{[}country\ ISO\ code{]}\ -\ Users} can only view the metadata.
+\end{quote}
+
+\begin{quote}
+IM DEs, DE Groups, Indicators, Indicator Groups and OU Group sets are shared to the global groups. \texttt{IM\ -\ Admin} can edit and view metadata while \texttt{IM\ -\ Users} can view metadata.
+\end{quote}
+
+\begin{quote}
+{[}\texttt{country\ ISO\ code}{]} Data sets are shared to the country user group. \texttt{{[}country\ ISO\ code{]}\ -\ Admin} can edit and view metadata; capture and view data and \texttt{{[}country\ ISO\ code{]}\ -\ Users} can view metadata; capture and view data.
+\end{quote}
+
+\begin{quote}
+IM Data sets are shared to the global user groups. \texttt{IM\ -\ Admin} can edit and view metadata; capture and view data while
+\texttt{IM\ -\ Users} can view metadata; capture and view data
+\end{quote}
+
+\hypertarget{tips-tricks-and-best-practices}{%
+\section{Tips, Tricks and Best Practices}\label{tips-tricks-and-best-practices}}
+
+\begin{quote}
+If a user is an Admin assign the user to the \texttt{{[}country\ ISO\ code{]}\ -\ Admin} group.
+\end{quote}
+
+\begin{quote}
+If a user does Data entry or Analytics assign the user to the \texttt{{[}country\ ISO\ code{]}\ -\ Users}
+\end{quote}
+
+\hypertarget{access-from-country-to-global-level-access}{%
+\subsection{Access from country to global level access:}\label{access-from-country-to-global-level-access}}
+
+In case you want a country user to have access to global metadata and/or data, do not share global metadata with the country User group the user is part of (ie do not share the Data set IM Case Reporting with GH -- Admin), but rather include the user in one of the IM User groups (ie include Amos into IM -- Users User group in case you want to give him access to data reported at global level)
+
+\hypertarget{access-from-global-to-country-level-access}{%
+\subsection{Access from global to country level access:}\label{access-from-global-to-country-level-access}}
+
+In case you want a global user to have access to country metadata and/or data, do not share country metadata with the IM User group the user is part of (ie do not share the Data set GH Case Reporting with IM -- Admin), but rather include the user into one of the relevant {[}country ISO code{]} User groups (ie include Keith into the DC -- Users User group if you want to give him access to data from DRC).
 
 \hypertarget{custom}{%
 \chapter{Customization \& Troubleshooting IM Datahub}\label{custom}}
