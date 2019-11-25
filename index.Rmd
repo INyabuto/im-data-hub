@@ -23,6 +23,17 @@ always_allow_html: yes
 
 # Welcome {-}
 
+```{r echo=FALSE, fig.width=100, fig.height=50}
+knitr::include_graphics("./images/logo1.png")
+```
+
+```{r echo=FALSE, fig.width=100, fig.height=50}
+knitr::include_graphics("./images/logo2.png")
+```
+
+This is a technical guide for the IM Data Hub, __a work currently in progress by BAO systems intended for official release in [production](imdatahub.org) by ______
+
+
 
 This is a technical guide for the IMPACT Malaria (IM) Data Hub, developed by Population Services International (PSI), to support IMPACT Malaria technical team to navigate, maintain and use the IM Data Hub.
 

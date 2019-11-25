@@ -24,7 +24,7 @@
 <meta name="author" content="Isaiah Nyabuto, Cristina Lussiana" />
 
 
-<meta name="date" content="2019-11-23" />
+<meta name="date" content="2019-11-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -112,7 +112,10 @@
 <li class="chapter" data-level="4.2.1" data-path="meta.html"><a href="meta.html#ou-trees"><i class="fa fa-check"></i><b>4.2.1</b> OU Trees</a></li>
 </ul></li>
 <li class="chapter" data-level="4.3" data-path="meta.html"><a href="meta.html#metadata"><i class="fa fa-check"></i><b>4.3</b> Metadata</a></li>
-<li class="chapter" data-level="4.4" data-path="meta.html"><a href="meta.html#core-metadata"><i class="fa fa-check"></i><b>4.4</b> Core Metadata</a></li>
+<li class="chapter" data-level="4.4" data-path="meta.html"><a href="meta.html#core-metadata"><i class="fa fa-check"></i><b>4.4</b> Core Metadata</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="meta.html"><a href="meta.html#category"><i class="fa fa-check"></i><b>4.4.1</b> Category</a></li>
+<li class="chapter" data-level="4.4.2" data-path="meta.html"><a href="meta.html#category-combination"><i class="fa fa-check"></i><b>4.4.2</b> Category Combination</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="access.html"><a href="access.html"><i class="fa fa-check"></i><b>5</b> Security Mechanism &amp; Access Model</a><ul>
 <li class="chapter" data-level="5.1" data-path="access.html"><a href="access.html#introduction-3"><i class="fa fa-check"></i><b>5.1</b> Introduction</a></li>
@@ -121,6 +124,11 @@
 </ul></li>
 <li class="chapter" data-level="5.3" data-path="access.html"><a href="access.html#access-model"><i class="fa fa-check"></i><b>5.3</b> Access Model</a><ul>
 <li class="chapter" data-level="5.3.1" data-path="access.html"><a href="access.html#user-roles"><i class="fa fa-check"></i><b>5.3.1</b> User roles</a></li>
+<li class="chapter" data-level="5.3.2" data-path="access.html"><a href="access.html#user-groups"><i class="fa fa-check"></i><b>5.3.2</b> User Groups</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="access.html"><a href="access.html#tips-tricks-and-best-practices"><i class="fa fa-check"></i><b>5.4</b> Tips, Tricks and Best Practices</a><ul>
+<li class="chapter" data-level="5.4.1" data-path="access.html"><a href="access.html#access-from-country-to-global-level-access"><i class="fa fa-check"></i><b>5.4.1</b> Access from country to global level access:</a></li>
+<li class="chapter" data-level="5.4.2" data-path="access.html"><a href="access.html#access-from-global-to-country-level-access"><i class="fa fa-check"></i><b>5.4.2</b> Access from global to country level access:</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="custom.html"><a href="custom.html"><i class="fa fa-check"></i><b>6</b> Customization &amp; Troubleshooting IM Datahub</a><ul>
@@ -273,7 +281,7 @@
 <p>IM Data Hub OUs consists of the following groups and group sets by countries and the type of facility.</p>
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:unnamed-chunk-12">Table 4.1: </span>A table showing OU groups and group set
+<span id="tab:unnamed-chunk-11">Table 4.1: </span>A table showing OU groups and group set
 </caption>
 <thead>
 <tr>
@@ -343,7 +351,7 @@ NE Public
 <p>IM Data Hub implements the following Metadata types.</p>
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:unnamed-chunk-13">Table 4.2: </span>A table showing metadata types implimented in the IM Data Hub
+<span id="tab:unnamed-chunk-12">Table 4.2: </span>A table showing metadata types implimented in the IM Data Hub
 </caption>
 <thead>
 <tr>
@@ -488,8 +496,374 @@ For instance: <em>KE PMP</em> is an indicator group with all PMP indicators for 
 </div>
 <div id="core-metadata" class="section level2">
 <h2><span class="header-section-number">4.4</span> Core Metadata</h2>
+<p>Core Metadata are reserved objects in the data hub. They are shared publicly for re-use in the data hub.</p>
+<p>There are two main types of <code>core metadata.</code></p>
+<ol style="list-style-type: decimal">
+<li>Category: a group of cat options for disaggregation/attributes.</li>
+<li>Category Combination: a combination of classes used to apply disaggregation onto data elements/indicators.</li>
+</ol>
 <p>The following is a list of all IM data hub core metadata.</p>
+<div id="category" class="section level3">
+<h3><span class="header-section-number">4.4.1</span> Category</h3>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-13">Table 4.3: </span>A table showing core categories set in the IM Data Hub
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+name
+</th>
+<th style="text-align:left;">
+id
+</th>
+<th style="text-align:left;">
+dataDimensionType
+</th>
+<th style="text-align:left;">
+categoryOptions
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+CORE - Age group
+</td>
+<td style="text-align:left;">
+JhSWHy2jOSU
+</td>
+<td style="text-align:left;">
+DISAGGREGATION
+</td>
+<td style="text-align:left;">
+&lt; 5 years, &gt;= 5 years, Unknown age group
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CORE - Age group (CU5)
+</td>
+<td style="text-align:left;">
+Xefm8oW3pkF
+</td>
+<td style="text-align:left;">
+DISAGGREGATION
+</td>
+<td style="text-align:left;">
+3-11 months, 12-59 months, Unknown age group
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CORE - Malaria case
+</td>
+<td style="text-align:left;">
+pDXpwgS0vPG
+</td>
+<td style="text-align:left;">
+DISAGGREGATION
+</td>
+<td style="text-align:left;">
+Presumed, Confirmed, Unknown malaria case
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CORE - Parasitological test
+</td>
+<td style="text-align:left;">
+lcitYzHH0qa
+</td>
+<td style="text-align:left;">
+DISAGGREGATION
+</td>
+<td style="text-align:left;">
+RDT, Microscopy, Unknown parasitological test
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CORE - Sex
+</td>
+<td style="text-align:left;">
+R192IcXWsCx
+</td>
+<td style="text-align:left;">
+DISAGGREGATION
+</td>
+<td style="text-align:left;">
+Male, Female, Unknown sex
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CORE - Type of health facility
+</td>
+<td style="text-align:left;">
+yYOva72MZyZ
+</td>
+<td style="text-align:left;">
+DISAGGREGATION
+</td>
+<td style="text-align:left;">
+Public, Private, Other type of HF, Unknown type of HF
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CORE - Type of health facility (correct)
+</td>
+<td style="text-align:left;">
+NNFAQZG9keS
+</td>
+<td style="text-align:left;">
+DISAGGREGATION
+</td>
+<td style="text-align:left;">
+Hospital, Health centre, Other type of HF, Unknown type of HF
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CORE - Type of health worker
+</td>
+<td style="text-align:left;">
+gwgoQPKhJdq
+</td>
+<td style="text-align:left;">
+DISAGGREGATION
+</td>
+<td style="text-align:left;">
+Supervisor, Clinical staff, Laboratory-based staff, Community-based staff, Other type of HW, Unknown type of HW
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="category-combination" class="section level3">
+<h3><span class="header-section-number">4.4.2</span> Category Combination</h3>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-14">Table 4.4: </span>A table showing core category combos set in the IM Data Hub
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+name
+</th>
+<th style="text-align:left;">
+id
+</th>
+<th style="text-align:left;">
+dataDimensionType
+</th>
+<th style="text-align:left;">
+categories
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+CD - Type of health facility | CORE - Type of health facility
+</td>
+<td style="text-align:left;">
+trkkw7Sqneh
+</td>
+<td style="text-align:left;">
+DISAGGREGATION
+</td>
+<td style="text-align:left;">
+CD - Type of health facility, CORE - Type of health facility
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CORE - Age-group
+</td>
+<td style="text-align:left;">
+s6PIj7AEo4C
+</td>
+<td style="text-align:left;">
+DISAGGREGATION
+</td>
+<td style="text-align:left;">
+CORE - Age group
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CORE - Age-group (CU5)
+</td>
+<td style="text-align:left;">
+XRB1m49tshW
+</td>
+<td style="text-align:left;">
+DISAGGREGATION
+</td>
+<td style="text-align:left;">
+CORE - Age group CU5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CORE - Malaria case
+</td>
+<td style="text-align:left;">
+vuvcFOW0mGh
+</td>
+<td style="text-align:left;">
+DISAGGREGATION
+</td>
+<td style="text-align:left;">
+CORE - Malaria case
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CORE - Malaria case | Sex | Age-group
+</td>
+<td style="text-align:left;">
+ritXllZj5kI
+</td>
+<td style="text-align:left;">
+DISAGGREGATION
+</td>
+<td style="text-align:left;">
+CORE - Malaria case, CORE - Sex, CORE - Age group
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CORE - Parasitological test
+</td>
+<td style="text-align:left;">
+cCnujLPVBoQ
+</td>
+<td style="text-align:left;">
+DISAGGREGATION
+</td>
+<td style="text-align:left;">
+CORE - Parasitological test
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CORE - Parasitological test | Age-group
+</td>
+<td style="text-align:left;">
+jyv6IyPKPo2
+</td>
+<td style="text-align:left;">
+DISAGGREGATION
+</td>
+<td style="text-align:left;">
+CORE - Parasitological test, CORE - Age group
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CORE - Sex
+</td>
+<td style="text-align:left;">
+d8pbG5hn8ez
+</td>
+<td style="text-align:left;">
+DISAGGREGATION
+</td>
+<td style="text-align:left;">
+CORE - Sex
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CORE - Sex | Age-group
+</td>
+<td style="text-align:left;">
+NnVXBadHoq5
+</td>
+<td style="text-align:left;">
+DISAGGREGATION
+</td>
+<td style="text-align:left;">
+CORE - Sex, CORE - Age group
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CORE - Sex | Age-group (CU5)
+</td>
+<td style="text-align:left;">
+x2c5hEXrAtG
+</td>
+<td style="text-align:left;">
+DISAGGREGATION
+</td>
+<td style="text-align:left;">
+CORE - Sex, CORE - Age group CU5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CORE - Type of health facility
+</td>
+<td style="text-align:left;">
+gfezS3MheUM
+</td>
+<td style="text-align:left;">
+DISAGGREGATION
+</td>
+<td style="text-align:left;">
+CORE - Type of health facility
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CORE - Type of health worker | Sex
+</td>
+<td style="text-align:left;">
+tbPCZwFdG5Y
+</td>
+<td style="text-align:left;">
+DISAGGREGATION
+</td>
+<td style="text-align:left;">
+CORE - Type of health worker, CORE - Sex
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+GH - Type of health facility | CORE - Type of health facility
+</td>
+<td style="text-align:left;">
+tCP9XXfJUz0
+</td>
+<td style="text-align:left;">
+DISAGGREGATION
+</td>
+<td style="text-align:left;">
+GH - Type of health facility, CORE - Type of health facility
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+KE - Type of health facility | CORE - Type of health facility
+</td>
+<td style="text-align:left;">
+bbcas85CNo2
+</td>
+<td style="text-align:left;">
+DISAGGREGATION
+</td>
+<td style="text-align:left;">
+KE - Type of health facility, CORE - Type of health facility
+</td>
+</tr>
+</tbody>
+</table>
 
+</div>
 </div>
 </div>
             </section>

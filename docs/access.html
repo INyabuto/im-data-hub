@@ -24,7 +24,7 @@
 <meta name="author" content="Isaiah Nyabuto, Cristina Lussiana" />
 
 
-<meta name="date" content="2019-11-23" />
+<meta name="date" content="2019-11-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -112,7 +112,10 @@
 <li class="chapter" data-level="4.2.1" data-path="meta.html"><a href="meta.html#ou-trees"><i class="fa fa-check"></i><b>4.2.1</b> OU Trees</a></li>
 </ul></li>
 <li class="chapter" data-level="4.3" data-path="meta.html"><a href="meta.html#metadata"><i class="fa fa-check"></i><b>4.3</b> Metadata</a></li>
-<li class="chapter" data-level="4.4" data-path="meta.html"><a href="meta.html#core-metadata"><i class="fa fa-check"></i><b>4.4</b> Core Metadata</a></li>
+<li class="chapter" data-level="4.4" data-path="meta.html"><a href="meta.html#core-metadata"><i class="fa fa-check"></i><b>4.4</b> Core Metadata</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="meta.html"><a href="meta.html#category"><i class="fa fa-check"></i><b>4.4.1</b> Category</a></li>
+<li class="chapter" data-level="4.4.2" data-path="meta.html"><a href="meta.html#category-combination"><i class="fa fa-check"></i><b>4.4.2</b> Category Combination</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="access.html"><a href="access.html"><i class="fa fa-check"></i><b>5</b> Security Mechanism &amp; Access Model</a><ul>
 <li class="chapter" data-level="5.1" data-path="access.html"><a href="access.html#introduction-3"><i class="fa fa-check"></i><b>5.1</b> Introduction</a></li>
@@ -121,6 +124,11 @@
 </ul></li>
 <li class="chapter" data-level="5.3" data-path="access.html"><a href="access.html#access-model"><i class="fa fa-check"></i><b>5.3</b> Access Model</a><ul>
 <li class="chapter" data-level="5.3.1" data-path="access.html"><a href="access.html#user-roles"><i class="fa fa-check"></i><b>5.3.1</b> User roles</a></li>
+<li class="chapter" data-level="5.3.2" data-path="access.html"><a href="access.html#user-groups"><i class="fa fa-check"></i><b>5.3.2</b> User Groups</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="access.html"><a href="access.html#tips-tricks-and-best-practices"><i class="fa fa-check"></i><b>5.4</b> Tips, Tricks and Best Practices</a><ul>
+<li class="chapter" data-level="5.4.1" data-path="access.html"><a href="access.html#access-from-country-to-global-level-access"><i class="fa fa-check"></i><b>5.4.1</b> Access from country to global level access:</a></li>
+<li class="chapter" data-level="5.4.2" data-path="access.html"><a href="access.html#access-from-global-to-country-level-access"><i class="fa fa-check"></i><b>5.4.2</b> Access from global to country level access:</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="custom.html"><a href="custom.html"><i class="fa fa-check"></i><b>6</b> Customization &amp; Troubleshooting IM Datahub</a><ul>
@@ -190,7 +198,7 @@
 <p>Access Model defines what and how objects are shared or accessed in the IM Data Hub. Objects, in this case, refers to the data, metadata, and all the components in the data hub.</p>
 <p>There are two ways of setting up the access model.</p>
 <p>User roles: Setting roles and the access level for the objects in the data hub.
-User groups: Defining groups to sharing access to objects in the data hub.</p>
+User groups: Defining groups for sharing access to objects in the data hub.</p>
 <div id="user-roles" class="section level3">
 <h3><span class="header-section-number">5.3.1</span> User roles</h3>
 <p>User roles defines the level of access to different objects in the data hub. You can set and assign roles to different objects in from the user app.</p>
@@ -245,6 +253,57 @@ User groups: Defining groups to sharing access to objects in the data hub.</p>
 </tr>
 </tbody>
 </table>
+</div>
+<div id="user-groups" class="section level3">
+<h3><span class="header-section-number">5.3.2</span> User Groups</h3>
+<p>There are two main types of user group.</p>
+<ol style="list-style-type: decimal">
+<li>Country user group - consists of <code>[country ISO code] - Admin</code> and <code>[country ISO code] - Users</code></li>
+<li>Global user group - consists of <code>IM - Admin</code> and <code>IM - Users</code></li>
+</ol>
+<blockquote>
+<p>All metadata are shared accordingly to the level of access each User group should have.</p>
+</blockquote>
+<p>The admin groups can edit and view metadata; capture and view data while user groups can only view metadata; capture and/or view data based on user’s user roles.</p>
+<blockquote>
+<p>CORE Cat options are shared public with access to view the metadata; capture and view data <code>IM  - Admin</code> can edit and view the metadata, capture and view data.</p>
+</blockquote>
+<blockquote>
+<p>[<code>country ISO code</code>] Cat options are shared public with access to view metadata; public capture and view data. <code>[country ISO code] Admin</code> can edit and view metadata; capture and view data. <code>IM - Admin</code> can edit and view metadata; capture and view data</p>
+</blockquote>
+<blockquote>
+<p>CORE Categories and CORE Cat combos are shared public with access to view metadata; Public view metadata. <code>IM - Admin</code> can edit and view the metadata.</p>
+</blockquote>
+<blockquote>
+<p>[<code>country ISO code</code>] Categories, Cat combos, DEs, DE Groups, Indicators, Indicator Groups, OU Groups and OU Group sets are shared to the country specific user groups. <code>[country ISO code] - Admin</code> can edit and view metadata while <code>[country ISO code] - Users</code> can only view the metadata.</p>
+</blockquote>
+<blockquote>
+<p>IM DEs, DE Groups, Indicators, Indicator Groups and OU Group sets are shared to the global groups. <code>IM - Admin</code> can edit and view metadata while <code>IM - Users</code> can view metadata.</p>
+</blockquote>
+<blockquote>
+<p>[<code>country ISO code</code>] Data sets are shared to the country user group. <code>[country ISO code] - Admin</code> can edit and view metadata; capture and view data and <code>[country ISO code] - Users</code> can view metadata; capture and view data.</p>
+</blockquote>
+<blockquote>
+<p>IM Data sets are shared to the global user groups. <code>IM - Admin</code> can edit and view metadata; capture and view data while
+<code>IM - Users</code> can view metadata; capture and view data</p>
+</blockquote>
+</div>
+</div>
+<div id="tips-tricks-and-best-practices" class="section level2">
+<h2><span class="header-section-number">5.4</span> Tips, Tricks and Best Practices</h2>
+<blockquote>
+<p>If a user is an Admin assign the user to the <code>[country ISO code] - Admin</code> group.</p>
+</blockquote>
+<blockquote>
+<p>If a user does Data entry or Analytics assign the user to the <code>[country ISO code] - Users</code></p>
+</blockquote>
+<div id="access-from-country-to-global-level-access" class="section level3">
+<h3><span class="header-section-number">5.4.1</span> Access from country to global level access:</h3>
+<p>In case you want a country user to have access to global metadata and/or data, do not share global metadata with the country User group the user is part of (ie do not share the Data set IM Case Reporting with GH – Admin), but rather include the user in one of the IM User groups (ie include Amos into IM – Users User group in case you want to give him access to data reported at global level)</p>
+</div>
+<div id="access-from-global-to-country-level-access" class="section level3">
+<h3><span class="header-section-number">5.4.2</span> Access from global to country level access:</h3>
+<p>In case you want a global user to have access to country metadata and/or data, do not share country metadata with the IM User group the user is part of (ie do not share the Data set GH Case Reporting with IM – Admin), but rather include the user into one of the relevant [country ISO code] User groups (ie include Keith into the DC – Users User group if you want to give him access to data from DRC).</p>
 
 </div>
 </div>

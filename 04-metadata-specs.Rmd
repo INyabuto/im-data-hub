@@ -36,6 +36,44 @@ library(dplyr)
 # 
 # 
 # }
+# 
+# categories <- function(){
+#   r <- GET(paste0(baseurl, "api/categories?fields=name,id,dataDimensionType,categoryOptions[name]&filter=name:like:CORE"))
+#   
+#   cat <- fromJSON(content(r,"text"))$categories
+#   
+#   if (!is.null(cat)){
+#     # df to string
+#     
+#     cat$categoryOptions <- substring(as.character(cat$categoryOptions), regexpr("['\"']",
+#                                                                                 as.character(cat$categoryOptions))+1)
+#     cat$categoryOptions <- str_remove_all(cat$categoryOptions, "[()\"']")
+#     
+#     cat
+#     
+#   }else{
+#     ""
+#   }
+# }
+# 
+# category_combo <- function(){
+#   r <- GET(paste0(baseurl, "api/categoryCombos?fields=name,id,dataDimensionType,categories[name]&filter=name:like:CORE"))
+#   
+#   cat <- fromJSON(content(r,"text"))$categoryCombos
+#   
+#   if (!is.null(cat)){
+#     # df to string
+#     
+#     cat$categories <- substring(as.character(cat$categories), regexpr("['\"']",
+#                                                                                 as.character(cat$categories))+1)
+#     cat$categories <- str_remove_all(cat$categories, "[()\"']")
+#     
+#     cat
+#     
+#   }else{
+#     ""
+#   }
+# }
 
 ```
 
@@ -158,5 +196,34 @@ kable(metadata_types, caption = "A table showing metadata types implimented in t
 
 ## Core Metadata
 
+Core Metadata are reserved objects in the data hub. They are shared publicly for re-use in the data hub.  
+
+There are two main types of `core metadata.`
+
+1. Category: a group of cat options for disaggregation/attributes.
+2. Category Combination: a combination of classes used to apply disaggregation onto data elements/indicators. 
+
 The following is a list of all IM data hub core metadata.
+
+### Category
+
+```{r, echo=FALSE}
+
+# cat <- categories()
+# resave(cat, file = "./hub.RData")
+
+kable(cat, caption = "A table showing core categories set in the IM Data Hub", escape = F) %>% kable_styling()
+```
+
+### Category Combination 
+
+```{r, echo=FALSE}
+
+# cat_combos <- category_combo()
+# 
+# resave(cat_combos, file = "./hub.RData")
+
+kable(cat_combos, caption = "A table showing core category combos set in the IM Data Hub", escape = F) %>% kable_styling()
+```
+
 

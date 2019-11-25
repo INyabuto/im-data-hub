@@ -24,7 +24,7 @@
 <meta name="author" content="Isaiah Nyabuto, Cristina Lussiana" />
 
 
-<meta name="date" content="2019-11-23" />
+<meta name="date" content="2019-11-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -112,7 +112,10 @@
 <li class="chapter" data-level="4.2.1" data-path="meta.html"><a href="meta.html#ou-trees"><i class="fa fa-check"></i><b>4.2.1</b> OU Trees</a></li>
 </ul></li>
 <li class="chapter" data-level="4.3" data-path="meta.html"><a href="meta.html#metadata"><i class="fa fa-check"></i><b>4.3</b> Metadata</a></li>
-<li class="chapter" data-level="4.4" data-path="meta.html"><a href="meta.html#core-metadata"><i class="fa fa-check"></i><b>4.4</b> Core Metadata</a></li>
+<li class="chapter" data-level="4.4" data-path="meta.html"><a href="meta.html#core-metadata"><i class="fa fa-check"></i><b>4.4</b> Core Metadata</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="meta.html"><a href="meta.html#category"><i class="fa fa-check"></i><b>4.4.1</b> Category</a></li>
+<li class="chapter" data-level="4.4.2" data-path="meta.html"><a href="meta.html#category-combination"><i class="fa fa-check"></i><b>4.4.2</b> Category Combination</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="access.html"><a href="access.html"><i class="fa fa-check"></i><b>5</b> Security Mechanism &amp; Access Model</a><ul>
 <li class="chapter" data-level="5.1" data-path="access.html"><a href="access.html#introduction-3"><i class="fa fa-check"></i><b>5.1</b> Introduction</a></li>
@@ -121,6 +124,11 @@
 </ul></li>
 <li class="chapter" data-level="5.3" data-path="access.html"><a href="access.html#access-model"><i class="fa fa-check"></i><b>5.3</b> Access Model</a><ul>
 <li class="chapter" data-level="5.3.1" data-path="access.html"><a href="access.html#user-roles"><i class="fa fa-check"></i><b>5.3.1</b> User roles</a></li>
+<li class="chapter" data-level="5.3.2" data-path="access.html"><a href="access.html#user-groups"><i class="fa fa-check"></i><b>5.3.2</b> User Groups</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="access.html"><a href="access.html#tips-tricks-and-best-practices"><i class="fa fa-check"></i><b>5.4</b> Tips, Tricks and Best Practices</a><ul>
+<li class="chapter" data-level="5.4.1" data-path="access.html"><a href="access.html#access-from-country-to-global-level-access"><i class="fa fa-check"></i><b>5.4.1</b> Access from country to global level access:</a></li>
+<li class="chapter" data-level="5.4.2" data-path="access.html"><a href="access.html#access-from-global-to-country-level-access"><i class="fa fa-check"></i><b>5.4.2</b> Access from global to country level access:</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="custom.html"><a href="custom.html"><i class="fa fa-check"></i><b>6</b> Customization &amp; Troubleshooting IM Datahub</a><ul>
@@ -151,75 +159,71 @@
 <h1><span class="header-section-number">Chapter 1</span> Introduction</h1>
 <div id="background" class="section level2">
 <h2><span class="header-section-number">1.1</span> Background</h2>
-<p>Impact Maria (IM) Data Hub is a web-based project monitoring system used to collect, analyze, and report IM indicator data. IM is a five-year project by the US President’s Malaria Initiative (PMI) global service to reduce malaria mortality and morbidity.</p>
-<p>The BAO system implements it in an ST-3 plan that began on Nov 27th, 2018.</p>
-<p>The system hosts all the IM data. Multiple partners use it at different levels from donors (PMI), implementers (PSI, Jhpiego, UCSF,.e.tc), and government ministries of health (MOH) to track project progress and country performance.</p>
-<p>It’s active in 11 countries, and collects a tremendous amount of data on;</p>
+<p>The Impact Maria (IM) Data Hub is a web-based project monitoring system used to collect, analyze, monitor and report IM indicator data. [IMPACT Malaria ] (impactmalaria.org) is a five year contract funded by the US President’s Malaria Initiative (PMI) to work with national malaria programs to fight malaria and save lives by strengthening diagnosis, treatment, and drug-based prevention for those most at risk, particularly children and pregnant women.</p>
+<p>The <a href="imdatahub.org"><strong>IMPACT Malaria Data Hub</strong></a> is the IMPACT Malaria project monitoring system database for IM indicators. It is a web based database in a District Health Information Software 2 (DHIS2) instance and it houses all IM indicator data for project monitoring and use. It is primarily designed with data users in mind, and so its configuration comes with approaches specifically designed to enable monitoring and promote the use of IM data.</p>
+<p>The IM Data Hub is used in IM countries in Africa and Asia and it collects a tremendous amount of data in the following tracks:</p>
 <ol style="list-style-type: decimal">
 <li>Case Management</li>
 <li>Malaria in pregnancy</li>
 <li>Seasonal Malaria Chemoprevention</li>
 <li>Global Technical Leadership.</li>
 </ol>
-<p>IM Data Hub is compatible with HNQIS version 4.</p>
+<p>It is used by multiple partners at different levels, from Ministries of Health (MoHs), National Malaria Control Programs (NMCPs), donors like the President’s Malaria Initiative (PMI), implementers (PSI, Jhpiego, University of California San Francisco (UCSF)) to track project monitoring and performance.</p>
 <div id="purpose" class="section level3">
 <h3><span class="header-section-number">1.1.1</span> Purpose</h3>
-<p>IM Data Hub was developed;</p>
+<p>The IM Data Hub was developed:</p>
 <ol style="list-style-type: decimal">
-<li>To monitor IM indicator data.</li>
-<li>Provide access to IM indicator data at the country and global level.</li>
+<li>To monitor IM indicator data</li>
+<li>Provide access to IM indicator data at district, country and global level</li>
 <li>Enable central/global level data management</li>
 <li>Track project progress and country performance</li>
-<li>Promote data use for decision making.</li>
+<li>Promote data use for decision making</li>
 </ol>
 </div>
 <div id="servers" class="section level3">
 <h3><span class="header-section-number">1.1.2</span> Servers</h3>
-<p>IM Data Hub is available at the following instances;</p>
-<ol style="list-style-type: decimal">
-<li>Development instance: Where all the developments and testing takes place. It’s accessible at <a href="https://im-dev.psi-mis.org/" class="uri">https://im-dev.psi-mis.org/</a> (version 2.30 as of Jan 9, 2019): Analytics run at midnight and 12:00 UTC (EAT -3h)</li>
-<li>Production instance: Ready for use. Accessible at impactmalaria-mis.org (Version 2.30, not ready as of Aug 30, 2019):</li>
-</ol>
+<p>The IM Data Hub has two istances:</p>
+<ul>
+<li>A <strong>development instance</strong> at <a href="https://im-dev.psi-mis.org">im-dev.psi-mis.org</a> hosted on a ST-3 plan from BAO Systems since Nov 22nd, 2019 for prototyping, testing and piloting. Analytics run daily at 00:00 and 12:00 UTC (EAT -3h)</li>
+<li>A <strong>production instance</strong> at <a href="https://imdatahub.org">imdatahub.org</a> hosted on a ST-3 plan from BAO Systems since Nov 27th, 2018 for actual monitoring and reporting. Analytics run daily at 00:00 and 12:00 UTC (EAT -3h)</li>
+</ul>
 </div>
 </div>
 <div id="getting-started" class="section level2">
 <h2><span class="header-section-number">1.2</span> Getting Started</h2>
-<p>The easiest way to get started on IM Data Hub is to log in at the test server at <a href="https://im-dev.psi-mis.org/" class="uri">https://im-dev.psi-mis.org/</a> with the following credentials.</p>
-<p><code>Username :</code><strong><code>demoUser</code></strong> <code>and Password :</code> <strong><code>Temp1234!</code></strong></p>
-<p>The landing page!</p>
-<p><img src="images/landing-page.png" width="1659" /></p>
-<p>Countries doing data entry or testings can log in with the following credentials based on their country ISO codes.</p>
+<p>The easiest way to get started on the IM Data Hub is to log in at the dev server at <a href="https://im-dev.psi-mis.org/" class="uri">https://im-dev.psi-mis.org/</a> with the IM demo credentials <code>demoUser</code> - the pw is provided by your System Admin.</p>
+<p>Countries doing data entry or testings have country specific demo accounts based on their country ISO codes - the pw is provided by your System Admin.</p>
 <table>
 <thead>
 <tr class="header">
 <th>Country</th>
-<th align="left">username ; password</th>
+<th align="left">username</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Congo</td>
-<td align="left"><code>CDdemo</code>;<code>Temp1234!</code></td>
+<td align="left"><code>CDdemo</code></td>
 </tr>
 <tr class="even">
 <td>Cameroon</td>
-<td align="left"><code>CMdemo</code>;<code>Temp1234!</code></td>
+<td align="left"><code>CMdemo</code></td>
 </tr>
 <tr class="odd">
 <td>Ghana</td>
-<td align="left"><code>GHdemo</code>;<code>Temp1234!</code></td>
+<td align="left"><code>GHdemo</code></td>
 </tr>
 <tr class="even">
 <td>Kenya</td>
-<td align="left"><code>KEdemo</code>;<code>Temp1234!</code></td>
+<td align="left"><code>KEdemo</code></td>
 </tr>
 <tr class="odd">
 <td>Mali</td>
-<td align="left"><code>MLdemo</code>;<code>Temp1234!</code></td>
+<td align="left"><code>MLdemo</code></td>
 </tr>
 <tr class="even">
 <td>Niger</td>
-<td align="left"><code>NEdemo</code>;<code>Temp1234!</code></td>
+<td align="left"><code>NEdemo</code></td>
 </tr>
 </tbody>
 </table>
