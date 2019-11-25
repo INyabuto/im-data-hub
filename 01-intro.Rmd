@@ -2,7 +2,7 @@
 
 ## Background
 
-The Impact Maria (IM) Data Hub is a web-based project monitoring system used to collect, analyze, monitor and report IM indicator data. [__IMPACT Malaria__](https://impactmalaria.org) is a five year contract funded by the US President’s Malaria Initiative (PMI) to work with national malaria programs to fight malaria and save lives by strengthening diagnosis, treatment, and drug-based prevention for those most at risk, particularly children and pregnant women.
+The Impact Maria (IM) Data Hub is a web-based project monitoring system used to collect, analyze, monitor and report IM indicator data. [__IMPACT Malaria__](https://imdpactmalaria.org) is a five year contract funded by the US President’s Malaria Initiative (PMI) to work with national malaria programs to fight malaria and save lives by strengthening diagnosis, treatment, and drug-based prevention for those most at risk, particularly children and pregnant women.
 
 The [__IMPACT Malaria Data Hub__](https://imdatahub.org) is the IMPACT Malaria project monitoring system database for IM indicators. It is a web based database in a District Health Information Software 2 (DHIS2) instance and it houses all IM indicator data for project monitoring and use. It is primarily designed with data users in mind, and so its configuration comes with approaches specifically designed to enable monitoring and promote the use of IM data.
 
