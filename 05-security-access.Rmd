@@ -62,8 +62,8 @@ User roles defines the level of access to different objects in the data hub. You
 
 The following are the user roles currently set up the data hub: 
 
-Name  | Details
------- |:--------------
+Name  | Details        |
+------ |:-------------- 
 _Admin - Country User Management | Administration of new users and user groups
 _Admin - Import / Export MetaData |Import and export of metadata and data
 _Admin - Org Unit admin advanced | Edit OU levels
@@ -113,7 +113,7 @@ The admin groups can edit and view metadata; capture and view data while user gr
 In case you want a country user to have access to global metadata and/or data, do not share global metadata with the country User group the user is part of (ie do not share the Data set IM Case Reporting with GH – Admin), but rather include the user in one of the IM User groups (ie include Amos into IM – Users User group in case you want to give him access to data reported at global level)
 
 ### Access from global to country level access:
-In case you want a global user to have access to country metadata and/or data, do not share country metadata with the IM User group the user is part of (ie do not share the Data set GH Case Reporting with IM – Admin), but rather include the user into one of the relevant [country ISO code] User groups (ie include Keith into the DC – Users User group if you want to give him access to data from DRC). 
+In case you want a global user to have access to country metadata and/or data, do not share country metadata with the IM User group the user is part of (ie do not share the Data set GH Case Reporting with IM – Admin), but rather include the user into one of the relevant [`country ISO code`] User groups (ie include Keith into the DC – Users User group if you want to give him access to data from DRC). 
 
 
 
