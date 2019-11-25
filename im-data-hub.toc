@@ -40,14 +40,16 @@
 \contentsline {subsection}{\numberline {4.2.1}OU Trees}{80}{subsection.4.2.1}% 
 \contentsline {section}{\numberline {4.3}Metadata}{81}{section.4.3}% 
 \contentsline {section}{\numberline {4.4}Core Metadata}{83}{section.4.4}% 
-\contentsline {chapter}{\numberline {5}Security Mechanism \& Access Model}{85}{chapter.5}% 
-\contentsline {section}{\numberline {5.1}Introduction}{85}{section.5.1}% 
-\contentsline {section}{\numberline {5.2}Security Mechanism}{85}{section.5.2}% 
-\contentsline {subsection}{\numberline {5.2.1}Authentication Mechanisms}{85}{subsection.5.2.1}% 
-\contentsline {subsubsection}{\numberline {5.2.1.1}Basic Authentication}{86}{subsubsection.5.2.1.1}% 
-\contentsline {subsubsection}{\numberline {5.2.1.2}OAuth 2 Authentication}{86}{subsubsection.5.2.1.2}% 
-\contentsline {section}{\numberline {5.3}Access Model}{86}{section.5.3}% 
-\contentsline {subsection}{\numberline {5.3.1}User roles}{86}{subsection.5.3.1}% 
-\contentsline {chapter}{\numberline {6}Customization \& Troubleshooting IM Datahub}{89}{chapter.6}% 
-\contentsline {section}{\numberline {6.1}Introduction}{89}{section.6.1}% 
-\contentsline {section}{\numberline {6.2}Adding new objects in the datahub.}{89}{section.6.2}% 
+\contentsline {subsection}{\numberline {4.4.1}Category}{83}{subsection.4.4.1}% 
+\contentsline {subsection}{\numberline {4.4.2}Category Combination}{85}{subsection.4.4.2}% 
+\contentsline {chapter}{\numberline {5}Security Mechanism \& Access Model}{89}{chapter.5}% 
+\contentsline {section}{\numberline {5.1}Introduction}{89}{section.5.1}% 
+\contentsline {section}{\numberline {5.2}Security Mechanism}{89}{section.5.2}% 
+\contentsline {subsection}{\numberline {5.2.1}Authentication Mechanisms}{89}{subsection.5.2.1}% 
+\contentsline {subsubsection}{\numberline {5.2.1.1}Basic Authentication}{90}{subsubsection.5.2.1.1}% 
+\contentsline {subsubsection}{\numberline {5.2.1.2}OAuth 2 Authentication}{90}{subsubsection.5.2.1.2}% 
+\contentsline {section}{\numberline {5.3}Access Model}{90}{section.5.3}% 
+\contentsline {subsection}{\numberline {5.3.1}User roles}{90}{subsection.5.3.1}% 
+\contentsline {chapter}{\numberline {6}Customization \& Troubleshooting IM Datahub}{93}{chapter.6}% 
+\contentsline {section}{\numberline {6.1}Introduction}{93}{section.6.1}% 
+\contentsline {section}{\numberline {6.2}Adding new objects in the datahub.}{93}{section.6.2}% 

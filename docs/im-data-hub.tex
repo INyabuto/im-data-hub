@@ -84,7 +84,7 @@
   \postauthor{\par}
       \predate{\centering\large\emph}
   \postdate{\par}
-    \date{2019-11-23}
+    \date{2019-11-25}
 
 \usepackage{booktabs}
 \usepackage{amsthm}
@@ -110,7 +110,7 @@
 
 \includegraphics[width=5.93in]{./images/logo2}
 
-This is a technical guide for the IM Data Hub, \textbf{a work currently in progress by BAO systems intended for official release in \href{imdatahub.org}{production} by }\_\_\_\_ 2020
+This is a technical guide for the IM Data Hub, \textbf{a work currently in progress by BAO systems intended for official release in \href{imdatahub.org}{production} by }\_\_\_\_
 
 \href{imdatahub.org}{\textbf{IM Data Hub}} is a warehouse for Impact Malaria indicator data. It houses all the IM indicator data for project monitoring and use. It is primarily designed with data users in mind, and so it comes with several tools specifically designed to enable monitoring and promote the use of IM data.
 
@@ -3560,7 +3560,222 @@ For instance: KE PMP is an indicator group with all PMP indicators for Kenya
 \hypertarget{core-metadata}{%
 \section{Core Metadata}\label{core-metadata}}
 
+Core Metadata are reserved objects in the data hub. They are shared publicly for re-use in the data hub.
+
+There are two main types of \texttt{core\ metadata.}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Category: a group of cat options for disaggregation/attributes.
+\item
+  Category Combination: a combination of classes used to apply disaggregation onto data elements/indicators.
+\end{enumerate}
+
 The following is a list of all IM data hub core metadata.
+
+\hypertarget{category}{%
+\subsection{Category}\label{category}}
+
+\label{tab:unnamed-chunk-14}A table showing core categories set in the IM Data Hub
+
+name
+
+id
+
+dataDimensionType
+
+categoryOptions
+
+CORE - Age group
+
+JhSWHy2jOSU
+
+DISAGGREGATION
+
+\textless{} 5 years, \textgreater{}= 5 years, Unknown age group
+
+CORE - Age group (CU5)
+
+Xefm8oW3pkF
+
+DISAGGREGATION
+
+3-11 months, 12-59 months, Unknown age group
+
+CORE - Malaria case
+
+pDXpwgS0vPG
+
+DISAGGREGATION
+
+Presumed, Confirmed, Unknown malaria case
+
+CORE - Parasitological test
+
+lcitYzHH0qa
+
+DISAGGREGATION
+
+RDT, Microscopy, Unknown parasitological test
+
+CORE - Sex
+
+R192IcXWsCx
+
+DISAGGREGATION
+
+Male, Female, Unknown sex
+
+CORE - Type of health facility
+
+yYOva72MZyZ
+
+DISAGGREGATION
+
+Public, Private, Other type of HF, Unknown type of HF
+
+CORE - Type of health facility (correct)
+
+NNFAQZG9keS
+
+DISAGGREGATION
+
+Hospital, Health centre, Other type of HF, Unknown type of HF
+
+CORE - Type of health worker
+
+gwgoQPKhJdq
+
+DISAGGREGATION
+
+Supervisor, Clinical staff, Laboratory-based staff, Community-based staff, Other type of HW, Unknown type of HW
+
+\hypertarget{category-combination}{%
+\subsection{Category Combination}\label{category-combination}}
+
+\label{tab:unnamed-chunk-15}A table showing core category combos set in the IM Data Hub
+
+name
+
+id
+
+dataDimensionType
+
+categories
+
+CD - Type of health facility \textbar{} CORE - Type of health facility
+
+trkkw7Sqneh
+
+DISAGGREGATION
+
+CD - Type of health facility, CORE - Type of health facility
+
+CORE - Age-group
+
+s6PIj7AEo4C
+
+DISAGGREGATION
+
+CORE - Age group
+
+CORE - Age-group (CU5)
+
+XRB1m49tshW
+
+DISAGGREGATION
+
+CORE - Age group CU5
+
+CORE - Malaria case
+
+vuvcFOW0mGh
+
+DISAGGREGATION
+
+CORE - Malaria case
+
+CORE - Malaria case \textbar{} Sex \textbar{} Age-group
+
+ritXllZj5kI
+
+DISAGGREGATION
+
+CORE - Malaria case, CORE - Sex, CORE - Age group
+
+CORE - Parasitological test
+
+cCnujLPVBoQ
+
+DISAGGREGATION
+
+CORE - Parasitological test
+
+CORE - Parasitological test \textbar{} Age-group
+
+jyv6IyPKPo2
+
+DISAGGREGATION
+
+CORE - Parasitological test, CORE - Age group
+
+CORE - Sex
+
+d8pbG5hn8ez
+
+DISAGGREGATION
+
+CORE - Sex
+
+CORE - Sex \textbar{} Age-group
+
+NnVXBadHoq5
+
+DISAGGREGATION
+
+CORE - Sex, CORE - Age group
+
+CORE - Sex \textbar{} Age-group (CU5)
+
+x2c5hEXrAtG
+
+DISAGGREGATION
+
+CORE - Sex, CORE - Age group CU5
+
+CORE - Type of health facility
+
+gfezS3MheUM
+
+DISAGGREGATION
+
+CORE - Type of health facility
+
+CORE - Type of health worker \textbar{} Sex
+
+tbPCZwFdG5Y
+
+DISAGGREGATION
+
+CORE - Type of health worker, CORE - Sex
+
+GH - Type of health facility \textbar{} CORE - Type of health facility
+
+tCP9XXfJUz0
+
+DISAGGREGATION
+
+GH - Type of health facility, CORE - Type of health facility
+
+KE - Type of health facility \textbar{} CORE - Type of health facility
+
+bbcas85CNo2
+
+DISAGGREGATION
+
+KE - Type of health facility, CORE - Type of health facility
 
 \hypertarget{access}{%
 \chapter{Security Mechanism \& Access Model}\label{access}}
