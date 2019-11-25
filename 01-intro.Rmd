@@ -27,8 +27,8 @@ The IM Data Hub was developed:
 ### Servers
 The IM Data Hub has two istances:
 
-- A __development instance__ at [im-dev.psi-mis.org](https://im-dev.psi-mis.org) hosted on a ST-3 plan from BAO Systems since Nov 22nd, 2019 for prototyping, testing and piloting. Analytics run daily at 00:00 and 12:00 UTC (EAT -3h)
-- A __production instance__ at [imdatahub.org](https://imdatahub.org) hosted on a ST-3 plan from BAO Systems since Nov 27th, 2018 for actual monitoring and reporting. Analytics run daily at 00:00 and 12:00 UTC (EAT -3h)
+- A __development instance__ at [im-dev.psi-mis.org](https://im-dev.psi-mis.org) hosted on a ST-3 plan from BAO Systems since Nov 22nd, 2018 for prototyping, testing and piloting. Analytics run daily at 00:00 and 12:00 UTC (EAT -3h)
+- A __production instance__ at [imdatahub.org](https://imdatahub.org) hosted on a ST-3 plan from BAO Systems since Nov 27th, 2019 for actual monitoring and reporting. Analytics run daily at 00:00 and 12:00 UTC (EAT -3h)
 
 ## Getting Started
 
