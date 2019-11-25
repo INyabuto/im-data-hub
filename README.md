@@ -1,34 +1,32 @@
 
-# Impact Malaria Data Hub - Tech Specs. 
+# Impact Malaria Data Hub - Tech Specs
 
 ## Background
 
-Impact Maria (IM) Data Hub is a web-based project monitoring system used to collect, analyze, and report indicator data for Impact Malaria Project. IM is a five-year project by the US President’s Malaria Initiative (PMI) global service to reduce malaria mortality and morbidity.
+The Impact Maria (IM) Data Hub is a web-based project monitoring system used to collect, analyze, monitor and report IM indicator data. [__IMPACT Malaria__](https://imdpactmalaria.org) is a five year contract funded by the US President’s Malaria Initiative (PMI) to work with national malaria programs to fight malaria and save lives by strengthening diagnosis, treatment, and drug-based prevention for those most at risk, particularly children and pregnant women.
 
-The BAO system implements it in an ST-3 plan that began on Nov 27th, 2018. 
+The [__IMPACT Malaria Data Hub__](https://imdatahub.org) is the IMPACT Malaria project monitoring system database for IM indicators. It is a web based database in a District Health Information Software 2 (DHIS2) instance and it houses all IM indicator data for project monitoring and use. It is primarily designed with data users in mind, and so its configuration comes with approaches specifically designed to enable monitoring and promote the use of IM data.
 
-The system hosts all the IM data. Multiple partners use it at different levels from donors (PMI), implementers (PSI, Jhpiego, UCSF,.e.tc), and government ministries of health (MOH) to track project progress and country performance.
-
-It’s active in 11 countries, and collects a tremendous amount of data on; 
+The IM Data Hub is used in IM countries in Africa and Asia and it collects a tremendous amount of data in the following tracks:
 
 1.  Case Management
 2.  Malaria in pregnancy 
 3.  Seasonal Malaria Chemoprevention
 4.  Global Technical Leadership.
 
-IM Data Hub is compatible with HNQIS version 4. 
+It is used by multiple partners at different levels, from Ministries of Health (MoHs), National Malaria Control Programs (NMCPs), donors like the President's Malaria Initiative (PMI), implementers (PSI, Jhpiego, University of California San Francisco (UCSF)) to track project monitoring and performance.
 
 ### Purpose
-IM Data Hub was developed;
+The IM Data Hub was developed:
 
-1. To monitor IM indicator data.
-2. Provide access to IM indicator data at the country and global level.
-3. Enable central/global level data management 
+1. To monitor IM indicator data
+2. Provide access to IM indicator data at district, country and global level
+3. Enable central/global level data management
 4. Track project progress and country performance 
-5. Promote data use for decision making. 
+5. Promote data use for decision making
 
 ### Servers
-IM Data Hub is available at the following instances; 
+The IM Data Hub has two istances:
 
-1. Development instance: Where all the developments and testing takes place. It’s accessible at https://im-dev.psi-mis.org/ (version 2.30 as of Jan 9, 2019): Analytics run at midnight and 12:00 UTC (EAT -3h)
-2. Production instance: Ready for use. Accessible at  impactmalaria-mis.org (Version 2.30, not ready as of Aug 30, 2019):
+- A __development instance__ at [im-dev.psi-mis.org](https://im-dev.psi-mis.org) hosted on a ST-3 plan from BAO Systems since Nov 22nd, 2019 for prototyping, testing and piloting. Analytics run daily at 00:00 and 12:00 UTC (EAT -3h)
+- A __production instance__ at [imdatahub.org](https://imdatahub.org) hosted on a ST-3 plan from BAO Systems since Nov 27th, 2018 for actual monitoring and reporting. Analytics run daily at 00:00 and 12:00 UTC (EAT -3h)
