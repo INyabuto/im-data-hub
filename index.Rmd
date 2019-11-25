@@ -86,7 +86,7 @@ The guide is divided into seven chapters:
 
 ## What is not covered in this guide.
 
-The focus of this guide is to walk you through the technical specification of the IM Data Hub. We attempt to showcase some best practices in configuring, testing, troubleshooting, reporting, monitoring, or use of data in the IM Data Hub. However, this is not a training on [DHIS2 Foundamentals] (https://academy.dhis2.org/courses/HISP/DHIS2_Level1/2015_Q1/about) and you need other references to master these essential skill sets. 
+The focus of this guide is to walk you through the technical specification of the IM Data Hub. We attempt to showcase some best practices in configuring, testing, troubleshooting, reporting, monitoring, or use of data in the IM Data Hub. However, this is not a training on [DHIS2 Foundamentals](https://academy.dhis2.org/courses/HISP/DHIS2_Level1/2015_Q1/about) and you need other references to master these essential skill sets. 
 
 ## Conventions
 
