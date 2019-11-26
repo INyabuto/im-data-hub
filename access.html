@@ -187,8 +187,7 @@
 <div id="basic-authentication" class="section level4">
 <h4><span class="header-section-number">5.2.1.1</span> Basic Authentication</h4>
 <p>Users can login IM Data Hub by specifying their <code>username</code> and <code>password</code> on the login page.</p>
-<p>Technically, the username is appended with a colon and the password is encoded through <code>base64encode</code> and then sent over to the server.</p>
-<p><code>base64encode(username:password)</code></p>
+<p>Technically, the username is appended with a colon and the password is encoded and then sent over to the server.</p>
 <p>IM Data Hub also provides two factor authentication mechanisms which allows the users to receive a <code>2FA code</code> for confirmation at the time of login. The two factor authentication is enabled on the user settings app. You can read more about the 2FA mechanism here: <code>https://www.google.com/landing/2step/</code></p>
 </div>
 <div id="oauth-2-authentication" class="section level4">
@@ -201,7 +200,7 @@
 <div id="access-model" class="section level2">
 <h2><span class="header-section-number">5.3</span> Access Model</h2>
 <p>Access Model defines what and how objects are shared or accessed in the IM Data Hub. Objects, in this case, refers to the data, metadata, and all the components in the IM Data Hub.</p>
-<p>There are two ways to manage and set up the access model:</p>
+<p>There are two ways of manage and set up the access model:</p>
 <p>User roles: Setting roles and the access level for the objects in the IM Data Hub, User groups: Defining groups for sharing access to objects in the IM Data Hub.</p>
 <div id="user-roles" class="section level3">
 <h3><span class="header-section-number">5.3.1</span> User roles</h3>
@@ -209,8 +208,8 @@
 <p>The following are the most relevant user roles in the IM Data Hub:</p>
 <table style="width:100%;">
 <colgroup>
-<col width="7%" />
-<col width="92%" />
+<col width="35%" />
+<col width="64%" />
 </colgroup>
 <thead>
 <tr class="header">
