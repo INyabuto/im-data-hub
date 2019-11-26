@@ -24,7 +24,7 @@
 <meta name="author" content="Isaiah Nyabuto, Cristina Lussiana" />
 
 
-<meta name="date" content="2019-11-25" />
+<meta name="date" content="2019-11-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -97,7 +97,10 @@
 </ul></li>
 <li class="chapter" data-level="2.3" data-path="comp.html"><a href="comp.html#data-mining-component"><i class="fa fa-check"></i><b>2.3</b> Data Mining Component</a><ul>
 <li class="chapter" data-level="2.3.1" data-path="comp.html"><a href="comp.html#pivot"><i class="fa fa-check"></i><b>2.3.1</b> Pivot Tables</a></li>
+<li class="chapter" data-level="2.3.2" data-path="comp.html"><a href="comp.html#visualizer"><i class="fa fa-check"></i><b>2.3.2</b> Data Visualizer</a></li>
+<li class="chapter" data-level="2.3.3" data-path="comp.html"><a href="comp.html#map"><i class="fa fa-check"></i><b>2.3.3</b> Maps</a></li>
 </ul></li>
+<li class="chapter" data-level="2.4" data-path="comp.html"><a href="comp.html#data-presentation"><i class="fa fa-check"></i><b>2.4</b> Data Presentation</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>3</b> Impact Malaria Data Specification</a><ul>
 <li class="chapter" data-level="3.1" data-path="data.html"><a href="data.html#introduction-1"><i class="fa fa-check"></i><b>3.1</b> Introduction</a></li>
@@ -264,18 +267,163 @@ Figure 2.4: Country Specific Datasets
 <li>Data Visualizers - generates a variety of charts; standard line, bar charts, pie charts e.t.c</li>
 <li>Maps - gives the ability to visualize IM data on a map.</li>
 </ol>
-<p>We will discuss more of these tools in section <a href="comp.html#pivot">2.3.1</a>, section <a href="#visualizer"><strong>??</strong></a> and section <a href="#map"><strong>??</strong></a></p>
+<p>We will discuss more of these tools in section <a href="comp.html#pivot">2.3.1</a>, section <a href="comp.html#visualizer">2.3.2</a> and section <a href="comp.html#map">2.3.3</a></p>
 <div id="pivot" class="section level3">
 <h3><span class="header-section-number">2.3.1</span> Pivot Tables</h3>
 <p>If you are familiar with excel, you are probably aware of “pivoting” the ability to summarize data on table in multiple dimensions. Excel Pivot Tables inspire Pivot Table.</p>
 <p>Pivot Table offers quick access to IM data in a tabular format. It allows the ability to ‘pivot’ data in several dimensions, such as indicators, data elements, periods, and organization units. The aspects can quickly appear as rows or columns, depending on the tailored view.</p>
 <p>In the following subsection, we are going to access and tabulate a sample of IM indicator data using the Pivot Table.</p>
 <p>As an example, we tabulate and pivot <code>IM Confirmed vs. Suspected Malaria Cases.</code> for last 12 months at the global level (world)</p>
-<p>Please refresh your browser or login with the demo account below if you have not.</p>
+<ol style="list-style-type: decimal">
+<li>Please refresh your browser or login with the demo account below if you have not.</li>
+</ol>
 <p><a href="https://im-dev.psi-mis.org/dhis-web-dataentry/index.action">IM Data Hub demo</a></p>
 <p><code>Username</code> :<strong><code>demoUser</code></strong> and <code>Password</code> : <strong><code>Temp1234!</code></strong></p>
-
+<ol start="2" style="list-style-type: decimal">
+<li>From Apps select or search for Pivot Tables</li>
+</ol>
+<div class="figure"><span id="fig:pivot-table"></span>
+<img src="images/pivot-table.png" alt="Searching Pivot Table App"  />
+<p class="caption">
+Figure 2.5: Searching Pivot Table App
+</p>
 </div>
+<ol start="3" style="list-style-type: decimal">
+<li><p>Click to launch the app.</p></li>
+<li><p>From the indicator group on your left, select IM PMP indicator and then search % of confirmed case and % of suspected malaria cases</p></li>
+<li>Make sure you pull each of the to the to the right side
+<div class="figure"><span id="fig:pivot-table2"></span>
+<img src="images/pivot-table2.png" alt="Selecting Indicators in the Pivot Table"  />
+<p class="caption">
+Figure 2.6: Selecting Indicators in the Pivot Table
+</p>
+</div></li>
+<li><p>Open the organisation unit tab and select world</p></li>
+</ol>
+<div class="figure"><span id="fig:pivot-table4"></span>
+<img src="images/pivot-table2.png" alt="Selecting the organisation unit"  />
+<p class="caption">
+Figure 2.7: Selecting the organisation unit
+</p>
+</div>
+<blockquote>
+<p>At least three dimensions must be specified; What, When and Where in the pivot table</p>
+</blockquote>
+<ol start="7" style="list-style-type: decimal">
+<li>Click on the update button to generate the report. Check that you can see a table like mine (fig 8). Congratulations ! We have tabulated our report.</li>
+</ol>
+<div class="figure"><span id="fig:pivot-table3"></span>
+<img src="images/pivot-table3.png" alt="Updating the Pivot Table"  />
+<p class="caption">
+Figure 2.8: Updating the Pivot Table
+</p>
+</div>
+<blockquote>
+<p>save the table as <code>IM PMP - % of confirmed vs Suspected cases last 12 months, global</code> we will refer to them in section 3.</p>
+</blockquote>
+<div id="best-practices-tips-tricks" class="section level4">
+<h4><span class="header-section-number">2.3.1.1</span> Best practices, tips &amp; tricks</h4>
+<ol style="list-style-type: decimal">
+<li>Hide empty rows/columns is a very useful Pivot Table option when analysing data across many org units or period with gaps in the data.</li>
+<li>Sort your table quickly by clicking on the sort symbol inside the column header cells</li>
+<li>You must always save your table as a favourite before you can add it to your dashboard or share it with colleagues</li>
+<li>You can add color legends to your table (coloring of cells based on their values) under Options. Multiple legends can now be assigned within the same table and are created in the “Legends” portion of the maintenance app.</li>
+</ol>
+<p>Next we will create a chart of these using the data visualizer app.</p>
+</div>
+</div>
+<div id="visualizer" class="section level3">
+<h3><span class="header-section-number">2.3.2</span> Data Visualizer</h3>
+<p>Data Visualizers allows you to generate various charts; bar charts, line graphs, pie charts etc directly in the IM Data Hub. They follow the same design and logic as the pivot tables in data selection.</p>
+<ol style="list-style-type: decimal">
+<li>The easiest way to visualize the table in a chart is to open this table as a chart Fig. <a href="comp.html#fig:visualizer">2.9</a>.</li>
+</ol>
+<div class="figure"><span id="fig:visualizer"></span>
+<img src="images/visualizer.png" alt="Opening this table As a Chart"  />
+<p class="caption">
+Figure 2.9: Opening this table As a Chart
+</p>
+</div>
+<ol start="2" style="list-style-type: decimal">
+<li>You can as well navigate directly to the data visualizer app by selecting the first option <code>Go to charts</code> or launching it form the apps. We will open ours as chart. Check that you see a chart as in (fig 10).</li>
+</ol>
+<div class="figure"><span id="fig:visualizer2"></span>
+<img src="images/visualizer2.png" alt="A bar chart generated by Data Visualizer App"  />
+<p class="caption">
+Figure 2.10: A bar chart generated by Data Visualizer App
+</p>
+</div>
+<p>By default, <code>open this table as chart</code> will attempt to visualize the table in a bar chart. We can switch to this chart to different types by selecting the <code>type</code>. Ensure you choose the appropriate type.</p>
+<p>We’ll stick to this as it is the most appropriate for this case. It shows the comparison.</p>
+<blockquote>
+<p>save your chart as <code>IM PMP - % confirmed vs suspected cases last 12 months, global - chart</code></p>
+</blockquote>
+<p>In the next section we’ll explore the maps app.</p>
+</div>
+<div id="map" class="section level3">
+<h3><span class="header-section-number">2.3.3</span> Maps</h3>
+<p>The Maps app allows you to set thematic layers of the areas and points, view facilities based on classifications, and visualize catchment areas for the geographical distribution of IM indicator data.</p>
+<p>Example; Malaria Confirmed Cases last 3 months by Region, Ghana.</p>
+<div class="figure"><span id="fig:maps2"></span>
+<img src="images/maps2.png" alt="Malaria Confirmed Cases last 3 months by Region, Ghana"  />
+<p class="caption">
+Figure 2.11: Malaria Confirmed Cases last 3 months by Region, Ghana
+</p>
+</div>
+<p>To create the map:</p>
+<ol style="list-style-type: decimal">
+<li>Navigate to the <code>Maps</code> app</li>
+</ol>
+<div class="figure"><span id="fig:map"></span>
+<img src="images/map.png" alt="The Maps App"  />
+<p class="caption">
+Figure 2.12: The Maps App
+</p>
+</div>
+<ol start="2" style="list-style-type: decimal">
+<li>Click the icon <code>Maps</code> to launch the app</li>
+<li>Add a <code>thematic layer</code></li>
+</ol>
+<div class="figure"><span id="fig:maps1"></span>
+<img src="images/maps1.png" alt="Select thematic layer"  />
+<p class="caption">
+Figure 2.13: Select thematic layer
+</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li>Follow the steps to select the dimensions; What, when and where.</li>
+</ol>
+<div class="figure"><span id="fig:maps"></span>
+<img src="images/maps.png" alt="Steps to select the dimensions; What, when and where"  />
+<p class="caption">
+Figure 2.14: Steps to select the dimensions; What, when and where
+</p>
+</div>
+<ol start="5" style="list-style-type: decimal">
+<li>Update the layer.</li>
+</ol>
+<div id="best-practices-tips-tricks-1" class="section level4">
+<h4><span class="header-section-number">2.3.3.1</span> Best practices, tips &amp; tricks</h4>
+<ol style="list-style-type: decimal">
+<li>Try not to put many overlapping layers on a map that will be difficult to interpret</li>
+<li>Use different color schemes when displaying multiple layers on a map</li>
+<li>The ordering of the layers is 1: Top Most Layer - 4: Bottom Most Layer. Add thematic layers to the map with this in mind.</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="data-presentation" class="section level2">
+<h2><span class="header-section-number">2.4</span> Data Presentation</h2>
+<p>Once the IM indicators are analyzed, processed, and you’ve come up with different information products, the next big thing is how this information is used in the routine monitoring of the project.</p>
+<p>Data use is an art by itself. Some several guides and structures attempt to promote data use. At PSI, we use the data use frameworks. - more about data use.</p>
+<p>In this section, we cover the data presentation component. This is to show you how the information products are pulled together on a dashboard to:</p>
+<ol style="list-style-type: decimal">
+<li>Quickly viewing the charts/tables/maps, you use most frequently</li>
+<li>Monitoring the project progress</li>
+<li>Establishing a routine for regularly checking key program aspects</li>
+<li>Sharing information with others.</li>
+</ol>
+
 </div>
 </div>
             </section>
