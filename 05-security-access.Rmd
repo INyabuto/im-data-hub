@@ -30,9 +30,7 @@ The IM Data Hub supports two types of authentication:
 
 Users can login IM Data Hub by specifying their `username` and `password` on the login page. 
 
-Technically, the username is appended with a colon and the password is encoded through `base64encode` and then sent over to the server. 
-
-`base64encode(username:password)`
+Technically, the username is appended with a colon and the password is encoded and then sent over to the server. 
 
 IM Data Hub also provides two factor authentication mechanisms which allows the users to receive a `2FA code` for confirmation at the time of login.  The two factor authentication is enabled on the user settings app. You can read more about the 2FA mechanism here: `https://www.google.com/landing/2step/`
 
@@ -48,7 +46,7 @@ Setting up OAuth 2 authentication requires access to the IM Data Hub Web API. Yo
 
 Access Model defines what and how objects are shared or accessed in the IM Data Hub. Objects, in this case, refers to the data, metadata, and all the components in the IM Data Hub. 
 
-There are two ways to manage and set up the access model:
+There are two ways of manage and set up the access model:
 
 User roles: Setting roles and the access level for the objects in the IM Data Hub,
 User groups: Defining groups for sharing access to objects in the IM Data Hub.
@@ -60,8 +58,8 @@ User roles defines the level of access to different objects in the IM Data Hub. 
 
 The following are the most relevant user roles in the IM Data Hub: 
 
-Name  | Details                                                                               |
------- |:-------------------------------------------------------------------------------------- 
+Name                             | Details                                                     |
+---------------------------------|:------------------------------------------------------------ 
 _Admin - Category Option Group (Private) and Group Set (Private) Management | Administration of private Category options group and Group set
 _Admin - Country User Management | Administration of new users and user groups
 _Admin - Data Elements (Private) | Administration of DEs, DE Groups and Group sets
