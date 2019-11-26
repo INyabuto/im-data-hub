@@ -10,9 +10,9 @@ In this chapter, we discuss the security mechanism and access model applied in t
 
 ## Security Mechanism  
 
-There are two main security mechanisms implemented in the IM Data Hub.
+There are two main security mechanisms implemented in the IM Data Hub:
 
-1. Authentication: a mechanism that restricts access to only authorized users or clients in the data hub.
+1. Authentication: a mechanism that restricts access to only authorized users or clients in the IM Data Hub,
 2. Audit trail: a mechanism that detects whether there was an attempt, unexpected, or any unauthorized activity has taken place. 
 
 
@@ -20,10 +20,10 @@ In this section, we discuss the authentication mechanisms and where to find the 
 
 ### Authentication Mechanisms
 
-IM Data Hub supports two types of authentication:
+The IM Data Hub supports two types of authentication:
 
-1. Basic Authentication. A mechanism that allows users to login or send their credentials over an HTTP web server. 
-2. OAuth 2. A mechanism that allows third party clients or apps to connect on behalf of a user via reusable tokens. Oauth2 access is based on IM Data Hub user roles. We’ll discuss user roles in section X.
+1. Basic Authentication: a mechanism that allows users to login or send their credentials over an HTTP web server,
+2. OAuth 2: a mechanism that allows third party clients or apps to connect on behalf of a user via reusable tokens. Oauth2 access is based on the IM Data Hub user roles. We’ll discuss user roles in the Access model section.
 
 
 #### Basic Authentication 
@@ -34,41 +34,44 @@ Technically, the username is appended with a colon and the password is encoded t
 
 `base64encode(username:password)`
 
-IM Data Hub also provides two factor authentication mechanisms which allows the users to receive a `2FA code` for confirmation at the time of login.  You can enable the two factor authentication is enabled on the user settings app. You can read more about the 2FA mechanism.
-
-`https://www.google.com/landing/2step/`
+IM Data Hub also provides two factor authentication mechanisms which allows the users to receive a `2FA code` for confirmation at the time of login.  The two factor authentication is enabled on the user settings app. You can read more about the 2FA mechanism here: `https://www.google.com/landing/2step/`
 
 
 #### OAuth 2 Authentication
 
-Third-party apps can connect to IM Data Hub via tokens provided by the OAuth 2 authentication mechanism. IM data Hub does not support the fine-grained OAuth 2 roles, but rather it provides access based on the user roles. 
+Third-party apps can connect to IM Data Hub via tokens provided by the OAuth 2 authentication mechanism. The IM Data Hub does not support the fine-grained OAuth 2 roles, but rather it provides access based on the user roles. 
 
-Setting up OAuth 2 authentication requires access to the 'IM Data Hub Web API`.  You can find the specification about this in the developer's guide. 
+Setting up OAuth 2 authentication requires access to the 'IM Data Hub Web API`. You can find the specification about this in the developer's guide. 
 
 
 ## Access Model 
 
-Access Model defines what and how objects are shared or accessed in the IM Data Hub. Objects, in this case, refers to the data, metadata, and all the components in the data hub. 
+Access Model defines what and how objects are shared or accessed in the IM Data Hub. Objects, in this case, refers to the data, metadata, and all the components in the IM Data Hub. 
 
-There are two ways of setting up the access model.
+There are two ways of manage and set up the access model:
 
-User roles: Setting roles and the access level for the objects in the data hub.
-User groups: Defining groups for sharing access to objects in the data hub.
+User roles: Setting roles and the access level for the objects in the IM Data Hub,
+User groups: Defining groups for sharing access to objects in the IM Data Hub.
 
 
 ### User roles
 
-User roles defines the level of access to different objects in the data hub. You can set and assign roles to different objects in from the user app.  
+User roles defines the level of access to different objects in the IM Data Hub. You can set and assign roles to different objects in from the user app.  
 
-The following are the user roles currently set up the data hub: 
+The following are the most relevant user roles in the IM Data Hub: 
 
-Name  | Details        |
------- |:-------------- 
+Name  | Details                                                                               |
+------ |:-------------------------------------------------------------------------------------- 
+_Admin - Category Option Group (Private) and Group Set (Private) Management | Administration of private Category options group and Group set
 _Admin - Country User Management | Administration of new users and user groups
+_Admin - Data Elements (Private) | Administration of DEs, DE Groups and Group sets
+_Admin - Data Set management (Private) | Administration of private data sets
 _Admin - Import / Export MetaData |Import and export of metadata and data
+_Admin - Import/Export aggregate data | Import and export of aggregated data
 _Admin - Org Unit admin advanced | Edit OU levels
 _Admin - Org Units (Basic) | Create, edit, and delete OUs
-_Admin - User Management advanced | Clone and disable users
+_Admin - User Management advanced | Replicate and disable users
+_Admin - Programs (Private) | Add and update programs
 _Analytics - Services (all) | Full access to all of DHIS2 analytical tools
 _App - Browser cache cleaner | Clear DHIS2 browser cache
 _User - Data Entry Aggregated | Data entry for data sets (Data Entry, Data Capture for DHIS2)
@@ -77,44 +80,70 @@ _User - Data Entry Tracker | Data entry for programs (Event capture, DHIS2 Andro
 
 ### User Groups
 
-There are two main types of user group.
+There are two main types of user groups.
 
-1. Country user group - consists of `[country ISO code] - Admin` and `[country ISO code] - Users` 
-2. Global user group - consists of `IM - Admin` and `IM - Users`
-
-
->All metadata are shared accordingly to the level of access each User group should have.
-
-The admin groups can edit and view metadata; capture and view data while user groups can only view metadata; capture and/or view data based on user’s user roles. 
+1. Country User group - consists of `[country ISO code] - Admin` and `[country ISO code] - Users` 
+2. Global User group - consists of `IM - Admin` and `IM - Users`
 
 
->CORE Cat options are shared public with access to view the metadata; capture and view data `IM  - Admin` can edit and view the metadata, capture and view data.
+>All metadata are shared accordingly to the level of access each user group should have.
 
->[`country ISO code`] Cat options are shared public with access to view metadata; public capture and view data. `[country ISO code] Admin` can edit and view metadata; capture and view data. `IM - Admin` can edit and view metadata; capture and view data
+The Admin User groups can edit and view metadata; capture and view data. The Users User groups can only view metadata; capture and/or view data based on user’s user roles. 
 
-> CORE Categories and CORE Cat combos are shared public with access to view metadata; Public view metadata. `IM - Admin` can edit and view the metadata.
 
-> [`country ISO code`] Categories, Cat combos, DEs, DE Groups, Indicators, Indicator Groups, OU Groups and OU Group sets are shared to the country specific user groups. `[country ISO code] - Admin` can edit and view metadata while `[country ISO code] - Users` can only view the metadata.
+>CORE Cat options are shared publicly with access to view the metadata; and publicly with access to capture and view data. `IM  - Admin` can edit and view the metadata; and capture and view data.
 
-> IM DEs, DE Groups, Indicators, Indicator Groups and OU Group sets are shared to the global groups. `IM - Admin` can edit and view metadata while `IM - Users` can view metadata.
+>[`country ISO code`] Cat options are shared publicly with access to view metadata; and publicly with access to capture and view data. `[country ISO code] Admin` can edit and view metadata; and capture and view data. `IM - Admin` can edit and view the metadata; and capture and view data.
 
->[`country ISO code`] Data sets are shared to the country user group. `[country ISO code] - Admin` can edit and view metadata; capture and view data and `[country ISO code] - Users` can view metadata; capture and view data.
+> CORE Categories and CORE Cat combos are shared publicly with access to view metadata. `IM - Admin` can edit and view the metadata.
 
->IM Data sets are shared to the global user groups. `IM - Admin` can edit and view metadata; capture and view data while
-`IM - Users` can view metadata; capture and view data
+> [`country ISO code`] Categories, Cat combos, DEs, DE Groups, Indicators, Indicator Groups, OU Groups and OU Group sets are shared to the country specific user groups. `[country ISO code] - Admin` can edit and view metadata, while `[country ISO code] - Users` can only view the metadata.
 
-## Tips, Tricks and Best Practices
+> IM DEs, DE Groups, Indicators, Indicator Groups and OU Group sets are shared to the global groups. `IM - Admin` can edit and view metadata, while `IM - Users` can view metadata.
 
-> If a user is an Admin assign the user to the `[country ISO code] - Admin` group.
+>[`country ISO code`] Data sets are shared to the country user groups. `[country ISO code] - Admin` can edit and view the metadata; and capture and view data. `[country ISO code] - Users` can view metadata; and capture and view data.
 
->If a user does Data entry or Analytics assign the user to the `[country ISO code] - Users`
+>IM Data sets are shared to the global user groups. `IM - Admin` can edit and view metadata; and capture and view data.
+`IM - Users` can view metadata; and capture and view data.
+
+
+### User Management
+
+Correct user management is critical to ensure that the IM Data Hub users have the right access to the right information based on their level of rights. All metadata are shared accordingly to the level of access each user group should have. The Admin User groups can edit and view metadata; capture and view data. The Users User groups can only view metadata; capture and/or view data based on user’s user roles. 
+
+If a user has [__Admin__] rights to the IM Data Hub:
+- Add the user to the relevant `[country ISO code] - Admin` group
+- Give the user the relevant User roles to admin users, OUs, DEs, Data sets, etc, like:
+   _Admin - Data Elements (Private)_ - to manage DEs
+   _Admin - Data Set management (Private)_ - to manage Data sets
+   _Admin - Country User Management_ - to admin users
+   _Admin - Org Units (Basic)_ - to admin OUs
+   _Analytics - Services (all)_ - to view analytics tables 
+   _App - Browser cache cleaner_ - to clean the cache
+   _User - Data Entry Aggregated_ - to do data entry for Data sets
+
+If a user has [__Data entry__] rights to the IM Data Hub:
+- Add the user to the relevant `[country ISO code] - Users` group
+- Give the user the relevant User roles to conduct data entry, like:
+   _User - Data Entry Aggregated_ - to do data entry for Data set
+   _App - Browser cache cleaner_ - to clean the cache
+
+If a user has [__Analytics__] rights to the IM Data Hub:
+- Add the user to the relevant `[country ISO code] - Users` group
+- Give the user the relevant User roles to view analytics tables, like:
+   _Analytics - Services (all)_ - to view analytics tables 
+   _App - Browser cache cleaner_ - to clean the cache
+
+
+## Important Best Practices for the Access Model
+
+> If a user is an Admin, you want to assign the user to the `[country ISO code] - Admin` group.
+
+> If a user does Data entry or Analytics, you want to assign the user to the `[country ISO code] - Users` group.
 
 ### Access from country to global level access:
-In case you want a country user to have access to global metadata and/or data, do not share global metadata with the country User group the user is part of (ie do not share the Data set IM Case Reporting with GH – Admin), but rather include the user in one of the IM User groups (ie include Amos into IM – Users User group in case you want to give him access to data reported at global level)
+In case you want a country user to have access to global metadata and/or data, [__do not__] share global metadata with the country User group the user is part of (ie do not share the Data set IM Case Reporting with GH – Admin), but rather include the user in one of the IM User groups (ie include Amos into `IM – Users` User group in case you want to give him access to data reported at global level).
 
 ### Access from global to country level access:
-In case you want a global user to have access to country metadata and/or data, do not share country metadata with the IM User group the user is part of (ie do not share the Data set GH Case Reporting with IM – Admin), but rather include the user into one of the relevant [`country ISO code`] User groups (ie include Keith into the DC – Users User group if you want to give him access to data from DRC). 
-
-
-
+In case you want a global user to have access to country metadata and/or data, [__do not__] share country metadata with the IM User group the user is part of (ie do not share the Data set GH Case Reporting with IM – Admin), but rather include the user into one of the relevant [`country ISO code`] User groups (ie include Keith into the `DC – Users` User group if you want to give him access to data from DRC). 
 
