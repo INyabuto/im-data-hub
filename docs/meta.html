@@ -24,7 +24,7 @@
 <meta name="author" content="Isaiah Nyabuto, Cristina Lussiana" />
 
 
-<meta name="date" content="2019-11-25" />
+<meta name="date" content="2019-11-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -69,7 +69,7 @@
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a></li>
 <li class="chapter" data-level="" data-path="preface.html"><a href="preface.html"><i class="fa fa-check"></i>Preface</a><ul>
-<li class="chapter" data-level="0.1" data-path="preface.html"><a href="preface.html#what-is-im-data-hub"><i class="fa fa-check"></i><b>0.1</b> What is IM Data Hub?</a></li>
+<li class="chapter" data-level="0.1" data-path="preface.html"><a href="preface.html#what-is-the-im-data-hub"><i class="fa fa-check"></i><b>0.1</b> What is the IM Data Hub?</a></li>
 <li class="chapter" data-level="0.2" data-path="preface.html"><a href="preface.html#who-should-read-this-guide"><i class="fa fa-check"></i><b>0.2</b> Who should read this guide?</a></li>
 <li class="chapter" data-level="0.3" data-path="preface.html"><a href="preface.html#what-is-covered-in-this-guide."><i class="fa fa-check"></i><b>0.3</b> What is covered in this guide.</a></li>
 <li class="chapter" data-level="0.4" data-path="preface.html"><a href="preface.html#what-is-not-covered-in-this-guide."><i class="fa fa-check"></i><b>0.4</b> What is not covered in this guide.</a></li>
@@ -78,7 +78,6 @@
 <li class="chapter" data-level="0.5.2" data-path="preface.html"><a href="preface.html#data-elements"><i class="fa fa-check"></i><b>0.5.2</b> Data Elements</a></li>
 <li class="chapter" data-level="0.5.3" data-path="preface.html"><a href="preface.html#indicators"><i class="fa fa-check"></i><b>0.5.3</b> Indicators</a></li>
 </ul></li>
-<li class="chapter" data-level="0.6" data-path="preface.html"><a href="preface.html#acknowledgement"><i class="fa fa-check"></i><b>0.6</b> Acknowledgement</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
 <li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#background"><i class="fa fa-check"></i><b>1.1</b> Background</a><ul>
@@ -95,6 +94,9 @@
 </ul></li>
 <li class="chapter" data-level="2.3" data-path="comp.html"><a href="comp.html#data-mining-component"><i class="fa fa-check"></i><b>2.3</b> Data Mining Component</a><ul>
 <li class="chapter" data-level="2.3.1" data-path="comp.html"><a href="comp.html#pivot"><i class="fa fa-check"></i><b>2.3.1</b> Pivot Tables</a></li>
+<li class="chapter" data-level="2.3.2" data-path="comp.html"><a href="comp.html#visualizer"><i class="fa fa-check"></i><b>2.3.2</b> Data Visualizer</a></li>
+<li class="chapter" data-level="2.3.3" data-path="comp.html"><a href="comp.html#map"><i class="fa fa-check"></i><b>2.3.3</b> Maps</a></li>
+<li class="chapter" data-level="2.3.4" data-path="comp.html"><a href="comp.html#data-presentation"><i class="fa fa-check"></i><b>2.3.4</b> Data Presentation</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>3</b> Impact Malaria Data Specification</a><ul>
@@ -159,7 +161,7 @@
 <h1><span class="header-section-number">Chapter 4</span> Metadata Specification</h1>
 <div id="introduction-2" class="section level2">
 <h2><span class="header-section-number">4.1</span> Introduction</h2>
-<p>In the previous chapter, we learned about the IM &amp; PMP indicators and how they are stored and constructed in the Data Hub. That is essential knowledge for you to start monitoring IM indicator data from the source to how they are presented in the IM Data Hub.</p>
+<p>In the previous chapter, we learned about the IM &amp; PMP indicators and how they are stored or constructed in the Data Hub. That is essential knowledge for you to start monitoring IM indicator data from the source to how they are presented in the IM Data Hub.</p>
 <p>In this chapter, we’ll dive deep to the bottom and explore what lies beneath the IM Data Hub, the metadata. Metadata is data about data.</p>
 <p>Let’s get started!</p>
 <p>First, I’d say anything in the data hub contains metadata. Metadata defines what, why, where, and how parts are set up in the data hub. They provide references to different objects in the data hub.</p>
@@ -281,7 +283,7 @@
 <p>IM Data Hub OUs consists of the following groups and group sets by countries and the type of facility.</p>
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:unnamed-chunk-11">Table 4.1: </span>A table showing OU groups and group set
+<span id="tab:unnamed-chunk-13">Table 4.1: </span>A table showing OU groups and group set
 </caption>
 <thead>
 <tr>
@@ -351,7 +353,7 @@ NE Public
 <p>IM Data Hub implements the following Metadata types.</p>
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:unnamed-chunk-12">Table 4.2: </span>A table showing metadata types implimented in the IM Data Hub
+<span id="tab:unnamed-chunk-14">Table 4.2: </span>A table showing metadata types implimented in the IM Data Hub
 </caption>
 <thead>
 <tr>
@@ -507,7 +509,7 @@ For instance: <em>KE PMP</em> is an indicator group with all PMP indicators for 
 <h3><span class="header-section-number">4.4.1</span> Category</h3>
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:unnamed-chunk-13">Table 4.3: </span>A table showing core categories set in the IM Data Hub
+<span id="tab:unnamed-chunk-15">Table 4.3: </span>A table showing core categories set in the IM Data Hub
 </caption>
 <thead>
 <tr>
@@ -645,7 +647,7 @@ Supervisor, Clinical staff, Laboratory-based staff, Community-based staff, Other
 <h3><span class="header-section-number">4.4.2</span> Category Combination</h3>
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:unnamed-chunk-14">Table 4.4: </span>A table showing core category combos set in the IM Data Hub
+<span id="tab:unnamed-chunk-16">Table 4.4: </span>A table showing core category combos set in the IM Data Hub
 </caption>
 <thead>
 <tr>

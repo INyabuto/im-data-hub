@@ -24,7 +24,7 @@
 <meta name="author" content="Isaiah Nyabuto, Cristina Lussiana" />
 
 
-<meta name="date" content="2019-11-25" />
+<meta name="date" content="2019-11-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -69,7 +69,7 @@
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a></li>
 <li class="chapter" data-level="" data-path="preface.html"><a href="preface.html"><i class="fa fa-check"></i>Preface</a><ul>
-<li class="chapter" data-level="0.1" data-path="preface.html"><a href="preface.html#what-is-im-data-hub"><i class="fa fa-check"></i><b>0.1</b> What is IM Data Hub?</a></li>
+<li class="chapter" data-level="0.1" data-path="preface.html"><a href="preface.html#what-is-the-im-data-hub"><i class="fa fa-check"></i><b>0.1</b> What is the IM Data Hub?</a></li>
 <li class="chapter" data-level="0.2" data-path="preface.html"><a href="preface.html#who-should-read-this-guide"><i class="fa fa-check"></i><b>0.2</b> Who should read this guide?</a></li>
 <li class="chapter" data-level="0.3" data-path="preface.html"><a href="preface.html#what-is-covered-in-this-guide."><i class="fa fa-check"></i><b>0.3</b> What is covered in this guide.</a></li>
 <li class="chapter" data-level="0.4" data-path="preface.html"><a href="preface.html#what-is-not-covered-in-this-guide."><i class="fa fa-check"></i><b>0.4</b> What is not covered in this guide.</a></li>
@@ -78,7 +78,6 @@
 <li class="chapter" data-level="0.5.2" data-path="preface.html"><a href="preface.html#data-elements"><i class="fa fa-check"></i><b>0.5.2</b> Data Elements</a></li>
 <li class="chapter" data-level="0.5.3" data-path="preface.html"><a href="preface.html#indicators"><i class="fa fa-check"></i><b>0.5.3</b> Indicators</a></li>
 </ul></li>
-<li class="chapter" data-level="0.6" data-path="preface.html"><a href="preface.html#acknowledgement"><i class="fa fa-check"></i><b>0.6</b> Acknowledgement</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
 <li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#background"><i class="fa fa-check"></i><b>1.1</b> Background</a><ul>
@@ -95,6 +94,9 @@
 </ul></li>
 <li class="chapter" data-level="2.3" data-path="comp.html"><a href="comp.html#data-mining-component"><i class="fa fa-check"></i><b>2.3</b> Data Mining Component</a><ul>
 <li class="chapter" data-level="2.3.1" data-path="comp.html"><a href="comp.html#pivot"><i class="fa fa-check"></i><b>2.3.1</b> Pivot Tables</a></li>
+<li class="chapter" data-level="2.3.2" data-path="comp.html"><a href="comp.html#visualizer"><i class="fa fa-check"></i><b>2.3.2</b> Data Visualizer</a></li>
+<li class="chapter" data-level="2.3.3" data-path="comp.html"><a href="comp.html#map"><i class="fa fa-check"></i><b>2.3.3</b> Maps</a></li>
+<li class="chapter" data-level="2.3.4" data-path="comp.html"><a href="comp.html#data-presentation"><i class="fa fa-check"></i><b>2.3.4</b> Data Presentation</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>3</b> Impact Malaria Data Specification</a><ul>
@@ -158,24 +160,28 @@
 <div id="header">
 <h1 class="title">Impact Malaria Data Hub Specifications</h1>
 <p class="author"><em>Isaiah Nyabuto, Cristina Lussiana</em></p>
-<p class="date"><em>2019-11-25</em></p>
+<p class="date"><em>2019-11-26</em></p>
 </div>
 <div id="welcome" class="section level1 unnumbered">
 <h1>Welcome</h1>
 <p><img src="images/logo1.png" width="100" /></p>
 <p><img src="images/logo2.png" width="214" /></p>
-<p>This is a technical guide for the IM Data Hub, <strong>a work currently in progress by BAO systems intended for official release in <a href="imdatahub.org">production</a> by </strong>____</p>
-<p><a href="imdatahub.org"><strong>IM Data Hub</strong></a> is a warehouse for Impact Malaria indicator data. It houses all the IM indicator data for project monitoring and use. It is primarily designed with data users in mind, and so it comes with several tools specifically designed to enable monitoring and promote the use of IM data.</p>
-<p>Today, IM Data Hub is extensively used in 11 countries in Africa, and it collects a tremendous amount of data in the following tracks;</p>
+<p>This is a technical guide for the IMPACT Malaria (IM) Data Hub, developed by Population Services International (PSI), to support IMPACT Malaria technical team to navigate, maintain and use the IM Data Hub.</p>
+<p>The <a href="https://imdatahub.org"><strong>IMPACT Malaria Data Hub</strong></a> is the IMPACT Malaria project monitoring system database for IM indicators. It is a web based database in a District Health Information Software 2 (DHIS2) instance and it houses all IM indicator data for project monitoring and use. It is primarily designed with data users in mind, and so its configuration comes with approaches specifically designed to enable monitoring and promote the use of IM data.</p>
+<p>The IM Data Hub is used in IM countries in Africa and Asia and it collects a tremendous amount of data in the following tracks:</p>
 <ol style="list-style-type: decimal">
-<li>case management</li>
+<li>Case management</li>
 <li>Malaria in Pregnancy</li>
 <li>Seasonal Malaria Chemoprevention</li>
 <li>Global Technical Leadership.</li>
 </ol>
-<p>It is used by multiple partners at different levels, from donors (PMI), Implementers (PSI, Jhpiego, UCSF, e.t.c), and government ministries of health in tracking country performance.</p>
-<p>IM Data Hub is implemented in an ST-3 plan since Nov 27th, 2018, and it supports HNQIS (1.4) compatibility.</p>
-<p>This guide provides information and the technical specifications you need to know about Impact Malaria (IM) Data Hub. It’s an all-inclusive guide and it complements other materials on the development, testing, or training in the Data Hub.</p>
+<p>It is used by multiple partners at different levels, from Ministries of Health (MoHs), National Malaria Control Programs (NMCPs), donors like the President’s Malaria Initiative (PMI), implementers (PSI, Jhpiego, University of California San Francisco (UCSF)) to track project monitoring and performance.</p>
+<p>The IM Data Hub has two instances:</p>
+<ul>
+<li>A <strong>development instance</strong> at <a href="https://im-dev.psi-mis.org">im-dev.psi-mis.org</a> hosted on a ST-3 plan from BAO Systems since Nov 22nd, 2018 for prototyping, testing and piloting</li>
+<li>A <strong>production instance</strong> at <a href="https://imdatahub.org">imdatahub.org</a> hosted on a ST-3 plan from BAO Systems since Nov 27th, 2019 for actual monitoring and reporting</li>
+</ul>
+<p>This guide provides all the information and the technical specifications you need to know about the IM Data Hub. It’s an all-inclusive guide on the IM Data Hub and it complements other materials on DHIS2 configuration, as well as training in the IM Data Hub.</p>
 <!--  Start of the preface -->
 </div>
             </section>

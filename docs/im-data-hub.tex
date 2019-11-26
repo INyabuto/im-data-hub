@@ -84,7 +84,7 @@
   \postauthor{\par}
       \predate{\centering\large\emph}
   \postdate{\par}
-    \date{2019-11-25}
+    \date{2019-11-26}
 
 \usepackage{booktabs}
 \usepackage{amsthm}
@@ -102,6 +102,10 @@
 \setcounter{tocdepth}{1}
 \tableofcontents
 }
+\includegraphics[width=2.78in]{./images/logo1}
+
+\includegraphics[width=5.93in]{./images/logo2}
+
 \hypertarget{welcome}{%
 \chapter*{Welcome}\label{welcome}}
 \addcontentsline{toc}{chapter}{Welcome}
@@ -110,17 +114,17 @@
 
 \includegraphics[width=5.93in]{./images/logo2}
 
-This is a technical guide for the IM Data Hub, \textbf{a work currently in progress by BAO systems intended for official release in \href{imdatahub.org}{production} by }\_\_\_\_
+This is a technical guide for the IMPACT Malaria (IM) Data Hub, developed by Population Services International (PSI), to support IMPACT Malaria technical team to navigate, maintain and use the IM Data Hub.
 
-\href{imdatahub.org}{\textbf{IM Data Hub}} is a warehouse for Impact Malaria indicator data. It houses all the IM indicator data for project monitoring and use. It is primarily designed with data users in mind, and so it comes with several tools specifically designed to enable monitoring and promote the use of IM data.
+The \href{https://imdatahub.org}{\textbf{IMPACT Malaria Data Hub}} is the IMPACT Malaria project monitoring system database for IM indicators. It is a web based database in a District Health Information Software 2 (DHIS2) instance and it houses all IM indicator data for project monitoring and use. It is primarily designed with data users in mind, and so its configuration comes with approaches specifically designed to enable monitoring and promote the use of IM data.
 
-Today, IM Data Hub is extensively used in 11 countries in Africa, and it collects a tremendous amount of data in the following tracks;
+The IM Data Hub is used in IM countries in Africa and Asia and it collects a tremendous amount of data in the following tracks:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  case management
+  Case management
 \item
   Malaria in Pregnancy
 \item
@@ -129,69 +133,77 @@ Today, IM Data Hub is extensively used in 11 countries in Africa, and it collect
   Global Technical Leadership.
 \end{enumerate}
 
-It is used by multiple partners at different levels, from donors (PMI), Implementers (PSI, Jhpiego, UCSF, e.t.c), and government ministries of health in tracking country performance.
+It is used by multiple partners at different levels, from Ministries of Health (MoHs), National Malaria Control Programs (NMCPs), donors like the President's Malaria Initiative (PMI), implementers (PSI, Jhpiego, University of California San Francisco (UCSF)) to track project monitoring and performance.
 
-IM Data Hub is implemented in an ST-3 plan since Nov 27th, 2018, and it supports HNQIS (1.4) compatibility.
+The IM Data Hub has two instances:
 
-This guide provides information and the technical specifications you need to know about Impact Malaria (IM) Data Hub. It's an all-inclusive guide and it complements other materials on the development, testing, or training in the Data Hub.
+\begin{itemize}
+\tightlist
+\item
+  A \textbf{development instance} at \href{https://im-dev.psi-mis.org}{im-dev.psi-mis.org} hosted on a ST-3 plan from BAO Systems since Nov 22nd, 2018 for prototyping, testing and piloting
+\item
+  A \textbf{production instance} at \href{https://imdatahub.org}{imdatahub.org} hosted on a ST-3 plan from BAO Systems since Nov 27th, 2019 for actual monitoring and reporting
+\end{itemize}
+
+This guide provides all the information and the technical specifications you need to know about the IM Data Hub. It's an all-inclusive guide on the IM Data Hub and it complements other materials on DHIS2 configuration, as well as training in the IM Data Hub.
 
 \hypertarget{preface}{%
 \chapter*{Preface}\label{preface}}
 \addcontentsline{toc}{chapter}{Preface}
 
-\hypertarget{what-is-im-data-hub}{%
-\section{What is IM Data Hub?}\label{what-is-im-data-hub}}
+\hypertarget{what-is-the-im-data-hub}{%
+\section{What is the IM Data Hub?}\label{what-is-the-im-data-hub}}
 
-Impact Maria (IM) Data Hub is a project monitoring system used to collect, analyze, and report Impact Malaria indicator data. IM Data Hub is where all the IM data lives.
-
-It's built on DHIS2 core software, and it supports HNQIS (1.4) compatibility.
+The Impact Maria (IM) Data Hub is a project monitoring system in DHIS2 used to collect, analyze, monitor and report Impact Malaria indicator data. It's built on DHIS2 core software, and it supports HNQIS (1.4.X) compatibility.
 
 \hypertarget{who-should-read-this-guide}{%
 \section{Who should read this guide?}\label{who-should-read-this-guide}}
 
-This guide is aimed at two main audiences.
+This guide is aimed at two main audiences:
 
 \begin{itemize}
 \tightlist
 \item
-  System Administrators who are involved in the administration or the daily operation of IM Data Hub.
+  System Administrators who are involved in the configuration, maintenance and troubleshooting the IM Data Hub,
 \item
-  Project teams \& M\&E staff interested to learn more about the IM Data Hub. You will find this helpful in understanding the overall system set up and how different components work together in the system.
+  IM Project teams and M\&E staff involved in supporting M\&E activities like data entry, reporting, data analysis and visualizations and project monitoring.
 \end{itemize}
+
+The audiences will find this guide helpful in understanding the overall system set up and how different components work together in the system.
 
 \hypertarget{what-is-covered-in-this-guide.}{%
 \section{What is covered in this guide.}\label{what-is-covered-in-this-guide.}}
 
-The guide is divided into seven chapters.
+The guide is divided into seven chapters:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  Introduction - offers some background information, basic setup, and how to get started on IM Data Hub quickly.
+  Introduction - offers some background information, basic setup, and how to get started on the IM Data Hub quickly
 \item
-  Understanding IM Data Hub Components - explores the basic set up to provide an understanding of the different components and how they function.
+  Understanding IM Data Hub Components - explores the basic set up to provide an understanding of the different components and how they function
 \item
-  Data Specification - `builds on the understanding of IM Data Hub components and talks about the IM indicators and data reporting.
+  Data Specification - builds on the understanding of the IM Data Hub components and talks about the IM indicators and data reporting
 \item
-  Metadata Specifications - dives into the data specification and the system components and talks about what lies at the bottom, the metadata.
+  Metadata Specifications - dives into the data specification and the system components and talks about what lies at the bottom, the metadata
 \item
-  Security and Access Model - Explains the security mechanisms and access model.
+  Security and Access Model - Explains the security mechanisms and access model
 \item
-  Customization \& Troubleshooting - Guides the customization, troubleshooting, and how to get help on IM Data Hub.
+  Customization \& Troubleshooting - Guides the customization, troubleshooting, and how to get help on the IM Data Hub
 \item
-  Appendix -
+  Appendix
 \end{enumerate}
 
 \hypertarget{what-is-not-covered-in-this-guide.}{%
 \section{What is not covered in this guide.}\label{what-is-not-covered-in-this-guide.}}
 
-The focus of this guide is to walk you through the technical specification of the IM Data Hub. We attempt to showcase some best practices in configuring, testing, troubleshooting, reporting, monitoring, or use of data in the IM Data Hub. However, still, you need other references to master these essential skill sets.
+The focus of this guide is to walk you through the technical specification of the IM Data Hub. We attempt to showcase some best practices in configuring, testing, troubleshooting, reporting, monitoring, or use of data in the IM Data Hub. However, this is not a training on \href{https://academy.dhis2.org/courses/HISP/DHIS2_Level1/2015_Q1/about}{DHIS2 Foundamentals} and you need other references to master these essential skill sets.
 
 \hypertarget{conventions}{%
 \section{Conventions}\label{conventions}}
 
-This guide follows the following document conventions.
+This guide follows the following abbrevations.
 
 \begin{longtable}[]{@{}ll@{}}
 \toprule
@@ -199,41 +211,41 @@ Abbreviation & In Full\tabularnewline
 \midrule
 \endhead
 CR & Case Reporting\tabularnewline
-IM & Impact Malaria\tabularnewline
-SS & Supportive Supervision\tabularnewline
-TR & Training\tabularnewline
-TL & Technical Leadership\tabularnewline
-SMC & Seasonal Malaria Chemoprophylaxis\tabularnewline
-DX & Diagnosis\tabularnewline
-TX & Treatment\tabularnewline
-MIP & Malaria In Pregnancy\tabularnewline
 CS & Country Specific\tabularnewline
-RE & Reporting\tabularnewline
+DX & Diagnosis\tabularnewline
+IM & Impact Malaria\tabularnewline
+MIP & Malaria In Pregnancy\tabularnewline
 PMP & Performance Management Plan\tabularnewline
+RE & Reporting\tabularnewline
+SMC & Seasonal Malaria Chemoprophylaxis\tabularnewline
+SS & Supportive Supervision\tabularnewline
+TL & Technical Leadership\tabularnewline
+TR & Training\tabularnewline
+TX & Treatment\tabularnewline
 \bottomrule
 \end{longtable}
 
 \hypertarget{data-sets}{%
 \subsection{Data Sets}\label{data-sets}}
 
-Data set: {[}\texttt{country\ ISO\ code}{]} {[}\texttt{program}{]}:
+Data set: {[}\texttt{country\ ISO\ code}{]} {[}\texttt{Data\ entry\ form\ name}{]}:
 
-Examples;
+Examples:
 
 \begin{itemize}
 \tightlist
 \item
   GH Supportive Supervision
 \item
-  CD Case Reporting \textbar{}Data set: {[}country ISO code{]} {[}Data entry form name{]}
+  CD Case Reporting
 \end{itemize}
 
 \hypertarget{data-elements}{%
 \subsection{Data Elements}\label{data-elements}}
 
-DEs: {[}\texttt{country\ ISO\ code}{]} {[}\texttt{program\ abbreviation}{]} - {[}\texttt{section\ abbreviation}{]} {[}\texttt{DE\ Form\ name}{]}:
+DEs: {[}\texttt{country\ ISO\ code}{]} {[}\texttt{Data\ entry\ form\ name\ abbreviation}{]} - {[}\texttt{Section\ abbreviation}{]} {[}\texttt{DE\ Form\ name}{]}:
 
-Examples;
+Examples:
 
 \begin{itemize}
 \tightlist
@@ -246,14 +258,11 @@ Examples;
 \hypertarget{indicators}{%
 \subsection{Indicators}\label{indicators}}
 
-Indicators: {[}\texttt{country\ ISO\ code}{]} {[}\texttt{PMP}{]} - {[}\texttt{section\ abbreviation}{]} {[}\texttt{Indicator\ name}{]}:
+Indicators: {[}\texttt{country\ ISO\ code}{]} {[}\texttt{PMP}{]} {[}\texttt{number}{]} - {[}\texttt{Section\ abbreviation}{]} {[}\texttt{Indicator\ name}{]}:
 
-Example;
+Example:
 
-CD PMP - DX Percentage of health workers demonstrating competence in malaria microscopy
-
-\hypertarget{acknowledgement}{%
-\section{Acknowledgement}\label{acknowledgement}}
+GH PMP 01 - DX Percentage of confirmed malaria cases
 
 \hypertarget{intro}{%
 \chapter{Introduction}\label{intro}}
@@ -261,9 +270,9 @@ CD PMP - DX Percentage of health workers demonstrating competence in malaria mic
 \hypertarget{background}{%
 \section{Background}\label{background}}
 
-The Impact Maria (IM) Data Hub is a web-based project monitoring system used to collect, analyze, monitor and report IM indicator data. {[}IMPACT Malaria {]} (impactmalaria.org) is a five year contract funded by the US President's Malaria Initiative (PMI) to work with national malaria programs to fight malaria and save lives by strengthening diagnosis, treatment, and drug-based prevention for those most at risk, particularly children and pregnant women.
+The Impact Maria (IM) Data Hub is a web-based project monitoring system used to collect, analyze, monitor and report IM indicator data. \href{https://imdpactmalaria.org}{\textbf{IMPACT Malaria}} is a five year contract funded by the US President's Malaria Initiative (PMI) to work with national malaria programs to fight malaria and save lives by strengthening diagnosis, treatment, and drug-based prevention for those most at risk, particularly children and pregnant women.
 
-The \href{imdatahub.org}{\textbf{IMPACT Malaria Data Hub}} is the IMPACT Malaria project monitoring system database for IM indicators. It is a web based database in a District Health Information Software 2 (DHIS2) instance and it houses all IM indicator data for project monitoring and use. It is primarily designed with data users in mind, and so its configuration comes with approaches specifically designed to enable monitoring and promote the use of IM data.
+The \href{https://imdatahub.org}{\textbf{IMPACT Malaria Data Hub}} is the IMPACT Malaria project monitoring system database for IM indicators. It is a web based database in a District Health Information Software 2 (DHIS2) instance and it houses all IM indicator data for project monitoring and use. It is primarily designed with data users in mind, and so its configuration comes with approaches specifically designed to enable monitoring and promote the use of IM data.
 
 The IM Data Hub is used in IM countries in Africa and Asia and it collects a tremendous amount of data in the following tracks:
 
@@ -310,9 +319,9 @@ The IM Data Hub has two istances:
 \begin{itemize}
 \tightlist
 \item
-  A \textbf{development instance} at \href{https://im-dev.psi-mis.org}{im-dev.psi-mis.org} hosted on a ST-3 plan from BAO Systems since Nov 22nd, 2019 for prototyping, testing and piloting. Analytics run daily at 00:00 and 12:00 UTC (EAT -3h)
+  A \textbf{development instance} at \href{https://im-dev.psi-mis.org}{im-dev.psi-mis.org} hosted on a ST-3 plan from BAO Systems since Nov 22nd, 2018 for prototyping, testing and piloting. Analytics run daily at 00:00 and 12:00 UTC (EAT -3h)
 \item
-  A \textbf{production instance} at \href{https://imdatahub.org}{imdatahub.org} hosted on a ST-3 plan from BAO Systems since Nov 27th, 2018 for actual monitoring and reporting. Analytics run daily at 00:00 and 12:00 UTC (EAT -3h)
+  A \textbf{production instance} at \href{https://imdatahub.org}{imdatahub.org} hosted on a ST-3 plan from BAO Systems since Nov 27th, 2019 for actual monitoring and reporting. Analytics run daily at 00:00 and 12:00 UTC (EAT -3h)
 \end{itemize}
 
 \hypertarget{getting-started}{%
@@ -350,7 +359,7 @@ We'll dive deeper into the components and understand how they are set up in the 
 
 Understanding IM Data Hub components will allow you to report, analyse, and monitor IM indicators more effectively.
 
-I'll start by showing the you reporting component, IM Data Hub uses data sets to collect indicator data. We will discuss them briefly in the next section. We will then walk through the data mining piece, and how the different outputs are pulled together on a dashboard for the project use. We'll wind up by exploring the data quality component and how the IM indicator data pass through the quality checks.
+I'll start by showing you the reporting component, IM Data Hub uses data sets to collect indicator data. We will discuss them briefly in the next section. We will then walk through the data mining piece, and how the different outputs are pulled together on a dashboard for the project use. We'll wind up by exploring the data quality component and how the IM indicator data pass through the quality checks.
 
 \hypertarget{reporting-component}{%
 \section{Reporting Component}\label{reporting-component}}
@@ -476,7 +485,7 @@ Country specific datasets are mainly used to report country's performance manage
 Similar to the global data sets, Country specific ones are organized in sections (in grey) with multiple subheadings. Fig \ref{fig:pmp-datasets}
 
 \begin{figure}
-\includegraphics[width=18.6in]{./images/pmp datasets} \caption{Country Specific Datasets}\label{fig:pmp-datasets}
+\includegraphics[width=19.26in]{./images/pmp datasets} \caption{Country Specific Datasets}\label{fig:pmp-datasets}
 \end{figure}
 
 \hypertarget{accessing-country-specific-datasets}{%
@@ -527,11 +536,219 @@ In the following subsection, we are going to access and tabulate a sample of IM 
 
 As an example, we tabulate and pivot \texttt{IM\ Confirmed\ vs.\ Suspected\ Malaria\ Cases.} for last 12 months at the global level (world)
 
-Please refresh your browser or login with the demo account below if you have not.
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Please refresh your browser or login with the demo account below if you have not.
+\end{enumerate}
 
-\texttt{{[}IM\ Data\ Hub\ demo{]}(https://im-dev.psi-mis.org/dhis-web-dataentry/index.action)}
+\href{https://im-dev.psi-mis.org/dhis-web-dataentry/index.action}{IM Data Hub demo}
 
 \texttt{Username} :\textbf{\texttt{demoUser}} and \texttt{Password} : \textbf{\texttt{Temp1234!}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  From Apps select or search for Pivot Tables
+\end{enumerate}
+
+\begin{figure}
+\includegraphics[width=15.36in]{./images/pivot-table} \caption{Searching Pivot Table App}\label{fig:pivot-table}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\item
+  Click to launch the app.
+\item
+  From the indicator group on your left, select IM PMP indicator and then search \% of confirmed case and \% of suspected malaria cases
+\item
+  Make sure you pull each of the to the to the right side
+
+  \begin{figure}
+  \includegraphics[width=27.64in]{./images/pivot-table2} \caption{Selecting Indicators in the Pivot Table}\label{fig:pivot-table2}
+  \end{figure}
+\item
+  Open the organisation unit tab and select world
+\end{enumerate}
+
+\begin{figure}
+\includegraphics[width=27.64in]{./images/pivot-table2} \caption{Selecting the organisation unit}\label{fig:pivot-table4}
+\end{figure}
+
+\begin{quote}
+At least three dimensions must be specified; What, When and Where in the pivot table
+\end{quote}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{6}
+\tightlist
+\item
+  Click on the update button to generate the report. Check that you can see a table like mine (fig 8). Congratulations ! We have tabulated our report.
+\end{enumerate}
+
+\begin{figure}
+\includegraphics[width=16.67in]{./images/pivot-table3} \caption{Updating the Pivot Table}\label{fig:pivot-table3}
+\end{figure}
+
+\begin{quote}
+save the table as \texttt{IM\ PMP\ -\ \%\ of\ confirmed\ vs\ Suspected\ cases\ last\ 12\ months,\ global} we will refer to them in section 3.
+\end{quote}
+
+\hypertarget{best-practices-tips-tricks}{%
+\subsubsection{Best practices, tips \& tricks}\label{best-practices-tips-tricks}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Hide empty rows/columns is a very useful Pivot Table option when analysing data across many org units or period with gaps in the data.
+\item
+  Sort your table quickly by clicking on the sort symbol inside the column header cells
+\item
+  You must always save your table as a favourite before you can add it to your dashboard or share it with colleagues
+\item
+  You can add color legends to your table (coloring of cells based on their values) under Options. Multiple legends can now be assigned within the same table and are created in the ``Legends'' portion of the maintenance app.
+\end{enumerate}
+
+Next we will create a chart of these using the data visualizer app.
+
+\hypertarget{visualizer}{%
+\subsection{Data Visualizer}\label{visualizer}}
+
+Data Visualizers allows you to generate various charts; bar charts, line graphs, pie charts etc directly in the IM Data Hub. They follow the same design and logic as the pivot tables in data selection.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  The easiest way to visualize the table in a chart is to open this table as a chart Fig. \ref{fig:visualizer}.
+\end{enumerate}
+
+\begin{figure}
+\includegraphics[width=34.69in]{./images/visualizer} \caption{Opening this table As a Chart}\label{fig:visualizer}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  You can as well navigate directly to the data visualizer app by selecting the first option \texttt{Go\ to\ charts} or launching it form the apps. We will open ours as chart. Check that you see a chart as in (fig 10).
+\end{enumerate}
+
+\begin{figure}
+\includegraphics[width=46.64in]{./images/visualizer2} \caption{A bar chart generated by Data Visualizer App}\label{fig:visualizer2}
+\end{figure}
+
+By default, \texttt{open\ this\ table\ as\ chart} will attempt to visualize the table in a bar chart. We can switch to this chart to different types by selecting the \texttt{type}. Ensure you choose the appropriate type.
+
+We'll stick to this as it is the most appropriate for this case. It shows the comparison.
+
+\begin{quote}
+save your chart as \texttt{IM\ PMP\ -\ \%\ confirmed\ vs\ suspected\ cases\ last\ 12\ months,\ global\ -\ chart}
+\end{quote}
+
+In the next section we'll explore the maps app.
+
+\hypertarget{map}{%
+\subsection{Maps}\label{map}}
+
+The Maps app allows you to set thematic layers of the areas and points, view facilities based on classifications, and visualize catchment areas for the geographical distribution of IM indicator data.
+
+Example; Malaria Confirmed Cases last 3 months by Region, Ghana.
+
+\begin{figure}
+\includegraphics[width=15.06in]{./images/maps2} \caption{Malaria Confirmed Cases last 3 months by Region, Ghana}\label{fig:maps2}
+\end{figure}
+
+To create the map:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Navigate to the \texttt{Maps} app
+\end{enumerate}
+
+\begin{figure}
+\includegraphics[width=4.25in]{./images/map} \caption{The Maps App}\label{fig:map}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Click the icon \texttt{Maps} to launch the app
+\item
+  Add a \texttt{thematic\ layer}
+\end{enumerate}
+
+\begin{figure}
+\includegraphics[width=19.25in]{./images/maps1} \caption{Select thematic layer}\label{fig:maps1}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  Follow the steps to select the dimensions; What, when and where.
+\end{enumerate}
+
+\begin{figure}
+\includegraphics[width=16.64in]{./images/maps} \caption{Steps to select the dimensions; What, when and where}\label{fig:maps}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  Update the layer.
+\end{enumerate}
+
+\hypertarget{best-practices-tips-tricks-1}{%
+\subsubsection{Best practices, tips \& tricks}\label{best-practices-tips-tricks-1}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Try not to put many overlapping layers on a map that will be difficult to interpret
+\item
+  Use different color schemes when displaying multiple layers on a map
+\item
+  The ordering of the layers is 1: Top Most Layer - 4: Bottom Most Layer. Add thematic layers to the map with this in mind.
+\end{enumerate}
+
+\hypertarget{data-presentation}{%
+\subsection{Data Presentation}\label{data-presentation}}
+
+Once the IM indicators are analyzed, processed, and you've come up with different information products, the next big thing is how this information is used in the routine monitoring of the project.
+
+Data use is an art by itself. Some several guides and structures attempt to promote data use. At PSI, we use the data use frameworks. - more about data use.
+
+In this section, we cover the data presentation component. This is to show you how the information products are pulled together on a dashboard to:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Quickly viewing the charts/tables/maps, you use most frequently
+\item
+  Monitoring the project progress
+\item
+  Establishing a routine for regularly checking key program aspects
+\item
+  Sharing information with others.
+\end{enumerate}
 
 \hypertarget{data}{%
 \chapter{Impact Malaria Data Specification}\label{data}}
@@ -3253,7 +3470,7 @@ Denid : 1
 \hypertarget{introduction-2}{%
 \section{Introduction}\label{introduction-2}}
 
-In the previous chapter, we learned about the IM \& PMP indicators and how they are stored and constructed in the Data Hub. That is essential knowledge for you to start monitoring IM indicator data from the source to how they are presented in the IM Data Hub.
+In the previous chapter, we learned about the IM \& PMP indicators and how they are stored or constructed in the Data Hub. That is essential knowledge for you to start monitoring IM indicator data from the source to how they are presented in the IM Data Hub.
 
 In this chapter, we'll dive deep to the bottom and explore what lies beneath the IM Data Hub, the metadata. Metadata is data about data.
 
@@ -3441,7 +3658,7 @@ OU groups, OU group sets.
 
 IM Data Hub OUs consists of the following groups and group sets by countries and the type of facility.
 
-\label{tab:unnamed-chunk-11}A table showing OU groups and group set
+\label{tab:unnamed-chunk-13}A table showing OU groups and group set
 
 OU group set
 
@@ -3476,7 +3693,7 @@ NE Public
 
 IM Data Hub implements the following Metadata types.
 
-\label{tab:unnamed-chunk-12}A table showing metadata types implimented in the IM Data Hub
+\label{tab:unnamed-chunk-14}A table showing metadata types implimented in the IM Data Hub
 
 Metadata
 
@@ -3569,7 +3786,7 @@ The following is a list of all IM data hub core metadata.
 \hypertarget{category}{%
 \subsection{Category}\label{category}}
 
-\label{tab:unnamed-chunk-13}A table showing core categories set in the IM Data Hub
+\label{tab:unnamed-chunk-15}A table showing core categories set in the IM Data Hub
 
 name
 
@@ -3646,7 +3863,7 @@ Supervisor, Clinical staff, Laboratory-based staff, Community-based staff, Other
 \hypertarget{category-combination}{%
 \subsection{Category Combination}\label{category-combination}}
 
-\label{tab:unnamed-chunk-14}A table showing core category combos set in the IM Data Hub
+\label{tab:unnamed-chunk-16}A table showing core category combos set in the IM Data Hub
 
 name
 
@@ -3972,7 +4189,7 @@ In case you want a country user to have access to global metadata and/or data, d
 \hypertarget{access-from-global-to-country-level-access}{%
 \subsection{Access from global to country level access:}\label{access-from-global-to-country-level-access}}
 
-In case you want a global user to have access to country metadata and/or data, do not share country metadata with the IM User group the user is part of (ie do not share the Data set GH Case Reporting with IM -- Admin), but rather include the user into one of the relevant {[}country ISO code{]} User groups (ie include Keith into the DC -- Users User group if you want to give him access to data from DRC).
+In case you want a global user to have access to country metadata and/or data, do not share country metadata with the IM User group the user is part of (ie do not share the Data set GH Case Reporting with IM -- Admin), but rather include the user into one of the relevant {[}\texttt{country\ ISO\ code}{]} User groups (ie include Keith into the DC -- Users User group if you want to give him access to data from DRC).
 
 \hypertarget{custom}{%
 \chapter{Customization \& Troubleshooting IM Datahub}\label{custom}}

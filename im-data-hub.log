@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2019.9.16)  25 NOV 2019 07:40
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2019.9.16)  26 NOV 2019 07:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -768,13 +768,22 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@toc=\write4
 \openout4 = `im-data-hub.toc'.
 
+File: ./images/logo1.png Graphic file (type bmp)
+<./images/logo1.png>
+File: ./images/logo2.png Graphic file (type bmp)
+<./images/logo2.png>
+
+Overfull \hbox (83.56096pt too wide) in paragraph at lines 107--108
+[][] 
+ []
+
 [4]
 File: ./images/logo1.png Graphic file (type bmp)
 <./images/logo1.png>
 File: ./images/logo2.png Graphic file (type bmp)
 <./images/logo2.png>
 
-Overfull \hbox (83.56096pt too wide) in paragraph at lines 111--112
+Overfull \hbox (83.56096pt too wide) in paragraph at lines 115--116
 [][] 
  []
 
@@ -782,14 +791,7 @@ Overfull \hbox (83.56096pt too wide) in paragraph at lines 111--112
 
 ] [6] [7
 
-]
-Overfull \hbox (0.725pt too wide) in paragraph at lines 234--235
-\TU/lmr/m/n/10 DEs: [\TU/lmtt/m/n/10 country ISO code\TU/lmr/m/n/10 ] [\TU/lmtt
-/m/n/10 program abbreviation\TU/lmr/m/n/10 ] - [\TU/lmtt/m/n/10 section abbrevi
-ation\TU/lmr/m/n/10 ]
- []
-
-[8] [9] [10
+] [8] [9] [10
 
 ]
 Chapter 1.
@@ -806,20 +808,20 @@ File: ./images/data-entry-app.png Graphic file (type bmp)
 File: ./images/im datasets.png Graphic file (type bmp)
 <./images/im datasets.png>
 
-Overfull \hbox (485.61679pt too wide) in paragraph at lines 387--387
+Overfull \hbox (485.61679pt too wide) in paragraph at lines 396--396
 []\TU/lmr/m/n/10 datasets.bb [] 
  []
 
 
-LaTeX Warning: Float too large for page by 24.06325pt on input line 388.
+LaTeX Warning: Float too large for page by 24.06325pt on input line 397.
 
 [14] [15]
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 423.
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 432.
 File: ./images/data-entry-app2.png Graphic file (type bmp)
 <./images/data-entry-app2.png>
 
-Overfull \hbox (207.09795pt too wide) in paragraph at lines 433--434
+Overfull \hbox (207.09795pt too wide) in paragraph at lines 442--443
 [][] 
  []
 
@@ -832,353 +834,415 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 File: ./images/im-reporting.png Graphic file (type bmp)
 <./images/im-reporting.png>
 
-Overfull \hbox (282.37444pt too wide) in paragraph at lines 453--454
+Overfull \hbox (282.37444pt too wide) in paragraph at lines 462--463
 [][] 
  []
 
 File: ./images/data-entry.png Graphic file (type bmp)
 <./images/data-entry.png>
 
-Overfull \hbox (1191.91238pt too wide) in paragraph at lines 464--464
+Overfull \hbox (1191.91238pt too wide) in paragraph at lines 473--473
 [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 24.07414pt on input line 465.
+LaTeX Warning: Float too large for page by 24.07414pt on input line 474.
 
 [17] [18]
 File: ./images/pmp datasets.png Graphic file (type bmp)
 <./images/pmp datasets.png>
 
-Overfull \hbox (107.44647pt too wide) in paragraph at lines 479--479
+Overfull \hbox (18.77966pt too wide) in paragraph at lines 488--488
 []\TU/lmr/m/n/10 datasets.bb [] 
  []
 
 
-LaTeX Warning: Float too large for page by 24.0413pt on input line 480.
-
-
-LaTeX Warning: Reference `visualizer' on page 19 undefined on input line 517.
-
-
-LaTeX Warning: Reference `map' on page 19 undefined on input line 517.
+LaTeX Warning: Float too large for page by 24.05217pt on input line 489.
 
 [19] [20]
-Overfull \hbox (64.5pt too wide) in paragraph at lines 532--533
-[]\TU/lmtt/m/n/10 [IM Data Hub demo](https://im-dev.psi-mis.org/dhis-web-dataen
-try/index.action) 
+File: ./images/pivot-table.png Graphic file (type bmp)
+<./images/pivot-table.png>
+
+Overfull \hbox (210.10939pt too wide) in paragraph at lines 559--559
+[][] 
  []
 
-[21] [22
+File: ./images/pivot-table2.png Graphic file (type bmp)
+<./images/pivot-table2.png>
 
-]
+Overfull \hbox (653.7954pt too wide) in paragraph at lines 573--573
+[][] 
+ []
+
+File: ./images/pivot-table2.png Graphic file (type bmp)
+<./images/pivot-table2.png>
+
+Overfull \hbox (653.7954pt too wide) in paragraph at lines 580--580
+[][] 
+ []
+
+File: ./images/pivot-table3.png Graphic file (type bmp)
+<./images/pivot-table3.png>
+
+Overfull \hbox (257.30704pt too wide) in paragraph at lines 596--596
+[][] 
+ []
+
+[21] [22] [23] [24]
+File: ./images/visualizer.png Graphic file (type bmp)
+<./images/visualizer.png>
+
+Overfull \hbox (829.33386pt too wide) in paragraph at lines 634--634
+[][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 24.08826pt on input line 635.
+
+File: ./images/visualizer2.png Graphic file (type bmp)
+<./images/visualizer2.png>
+
+Overfull \hbox (720.14pt too wide) in paragraph at lines 646--646
+[][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 24.0757pt on input line 647.
+
+File: ./images/maps2.png Graphic file (type bmp)
+<./images/maps2.png>
+
+Overfull \hbox (199.07576pt too wide) in paragraph at lines 667--667
+[][] 
+ []
+
+[25] [26] [27] [28]
+File: ./images/map.png Graphic file (type bmp)
+<./images/map.png>
+File: ./images/maps1.png Graphic file (type bmp)
+<./images/maps1.png>
+
+Overfull \hbox (316.71945pt too wide) in paragraph at lines 694--694
+[][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 24.06052pt on input line 695.
+
+File: ./images/maps.png Graphic file (type bmp)
+<./images/maps.png>
+
+Overfull \hbox (256.3032pt too wide) in paragraph at lines 706--706
+[][] 
+ []
+
+[29] [30] [31] [32]
 Chapter 3.
-[23] [24]
-Underfull \hbox (badness 1117) in paragraph at lines 639--640
+[33
+
+] [34]
+Underfull \hbox (badness 1117) in paragraph at lines 856--857
 []\TU/lmr/m/n/10 Total number of suspected malaria cases who received a parasit
 ological
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 673--674
+Underfull \hbox (badness 10000) in paragraph at lines 890--891
 \TU/lmr/m/n/10 : #{N6j1f9LZiLf} + #{BAZd7D3zQHN} + #{zsUZQV4CAd6} +
  []
 
 
-Underfull \hbox (badness 1297) in paragraph at lines 675--676
+Underfull \hbox (badness 1297) in paragraph at lines 892--893
 []\TU/lmr/m/n/10 Total number of suspected cases of malariaid : #{eHWYhy8vO8q} 
 +
  []
 
-[25]
-Underfull \hbox (badness 1231) in paragraph at lines 709--710
+[35]
+Underfull \hbox (badness 1231) in paragraph at lines 926--927
 \TU/lmr/m/n/10 classifying cases according to global standardsid : #{Grnm6jdzAJ
 I} +
  []
 
 
-Underfull \hbox (badness 1377) in paragraph at lines 711--712
+Underfull \hbox (badness 1377) in paragraph at lines 928--929
 \TU/lmr/m/n/10 #{SZKdCBFJd96} + #{blbz5pmEqoF} + #{pgsaevmKtbM} + #{ytb-
  []
 
-[26]
-Underfull \hbox (badness 1953) in paragraph at lines 745--746
+[36]
+Underfull \hbox (badness 1953) in paragraph at lines 962--963
 \TU/lmr/m/n/10 lists for diagnosis during supervisory visitsid : #{DTdMcXDeHFj}
  +
  []
 
-[27]
-Underfull \hbox (badness 5022) in paragraph at lines 783--784
+[37]
+Underfull \hbox (badness 5022) in paragraph at lines 1000--1001
 []\TU/lmr/m/n/10 Total number of targeted health workersid : #{opuW5lGx2Cc} +
  []
 
 
-Underfull \hbox (badness 5022) in paragraph at lines 795--796
+Underfull \hbox (badness 5022) in paragraph at lines 1012--1013
 []\TU/lmr/m/n/10 Total number of targeted health workersid : #{opuW5lGx2Cc} +
  []
 
 
-Underfull \hbox (badness 5203) in paragraph at lines 805--806
+Underfull \hbox (badness 5203) in paragraph at lines 1022--1023
 []\TU/lmr/m/n/10 Number of supervisors trained in supervision of malaria diagno
 stic-
  []
 
 
-Underfull \hbox (badness 2662) in paragraph at lines 805--806
+Underfull \hbox (badness 2662) in paragraph at lines 1022--1023
 \TU/lmr/m/n/10 sid : #{RnEg1HPF7IR} + #{hbEgIBy1bIf} + #{zlWYhVAouup} +
  []
 
-[28]
-Overfull \hbox (12.88393pt too wide) in paragraph at lines 807--808
+[38]
+Overfull \hbox (12.88393pt too wide) in paragraph at lines 1024--1025
 []\TU/lmr/m/n/10 Total number of targeted supervisorsid : #{cGXuIzDaAEP} + #{MF
 pS8w5h9XS}
  []
 
 
-Underfull \hbox (badness 1237) in paragraph at lines 817--818
+Underfull \hbox (badness 1237) in paragraph at lines 1034--1035
 []\TU/lmr/m/n/10 Number of supervisors trained in supervision of malaria diagno
 sticsid :
  []
 
 
-Underfull \hbox (badness 1147) in paragraph at lines 817--818
+Underfull \hbox (badness 1147) in paragraph at lines 1034--1035
 \TU/lmr/m/n/10 #{rvPl8m8kted} + #{sRz3zlhaJrH} + #{jZmH2n22eJf} + #{oFiMCw-
  []
 
 
-Overfull \hbox (12.88393pt too wide) in paragraph at lines 819--820
+Overfull \hbox (12.88393pt too wide) in paragraph at lines 1036--1037
 []\TU/lmr/m/n/10 Total number of targeted supervisorsid : #{cGXuIzDaAEP} + #{MF
 pS8w5h9XS}
  []
 
-[29]
-Underfull \hbox (badness 1281) in paragraph at lines 879--880
+[39]
+Underfull \hbox (badness 1281) in paragraph at lines 1096--1097
 []\TU/lmr/m/n/10 Number of pregnant women who received two doses of IPTp (IPT2)
 id
  []
 
 
-Underfull \hbox (badness 6173) in paragraph at lines 879--880
+Underfull \hbox (badness 6173) in paragraph at lines 1096--1097
 \TU/lmr/m/n/10 : #{Y73pLgWXfTh} + #{LF9PqTGXhBc} + #{inFlJdtBRGo} +
  []
 
 
-Underfull \hbox (badness 2790) in paragraph at lines 891--892
+Underfull \hbox (badness 2790) in paragraph at lines 1108--1109
 \TU/lmr/m/n/10 #{i5xgliv1YDl} + #{qk8A67ySRR0} + #{jrvQeHC4vrr} + #{uuWS-
  []
 
-[30]
-Underfull \hbox (badness 1852) in paragraph at lines 927--928
+[40]
+Underfull \hbox (badness 1852) in paragraph at lines 1144--1145
 []\TU/lmr/m/n/10 Number of health workers who complete the training course on I
 PT-
  []
 
 
-Underfull \hbox (badness 3386) in paragraph at lines 927--928
+Underfull \hbox (badness 3386) in paragraph at lines 1144--1145
 \TU/lmr/m/n/10 pid : #{yQ11Q5pQ2lx} + #{CxioZ7hV8e9} + #{eEITioVuAGg} +
  []
 
 
-Underfull \hbox (badness 5231) in paragraph at lines 929--930
+Underfull \hbox (badness 5231) in paragraph at lines 1146--1147
 []\TU/lmr/m/n/10 Total number of targeted health workersid : #{yoNR9Ct37gT} +
  []
 
-[31]
-Underfull \hbox (badness 2478) in paragraph at lines 967--968
+[41]
+Underfull \hbox (badness 2478) in paragraph at lines 1184--1185
 []\TU/lmr/m/n/10 Number of children in target age range in the intervention are
 aid :
  []
 
-[32]
-Underfull \hbox (badness 2478) in paragraph at lines 979--980
-[]\TU/lmr/m/n/10 Number of children in target age range in the intervention are
-aid :
- []
-
-
-Underfull \hbox (badness 2478) in paragraph at lines 991--992
+[42]
+Underfull \hbox (badness 2478) in paragraph at lines 1196--1197
 []\TU/lmr/m/n/10 Number of children in target age range in the intervention are
 aid :
  []
 
 
-Underfull \hbox (badness 2478) in paragraph at lines 1003--1004
+Underfull \hbox (badness 2478) in paragraph at lines 1208--1209
 []\TU/lmr/m/n/10 Number of children in target age range in the intervention are
 aid :
  []
 
 
-Underfull \hbox (badness 2478) in paragraph at lines 1015--1016
-[]\TU/lmr/m/n/10 Number of children in target age range in the intervention are
-aid :
- []
-
-[33]
-Underfull \hbox (badness 2478) in paragraph at lines 1027--1028
+Underfull \hbox (badness 2478) in paragraph at lines 1220--1221
 []\TU/lmr/m/n/10 Number of children in target age range in the intervention are
 aid :
  []
 
 
-Overfull \hbox (8.96501pt too wide) in paragraph at lines 1051--1052
+Underfull \hbox (badness 2478) in paragraph at lines 1232--1233
+[]\TU/lmr/m/n/10 Number of children in target age range in the intervention are
+aid :
+ []
+
+[43]
+Underfull \hbox (badness 2478) in paragraph at lines 1244--1245
+[]\TU/lmr/m/n/10 Number of children in target age range in the intervention are
+aid :
+ []
+
+
+Overfull \hbox (8.96501pt too wide) in paragraph at lines 1268--1269
 []\TU/lmr/m/n/10 Total number of targeted countries anticipated to have plansid
  : #{gN3w6Jx7q5h} 
  []
 
-[34]
-Underfull \hbox (badness 1796) in paragraph at lines 1075--1076
+[44]
+Underfull \hbox (badness 1796) in paragraph at lines 1292--1293
 \TU/lmr/m/n/10 case studies, peer-reviewed publications, webinars, oral/poster 
 presenta-
  []
 
-[35] [36]
-Underfull \hbox (badness 2065) in paragraph at lines 1161--1162
+[45] [46]
+Underfull \hbox (badness 2065) in paragraph at lines 1378--1379
 []\TU/lmr/m/n/10 Number of reported uncomplicated malaria cases that receive th
 e ap-
  []
 
 
-Underfull \hbox (badness 1348) in paragraph at lines 1161--1162
+Underfull \hbox (badness 1348) in paragraph at lines 1378--1379
 \TU/lmr/m/n/10 propriate first-line antimalarial treatment (NP)id : #{RYl937S07
 k0} +
  []
 
 
-Underfull \hbox (badness 4072) in paragraph at lines 1163--1164
+Underfull \hbox (badness 4072) in paragraph at lines 1380--1381
 []\TU/lmr/m/n/10 Total number of reported malaria cases during reporting period
 id :
  []
 
 
-Overfull \hbox (37.5989pt too wide) in paragraph at lines 1163--1164
+Overfull \hbox (37.5989pt too wide) in paragraph at lines 1380--1381
 \TU/lmr/m/n/10 #{sZoMIJ8KFiw}+#{RnZK9U6WoAm}+ #{WuWNNgy0A1Z} + #{rKatBh8TmW2}
  []
 
 
-Underfull \hbox (badness 4072) in paragraph at lines 1175--1176
+Underfull \hbox (badness 4072) in paragraph at lines 1392--1393
 []\TU/lmr/m/n/10 Total number of reported malaria cases during reporting period
 id :
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1175--1176
+Underfull \hbox (badness 10000) in paragraph at lines 1392--1393
 \TU/lmr/m/n/10 #{CrV5hkFVvdH} + #{qXQ0d9NKQtI} + #{AmUi4XKbJ6X} +
  []
 
 
-Underfull \hbox (badness 4072) in paragraph at lines 1187--1188
+Underfull \hbox (badness 4072) in paragraph at lines 1404--1405
 []\TU/lmr/m/n/10 Total number of reported malaria cases during reporting period
 id :
  []
 
-[37]
-Underfull \hbox (badness 2253) in paragraph at lines 1221--1222
+[47]
+Underfull \hbox (badness 2253) in paragraph at lines 1438--1439
 \TU/lmr/m/n/10 sessment visits measured through direct observation during super
 vision
  []
 
 
-Underfull \hbox (badness 2573) in paragraph at lines 1223--1224
+Underfull \hbox (badness 2573) in paragraph at lines 1440--1441
 []\TU/lmr/m/n/10 Health workers assessed on management of positive malaria case
 sid :
  []
 
 
-Underfull \hbox (badness 7273) in paragraph at lines 1223--1224
+Underfull \hbox (badness 7273) in paragraph at lines 1440--1441
 \TU/lmr/m/n/10 #{Bli6iNQMtP5} + #{w1gYh10blt1} + #{ibu7rlMvF7s} + #{YC-
  []
 
-[38] [39] [40] [41] [42] [43] [44] [45] [46] [47] [48] [49] [50] [51] [52] [53]
-[54] [55] [56] [57] [58] [59] [60] [61] [62] [63] [64] [65] [66] [67] [68] [69]
-[70] [71] [72] [73] [74] [75] [76]
+[48] [49] [50] [51] [52] [53] [54] [55] [56] [57] [58] [59] [60] [61] [62] [63]
+[64] [65] [66] [67] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77] [78] [79]
+[80] [81] [82] [83] [84] [85] [86]
 Chapter 4.
-[77
+[87
 
 ]
-Overfull \hbox (11.99748pt too wide) in paragraph at lines 3321--3322
+Overfull \hbox (11.99748pt too wide) in paragraph at lines 3538--3539
 []\TU/lmr/m/n/10 Country|  
  []
 
 
-Overfull \hbox (3.14839pt too wide) in alignment at lines 3318--3332
+Overfull \hbox (3.14839pt too wide) in alignment at lines 3535--3549
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (20.59747pt too wide) in paragraph at lines 3334--3335
+Overfull \hbox (20.59747pt too wide) in paragraph at lines 3551--3552
 []\TU/lmr/m/n/10 Cameroon|  
  []
 
 
-Overfull \hbox (8.93747pt too wide) in paragraph at lines 3345--3346
+Overfull \hbox (8.93747pt too wide) in paragraph at lines 3562--3563
 \TU/lmr/m/n/10 d’Ivoire|  
  []
 
 
-Overfull \hbox (3.34747pt too wide) in paragraph at lines 3367--3368
+Overfull \hbox (3.34747pt too wide) in paragraph at lines 3584--3585
 []\TU/lmr/m/n/10 Kenya|  
  []
 
 
-Overfull \hbox (4.81747pt too wide) in paragraph at lines 3378--3379
+Overfull \hbox (4.81747pt too wide) in paragraph at lines 3595--3596
 []\TU/lmr/m/n/10 Ghana|  
  []
 
 
-Overfull \hbox (1.46747pt too wide) in paragraph at lines 3411--3412
+Overfull \hbox (1.46747pt too wide) in paragraph at lines 3628--3629
 []\TU/lmr/m/n/10 Sierra 
  []
 
 
-Overfull \hbox (1.53748pt too wide) in paragraph at lines 3411--3412
+Overfull \hbox (1.53748pt too wide) in paragraph at lines 3628--3629
 \TU/lmr/m/n/10 Leone|  
  []
 
 
-Overfull \hbox (8.34747pt too wide) in paragraph at lines 3422--3423
+Overfull \hbox (8.34747pt too wide) in paragraph at lines 3639--3640
 []\TU/lmr/m/n/10 Zambia|  
  []
 
 
-Overfull \hbox (3.14839pt too wide) in alignment at lines 3332--3433
+Overfull \hbox (3.14839pt too wide) in alignment at lines 3549--3650
  [] [] [] [] [] 
  []
 
-[78]
-Underfull \hbox (badness 3312) in paragraph at lines 3435--3437
+[88]
+Underfull \hbox (badness 3312) in paragraph at lines 3652--3654
 []\TU/lmr/m/n/10 The following is the Metadata endpoint for organization unit l
 evels.
  []
 
-[79] [80] [81] [82] [83] [84] [85] [86
+[89] [90] [91] [92] [93] [94] [95] [96
 
 ]
 Chapter 5.
-[87] [88] [89] [90]
+[97] [98] [99] [100]
 Chapter 6.
 No file im-data-hub.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 4008.
-[91
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 4225.
+[101
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 4008.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 4225.
 (./im-data-hub.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 4008.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 4008.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 4225.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 4225.
 
 Package rerunfilecheck Info: File `im-data-hub.out' has not changed.
-(rerunfilecheck)             Checksum: AF5529052C0C6A5D00677F123F8F058D.
-
-LaTeX Warning: There were undefined references.
-
+(rerunfilecheck)             Checksum: DE43409B949DCF16C59C317048880DBB.
  ) 
 Here is how much of TeX's memory you used:
- 22870 strings out of 494894
- 432377 string characters out of 6173843
- 527169 words of memory out of 5000000
- 26599 multiletter control sequences out of 15000+600000
+ 22918 strings out of 494894
+ 433382 string characters out of 6173843
+ 527965 words of memory out of 5000000
+ 26638 multiletter control sequences out of 15000+600000
  545073 words of font info for 56 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  45i,5n,47p,808b,429s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on im-data-hub.pdf (91 pages).
+Output written on im-data-hub.pdf (101 pages).

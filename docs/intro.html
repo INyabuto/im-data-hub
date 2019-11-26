@@ -24,7 +24,7 @@
 <meta name="author" content="Isaiah Nyabuto, Cristina Lussiana" />
 
 
-<meta name="date" content="2019-11-25" />
+<meta name="date" content="2019-11-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -69,7 +69,7 @@
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a></li>
 <li class="chapter" data-level="" data-path="preface.html"><a href="preface.html"><i class="fa fa-check"></i>Preface</a><ul>
-<li class="chapter" data-level="0.1" data-path="preface.html"><a href="preface.html#what-is-im-data-hub"><i class="fa fa-check"></i><b>0.1</b> What is IM Data Hub?</a></li>
+<li class="chapter" data-level="0.1" data-path="preface.html"><a href="preface.html#what-is-the-im-data-hub"><i class="fa fa-check"></i><b>0.1</b> What is the IM Data Hub?</a></li>
 <li class="chapter" data-level="0.2" data-path="preface.html"><a href="preface.html#who-should-read-this-guide"><i class="fa fa-check"></i><b>0.2</b> Who should read this guide?</a></li>
 <li class="chapter" data-level="0.3" data-path="preface.html"><a href="preface.html#what-is-covered-in-this-guide."><i class="fa fa-check"></i><b>0.3</b> What is covered in this guide.</a></li>
 <li class="chapter" data-level="0.4" data-path="preface.html"><a href="preface.html#what-is-not-covered-in-this-guide."><i class="fa fa-check"></i><b>0.4</b> What is not covered in this guide.</a></li>
@@ -78,7 +78,6 @@
 <li class="chapter" data-level="0.5.2" data-path="preface.html"><a href="preface.html#data-elements"><i class="fa fa-check"></i><b>0.5.2</b> Data Elements</a></li>
 <li class="chapter" data-level="0.5.3" data-path="preface.html"><a href="preface.html#indicators"><i class="fa fa-check"></i><b>0.5.3</b> Indicators</a></li>
 </ul></li>
-<li class="chapter" data-level="0.6" data-path="preface.html"><a href="preface.html#acknowledgement"><i class="fa fa-check"></i><b>0.6</b> Acknowledgement</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
 <li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#background"><i class="fa fa-check"></i><b>1.1</b> Background</a><ul>
@@ -95,6 +94,9 @@
 </ul></li>
 <li class="chapter" data-level="2.3" data-path="comp.html"><a href="comp.html#data-mining-component"><i class="fa fa-check"></i><b>2.3</b> Data Mining Component</a><ul>
 <li class="chapter" data-level="2.3.1" data-path="comp.html"><a href="comp.html#pivot"><i class="fa fa-check"></i><b>2.3.1</b> Pivot Tables</a></li>
+<li class="chapter" data-level="2.3.2" data-path="comp.html"><a href="comp.html#visualizer"><i class="fa fa-check"></i><b>2.3.2</b> Data Visualizer</a></li>
+<li class="chapter" data-level="2.3.3" data-path="comp.html"><a href="comp.html#map"><i class="fa fa-check"></i><b>2.3.3</b> Maps</a></li>
+<li class="chapter" data-level="2.3.4" data-path="comp.html"><a href="comp.html#data-presentation"><i class="fa fa-check"></i><b>2.3.4</b> Data Presentation</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>3</b> Impact Malaria Data Specification</a><ul>
@@ -159,8 +161,8 @@
 <h1><span class="header-section-number">Chapter 1</span> Introduction</h1>
 <div id="background" class="section level2">
 <h2><span class="header-section-number">1.1</span> Background</h2>
-<p>The Impact Maria (IM) Data Hub is a web-based project monitoring system used to collect, analyze, monitor and report IM indicator data. [IMPACT Malaria ] (impactmalaria.org) is a five year contract funded by the US President’s Malaria Initiative (PMI) to work with national malaria programs to fight malaria and save lives by strengthening diagnosis, treatment, and drug-based prevention for those most at risk, particularly children and pregnant women.</p>
-<p>The <a href="imdatahub.org"><strong>IMPACT Malaria Data Hub</strong></a> is the IMPACT Malaria project monitoring system database for IM indicators. It is a web based database in a District Health Information Software 2 (DHIS2) instance and it houses all IM indicator data for project monitoring and use. It is primarily designed with data users in mind, and so its configuration comes with approaches specifically designed to enable monitoring and promote the use of IM data.</p>
+<p>The Impact Maria (IM) Data Hub is a web-based project monitoring system used to collect, analyze, monitor and report IM indicator data. <a href="https://imdpactmalaria.org"><strong>IMPACT Malaria</strong></a> is a five year contract funded by the US President’s Malaria Initiative (PMI) to work with national malaria programs to fight malaria and save lives by strengthening diagnosis, treatment, and drug-based prevention for those most at risk, particularly children and pregnant women.</p>
+<p>The <a href="https://imdatahub.org"><strong>IMPACT Malaria Data Hub</strong></a> is the IMPACT Malaria project monitoring system database for IM indicators. It is a web based database in a District Health Information Software 2 (DHIS2) instance and it houses all IM indicator data for project monitoring and use. It is primarily designed with data users in mind, and so its configuration comes with approaches specifically designed to enable monitoring and promote the use of IM data.</p>
 <p>The IM Data Hub is used in IM countries in Africa and Asia and it collects a tremendous amount of data in the following tracks:</p>
 <ol style="list-style-type: decimal">
 <li>Case Management</li>
@@ -184,8 +186,8 @@
 <h3><span class="header-section-number">1.1.2</span> Servers</h3>
 <p>The IM Data Hub has two istances:</p>
 <ul>
-<li>A <strong>development instance</strong> at <a href="https://im-dev.psi-mis.org">im-dev.psi-mis.org</a> hosted on a ST-3 plan from BAO Systems since Nov 22nd, 2019 for prototyping, testing and piloting. Analytics run daily at 00:00 and 12:00 UTC (EAT -3h)</li>
-<li>A <strong>production instance</strong> at <a href="https://imdatahub.org">imdatahub.org</a> hosted on a ST-3 plan from BAO Systems since Nov 27th, 2018 for actual monitoring and reporting. Analytics run daily at 00:00 and 12:00 UTC (EAT -3h)</li>
+<li>A <strong>development instance</strong> at <a href="https://im-dev.psi-mis.org">im-dev.psi-mis.org</a> hosted on a ST-3 plan from BAO Systems since Nov 22nd, 2018 for prototyping, testing and piloting. Analytics run daily at 00:00 and 12:00 UTC (EAT -3h)</li>
+<li>A <strong>production instance</strong> at <a href="https://imdatahub.org">imdatahub.org</a> hosted on a ST-3 plan from BAO Systems since Nov 27th, 2019 for actual monitoring and reporting. Analytics run daily at 00:00 and 12:00 UTC (EAT -3h)</li>
 </ul>
 </div>
 </div>
