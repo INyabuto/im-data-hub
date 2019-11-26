@@ -41,7 +41,7 @@ IM Data Hub also provides two factor authentication mechanisms which allows the 
 
 Third-party apps can connect to IM Data Hub via tokens provided by the OAuth 2 authentication mechanism. The IM Data Hub does not support the fine-grained OAuth 2 roles, but rather it provides access based on the user roles. 
 
-Setting up OAuth 2 authentication requires access to the 'IM Data Hub Web API`. You can find the specification about this in the developer's guide. 
+Setting up OAuth 2 authentication requires access to the IM Data Hub Web API. You can find the specification about this in the developer's guide. 
 
 
 ## Access Model 
