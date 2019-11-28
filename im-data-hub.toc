@@ -26,7 +26,7 @@
 \contentsline {subsection}{\numberline {2.3.2}Data Visualizer}{25}{subsection.2.3.2}% 
 \contentsline {subsection}{\numberline {2.3.3}Maps}{25}{subsection.2.3.3}% 
 \contentsline {subsubsection}{\numberline {2.3.3.1}Best practices, tips \& tricks}{29}{subsubsection.2.3.3.1}% 
-\contentsline {subsection}{\numberline {2.3.4}Data Presentation}{29}{subsection.2.3.4}% 
+\contentsline {section}{\numberline {2.4}Data Presentation}{29}{section.2.4}% 
 \contentsline {chapter}{\numberline {3}Impact Malaria Data Specification}{33}{chapter.3}% 
 \contentsline {section}{\numberline {3.1}Introduction}{33}{section.3.1}% 
 \contentsline {section}{\numberline {3.2}Data Elements}{33}{section.3.2}% 
