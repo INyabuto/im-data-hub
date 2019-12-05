@@ -51,11 +51,9 @@ The data elements have the following key fields;
 4. `domainType` that specifies the data model - aggregate or tracker.
 5. `aggregationType` defines how data is stored in the data hub.
 
-More about data elements can be found at. 
+You can refer to [dataElement schema](http://im-dev.psi-mis.org/api/schemas/dataElement.json) for more detailed specs.
 
-`http://im-dev.psi-mis.org/api/schemas/dataElement.json`
-
-For now please note the `uid,name,shortName and formName` we will discuss these in section \@ref(global-ind) and section \@ref(country-ind).
+For now please note the `uid,name,shortName and formName` we discuss these in section \@ref(global-ind) and section \@ref(country-ind) below.
 
 ## Counts
 
@@ -73,7 +71,7 @@ There are four main types of operations;
 
 Remember that an indicator has a numerator, a denominator and a count. In this section, you will notice that similar to data elements, indicators also have the uid, short name and code to uniquely identifying them in the hub.
 
-IM Data Hub indicators are grtouped into two; 
+IM Data Hub indicators are grouped into two; 
 
 Global IM indicators - computes PMP data for global access.
 Country Specific (PMP) indicators - computes PMP data for country access.
@@ -113,11 +111,11 @@ kable(im_ind_global, escape = F) %>%
   # column_spec(4, width = "15em") %>%
   # column_spec(5, width = "15em") %>%
   # column_spec(1, width = "10em") %>%
-  pack_rows("MIP indicators", pack(im_ind_global$code, "MIP")[1], pack(im_ind_global$code, "MIP")[2]) %>%
-  pack_rows("DX indicators", pack(im_ind_global$code, "DX")[1], pack(im_ind_global$code, "DX")[2]) %>%
-  pack_rows("SMC indicators", pack(im_ind_global$code, "SMC")[1], pack(im_ind_global$code, "SMC")[2]) %>%
-  pack_rows("TL indicators", pack(im_ind_global$code, "TL")[1], pack(im_ind_global$code, "TL")[2]) %>%
-  pack_rows("TX indicators", pack(im_ind_global$code, "TX")[1], pack(im_ind_global$code, "TX")[2])
+  pack_rows("MIP indicators", pack(im_ind_global$code, "MIP")[1], pack(im_ind_global$code, "MIP")[2], label_row_css = "background-color:#A7C6ED; color:#212721;") %>%
+  pack_rows("DX indicators", pack(im_ind_global$code, "DX")[1], pack(im_ind_global$code, "DX")[2], label_row_css = "background-color:#A7C6ED; color:#212721;") %>%
+  pack_rows("SMC indicators", pack(im_ind_global$code, "SMC")[1], pack(im_ind_global$code, "SMC")[2], label_row_css = "background-color:#A7C6ED; color:#212721;") %>%
+  pack_rows("TL indicators", pack(im_ind_global$code, "TL")[1], pack(im_ind_global$code, "TL")[2], label_row_css = "background-color:#A7C6ED; color:#212721;") %>%
+  pack_rows("TX indicators", pack(im_ind_global$code, "TX")[1], pack(im_ind_global$code, "TX")[2], label_row_css = "background-color:#A7C6ED; color:#212721;")
    # pack_rows("PMP Inndicators", 11, 30)
 ```
 
@@ -135,11 +133,11 @@ im_ind_kenya <- im_ind %>%
 im_ind_kenya %>%
   kable(escape = F) %>%
   kable_styling(fixed_thead = T, font_size = "7") %>%
-  pack_rows("MIP indicators", pack(im_ind_kenya$shortName, "MIP")[1], pack(im_ind_kenya$shortName, "MIP")[2])  %>%
-  pack_rows("DX indicators", pack(im_ind_kenya$shortName, "DX")[1], pack(im_ind_kenya$shortName, "DX")[2]) %>%
+  pack_rows("MIP indicators", pack(im_ind_kenya$shortName, "MIP")[1], pack(im_ind_kenya$shortName, "MIP")[2], label_row_css = "background-color:#A7C6ED; color:#212721;")  %>%
+  pack_rows("DX indicators", pack(im_ind_kenya$shortName, "DX")[1], pack(im_ind_kenya$shortName, "DX")[2], label_row_css = "background-color:#A7C6ED; color:#212721;") %>%
  # pack_rows("SMC indicators", pack(im_ind_kenya$shortName, "SMC")[1], pack(im_ind_kenya$shortName, "SMC")[2]) %>%
-  pack_rows("TL indicators", pack(im_ind_kenya$shortName, "TL")[1], pack(im_ind_kenya$shortName, "TL")[2]) %>%
-  pack_rows("TX indicators", pack(im_ind_kenya$shortName, "TX")[1], pack(im_ind_kenya$shortName, "TX")[2])
+  pack_rows("TL indicators", pack(im_ind_kenya$shortName, "TL")[1], pack(im_ind_kenya$shortName, "TL")[2], label_row_css = "background-color:#A7C6ED; color:#212721;") %>%
+  pack_rows("TX indicators", pack(im_ind_kenya$shortName, "TX")[1], pack(im_ind_kenya$shortName, "TX")[2], label_row_css = "background-color:#A7C6ED; color:#212721;")
 
 ```
 
@@ -154,11 +152,11 @@ im_ind_ghana <- im_ind %>%
 im_ind_ghana %>%
   kable(escape = F) %>%
   kable_styling(fixed_thead = T, font_size = "7") %>%
-  pack_rows("MIP indicators", pack(im_ind_ghana$shortName, "MIP")[1], pack(im_ind_ghana$shortName, "MIP")[2])  %>%
-  pack_rows("DX indicators", pack(im_ind_ghana$shortName, "DX")[1], pack(im_ind_ghana$shortName, "DX")[2]) %>%
+  pack_rows("MIP indicators", pack(im_ind_ghana$shortName, "MIP")[1], pack(im_ind_ghana$shortName, "MIP")[2], label_row_css = "background-color:#A7C6ED; color:#212721;")  %>%
+  pack_rows("DX indicators", pack(im_ind_ghana$shortName, "DX")[1], pack(im_ind_ghana$shortName, "DX")[2], label_row_css = "background-color:#A7C6ED; color:#212721;") %>%
  # pack_rows("SMC indicators", pack(im_ind_kenya$shortName, "SMC")[1], pack(im_ind_kenya$shortName, "SMC")[2]) %>%
-  pack_rows("TL indicators", pack(im_ind_ghana$shortName, "TL")[1], pack(im_ind_ghana$shortName, "TL")[2]) %>%
-  pack_rows("TX indicators", pack(im_ind_ghana$shortName, "TX")[1], pack(im_ind_ghana$shortName, "TX")[2])
+  pack_rows("TL indicators", pack(im_ind_ghana$shortName, "TL")[1], pack(im_ind_ghana$shortName, "TL")[2], label_row_css = "background-color:#A7C6ED; color:#212721;") %>%
+  pack_rows("TX indicators", pack(im_ind_ghana$shortName, "TX")[1], pack(im_ind_ghana$shortName, "TX")[2], label_row_css = "background-color:#A7C6ED; color:#212721;")
 
 ```
 
@@ -174,7 +172,7 @@ im_ind_congo %>%
   kable(escape = F) %>%
   kable_styling(fixed_thead = T, font_size = "7") %>%
   #pack_rows("MIP indicators", pack(im_ind_kenya$shortName, "MIP")[1], pack(im_ind_kenya$shortName, "MIP")[2])  %>%
-  pack_rows("DX indicators", pack(im_ind_congo$shortName, "DX")[1], pack(im_ind_congo$shortName, "DX")[2]) #%>%
+  pack_rows("DX indicators", pack(im_ind_congo$shortName, "DX")[1], pack(im_ind_congo$shortName, "DX")[2], label_row_css = "background-color:#A7C6ED; color:#212721;") #%>%
  # pack_rows("SMC indicators", pack(im_ind_kenya$shortName, "SMC")[1], pack(im_ind_kenya$shortName, "SMC")[2]) %>%
   #pack_rows("TL indicators", pack(im_ind_kenya$shortName, "TL")[1], pack(im_ind_kenya$shortName, "TL")[2]) %>%
   #pack_rows("TX indicators", pack(im_ind_kenya$shortName, "TX")[1], pack(im_ind_kenya$shortName, "TX")[2])
@@ -193,10 +191,12 @@ im_ind_mali <- im_ind %>%
 im_ind_mali %>%
   kable(escape = F) %>%
   kable_styling(fixed_thead = T, font_size = "7") %>%
-  pack_rows("MIP indicators", pack(im_ind_mali$shortName, "MIP")[1], pack(im_ind_mali$shortName, "MIP")[2])  %>%
-  pack_rows("DX indicators", pack(im_ind_mali$shortName, "DX")[1], pack(im_ind_mali$shortName, "DX")[2]) %>%
-  pack_rows("SMC indicators", pack(im_ind_mali$shortName, "SMC")[1], pack(im_ind_mali$shortName, "SMC")[2]) %>%
-  pack_rows("TL indicators", pack(im_ind_mali$shortName, "TL")[1], pack(im_ind_mali$shortName, "TL")[2]) %>%
-  pack_rows("TX indicators", pack(im_ind_mali$shortName, "TX")[1], pack(im_ind_mali$shortName, "TX")[2])
+  pack_rows("MIP indicators", pack(im_ind_mali$shortName, "MIP")[1], pack(im_ind_mali$shortName, "MIP")[2], label_row_css = "background-color:#A7C6ED; color:#212721;")  %>%
+  pack_rows("DX indicators", pack(im_ind_mali$shortName, "DX")[1], pack(im_ind_mali$shortName, "DX")[2], label_row_css = "background-color:#A7C6ED; color:#212721;") %>%
+  pack_rows("SMC indicators", pack(im_ind_mali$shortName, "SMC")[1], pack(im_ind_mali$shortName, "SMC")[2], label_row_css = "background-color:#A7C6ED; color:#212721;") %>%
+  pack_rows("TL indicators", pack(im_ind_mali$shortName, "TL")[1], pack(im_ind_mali$shortName, "TL")[2], label_row_css = "background-color:#A7C6ED; color:#212721;") %>%
+  pack_rows("TX indicators", pack(im_ind_mali$shortName, "TX")[1], pack(im_ind_mali$shortName, "TX")[2], label_row_css = "background-color:#A7C6ED; color:#212721;")
 
 ```
+
+
