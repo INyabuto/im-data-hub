@@ -1,5 +1,8 @@
 
-# Impact Malaria Data Hub - Tech Specs
+
+# Impact Malaria Data Hub - Tech Specs 
+
+[![Build Status](https://travis-ci.com/INyabuto/im-data-hub.svg?branch=master)](https://travis-ci.com/INyabuto/im-data-hub)
 
 ## Background
 
