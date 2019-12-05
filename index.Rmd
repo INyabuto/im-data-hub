@@ -9,7 +9,8 @@ bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
 github-repo: INyabuto/im-data-hub
-description: "This is a technical specification of the Impact Malaria Data Hub."
+description: "A technical specification of the Impact Malaria Data Hub."
+favicon: "./images/favicon.ico"
 always_allow_html: yes
 ---
 
