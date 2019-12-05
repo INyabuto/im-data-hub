@@ -83,8 +83,6 @@ In the previous chapter, we learned about the IM & PMP indicators and how they a
 
 In this chapter, we'll dive deep to the bottom and explore what lies beneath the IM Data Hub, the metadata. Metadata is data about data. 
 
-Let's get started!
-
 First, I'd say anything in the data hub contains metadata. Metadata defines what, why, where, and how parts are set up in the data hub. They provide references to different objects in the data hub.
 
 Already you are familiar with datasets, data elements, or you might have heard of sections in the other chapters. All these are essentially metadata themselves. 
