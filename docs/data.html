@@ -5,32 +5,32 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 3 Impact Malaria Data Specification | Impact Malaria Data Hub Specifications</title>
-  <meta name="description" content="This is a technical specification of the Impact Malaria Data Hub." />
-  <meta name="generator" content="bookdown 0.13.2 and GitBook 2.6.7" />
+  <meta name="description" content="A technical specification of the Impact Malaria Data Hub." />
+  <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 3 Impact Malaria Data Specification | Impact Malaria Data Hub Specifications" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="This is a technical specification of the Impact Malaria Data Hub." />
+  <meta property="og:description" content="A technical specification of the Impact Malaria Data Hub." />
   <meta name="github-repo" content="INyabuto/im-data-hub" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Chapter 3 Impact Malaria Data Specification | Impact Malaria Data Hub Specifications" />
   
-  <meta name="twitter:description" content="This is a technical specification of the Impact Malaria Data Hub." />
+  <meta name="twitter:description" content="A technical specification of the Impact Malaria Data Hub." />
   
 
 <meta name="author" content="Isaiah Nyabuto, Cristina Lussiana" />
 
 
-<meta name="date" content="2019-11-28" />
+<meta name="date" content="2019-12-05" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
-  
+  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
 <link rel="prev" href="comp.html"/>
 <link rel="next" href="meta.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
@@ -40,6 +40,9 @@
 <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
 
 
 
@@ -127,8 +130,9 @@
 <li class="chapter" data-level="5.3" data-path="access.html"><a href="access.html#access-model"><i class="fa fa-check"></i><b>5.3</b> Access Model</a><ul>
 <li class="chapter" data-level="5.3.1" data-path="access.html"><a href="access.html#user-roles"><i class="fa fa-check"></i><b>5.3.1</b> User roles</a></li>
 <li class="chapter" data-level="5.3.2" data-path="access.html"><a href="access.html#user-groups"><i class="fa fa-check"></i><b>5.3.2</b> User Groups</a></li>
+<li class="chapter" data-level="5.3.3" data-path="access.html"><a href="access.html#user-management"><i class="fa fa-check"></i><b>5.3.3</b> User Management</a></li>
 </ul></li>
-<li class="chapter" data-level="5.4" data-path="access.html"><a href="access.html#tips-tricks-and-best-practices"><i class="fa fa-check"></i><b>5.4</b> Tips, Tricks and Best Practices</a><ul>
+<li class="chapter" data-level="5.4" data-path="access.html"><a href="access.html#important-best-practices-for-the-access-model"><i class="fa fa-check"></i><b>5.4</b> Important Best Practices for the Access Model</a><ul>
 <li class="chapter" data-level="5.4.1" data-path="access.html"><a href="access.html#access-from-country-to-global-level-access"><i class="fa fa-check"></i><b>5.4.1</b> Access from country to global level access:</a></li>
 <li class="chapter" data-level="5.4.2" data-path="access.html"><a href="access.html#access-from-global-to-country-level-access"><i class="fa fa-check"></i><b>5.4.2</b> Access from global to country level access:</a></li>
 </ul></li>
@@ -137,6 +141,10 @@
 <li class="chapter" data-level="6.1" data-path="custom.html"><a href="custom.html#introduction-4"><i class="fa fa-check"></i><b>6.1</b> Introduction</a></li>
 <li class="chapter" data-level="6.2" data-path="custom.html"><a href="custom.html#adding-new-objects-in-the-datahub."><i class="fa fa-check"></i><b>6.2</b> Adding new objects in the datahub.</a></li>
 </ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
 </ul>
 
       </nav>
@@ -178,9 +186,8 @@ Country specific data elements - used by specified country data sets.</p>
 <li><code>domainType</code> that specifies the data model - aggregate or tracker.</li>
 <li><code>aggregationType</code> defines how data is stored in the data hub.</li>
 </ol>
-<p>More about data elements can be found at.</p>
-<p><code>http://im-dev.psi-mis.org/api/schemas/dataElement.json</code></p>
-<p>For now please note the <code>uid,name,shortName and formName</code> we will discuss these in section <a href="data.html#global-ind">3.4.1</a> and section <a href="data.html#country-ind">3.4.2</a>.</p>
+<p>You can refer to <a href="http://im-dev.psi-mis.org/api/schemas/dataElement.json">dataElement schema</a> for more detailed specs.</p>
+<p>For now please note the <code>uid,name,shortName and formName</code> we discuss these in section <a href="data.html#global-ind">3.4.1</a> and section <a href="data.html#country-ind">3.4.2</a> below.</p>
 </div>
 <div id="counts" class="section level2">
 <h2><span class="header-section-number">3.3</span> Counts</h2>
@@ -196,7 +203,7 @@ Country specific data elements - used by specified country data sets.</p>
 <div id="ind" class="section level2">
 <h2><span class="header-section-number">3.4</span> Indicators</h2>
 <p>Remember that an indicator has a numerator, a denominator and a count. In this section, you will notice that similar to data elements, indicators also have the uid, short name and code to uniquely identifying them in the hub.</p>
-<p>IM Data Hub indicators are grtouped into two;</p>
+<p>IM Data Hub indicators are grouped into two;</p>
 <p>Global IM indicators - computes PMP data for global access.
 Country Specific (PMP) indicators - computes PMP data for country access.</p>
 <p>We present to you a list of all the IM indicators in section <a href="data.html#global-ind">3.4.1</a></p>
@@ -227,7 +234,7 @@ count
 </thead>
 <tbody>
 <tr grouplength="18">
-<td colspan="6" style="border-bottom: 1px solid;">
+<td colspan="6" style="background-color:#A7C6ED; color:#212721;">
 <strong>DX indicators</strong>
 </td>
 </tr>
@@ -592,7 +599,7 @@ Total number of targeted countries<br>id : #{MUKvaz7q2CD} &gt;= 0
 </td>
 </tr>
 <tr grouplength="9">
-<td colspan="6" style="border-bottom: 1px solid; padding-left: 2em;" indentlevel="1">
+<td colspan="6" style="background-color:#A7C6ED; color:#212721; padding-left: 2em;" indentlevel="1">
 <strong>MIP indicators</strong>
 </td>
 </tr>
@@ -777,7 +784,7 @@ Functional/active malaria/MiP/ANC/community health or RMNCH Working Group with a
 </td>
 </tr>
 <tr grouplength="8">
-<td colspan="6" style="border-bottom: 1px solid;">
+<td colspan="6" style="background-color:#A7C6ED; color:#212721;">
 <strong>SMC indicators</strong>
 </td>
 </tr>
@@ -942,7 +949,7 @@ Total number of targeted countries anticipated to have plans<br>id : #{gN3w6Jx7q
 </td>
 </tr>
 <tr grouplength="3">
-<td colspan="6" style="border-bottom: 1px solid;">
+<td colspan="6" style="background-color:#A7C6ED; color:#212721;">
 <strong>TL indicators</strong>
 </td>
 </tr>
@@ -1007,7 +1014,7 @@ Participation in national, regional or global working group(s) or taskforce(s) r
 </td>
 </tr>
 <tr grouplength="18">
-<td colspan="6" style="border-bottom: 1px solid;">
+<td colspan="6" style="background-color:#A7C6ED; color:#212721;">
 <strong>TX indicators</strong>
 </td>
 </tr>
@@ -1443,7 +1450,7 @@ count
 </thead>
 <tbody>
 <tr grouplength="14">
-<td colspan="6" style="border-bottom: 1px solid;">
+<td colspan="6" style="background-color:#A7C6ED; color:#212721;">
 <strong>DX indicators</strong>
 </td>
 </tr>
@@ -1728,7 +1735,7 @@ Den<br>id : #{WrYkhf4k7pL}
 </td>
 </tr>
 <tr grouplength="12">
-<td colspan="6" style="border-bottom: 1px solid;">
+<td colspan="6" style="background-color:#A7C6ED; color:#212721;">
 <strong>TX indicators</strong>
 </td>
 </tr>
@@ -1973,7 +1980,7 @@ Den<br>id : #{k0OSOd7UeDj}+#{Jz08Pq3eoMi}
 </td>
 </tr>
 <tr grouplength="10">
-<td colspan="6" style="border-bottom: 1px solid; padding-left: 2em;" indentlevel="1">
+<td colspan="6" style="background-color:#A7C6ED; color:#212721; padding-left: 2em;" indentlevel="1">
 <strong>MIP indicators</strong>
 </td>
 </tr>
@@ -2178,7 +2185,7 @@ Den<br>id : #{LELIkDnSPSg}
 </td>
 </tr>
 <tr grouplength="6">
-<td colspan="6" style="border-bottom: 1px solid;">
+<td colspan="6" style="background-color:#A7C6ED; color:#212721;">
 <strong>TL indicators</strong>
 </td>
 </tr>
@@ -2332,7 +2339,7 @@ count
 </thead>
 <tbody>
 <tr grouplength="23">
-<td colspan="6" style="border-bottom: 1px solid;">
+<td colspan="6" style="background-color:#A7C6ED; color:#212721;">
 <strong>DX indicators</strong>
 </td>
 </tr>
@@ -2797,7 +2804,7 @@ Den<br>id : #{oVIXBtQccHN}
 </td>
 </tr>
 <tr grouplength="15">
-<td colspan="6" style="border-bottom: 1px solid;">
+<td colspan="6" style="background-color:#A7C6ED; color:#212721;">
 <strong>TX indicators</strong>
 </td>
 </tr>
@@ -3102,7 +3109,7 @@ Den<br>id : R{jVmnSOBUkeG.ACTUAL_REPORTS}
 </td>
 </tr>
 <tr grouplength="9">
-<td colspan="6" style="border-bottom: 1px solid; padding-left: 2em;" indentlevel="1">
+<td colspan="6" style="background-color:#A7C6ED; color:#212721; padding-left: 2em;" indentlevel="1">
 <strong>MIP indicators</strong>
 </td>
 </tr>
@@ -3287,7 +3294,7 @@ Den<br>id : 1
 </td>
 </tr>
 <tr grouplength="5">
-<td colspan="6" style="border-bottom: 1px solid;">
+<td colspan="6" style="background-color:#A7C6ED; color:#212721;">
 <strong>TL indicators</strong>
 </td>
 </tr>
@@ -3421,7 +3428,7 @@ count
 </thead>
 <tbody>
 <tr grouplength="5">
-<td colspan="6" style="border-bottom: 1px solid;">
+<td colspan="6" style="background-color:#A7C6ED; color:#212721;">
 <strong>DX indicators</strong>
 </td>
 </tr>
@@ -3555,7 +3562,7 @@ count
 </thead>
 <tbody>
 <tr grouplength="18">
-<td colspan="6" style="border-bottom: 1px solid;">
+<td colspan="6" style="background-color:#A7C6ED; color:#212721;">
 <strong>DX indicators</strong>
 </td>
 </tr>
@@ -3920,7 +3927,7 @@ Den<br>id : #{nUyU7k7knZD}
 </td>
 </tr>
 <tr grouplength="16">
-<td colspan="6" style="border-bottom: 1px solid;">
+<td colspan="6" style="background-color:#A7C6ED; color:#212721;">
 <strong>TX indicators</strong>
 </td>
 </tr>
@@ -4245,7 +4252,7 @@ Den<br>id : #{nUyU7k7knZD}
 </td>
 </tr>
 <tr grouplength="8">
-<td colspan="6" style="border-bottom: 1px solid; padding-left: 2em;" indentlevel="1">
+<td colspan="6" style="background-color:#A7C6ED; color:#212721; padding-left: 2em;" indentlevel="1">
 <strong>MIP indicators</strong>
 </td>
 </tr>
@@ -4410,7 +4417,7 @@ Den<br>id : 1
 </td>
 </tr>
 <tr grouplength="8">
-<td colspan="6" style="border-bottom: 1px solid;">
+<td colspan="6" style="background-color:#A7C6ED; color:#212721;">
 <strong>SMC indicators</strong>
 </td>
 </tr>
@@ -4575,7 +4582,7 @@ Den<br>id : #{gN3w6Jx7q5h}
 </td>
 </tr>
 <tr grouplength="3">
-<td colspan="6" style="border-bottom: 1px solid;">
+<td colspan="6" style="background-color:#A7C6ED; color:#212721;">
 <strong>TL indicators</strong>
 </td>
 </tr>
@@ -4657,11 +4664,13 @@ Den<br>id : 1
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
@@ -4669,12 +4678,11 @@ gitbook.start({
 "github": false,
 "facebook": true,
 "twitter": true,
-"google": false,
 "linkedin": false,
 "weibo": false,
 "instapaper": false,
 "vk": false,
-"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
 "theme": "white",
@@ -4687,6 +4695,10 @@ gitbook.start({
 },
 "history": {
 "link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/INyabuto/im-data-hub/blob/master/03-data-specs.Rmd",
 "text": null
 },
 "download": ["im-data-hub.pdf", "im-data-hub.epub"],

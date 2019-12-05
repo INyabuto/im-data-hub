@@ -55,9 +55,11 @@
 \contentsline {section}{\numberline {5.3}Access Model}{98}{section.5.3}% 
 \contentsline {subsection}{\numberline {5.3.1}User roles}{98}{subsection.5.3.1}% 
 \contentsline {subsection}{\numberline {5.3.2}User Groups}{99}{subsection.5.3.2}% 
-\contentsline {section}{\numberline {5.4}Tips, Tricks and Best Practices}{100}{section.5.4}% 
-\contentsline {subsection}{\numberline {5.4.1}Access from country to global level access:}{100}{subsection.5.4.1}% 
-\contentsline {subsection}{\numberline {5.4.2}Access from global to country level access:}{100}{subsection.5.4.2}% 
-\contentsline {chapter}{\numberline {6}Customization \& Troubleshooting IM Datahub}{101}{chapter.6}% 
-\contentsline {section}{\numberline {6.1}Introduction}{101}{section.6.1}% 
-\contentsline {section}{\numberline {6.2}Adding new objects in the datahub.}{101}{section.6.2}% 
+\contentsline {subsection}{\numberline {5.3.3}User Management}{100}{subsection.5.3.3}% 
+\contentsline {section}{\numberline {5.4}Important Best Practices for the Access Model}{101}{section.5.4}% 
+\contentsline {subsection}{\numberline {5.4.1}Access from country to global level access:}{101}{subsection.5.4.1}% 
+\contentsline {subsection}{\numberline {5.4.2}Access from global to country level access:}{101}{subsection.5.4.2}% 
+\contentsline {chapter}{\numberline {6}Customization \& Troubleshooting IM Datahub}{103}{chapter.6}% 
+\contentsline {section}{\numberline {6.1}Introduction}{103}{section.6.1}% 
+\contentsline {section}{\numberline {6.2}Adding new objects in the datahub.}{103}{section.6.2}% 
+\contentsline {chapter}{References}{105}{chapter*.4}% 
