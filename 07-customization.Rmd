@@ -1,4 +1,4 @@
-# Customization & Troubleshooting IM Datahub {#custom}
+# Customization in the IM Datahub {#custom}
 
 ## Introduction 
 
@@ -8,7 +8,7 @@ Customization involves setting up new objects or components, while maintenance, 
 
 Maintenance requires an assessment of the current set up to detect flaws or breakages. It is for the overall improvement of the system.
 
-In this chapter, we cover the process of adding new objects and troubleshooting or maintaining existing objects in the data hub. We'll also discuss getting help on IM datahub.
+In this chapter, we cover the process of adding new objects or maintaining existing objects in the data hub.
 
 ## Adding new objects in the datahub.
 
