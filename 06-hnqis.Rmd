@@ -1,0 +1,60 @@
+![HNQIS](images/hnqis.png)
+
+# Health Network Quality Improvement System {#hnqis}
+
+## Background
+
+Poor quality of care results in poor health outcomes. Improving and monitoring the quality of care in lower- and middle-income countries presents both unique challenges and opportunities to increase efficiencies in resource allocation based on standardized evaluations. Key constraints include the lack of enforced standards, delayed performance feedback, and poor use of monitoring data to allocate resources.
+
+### Challenges
+1. Growing scale and scope of the network.
+2. Limited quality assessment tools.
+3. Poor quality feedback and coaching.
+4. Poor use of monitoring data.
+
+## Introduction
+
+Health Network Quality Improvement System (HNQIS) is an electronic tablet-based application used to improve quality of health services in health care networks and effectively manage and reach health impact at scale. 
+
+The HNQIS is composed of four modules that support healthcare supervisors to:
+1.	Plan supervision visits using a prioritization matrix that presents facility-specific quality scores and patient volume.
+2.	Assess providers’ quality of care against clinical standards.
+3.	Improve providers’ quality of care through tailored feedback.
+4.	Monitor quality improvements over time.
+
+HNQIS is an Android application that is fully functional without internet connectivity. It is linked with the information management system Demographic Health Information Software 2 (DHIS2), an open source technology adopted by many ministries of health across the world. It assists teams to assess quality of care of providers’ services to measure provider proficiencies in respective skills, and to highlight and monitor identified areas for improvement.
+
+HNQIS is now active in 23 countries and has conducted more than 18,000 assessments at 8,000 outlets across 13 health areas. 
+
+## Modules
+HNQIS has 4 modules discussed below:
+
+### Plan Module
+This module automatically schedules future assessments based on where support is needed most (quality score), and where it will have most impact (client load). Furthermore, the planning module prioritizes planning of support visits by segmenting all outlets into the following categories:
+
+1. Never been assessed.
+2. Assessments overdue.
+3. Scheduled to be assessed in the current month.
+4. Scheduled to be assessed in future months.
+
+Each health area has independent planning variables (quality score/client load) but the planning report is integrated across all areas the Quality Assurance Officer (QAO) is responsible for supporting.
+
+### Assess Module
+This module enables QAOs to assess clinical procedures in each health area catered for by network providers through case observation or simulation. The assessment checklist is aligned with national supervision checklists. An assessment score is automatically generated on-site and performance benchmarked (e.g. Good/ Satisfactory/Poor). The module contains a consistent approach to scoring and benchmarking all health areas to allow comparability within and across network providers.
+
+### Improve Module
+This module ensures that provider feedback following a quality assessment is undertaken in a robust and consistent manner, rather than based on the subjectivity of the QAO. The Improve Module:
+
+1. Highlights the key areas of weakness identified during the assessment.
+2. Displays tailored feedback scripts that take into account both how the procedure should be undertaken (as per protocols), as well as why it is important to do so.
+
+This places all the relevant information required to improve the performance of the provider in one place. The module facilitates a consistent approach to provision of feedback, eliminating subjectivity regarding the areas of focus or the actual feedback provided.
+
+### Monitor Module
+This module consists of a performance monitoring dashboard tailored to meet the needs of the QAO. The dashboard contains a range of charts, graphs, maps and tables highlighting trends and overall performance of all the providers the QAO is responsible for supporting. Dashboards can also be used to visualize data collected through other channels that is relevant to quality improvement, such as availability and sales of health commodities. The main purpose of this module is to facilitate the use of data in decision-making at the QAO level.
+
+It offers the QAO an opportunity to track the return on their support visit efforts over time, so as to give them insight on where they need to apply a different approach. The system also allows to develop tailored interfaces to meet the need in terms of data of different users of HNQIS (i.e. project managers, medical detailers, etc.), and therefore enable mid-course correction e.g. conducting a refresher course in a particular low performing health area.
+
+## Getting Started
+1. Download the app from the Google Play Store by clicking the link below (or by searching hnqis)
+https://play.google.com/store/apps/details?id=org.eyeseetea.malariacare.hnqis_ng
