@@ -1,6 +1,7 @@
+# Health Network Quality Improvement System {#hnqis}
+
 ![HNQIS](images/hnqis.png)
 
-# Health Network Quality Improvement System {#hnqis}
 
 ## Background
 
