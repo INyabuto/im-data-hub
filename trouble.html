@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>1 Introduction | Impact Malaria Data Hub Specifications</title>
+  <title>8 Troubleshooting and Getting Help on IM Datahub | Impact Malaria Data Hub Specifications</title>
   <meta name="description" content="A technical specification of the Impact Malaria Data Hub." />
   <meta name="generator" content="bookdown 0.16.5 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="1 Introduction | Impact Malaria Data Hub Specifications" />
+  <meta property="og:title" content="8 Troubleshooting and Getting Help on IM Datahub | Impact Malaria Data Hub Specifications" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="INyabuto/im-data-hub" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="1 Introduction | Impact Malaria Data Hub Specifications" />
+  <meta name="twitter:title" content="8 Troubleshooting and Getting Help on IM Datahub | Impact Malaria Data Hub Specifications" />
   
   <meta name="twitter:description" content="A technical specification of the Impact Malaria Data Hub." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
-<link rel="prev" href="preface.html"/>
-<link rel="next" href="comp.html"/>
+<link rel="prev" href="custom.html"/>
+<link rel="next" href="references.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -178,78 +178,15 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="intro" class="section level1">
-<h1><span class="header-section-number">1</span> Introduction</h1>
-<div id="background" class="section level2">
-<h2><span class="header-section-number">1.1</span> Background</h2>
-<p>The Impact Maria (IM) Data Hub is a web-based project monitoring system used to collect, analyze, monitor and report IM indicator data. <a href="https://imdpactmalaria.org"><strong>IMPACT Malaria</strong></a> is a five year contract funded by the US President’s Malaria Initiative (PMI) to work with national malaria programs to fight malaria and save lives by strengthening diagnosis, treatment, and drug-based prevention for those most at risk, particularly children and pregnant women.</p>
-<p>The <a href="https://imdatahub.org"><strong>IMPACT Malaria Data Hub</strong></a> is the IMPACT Malaria project monitoring system database for IM indicators. It is a web based database in a District Health Information Software 2 (DHIS2) instance and it houses all IM indicator data for project monitoring and use. It is primarily designed with data users in mind, and so its configuration comes with approaches specifically designed to enable monitoring and promote the use of IM data.</p>
-<p>The IM Data Hub is used in IM countries in Africa and Asia and it collects a tremendous amount of data in the following tracks:</p>
+<div id="trouble" class="section level1">
+<h1><span class="header-section-number">8</span> Troubleshooting and Getting Help on IM Datahub</h1>
+<div id="introduction-6" class="section level2">
+<h2><span class="header-section-number">8.1</span> Introduction</h2>
+<p>The IM Datahub has various resources for getting help.</p>
 <ol style="list-style-type: decimal">
-<li>Case Management</li>
-<li>Malaria in pregnancy</li>
-<li>Seasonal Malaria Chemoprevention</li>
-<li>Global Technical Leadership.</li>
+<li>IM Datahub Help Desk</li>
+<li></li>
 </ol>
-<p>It is used by multiple partners at different levels, from Ministries of Health (MoHs), National Malaria Control Programs (NMCPs), donors like the President’s Malaria Initiative (PMI), implementers (PSI, Jhpiego, University of California San Francisco (UCSF)) to track project monitoring and performance.</p>
-<div id="purpose" class="section level3">
-<h3><span class="header-section-number">1.1.1</span> Purpose</h3>
-<p>The IM Data Hub was developed:</p>
-<ol style="list-style-type: decimal">
-<li>To monitor IM indicator data</li>
-<li>Provide access to IM indicator data at district, country and global level</li>
-<li>Enable central/global level data management</li>
-<li>Track project progress and country performance</li>
-<li>Promote data use for decision making</li>
-</ol>
-</div>
-<div id="servers" class="section level3">
-<h3><span class="header-section-number">1.1.2</span> Servers</h3>
-<p>The IM Data Hub has two istances:</p>
-<ul>
-<li>A <strong>development instance</strong> at <a href="https://dev.imdatahub.org">dev.imdatahub.org</a> hosted on a ST-3 plan from BAO Systems since Nov 22nd, 2018 for prototyping, testing and piloting. Analytics run daily at 00:00 and 12:00 UTC (EAT -3h)</li>
-<li>A <strong>production instance</strong> at <a href="https://imdatahub.org">imdatahub.org</a> hosted on a ST-3 plan from BAO Systems since Nov 27th, 2019 for actual monitoring and reporting. Analytics run daily at 00:00 and 12:00 UTC (EAT -3h)</li>
-</ul>
-</div>
-</div>
-<div id="getting-started" class="section level2">
-<h2><span class="header-section-number">1.2</span> Getting Started</h2>
-<p>The easiest way to get started on the IM Data Hub is to log in at the dev server at <a href="https://dev.imdatahub.org/" class="uri">https://dev.imdatahub.org/</a> with the IM demo credentials <code>demoUser</code> - the pw is provided by your System Admin.</p>
-<p>Countries doing data entry or testings have country specific demo accounts based on their country ISO codes - the pw is provided by your System Admin.</p>
-<table>
-<thead>
-<tr class="header">
-<th>Country</th>
-<th align="left">username</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Congo</td>
-<td align="left"><code>CDdemo</code></td>
-</tr>
-<tr class="even">
-<td>Cameroon</td>
-<td align="left"><code>CMdemo</code></td>
-</tr>
-<tr class="odd">
-<td>Ghana</td>
-<td align="left"><code>GHdemo</code></td>
-</tr>
-<tr class="even">
-<td>Kenya</td>
-<td align="left"><code>KEdemo</code></td>
-</tr>
-<tr class="odd">
-<td>Mali</td>
-<td align="left"><code>MLdemo</code></td>
-</tr>
-<tr class="even">
-<td>Niger</td>
-<td align="left"><code>NEdemo</code></td>
-</tr>
-</tbody>
-</table>
 
 </div>
 </div>
@@ -258,8 +195,8 @@
           </div>
         </div>
       </div>
-<a href="preface.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="comp.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="custom.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -290,7 +227,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/INyabuto/im-data-hub/edit/master/01-intro.Rmd",
+"link": "https://github.com/INyabuto/im-data-hub/edit/master/08-troubleshooting.Rmd",
 "text": "Edit"
 },
 "history": {

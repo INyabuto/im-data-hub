@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>1 Introduction | Impact Malaria Data Hub Specifications</title>
+  <title>6 Health Network Quality Improvement System | Impact Malaria Data Hub Specifications</title>
   <meta name="description" content="A technical specification of the Impact Malaria Data Hub." />
   <meta name="generator" content="bookdown 0.16.5 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="1 Introduction | Impact Malaria Data Hub Specifications" />
+  <meta property="og:title" content="6 Health Network Quality Improvement System | Impact Malaria Data Hub Specifications" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="INyabuto/im-data-hub" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="1 Introduction | Impact Malaria Data Hub Specifications" />
+  <meta name="twitter:title" content="6 Health Network Quality Improvement System | Impact Malaria Data Hub Specifications" />
   
   <meta name="twitter:description" content="A technical specification of the Impact Malaria Data Hub." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
-<link rel="prev" href="preface.html"/>
-<link rel="next" href="comp.html"/>
+<link rel="prev" href="access.html"/>
+<link rel="next" href="custom.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -178,78 +178,70 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="intro" class="section level1">
-<h1><span class="header-section-number">1</span> Introduction</h1>
-<div id="background" class="section level2">
-<h2><span class="header-section-number">1.1</span> Background</h2>
-<p>The Impact Maria (IM) Data Hub is a web-based project monitoring system used to collect, analyze, monitor and report IM indicator data. <a href="https://imdpactmalaria.org"><strong>IMPACT Malaria</strong></a> is a five year contract funded by the US President’s Malaria Initiative (PMI) to work with national malaria programs to fight malaria and save lives by strengthening diagnosis, treatment, and drug-based prevention for those most at risk, particularly children and pregnant women.</p>
-<p>The <a href="https://imdatahub.org"><strong>IMPACT Malaria Data Hub</strong></a> is the IMPACT Malaria project monitoring system database for IM indicators. It is a web based database in a District Health Information Software 2 (DHIS2) instance and it houses all IM indicator data for project monitoring and use. It is primarily designed with data users in mind, and so its configuration comes with approaches specifically designed to enable monitoring and promote the use of IM data.</p>
-<p>The IM Data Hub is used in IM countries in Africa and Asia and it collects a tremendous amount of data in the following tracks:</p>
+<div id="hnqis" class="section level1">
+<h1><span class="header-section-number">6</span> Health Network Quality Improvement System</h1>
+<div class="figure">
+<img src="images/hnqis.png" alt="HNQIS" />
+<p class="caption">HNQIS</p>
+</div>
+<div id="background-1" class="section level2">
+<h2><span class="header-section-number">6.1</span> Background</h2>
+<p>Poor quality of care results in poor health outcomes. Improving and monitoring the quality of care in lower- and middle-income countries presents both unique challenges and opportunities to increase efficiencies in resource allocation based on standardized evaluations. Key constraints include the lack of enforced standards, delayed performance feedback, and poor use of monitoring data to allocate resources.</p>
+<div id="challenges" class="section level3">
+<h3><span class="header-section-number">6.1.1</span> Challenges</h3>
 <ol style="list-style-type: decimal">
-<li>Case Management</li>
-<li>Malaria in pregnancy</li>
-<li>Seasonal Malaria Chemoprevention</li>
-<li>Global Technical Leadership.</li>
-</ol>
-<p>It is used by multiple partners at different levels, from Ministries of Health (MoHs), National Malaria Control Programs (NMCPs), donors like the President’s Malaria Initiative (PMI), implementers (PSI, Jhpiego, University of California San Francisco (UCSF)) to track project monitoring and performance.</p>
-<div id="purpose" class="section level3">
-<h3><span class="header-section-number">1.1.1</span> Purpose</h3>
-<p>The IM Data Hub was developed:</p>
-<ol style="list-style-type: decimal">
-<li>To monitor IM indicator data</li>
-<li>Provide access to IM indicator data at district, country and global level</li>
-<li>Enable central/global level data management</li>
-<li>Track project progress and country performance</li>
-<li>Promote data use for decision making</li>
+<li>Growing scale and scope of the network.</li>
+<li>Limited quality assessment tools.</li>
+<li>Poor quality feedback and coaching.</li>
+<li>Poor use of monitoring data.</li>
 </ol>
 </div>
-<div id="servers" class="section level3">
-<h3><span class="header-section-number">1.1.2</span> Servers</h3>
-<p>The IM Data Hub has two istances:</p>
-<ul>
-<li>A <strong>development instance</strong> at <a href="https://dev.imdatahub.org">dev.imdatahub.org</a> hosted on a ST-3 plan from BAO Systems since Nov 22nd, 2018 for prototyping, testing and piloting. Analytics run daily at 00:00 and 12:00 UTC (EAT -3h)</li>
-<li>A <strong>production instance</strong> at <a href="https://imdatahub.org">imdatahub.org</a> hosted on a ST-3 plan from BAO Systems since Nov 27th, 2019 for actual monitoring and reporting. Analytics run daily at 00:00 and 12:00 UTC (EAT -3h)</li>
-</ul>
+</div>
+<div id="introduction-4" class="section level2">
+<h2><span class="header-section-number">6.2</span> Introduction</h2>
+<p>Health Network Quality Improvement System (HNQIS) is an electronic tablet-based application used to improve quality of health services in health care networks and effectively manage and reach health impact at scale.</p>
+<p>The HNQIS is composed of four modules that support healthcare supervisors to: 1. Plan supervision visits using a prioritization matrix that presents facility-specific quality scores and patient volume. 2. Assess providers’ quality of care against clinical standards. 3. Improve providers’ quality of care through tailored feedback. 4. Monitor quality improvements over time.</p>
+<p>HNQIS is an Android application that is fully functional without internet connectivity. It is linked with the information management system Demographic Health Information Software 2 (DHIS2), an open source technology adopted by many ministries of health across the world. It assists teams to assess quality of care of providers’ services to measure provider proficiencies in respective skills, and to highlight and monitor identified areas for improvement.</p>
+<p>HNQIS is now active in 23 countries and has conducted more than 18,000 assessments at 8,000 outlets across 13 health areas.</p>
+</div>
+<div id="modules" class="section level2">
+<h2><span class="header-section-number">6.3</span> Modules</h2>
+<p>HNQIS has 4 modules discussed below:</p>
+<div id="plan-module" class="section level3">
+<h3><span class="header-section-number">6.3.1</span> Plan Module</h3>
+<p>This module automatically schedules future assessments based on where support is needed most (quality score), and where it will have most impact (client load). Furthermore, the planning module prioritizes planning of support visits by segmenting all outlets into the following categories:</p>
+<ol style="list-style-type: decimal">
+<li>Never been assessed.</li>
+<li>Assessments overdue.</li>
+<li>Scheduled to be assessed in the current month.</li>
+<li>Scheduled to be assessed in future months.</li>
+</ol>
+<p>Each health area has independent planning variables (quality score/client load) but the planning report is integrated across all areas the Quality Assurance Officer (QAO) is responsible for supporting.</p>
+</div>
+<div id="assess-module" class="section level3">
+<h3><span class="header-section-number">6.3.2</span> Assess Module</h3>
+<p>This module enables QAOs to assess clinical procedures in each health area catered for by network providers through case observation or simulation. The assessment checklist is aligned with national supervision checklists. An assessment score is automatically generated on-site and performance benchmarked (e.g. Good/ Satisfactory/Poor). The module contains a consistent approach to scoring and benchmarking all health areas to allow comparability within and across network providers.</p>
+</div>
+<div id="improve-module" class="section level3">
+<h3><span class="header-section-number">6.3.3</span> Improve Module</h3>
+<p>This module ensures that provider feedback following a quality assessment is undertaken in a robust and consistent manner, rather than based on the subjectivity of the QAO. The Improve Module:</p>
+<ol style="list-style-type: decimal">
+<li>Highlights the key areas of weakness identified during the assessment.</li>
+<li>Displays tailored feedback scripts that take into account both how the procedure should be undertaken (as per protocols), as well as why it is important to do so.</li>
+</ol>
+<p>This places all the relevant information required to improve the performance of the provider in one place. The module facilitates a consistent approach to provision of feedback, eliminating subjectivity regarding the areas of focus or the actual feedback provided.</p>
+</div>
+<div id="monitor-module" class="section level3">
+<h3><span class="header-section-number">6.3.4</span> Monitor Module</h3>
+<p>This module consists of a performance monitoring dashboard tailored to meet the needs of the QAO. The dashboard contains a range of charts, graphs, maps and tables highlighting trends and overall performance of all the providers the QAO is responsible for supporting. Dashboards can also be used to visualize data collected through other channels that is relevant to quality improvement, such as availability and sales of health commodities. The main purpose of this module is to facilitate the use of data in decision-making at the QAO level.</p>
+<p>It offers the QAO an opportunity to track the return on their support visit efforts over time, so as to give them insight on where they need to apply a different approach. The system also allows to develop tailored interfaces to meet the need in terms of data of different users of HNQIS (i.e. project managers, medical detailers, etc.), and therefore enable mid-course correction e.g. conducting a refresher course in a particular low performing health area.</p>
 </div>
 </div>
-<div id="getting-started" class="section level2">
-<h2><span class="header-section-number">1.2</span> Getting Started</h2>
-<p>The easiest way to get started on the IM Data Hub is to log in at the dev server at <a href="https://dev.imdatahub.org/" class="uri">https://dev.imdatahub.org/</a> with the IM demo credentials <code>demoUser</code> - the pw is provided by your System Admin.</p>
-<p>Countries doing data entry or testings have country specific demo accounts based on their country ISO codes - the pw is provided by your System Admin.</p>
-<table>
-<thead>
-<tr class="header">
-<th>Country</th>
-<th align="left">username</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Congo</td>
-<td align="left"><code>CDdemo</code></td>
-</tr>
-<tr class="even">
-<td>Cameroon</td>
-<td align="left"><code>CMdemo</code></td>
-</tr>
-<tr class="odd">
-<td>Ghana</td>
-<td align="left"><code>GHdemo</code></td>
-</tr>
-<tr class="even">
-<td>Kenya</td>
-<td align="left"><code>KEdemo</code></td>
-</tr>
-<tr class="odd">
-<td>Mali</td>
-<td align="left"><code>MLdemo</code></td>
-</tr>
-<tr class="even">
-<td>Niger</td>
-<td align="left"><code>NEdemo</code></td>
-</tr>
-</tbody>
-</table>
+<div id="getting-started-1" class="section level2">
+<h2><span class="header-section-number">6.4</span> Getting Started</h2>
+<ol style="list-style-type: decimal">
+<li>Download the app from the Google Play Store by clicking the link below (or by searching hnqis) <a href="https://play.google.com/store/apps/details?id=org.eyeseetea.malariacare.hnqis_ng" class="uri">https://play.google.com/store/apps/details?id=org.eyeseetea.malariacare.hnqis_ng</a></li>
+</ol>
 
 </div>
 </div>
@@ -258,8 +250,8 @@
           </div>
         </div>
       </div>
-<a href="preface.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="comp.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="access.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="custom.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -290,7 +282,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/INyabuto/im-data-hub/edit/master/01-intro.Rmd",
+"link": "https://github.com/INyabuto/im-data-hub/edit/master/06-hnqis.Rmd",
 "text": "Edit"
 },
 "history": {
