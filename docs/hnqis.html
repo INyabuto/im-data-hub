@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Preface | Impact Malaria Data Hub Specifications</title>
+  <title>Chapter 6 Health Network Quality Improvement System | Impact Malaria Data Hub Specifications</title>
   <meta name="description" content="A technical specification of the Impact Malaria Data Hub." />
   <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Preface | Impact Malaria Data Hub Specifications" />
+  <meta property="og:title" content="Chapter 6 Health Network Quality Improvement System | Impact Malaria Data Hub Specifications" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="INyabuto/im-data-hub" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Preface | Impact Malaria Data Hub Specifications" />
+  <meta name="twitter:title" content="Chapter 6 Health Network Quality Improvement System | Impact Malaria Data Hub Specifications" />
   
   <meta name="twitter:description" content="A technical specification of the Impact Malaria Data Hub." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
-<link rel="prev" href="index.html"/>
-<link rel="next" href="intro.html"/>
+<link rel="prev" href="access.html"/>
+<link rel="next" href="custom.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -178,124 +178,76 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="preface" class="section level1 unnumbered">
-<h1>Preface</h1>
-<div id="what-is-the-im-data-hub" class="section level2">
-<h2><span class="header-section-number">0.1</span> What is the IM Data Hub?</h2>
-<p>The Impact Maria (IM) Data Hub is a project monitoring system in DHIS2 used to collect, analyze, monitor and report Impact Malaria indicator data. It’s built on DHIS2 core software, and it supports HNQIS (1.4.X) compatibility.</p>
+<div id="hnqis" class="section level1">
+<h1><span class="header-section-number">Chapter 6</span> Health Network Quality Improvement System</h1>
+<div class="figure">
+<img src="images/hnqis.png" alt="HNQIS" />
+<p class="caption">HNQIS</p>
 </div>
-<div id="who-should-read-this-guide" class="section level2">
-<h2><span class="header-section-number">0.2</span> Who should read this guide?</h2>
-<p>This guide is aimed at two main audiences:</p>
-<ul>
-<li>System Administrators who are involved in the configuration, maintenance and troubleshooting the IM Data Hub,</li>
-<li>IM Project teams and M&amp;E staff involved in supporting M&amp;E activities like data entry, reporting, data analysis and visualizations and project monitoring.</li>
-</ul>
-<p>The audiences will find this guide helpful in understanding the overall system set up and how different components work together in the system.</p>
-</div>
-<div id="what-is-covered-in-this-guide." class="section level2">
-<h2><span class="header-section-number">0.3</span> What is covered in this guide.</h2>
-<p>The guide is divided into seven chapters:</p>
+<div id="background-1" class="section level2">
+<h2><span class="header-section-number">6.1</span> Background</h2>
+<p>Poor quality of care results in poor health outcomes. Improving and monitoring the quality of care in lower- and middle-income countries presents both unique challenges and opportunities to increase efficiencies in resource allocation based on standardized evaluations. Key constraints include the lack of enforced standards, delayed performance feedback, and poor use of monitoring data to allocate resources.</p>
+<div id="challenges" class="section level3">
+<h3><span class="header-section-number">6.1.1</span> Challenges</h3>
 <ol style="list-style-type: decimal">
-<li>Introduction - offers some background information, basic setup, and how to get started on the IM Data Hub quickly</li>
-<li>Understanding IM Data Hub Components - explores the basic set up to provide an understanding of the different components and how they function</li>
-<li>Data Specification - builds on the understanding of the IM Data Hub components and talks about the IM indicators and data reporting</li>
-<li>Metadata Specifications - dives into the data specification and the system components and talks about what lies at the bottom, the metadata</li>
-<li>Security and Access Model - Explains the security mechanisms and access model</li>
-<li>Customization &amp; Troubleshooting - Guides the customization, troubleshooting, and how to get help on the IM Data Hub</li>
-<li>Appendix</li>
+<li>Growing scale and scope of the network.</li>
+<li>Limited quality assessment tools.</li>
+<li>Poor quality feedback and coaching.</li>
+<li>Poor use of monitoring data.</li>
 </ol>
 </div>
-<div id="what-is-not-covered-in-this-guide." class="section level2">
-<h2><span class="header-section-number">0.4</span> What is not covered in this guide.</h2>
-<p>The focus of this guide is to walk you through the technical specification of the IM Data Hub. We attempt to showcase some best practices in configuring, testing, troubleshooting, reporting, monitoring, or use of data in the IM Data Hub. However, this is not a training on <a href="https://academy.dhis2.org/courses/HISP/DHIS2_Level1/2015_Q1/about">DHIS2 Foundamentals</a> and you need other references to master these essential skill sets.</p>
 </div>
-<div id="conventions" class="section level2">
-<h2><span class="header-section-number">0.5</span> Conventions</h2>
-<p>This guide follows the following abbrevations.</p>
-<table>
-<thead>
-<tr class="header">
-<th>Abbreviation</th>
-<th align="left">In Full</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>CR</td>
-<td align="left">Case Reporting</td>
-</tr>
-<tr class="even">
-<td>CS</td>
-<td align="left">Country Specific</td>
-</tr>
-<tr class="odd">
-<td>DX</td>
-<td align="left">Diagnosis</td>
-</tr>
-<tr class="even">
-<td>IM</td>
-<td align="left">Impact Malaria</td>
-</tr>
-<tr class="odd">
-<td>MIP</td>
-<td align="left">Malaria In Pregnancy</td>
-</tr>
-<tr class="even">
-<td>PMP</td>
-<td align="left">Performance Management Plan</td>
-</tr>
-<tr class="odd">
-<td>RE</td>
-<td align="left">Reporting</td>
-</tr>
-<tr class="even">
-<td>SMC</td>
-<td align="left">Seasonal Malaria Chemoprophylaxis</td>
-</tr>
-<tr class="odd">
-<td>SS</td>
-<td align="left">Supportive Supervision</td>
-</tr>
-<tr class="even">
-<td>TL</td>
-<td align="left">Technical Leadership</td>
-</tr>
-<tr class="odd">
-<td>TR</td>
-<td align="left">Training</td>
-</tr>
-<tr class="even">
-<td>TX</td>
-<td align="left">Treatment</td>
-</tr>
-</tbody>
-</table>
-<div id="data-sets" class="section level3">
-<h3><span class="header-section-number">0.5.1</span> Data Sets</h3>
-<p>Data set: [<code>country ISO code</code>] [<code>Data entry form name</code>]:</p>
-<p>Examples:</p>
-<ul>
-<li>GH Supportive Supervision</li>
-<li>CD Case Reporting</li>
-</ul>
+<div id="introduction-4" class="section level2">
+<h2><span class="header-section-number">6.2</span> Introduction</h2>
+<p>Health Network Quality Improvement System (HNQIS) is an electronic tablet-based application used to improve quality of health services in health care networks and effectively manage and reach health impact at scale.</p>
+<p>The HNQIS is composed of four modules that support healthcare supervisors to:
+1. Plan supervision visits using a prioritization matrix that presents facility-specific quality scores and patient volume.
+2. Assess providers’ quality of care against clinical standards.
+3. Improve providers’ quality of care through tailored feedback.
+4. Monitor quality improvements over time.</p>
+<p>HNQIS is an Android application that is fully functional without internet connectivity. It is linked with the information management system Demographic Health Information Software 2 (DHIS2), an open source technology adopted by many ministries of health across the world. It assists teams to assess quality of care of providers’ services to measure provider proficiencies in respective skills, and to highlight and monitor identified areas for improvement.</p>
+<p>HNQIS is now active in 23 countries and has conducted more than 18,000 assessments at 8,000 outlets across 13 health areas.</p>
 </div>
-<div id="data-elements" class="section level3">
-<h3><span class="header-section-number">0.5.2</span> Data Elements</h3>
-<p>DEs: [<code>country ISO code</code>] [<code>Data entry form name abbreviation</code>] - [<code>Section abbreviation</code>] [<code>DE Form name</code>]:</p>
-<p>Examples:</p>
-<ul>
-<li>GH CR - DX Cases confirmed</li>
-<li>CD TL - DX Does this province have national malaria diagnostic supervision tools that adhere to global standards?</li>
-</ul>
+<div id="modules" class="section level2">
+<h2><span class="header-section-number">6.3</span> Modules</h2>
+<p>HNQIS has 4 modules discussed below:</p>
+<div id="plan-module" class="section level3">
+<h3><span class="header-section-number">6.3.1</span> Plan Module</h3>
+<p>This module automatically schedules future assessments based on where support is needed most (quality score), and where it will have most impact (client load). Furthermore, the planning module prioritizes planning of support visits by segmenting all outlets into the following categories:</p>
+<ol style="list-style-type: decimal">
+<li>Never been assessed.</li>
+<li>Assessments overdue.</li>
+<li>Scheduled to be assessed in the current month.</li>
+<li>Scheduled to be assessed in future months.</li>
+</ol>
+<p>Each health area has independent planning variables (quality score/client load) but the planning report is integrated across all areas the Quality Assurance Officer (QAO) is responsible for supporting.</p>
 </div>
-<div id="indicators" class="section level3">
-<h3><span class="header-section-number">0.5.3</span> Indicators</h3>
-<p>Indicators: [<code>country ISO code</code>] [<code>PMP</code>] [<code>number</code>] - [<code>Section abbreviation</code>] [<code>Indicator name</code>]:</p>
-<p>Example:</p>
-<p>GH PMP 01 - DX Percentage of confirmed malaria cases</p>
+<div id="assess-module" class="section level3">
+<h3><span class="header-section-number">6.3.2</span> Assess Module</h3>
+<p>This module enables QAOs to assess clinical procedures in each health area catered for by network providers through case observation or simulation. The assessment checklist is aligned with national supervision checklists. An assessment score is automatically generated on-site and performance benchmarked (e.g. Good/ Satisfactory/Poor). The module contains a consistent approach to scoring and benchmarking all health areas to allow comparability within and across network providers.</p>
+</div>
+<div id="improve-module" class="section level3">
+<h3><span class="header-section-number">6.3.3</span> Improve Module</h3>
+<p>This module ensures that provider feedback following a quality assessment is undertaken in a robust and consistent manner, rather than based on the subjectivity of the QAO. The Improve Module:</p>
+<ol style="list-style-type: decimal">
+<li>Highlights the key areas of weakness identified during the assessment.</li>
+<li>Displays tailored feedback scripts that take into account both how the procedure should be undertaken (as per protocols), as well as why it is important to do so.</li>
+</ol>
+<p>This places all the relevant information required to improve the performance of the provider in one place. The module facilitates a consistent approach to provision of feedback, eliminating subjectivity regarding the areas of focus or the actual feedback provided.</p>
+</div>
+<div id="monitor-module" class="section level3">
+<h3><span class="header-section-number">6.3.4</span> Monitor Module</h3>
+<p>This module consists of a performance monitoring dashboard tailored to meet the needs of the QAO. The dashboard contains a range of charts, graphs, maps and tables highlighting trends and overall performance of all the providers the QAO is responsible for supporting. Dashboards can also be used to visualize data collected through other channels that is relevant to quality improvement, such as availability and sales of health commodities. The main purpose of this module is to facilitate the use of data in decision-making at the QAO level.</p>
+<p>It offers the QAO an opportunity to track the return on their support visit efforts over time, so as to give them insight on where they need to apply a different approach. The system also allows to develop tailored interfaces to meet the need in terms of data of different users of HNQIS (i.e. project managers, medical detailers, etc.), and therefore enable mid-course correction e.g. conducting a refresher course in a particular low performing health area.</p>
+</div>
+</div>
+<div id="getting-started-1" class="section level2">
+<h2><span class="header-section-number">6.4</span> Getting Started</h2>
+<ol style="list-style-type: decimal">
+<li>Download the app from the Google Play Store by clicking the link below (or by searching hnqis)
+<a href="https://play.google.com/store/apps/details?id=org.eyeseetea.malariacare.hnqis_ng" class="uri">https://play.google.com/store/apps/details?id=org.eyeseetea.malariacare.hnqis_ng</a></li>
+</ol>
 
-</div>
 </div>
 </div>
             </section>
@@ -303,8 +255,8 @@
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="intro.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="access.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="custom.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -335,7 +287,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/INyabuto/im-data-hub/edit/master/index.Rmd",
+"link": "https://github.com/INyabuto/im-data-hub/edit/master/06-hnqis.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -343,7 +295,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/INyabuto/im-data-hub/blob/master/index.Rmd",
+"link": "https://github.com/INyabuto/im-data-hub/blob/master/06-hnqis.Rmd",
 "text": null
 },
 "download": ["im-data-hub.pdf", "im-data-hub.epub"],

@@ -59,7 +59,19 @@
 \contentsline {section}{\numberline {5.4}Important Best Practices for the Access Model}{101}{section.5.4}% 
 \contentsline {subsection}{\numberline {5.4.1}Access from country to global level access:}{101}{subsection.5.4.1}% 
 \contentsline {subsection}{\numberline {5.4.2}Access from global to country level access:}{101}{subsection.5.4.2}% 
-\contentsline {chapter}{\numberline {6}Customization \& Troubleshooting IM Datahub}{103}{chapter.6}% 
-\contentsline {section}{\numberline {6.1}Introduction}{103}{section.6.1}% 
-\contentsline {section}{\numberline {6.2}Adding new objects in the datahub.}{103}{section.6.2}% 
-\contentsline {chapter}{References}{105}{chapter*.4}% 
+\contentsline {chapter}{\numberline {6}Health Network Quality Improvement System}{103}{chapter.6}% 
+\contentsline {section}{\numberline {6.1}Background}{103}{section.6.1}% 
+\contentsline {subsection}{\numberline {6.1.1}Challenges}{104}{subsection.6.1.1}% 
+\contentsline {section}{\numberline {6.2}Introduction}{104}{section.6.2}% 
+\contentsline {section}{\numberline {6.3}Modules}{104}{section.6.3}% 
+\contentsline {subsection}{\numberline {6.3.1}Plan Module}{104}{subsection.6.3.1}% 
+\contentsline {subsection}{\numberline {6.3.2}Assess Module}{105}{subsection.6.3.2}% 
+\contentsline {subsection}{\numberline {6.3.3}Improve Module}{105}{subsection.6.3.3}% 
+\contentsline {subsection}{\numberline {6.3.4}Monitor Module}{105}{subsection.6.3.4}% 
+\contentsline {section}{\numberline {6.4}Getting Started}{105}{section.6.4}% 
+\contentsline {chapter}{\numberline {7}Customization in the IM Datahub}{107}{chapter.7}% 
+\contentsline {section}{\numberline {7.1}Introduction}{107}{section.7.1}% 
+\contentsline {section}{\numberline {7.2}Adding new objects in the datahub.}{107}{section.7.2}% 
+\contentsline {chapter}{\numberline {8}Troubleshooting and Getting Help on IM Datahub}{109}{chapter.8}% 
+\contentsline {section}{\numberline {8.1}Introduction}{109}{section.8.1}% 
+\contentsline {chapter}{References}{111}{chapter*.4}% 
