@@ -16,34 +16,35 @@
 \contentsline {chapter}{\numberline {2}Understanding IM Data Hub}{13}{chapter.2}% 
 \contentsline {section}{\numberline {2.1}Introduction}{13}{section.2.1}% 
 \contentsline {section}{\numberline {2.2}Reporting Component}{13}{section.2.2}% 
-\contentsline {subsection}{\numberline {2.2.1}Global datasets}{14}{subsection.2.2.1}% 
-\contentsline {subsubsection}{\numberline {2.2.1.1}Accessing Global Datasets}{16}{subsubsection.2.2.1.1}% 
-\contentsline {subsection}{\numberline {2.2.2}Country Specific Datasets}{17}{subsection.2.2.2}% 
-\contentsline {subsubsection}{\numberline {2.2.2.1}Accessing Country Specific Datasets}{19}{subsubsection.2.2.2.1}% 
-\contentsline {section}{\numberline {2.3}Data Mining Component}{19}{section.2.3}% 
-\contentsline {subsection}{\numberline {2.3.1}Pivot Tables}{19}{subsection.2.3.1}% 
-\contentsline {subsubsection}{\numberline {2.3.1.1}Best practices, tips \& tricks}{25}{subsubsection.2.3.1.1}% 
+\contentsline {subsection}{\numberline {2.2.1}Global data sets}{14}{subsection.2.2.1}% 
+\contentsline {subsubsection}{\numberline {2.2.1.1}Accessing Global data sets}{14}{subsubsection.2.2.1.1}% 
+\contentsline {subsection}{\numberline {2.2.2}Country Specific Data sets}{17}{subsection.2.2.2}% 
+\contentsline {subsubsection}{\numberline {2.2.2.1}Accessing Country Specific Data sets}{17}{subsubsection.2.2.2.1}% 
+\contentsline {section}{\numberline {2.3}Data Mining Component}{20}{section.2.3}% 
+\contentsline {subsection}{\numberline {2.3.1}Pivot Table}{20}{subsection.2.3.1}% 
+\contentsline {subsubsection}{\numberline {2.3.1.1}Best practices, tips \& tricks}{21}{subsubsection.2.3.1.1}% 
 \contentsline {subsection}{\numberline {2.3.2}Data Visualizer}{25}{subsection.2.3.2}% 
 \contentsline {subsection}{\numberline {2.3.3}Maps}{25}{subsection.2.3.3}% 
-\contentsline {subsubsection}{\numberline {2.3.3.1}Best practices, tips \& tricks}{29}{subsubsection.2.3.3.1}% 
+\contentsline {subsubsection}{\numberline {2.3.3.1}Best practices, tips \& tricks}{25}{subsubsection.2.3.3.1}% 
 \contentsline {section}{\numberline {2.4}Data Presentation}{29}{section.2.4}% 
-\contentsline {chapter}{\numberline {3}Impact Malaria Data Specification}{33}{chapter.3}% 
+\contentsline {chapter}{\numberline {3}IM Data Specification}{33}{chapter.3}% 
 \contentsline {section}{\numberline {3.1}Introduction}{33}{section.3.1}% 
 \contentsline {section}{\numberline {3.2}Data Elements}{33}{section.3.2}% 
 \contentsline {section}{\numberline {3.3}Counts}{34}{section.3.3}% 
 \contentsline {section}{\numberline {3.4}Indicators}{34}{section.3.4}% 
-\contentsline {subsection}{\numberline {3.4.1}Global IM indicators}{34}{subsection.3.4.1}% 
-\contentsline {subsection}{\numberline {3.4.2}Country IM indicators}{51}{subsection.3.4.2}% 
+\contentsline {subsection}{\numberline {3.4.1}Global IM PMP indicators}{34}{subsection.3.4.1}% 
+\contentsline {subsection}{\numberline {3.4.2}Country IM PMP indicators}{51}{subsection.3.4.2}% 
 \contentsline {subsubsection}{\numberline {3.4.2.1}Kenya}{51}{subsubsection.3.4.2.1}% 
 \contentsline {subsubsection}{\numberline {3.4.2.2}Ghana}{60}{subsubsection.3.4.2.2}% 
-\contentsline {subsubsection}{\numberline {3.4.2.3}Congo}{72}{subsubsection.3.4.2.3}% 
+\contentsline {subsubsection}{\numberline {3.4.2.3}Demoncratic Republic of Congo}{72}{subsubsection.3.4.2.3}% 
 \contentsline {subsubsection}{\numberline {3.4.2.4}Mali}{74}{subsubsection.3.4.2.4}% 
-\contentsline {chapter}{\numberline {4}Metadata Specification}{87}{chapter.4}% 
+\contentsline {chapter}{\numberline {4}IM Metadata Specification}{87}{chapter.4}% 
 \contentsline {section}{\numberline {4.1}Introduction}{87}{section.4.1}% 
-\contentsline {section}{\numberline {4.2}Organization Units (OU)}{88}{section.4.2}% 
+\contentsline {section}{\numberline {4.2}Organization Units (OUs)}{88}{section.4.2}% 
 \contentsline {subsection}{\numberline {4.2.1}OU Trees}{88}{subsection.4.2.1}% 
-\contentsline {section}{\numberline {4.3}Metadata}{89}{section.4.3}% 
-\contentsline {section}{\numberline {4.4}Core Metadata}{91}{section.4.4}% 
+\contentsline {subsection}{\numberline {4.2.2}OU Groups, OU Group sets}{89}{subsection.4.2.2}% 
+\contentsline {section}{\numberline {4.3}Metadata}{90}{section.4.3}% 
+\contentsline {section}{\numberline {4.4}CORE Metadata}{91}{section.4.4}% 
 \contentsline {subsection}{\numberline {4.4.1}Category}{91}{subsection.4.4.1}% 
 \contentsline {subsection}{\numberline {4.4.2}Category Combination}{93}{subsection.4.4.2}% 
 \contentsline {chapter}{\numberline {5}Security Mechanism \& Access Model}{97}{chapter.5}% 
@@ -69,9 +70,6 @@
 \contentsline {subsection}{\numberline {6.3.3}Improve Module}{105}{subsection.6.3.3}% 
 \contentsline {subsection}{\numberline {6.3.4}Monitor Module}{105}{subsection.6.3.4}% 
 \contentsline {section}{\numberline {6.4}Getting Started}{105}{section.6.4}% 
-\contentsline {chapter}{\numberline {7}Customization in the IM Datahub}{107}{chapter.7}% 
+\contentsline {chapter}{\numberline {7}Troubleshooting and Getting Help on the IM Data Hub}{107}{chapter.7}% 
 \contentsline {section}{\numberline {7.1}Introduction}{107}{section.7.1}% 
-\contentsline {section}{\numberline {7.2}Adding new objects in the datahub.}{107}{section.7.2}% 
-\contentsline {chapter}{\numberline {8}Troubleshooting and Getting Help on IM Datahub}{109}{chapter.8}% 
-\contentsline {section}{\numberline {8.1}Introduction}{109}{section.8.1}% 
-\contentsline {chapter}{References}{111}{chapter*.4}% 
+\contentsline {chapter}{References}{109}{chapter*.4}% 
