@@ -1,4 +1,4 @@
-# Troubleshooting and Getting Help on IM Datahub {#trouble}
+# Troubleshooting and Getting Help on the IM Data Hub {#trouble}
 
 ## Introduction 
 
