@@ -100,7 +100,7 @@
 
 \title{Impact Malaria Data Hub Specifications}
 \author{Isaiah Nyabuto, Cristina Lussiana}
-\date{2019-12-13}
+\date{2019-12-17}
 
 \begin{document}
 \maketitle
@@ -358,54 +358,44 @@ Niger & \texttt{NEdemo}\tabularnewline
 \hypertarget{introduction}{%
 \section{Introduction}\label{introduction}}
 
-Now that you're already started and you've got some essential background about IM Data Hub, we are going to explore the details/components that form IM Data Hub.
+Now that you're already started and you've got some essential background about the IM Data Hub, we are going to explore the details/components that form the IM Data Hub.
 
-As we saw in chapter \ref{intro}, IM Data Hub is not just a database; it's a project monitoring system. It's divided into components; whose primary goal is to monitor IM indicator data for action.
+The IM Data Hub is not just a database: it's rather a project monitoring system and it's meant to monitor IM indicators and support decision-makers.
 
-We'll dive deeper into the components and understand how they are set up in the Hub.
+Understanding the IM Data Hub components will allow you to report, analyse, and monitor IM indicators more effectively. We'll dive deeper into the components and understand how they are set up in the IM Data Hub.
 
-Understanding IM Data Hub components will allow you to report, analyse, and monitor IM indicators more effectively.
-
-I'll start by showing you the reporting component, IM Data Hub uses data sets to collect indicator data. We will discuss them briefly in the next section. We will then walk through the data mining piece, and how the different outputs are pulled together on a dashboard for the project use. We'll wind up by exploring the data quality component and how the IM indicator data pass through the quality checks.
+This section shows the reporting component, mainly the data sets that the IM Data Hub uses to collect indicator data. We will then walk through the data mining piece, and how the different outputs are pulled together on a dashboard for the project use.
 
 \hypertarget{reporting-component}{%
 \section{Reporting Component}\label{reporting-component}}
 
-Reporting is organized through the use of data sets. A data set is simply a list of data elements that are grouped for data collection. We'll talk more about data elements in the next chapter.
+Reporting into the IM Data Hub to inform the IM Performance Monitoring Plan (PMP) indicators is organized through the use of data sets. A data set is simply a list of data elements that are grouped for data collection.
 
-A data set has a reporting period and an organization unit. The reporting period specifies how the data is reported, i.e., monthly, or quarterly, while the organization unit determines the location ``where'' the information is collected.
+A data set has a reporting period and is assigned to organization units. The reporting period specifies how often the data is reported, ie. monthly or quarterly, while the organization units determine the location ``where'' the information is collected from.
 
-IM Data Hub has two main types of data sets;
+The IM Data Hub has two main types of data sets:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  Global data sets for reporting IM indicators. You will learn more about this in section \ref{global-dataset}
+  Global data sets that are common to more than one country (ie. IM Seasonal Malaria Chemoprevention),
 \item
-  Country specific data set for reporting PMP indicators. You will learn more about this in section \ref{country-dataset}
+  Country specific data set that are specific to countries (ie. GH Case Reporting).
 \end{enumerate}
 
-The data sets are accessible through the data entry app (Fig. \ref{fig:data-entry-app}), and they appear as forms. They are designed to mimic the paper forms to allow ease of data entry/reporting process.
+The data sets are accessible through the \textbf{data entry app} (Fig. \ref{fig:data-entry-app}) and they appear as forms. They are designed to mimic the paper forms to allow ease of data entry/reporting process.
 
 \begin{figure}
 \includegraphics[width=3.28in]{./images/data-entry-app} \caption{An icon of the data entry app}\label{fig:data-entry-app}
 \end{figure}
 
 \hypertarget{global-dataset}{%
-\subsection{Global datasets}\label{global-dataset}}
+\subsection{Global data sets}\label{global-dataset}}
 
-Global datasets are accessible at a global level and are used to report IM indicators on a monthly and quarterly basis.
+Global data sets are accessible to relevant countries and are meant to collect data to inform country and global PMP Indicators.
 
-They consist of five data sets, which all begin with the \texttt{{[}project\ code{]}} followed by the \texttt{{[}data\ set\ name{]}} as shown below in yellow (Fig \ref{fig:im-datasets})
-
-\begin{figure}
-\includegraphics[width=13.47in]{./images/im datasets} \caption{Global datasets}\label{fig:im-datasets}
-\end{figure}
-
-Global datasets are divided into sections (in grey) that groups IM data elements into multiple subheadings for ease of data collection.
-
-There are five main sections:
+As of Dec 2019, there are five global data sets in the IM Data Hub and all of them begin with \texttt{IM} followed by the \texttt{{[}data\ set\ name{]}} as shown below in yellow (Fig \ref{fig:im-datasets}). Global data sets are divided into sections (in grey) that groups IM data elements into multiple subheadings for ease of data collection. There are five main sections:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -422,10 +412,12 @@ There are five main sections:
   Seasonal Malaria Chemoprevention
 \end{enumerate}
 
-We will talk about them in chapter \ref{meta}.
+\begin{figure}
+\includegraphics[width=13.47in]{./images/im datasets} \caption{Global datasets}\label{fig:im-datasets}
+\end{figure}
 
 \hypertarget{access-global-datasets}{%
-\subsubsection{Accessing Global Datasets}\label{access-global-datasets}}
+\subsubsection{Accessing Global data sets}\label{access-global-datasets}}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -434,9 +426,9 @@ We will talk about them in chapter \ref{meta}.
   If you haven't already logged in yet, please log in now at:
 \end{enumerate}
 
-\href{https://im-dev.psi-mis.org/dhis-web-dataentry/index.action}{IM Data Hub demo}
+\href{https://imdatahub.org}{IM Data Hub demo}
 
-\texttt{Username} :\textbf{\texttt{demoUser}} and \texttt{Password} : \textbf{\texttt{Temp1234!}}
+\texttt{Username} :\textbf{\texttt{demoUser}} and \texttt{Password} : ask your System Admin
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -463,7 +455,7 @@ We will talk about them in chapter \ref{meta}.
 \setcounter{enumi}{3}
 \tightlist
 \item
-  Select \texttt{IM\ Case\ Reporting} data set and the period to report; this case October 2019.
+  Select \texttt{IM\ Case\ Reporting} data set and the period to report, ie. October 2019.
 \end{enumerate}
 
 \includegraphics[width=17.36in]{./images/im-reporting}
@@ -474,74 +466,72 @@ We will talk about them in chapter \ref{meta}.
 \tightlist
 \item
   Wait for the data entry form to load, and check that you can see the same screen as in Fig \ref{fig:data-entry} below. Congratulations! You can now start reporting.
+
+  \begin{figure}
+  \includegraphics[width=46.42in]{./images/data-entry} \caption{IM Case Reporting Data Entry Form}\label{fig:data-entry}
+  \end{figure}
 \end{enumerate}
 
-\begin{figure}
-\includegraphics[width=46.42in]{./images/data-entry} \caption{IM Case Reporting Data Entry Form}\label{fig:data-entry}
-\end{figure}
+Before completing the records, please notice the \texttt{Run\ validation} button at the top right.
 
-Before completing the records, please notice the \texttt{Run\ validation} button at the top right. We will talk about this in section 6.
-
-The complete button submits the records into the data hub.
+The complete button submits the records into the IM Data Hub.
 
 \hypertarget{country-dataset}{%
-\subsection{Country Specific Datasets}\label{country-dataset}}
+\subsection{Country Specific Data sets}\label{country-dataset}}
 
-Country specific datasets are mainly used to report country's performance management plan (PMP) indicators. They are accessible at the district or facility level and are reported monthly.
+Country specific data sets are used to report country's Performance Management Plan (PMP) indicators which will ultimately inform the global IM PMP indicators. They are accessible at the desired frequency of reporting (ie. annually, quarterly or monthly) and at the relevant level of data colleciton (ie. national, province, district or facility level).
 
-Similar to the global data sets, Country specific ones are organized in sections (in grey) with multiple subheadings. Fig \ref{fig:pmp-datasets}
+Similar to the global data sets, country specific ones are organized in sections (in grey) with multiple subheadings. Fig \ref{fig:pmp-datasets}
 
 \begin{figure}
 \includegraphics[width=19.26in]{./images/pmp datasets} \caption{Country Specific Datasets}\label{fig:pmp-datasets}
 \end{figure}
 
-\hypertarget{accessing-country-specific-datasets}{%
-\subsubsection{Accessing Country Specific Datasets}\label{accessing-country-specific-datasets}}
+\hypertarget{accessing-country-specific-data-sets}{%
+\subsubsection{Accessing Country Specific Data sets}\label{accessing-country-specific-data-sets}}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  Follow the same steps in section \ref{access-global-datasets} to launch the data entry app. Ensure you are loogied in with your country demo account.
+  Follow the same steps in section \ref{access-global-datasets} to launch the data entry app. Ensure you are looged in with your country demo account (ie. \texttt{Username} :\textbf{\texttt{GHdemo}} and \texttt{Password} : ask your System Admin).
 \item
-  Click on the level to report (i.e country / district / facility) on the left bar
+  On the left bar, select the relevant org units you want to report from.
 \item
-  Select \texttt{{[}Country\ ISO{]}\ Case\ Reporting} data set and the period to report; this case October 2019.
+  Select the relevant data set (ie. \texttt{{[}Country\ ISO{]}\ Case\ Reporting}) and the period to report (ie. October 2019).
 \item
-  Wait for the form to load. Congratulations!
+  Wait for the form to load.
 \end{enumerate}
 
-For some countries like \texttt{Kenya}, \texttt{Ghana} and \texttt{Mali} the reporting process is automated through scripts. This is discussed in section.
+For some countries like \texttt{Kenya}, \texttt{Ghana} and \texttt{Mali}, the reporting process for some data sets (ie. \texttt{{[}Country\ ISO{]}\ Case\ Reporting}) is automated through scripts.
 
 \hypertarget{data-mining-component}{%
 \section{Data Mining Component}\label{data-mining-component}}
 
-Once the data is collected or loaded into the Data Hub, it then becomes available for data mining. Data mining is a technical process that involves the extraction and analysis of data to generate information.
+Once the data is collected or loaded into the IM Data Hub, it then becomes available for data mining. Data mining is a technical process that involves the extraction and analysis of data to generate information.
 
-The data mining component provides tools for enabling the extraction and analysis of IM indicator data.
+The data mining component provides tools for enabling the extraction and analysis of the IM PMP indicator data. The information collected through the data elements which compose the global and country specific data sets is pulled into global and country specific PMP indicators. Both the data elements which compose the global and country specific data sets and the global and country specific PMP indicators can be analysed and visualized in the DHIS2 analytics apps.
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  Pivot Tables - extracts data in a tabular format and enables the ability to pivot IM indicators.
+  Pivot Tables - extracts data in a tabular format and enables the ability to pivot data elements and indicators,
 \item
-  Data Visualizers - generates a variety of charts; standard line, bar charts, pie charts e.t.c
+  Data Visualizer - generates a variety of charts like standard line, bar charts, pie charts, etc, to pivot data elements and indicators,
 \item
-  Maps - gives the ability to visualize IM data on a map.
+  Maps - gives the ability to visualize IM data elements and indicaotrs on a map.
 \end{enumerate}
 
-We will discuss more of these tools in section \ref{pivot}, section \ref{visualizer} and section \ref{map}
-
 \hypertarget{pivot}{%
-\subsection{Pivot Tables}\label{pivot}}
+\subsection{Pivot Table}\label{pivot}}
 
-If you are familiar with excel, you are probably aware of ``pivoting'' the ability to summarize data on table in multiple dimensions. Excel Pivot Tables inspire Pivot Table.
+If you are familiar with Excel, you are probably aware of ``pivoting'' as the ability to summarize data on tables in multiple dimensions. Excel Pivot Tables have inspires the DHIS2 Pivot Table app.
 
-Pivot Table offers quick access to IM data in a tabular format. It allows the ability to `pivot' data in several dimensions, such as indicators, data elements, periods, and organization units. The aspects can quickly appear as rows or columns, depending on the tailored view.
+Pivot Table offers quick access to IM data in a tabular format. It allows the ability to `pivot' data in several dimensions, such as indicators, data elements, periods, and organization units.
 
-In the following subsection, we are going to access and tabulate a sample of IM indicator data using the Pivot Table.
+In the following subsection, we are going to access and tabulate a sample of IM indicator data using the Pivot Table app.
 
-As an example, we tabulate and pivot \texttt{IM\ Confirmed\ vs.\ Suspected\ Malaria\ Cases.} for last 12 months at the global level (world)
+As an example, we tabulate and pivot \texttt{IM\ Confirmed\ vs.\ Suspected\ Malaria\ Cases} for last 12 months at the global level (world).
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -550,45 +540,39 @@ As an example, we tabulate and pivot \texttt{IM\ Confirmed\ vs.\ Suspected\ Mala
   Please refresh your browser or login with the demo account below if you have not.
 \end{enumerate}
 
-\href{https://im-dev.psi-mis.org/dhis-web-dataentry/index.action}{IM Data Hub demo}
+\href{https://imdatahub.org}{IM Data Hub demo}
 
-\texttt{Username} :\textbf{\texttt{demoUser}} and \texttt{Password} : \textbf{\texttt{Temp1234!}}
+\texttt{Username} :\textbf{\texttt{demoUser}} and \texttt{Password} : ask your System Admin
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \setcounter{enumi}{1}
-\tightlist
 \item
   From Apps select or search for Pivot Tables
-\end{enumerate}
 
-\begin{figure}
-\includegraphics[width=15.36in]{./images/pivot-table} \caption{Searching Pivot Table App}\label{fig:pivot-table}
-\end{figure}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{2}
+  \begin{figure}
+  \includegraphics[width=15.36in]{./images/pivot-table} \caption{Searching Pivot Table App}\label{fig:pivot-table}
+  \end{figure}
 \item
-  Click to launch the app.
+  Click to launch the app
 \item
-  From the indicator group on your left, select IM PMP indicator and then search \% of confirmed case and \% of suspected malaria cases
+  From the indicator group on your left, select IM PMP indicators and then search \% of confirmed case and \% of suspected malaria cases
 \item
-  Make sure you pull each of the to the to the right side
+  Make sure you pull all the PMP indicators to the right side
 
   \begin{figure}
   \includegraphics[width=27.64in]{./images/pivot-table2} \caption{Selecting Indicators in the Pivot Table}\label{fig:pivot-table2}
   \end{figure}
 \item
   Open the organisation unit tab and select world
+
+  \begin{figure}
+  \includegraphics[width=27.64in]{./images/pivot-table2} \caption{Selecting the organisation unit}\label{fig:pivot-table4}
+  \end{figure}
 \end{enumerate}
 
-\begin{figure}
-\includegraphics[width=27.64in]{./images/pivot-table2} \caption{Selecting the organisation unit}\label{fig:pivot-table4}
-\end{figure}
-
 \begin{quote}
-At least three dimensions must be specified; What, When and Where in the pivot table
+At least three dimensions must be specified: what, when and where in the pivot table.
 \end{quote}
 
 \begin{enumerate}
@@ -596,15 +580,15 @@ At least three dimensions must be specified; What, When and Where in the pivot t
 \setcounter{enumi}{6}
 \tightlist
 \item
-  Click on the update button to generate the report. Check that you can see a table like mine (fig 8). Congratulations ! We have tabulated our report.
+  Click on the update button to generate the report. Check that you can see a table like this one (fig 8). Congratulations! We have tabulated our report.
+
+  \begin{figure}
+  \includegraphics[width=16.67in]{./images/pivot-table3} \caption{Updating the Pivot Table}\label{fig:pivot-table3}
+  \end{figure}
 \end{enumerate}
 
-\begin{figure}
-\includegraphics[width=16.67in]{./images/pivot-table3} \caption{Updating the Pivot Table}\label{fig:pivot-table3}
-\end{figure}
-
 \begin{quote}
-save the table as \texttt{IM\ PMP\ -\ \%\ of\ confirmed\ vs\ Suspected\ cases\ last\ 12\ months,\ global} we will refer to them in section 3.
+Save the table as \texttt{IM\ PMP\ -\ \%\ of\ confirmed\ vs\ suspected\ cases\ last\ 12\ months,\ global}.
 \end{quote}
 
 \hypertarget{best-practices-tips-tricks}{%
@@ -614,11 +598,11 @@ save the table as \texttt{IM\ PMP\ -\ \%\ of\ confirmed\ vs\ Suspected\ cases\ l
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  Hide empty rows/columns is a very useful Pivot Table option when analysing data across many org units or period with gaps in the data.
+  Hide empty rows/columns is a very useful Pivot Table option when analysing data across many org units or periods with gaps in the data,
 \item
-  Sort your table quickly by clicking on the sort symbol inside the column header cells
+  Sort your table quickly by clicking on the sort symbol inside the column header cells,
 \item
-  You must always save your table as a favourite before you can add it to your dashboard or share it with colleagues
+  You must always save your table as a favourite before you can add it to your dashboard or share it with colleagues,
 \item
   You can add color legends to your table (coloring of cells based on their values) under Options. Multiple legends can now be assigned within the same table and are created in the ``Legends'' portion of the maintenance app.
 \end{enumerate}
@@ -628,47 +612,39 @@ Next we will create a chart of these using the data visualizer app.
 \hypertarget{visualizer}{%
 \subsection{Data Visualizer}\label{visualizer}}
 
-Data Visualizers allows you to generate various charts; bar charts, line graphs, pie charts etc directly in the IM Data Hub. They follow the same design and logic as the pivot tables in data selection.
+Data Visualizer allows you to generate various charts, including bar charts, line graphs, pie charts, etc., directly in the IM Data Hub. They follow the same design and logic as the Pivot Table app, but they don't allow for a dimensional analysis which includes more than one factor.
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
   The easiest way to visualize the table in a chart is to open this table as a chart Fig. \ref{fig:visualizer}.
-\end{enumerate}
 
-\begin{figure}
-\includegraphics[width=34.69in]{./images/visualizer} \caption{Opening this table As a Chart}\label{fig:visualizer}
-\end{figure}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{1}
-\tightlist
+  \begin{figure}
+  \includegraphics[width=34.69in]{./images/visualizer} \caption{Opening this table As a Chart}\label{fig:visualizer}
+  \end{figure}
 \item
-  You can as well navigate directly to the data visualizer app by selecting the first option \texttt{Go\ to\ charts} or launching it form the apps. We will open ours as chart. Check that you see a chart as in (fig 10).
-\end{enumerate}
+  You can as well navigate directly to the Data Visualizer app by selecting the first option \texttt{Go\ to\ charts} or launching it form the apps menu. We will open ours as chart. Check that you see a chart as in (fig 10).
 
-\begin{figure}
-\includegraphics[width=46.64in]{./images/visualizer2} \caption{A bar chart generated by Data Visualizer App}\label{fig:visualizer2}
-\end{figure}
+  \begin{figure}
+  \includegraphics[width=46.64in]{./images/visualizer2} \caption{A bar chart generated by Data Visualizer App}\label{fig:visualizer2}
+  \end{figure}
+\end{enumerate}
 
 By default, \texttt{open\ this\ table\ as\ chart} will attempt to visualize the table in a bar chart. We can switch to this chart to different types by selecting the \texttt{type}. Ensure you choose the appropriate type.
 
 We'll stick to this as it is the most appropriate for this case. It shows the comparison.
 
 \begin{quote}
-save your chart as \texttt{IM\ PMP\ -\ \%\ confirmed\ vs\ suspected\ cases\ last\ 12\ months,\ global\ -\ chart}
+Save your chart as \texttt{IM\ PMP\ -\ \%\ confirmed\ vs\ suspected\ cases\ last\ 12\ months,\ global}
 \end{quote}
-
-In the next section we'll explore the maps app.
 
 \hypertarget{map}{%
 \subsection{Maps}\label{map}}
 
-The Maps app allows you to set thematic layers of the areas and points, view facilities based on classifications, and visualize catchment areas for the geographical distribution of IM indicator data.
+The Maps app allows you to set thematic layers of the areas and points, view facilities based on classifications, and visualize catchment areas for the geographical distribution of the IM data elements and indicators.
 
-Example; Malaria Confirmed Cases last 3 months by Region, Ghana.
+Example: Malaria Confirmed Cases in the last 3 months by region, Ghana.
 
 \begin{figure}
 \includegraphics[width=15.06in]{./images/maps2} \caption{Malaria Confirmed Cases last 3 months by Region, Ghana}\label{fig:maps2}
@@ -678,47 +654,28 @@ To create the map:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\tightlist
 \item
   Navigate to the \texttt{Maps} app
-\end{enumerate}
 
-\begin{figure}
-\includegraphics[width=4.25in]{./images/map} \caption{The Maps App}\label{fig:map}
-\end{figure}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{1}
-\tightlist
+  \begin{figure}
+  \includegraphics[width=4.25in]{./images/map} \caption{The Maps App}\label{fig:map}
+  \end{figure}
 \item
   Click the icon \texttt{Maps} to launch the app
 \item
   Add a \texttt{thematic\ layer}
-\end{enumerate}
 
-\begin{figure}
-\includegraphics[width=19.25in]{./images/maps1} \caption{Select thematic layer}\label{fig:maps1}
-\end{figure}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{3}
-\tightlist
+  \begin{figure}
+  \includegraphics[width=19.25in]{./images/maps1} \caption{Select thematic layer}\label{fig:maps1}
+  \end{figure}
 \item
-  Follow the steps to select the dimensions; What, when and where.
-\end{enumerate}
+  Follow the steps to select the dimensions; What, when and where
 
-\begin{figure}
-\includegraphics[width=16.64in]{./images/maps} \caption{Steps to select the dimensions; What, when and where}\label{fig:maps}
-\end{figure}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{4}
-\tightlist
+  \begin{figure}
+  \includegraphics[width=16.64in]{./images/maps} \caption{Steps to select the dimensions; What, when and where}\label{fig:maps}
+  \end{figure}
 \item
-  Update the layer.
+  Update the layer
 \end{enumerate}
 
 \hypertarget{best-practices-tips-tricks-1}{%
@@ -728,9 +685,9 @@ To create the map:
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  Try not to put many overlapping layers on a map that will be difficult to interpret
+  Try not to put many overlapping layers on a map that will be difficult to interpret,
 \item
-  Use different color schemes when displaying multiple layers on a map
+  Use different color schemes when displaying multiple layers on a map,
 \item
   The ordering of the layers is 1: Top Most Layer - 4: Bottom Most Layer. Add thematic layers to the map with this in mind.
 \end{enumerate}
@@ -738,32 +695,17 @@ To create the map:
 \hypertarget{data-presentation}{%
 \section{Data Presentation}\label{data-presentation}}
 
-Once the IM indicators are analyzed, processed, and you've come up with different information products, the next big thing is how this information is used in the routine monitoring of the project.
+Once the IM data elements and PMP indicators are analyzed, processed, and you've come up with different information products, the next big thing is how this information is used in the routine monitoring of the project.
 
-Data use is an art by itself. Some several guides and structures attempt to promote data use. At PSI, we use the data use frameworks. - more about data use.
-
-In this section, we cover the data presentation component. This is to show you how the information products are pulled together on a dashboard to:
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\tightlist
-\item
-  Quickly viewing the charts/tables/maps, you use most frequently
-\item
-  Monitoring the project progress
-\item
-  Establishing a routine for regularly checking key program aspects
-\item
-  Sharing information with others.
-\end{enumerate}
+Data use is an art by itself. Some several guides and structures attempt to promote data use. For the IM Data Hub, we promote the use of the Data-to-Action (D2A) frameworks as a tool to strenghten data use for decision-making.
 
 \hypertarget{data}{%
-\chapter{Impact Malaria Data Specification}\label{data}}
+\chapter{IM Data Specification}\label{data}}
 
 \hypertarget{introduction-1}{%
 \section{Introduction}\label{introduction-1}}
 
-IM data is specified through the use indicators. Indicators consist of a numerator, denominator, and a count. The numerator and denominator are data elements, and the count specifies the applied operation. Counts can be a percentage, a number, or a ratio.
+The IM data is specified through the use indicators. Indicators consist of a numerator, denominator, and a type of count. The numerator and denominator are data elements, and the count specifies the applied operation. Counts can be a percentage, a number, or a ratio.
 
 In this chapter, we are going to explore the IM indicators and how they are constructed in the Data Hub.
 
@@ -772,41 +714,37 @@ We'll start by a short introduction to data elements and how they form the base/
 \hypertarget{data-elements-1}{%
 \section{Data Elements}\label{data-elements-1}}
 
-Data elements form the base of IM indicators. As we mentioned in the previous chapter, they define how IM data are collected and stored in the Data Hub.
+Data elements form the base of IM indicators. As we mentioned in the previous chapter, they define how IM data are collected and stored in the IM Data Hub.
 
 IM Data hub consists of:
-Global data elements - are shared across a number of countries.
-Country specific data elements - used by specified country data sets.
+Global data elements - are shared across a number of countries,
+Country specific data elements - used by specific country data sets.
 
-IM data elements are grouped by country and programs for easy access from the pivot table, data visualizer and maps app.
+IM data elements are grouped into data elements groups by country and programs for easy access from the Analytics apps in DHIS2 (Pivot Table, Data Visualizer and Maps).
 
-The data elements have the following key fields;
+The data elements have the following key fields:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  \texttt{uid,\ name,\ shortName,\ and\ code} for uniquely identifying the data element in the data hub.
+  \texttt{uid,\ name,\ shortName,\ and\ code} for uniquely identifying the data element in the IM Data Hub,
 \item
-  \texttt{description} to document more information about the data point.
+  \texttt{description} to document more information about the data point,
 \item
-  \texttt{formName} that appears on the data entry form.
+  \texttt{formName} that appears on the data entry form (in our case, data sets),
 \item
-  \texttt{domainType} that specifies the data model - aggregate or tracker.
+  \texttt{domainType} that specifies the data model - aggregate or tracker (in our case, aggregate),
 \item
-  \texttt{aggregationType} defines how data is stored in the data hub.
+  \texttt{aggregationType} defines how data is stored in the IM Data Hub.
 \end{enumerate}
-
-You can refer to \href{http://im-dev.psi-mis.org/api/schemas/dataElement.json}{dataElement schema} for more detailed specs.
-
-For now please note the \texttt{uid,name,shortName\ and\ formName} we discuss these in section \ref{global-ind} and section \ref{country-ind} below.
 
 \hypertarget{counts}{%
 \section{Counts}\label{counts}}
 
-Counts define the operation applied to IM indicators calculations.
+Counts define the operation applied to the IM indicators calculations.
 
-There are four main types of operations;
+There are four main types of operations:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -816,7 +754,7 @@ There are four main types of operations;
 \item
   \texttt{1\ -\ Ratio} - a fraction of the numerator and denominator
 \item
-  \texttt{100\ -\ percent} - a ratio multiplied by 100 percent.
+  \texttt{100\ -\ percent} - a ratio multiplied by 100 percent
 \item
   \texttt{1000\ -\ per\ thousand} - a ratio multiplied by 1000
 \end{enumerate}
@@ -824,17 +762,17 @@ There are four main types of operations;
 \hypertarget{ind}{%
 \section{Indicators}\label{ind}}
 
-Remember that an indicator has a numerator, a denominator and a count. In this section, you will notice that similar to data elements, indicators also have the uid, short name and code to uniquely identifying them in the hub.
+Remember that an indicator has a numerator, a denominator and a count. In this section, you will notice that similar to data elements, indicators also have the uid, short name and code to uniquely identifying them in the IM Data Hub.
 
-IM Data Hub indicators are grouped into two;
+The IM PMP indicators are grouped into two types:
 
-Global IM indicators - computes PMP data for global access.
-Country Specific (PMP) indicators - computes PMP data for country access.
+Global IM PMP indicators - computes PMP data for global access,
+Country Specific PMP indicators - computes PMP data for country access.
 
 We present to you a list of all the IM indicators in section \ref{global-ind}
 
 \hypertarget{global-ind}{%
-\subsection{Global IM indicators}\label{global-ind}}
+\subsection{Global IM PMP indicators}\label{global-ind}}
 
 code
 
@@ -1555,7 +1493,7 @@ Denid : \#\{oWhqaiv26dB\}
 100 - Per Cent
 
 \hypertarget{country-ind}{%
-\subsection{Country IM indicators}\label{country-ind}}
+\subsection{Country IM PMP indicators}\label{country-ind}}
 
 \hypertarget{kenya}{%
 \subsubsection{Kenya}\label{kenya}}
@@ -2731,8 +2669,8 @@ Denid : R\{jVmnSOBUkeG.ACTUAL\_REPORTS\}
 
 100 - Per Cent
 
-\hypertarget{congo}{%
-\subsubsection{Congo}\label{congo}}
+\hypertarget{demoncratic-republic-of-congo}{%
+\subsubsection{Demoncratic Republic of Congo}\label{demoncratic-republic-of-congo}}
 
 code
 
@@ -3470,68 +3408,64 @@ Denid : 1
 1 - Atomic (number)
 
 \hypertarget{meta}{%
-\chapter{Metadata Specification}\label{meta}}
+\chapter{IM Metadata Specification}\label{meta}}
 
 \hypertarget{introduction-2}{%
 \section{Introduction}\label{introduction-2}}
 
-In the previous chapter, we learned about the IM \& PMP indicators and how they are stored or constructed in the Data Hub. That is essential knowledge for you to start monitoring IM indicator data from the source to how they are presented in the IM Data Hub.
+In the previous chapter, we learned about the IM PMP indicators and how they are stored or constructed in the IM Data Hub. That is essential knowledge for you to start monitoring IM PMP indicators from the source to how they are presented in the IM Data Hub.
 
-In this chapter, we'll dive deep to the bottom and explore what lies beneath the IM Data Hub, the metadata. Metadata is data about data.
+In this chapter, we'll dive deep to the bottom and explore what lies beneath the IM Data Hub, the metadata. Metadata defines what, why, where, and how parts are set up in the IM Data Hub. They provide references to different objects in the IM Data Hub.
 
-First, I'd say anything in the data hub contains metadata. Metadata defines what, why, where, and how parts are set up in the data hub. They provide references to different objects in the data hub.
+Already you are familiar with data sets, data elements, indicators: all these are essentially metadata themselves.
 
-Already you are familiar with datasets, data elements, or you might have heard of sections in the other chapters. All these are essentially metadata themselves.
+The IM Data Hub metadata are specified in either CSV, JSON or XML formats and are available at the metadata API endpoint:
 
-IM Data Hub Metadata are specified in either CSV, JSON or XML formats are available at the metadata API endpoint:
+\texttt{https://imdatahub.org/api/metadata}
 
-\texttt{https://im-dev.psi-mis.org/api/metadata}
-
-Metadata has a name, uid, code that uniquely identifies the object in the hub. It also has a sharing setting that defines the access group. We'll talk about the access group in the following chapter.
+Metadata has a name, uid, code that uniquely identifies the object in the IM Data Hub. It also has a sharing setting that defines the access group (have a look to the section `Access model' for further info on this).
 
 All IM Data Hub metadata can be accessed individually by specifying their names or ids on the API endpoint. For example, the metadata for a data element with the short name \texttt{suspected\ malaria\ cases} is accessed at:
 
-\texttt{https://im-dev.psi-mis.org/api/29/dataElements/eHWYhy8vO8q.json}
+\texttt{https://imdatahub.org/api/29/dataElements/eHWYhy8vO8q.json}
 
-In the following sections we discuss IM Data Hub metadata in three main groups;
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\tightlist
-\item
-  Organization Unit stores information about the location where IM indicator data is reported, analyzed, or presented.
-\item
-  Metadata that specifies what, why, and how IM Data Hub components are set up. They include; datasets, data elements, sections, data elements groups \& group sets, organization unit groups \& group sets, indicators, indicator groups, categories, categories, combo, \& combinations. e.t.c
-\item
-  Core Metadata - any metadata that is shared publicly for re-usability across the data hub.
-\end{enumerate}
-
-\hypertarget{organization-units-ou}{%
-\section{Organization Units (OU)}\label{organization-units-ou}}
-
-Organization Units specifies the location or where IM indicators are collected, analyzed, or presented on a dashboard.
-
-There are two main types of OUs in the data hub.
+In the following sections we discuss the IM Data Hub metadata in three main groups:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  Test - a list of OUs for development and testing objects in the data hub. This is where we have been doing our practices.
+  Organization Unit stores information about the location where IM indicator data is reported, analyzed, or presented,
 \item
-  World - a list of OUs for production or real use in the data hub.
+  Metadata that specifies what, why, and how IM Data Hub components are set up. They include; datasets, data elements, sections, data elements groups and group sets, organization unit groups and group sets, indicators, indicator groups, categories, category options, categories, category combinations, and category option combinations,
+\item
+  CORE metadata - any metadata that is shared publicly within the IM Data Hub for re-usability across the IM Data Hub.
 \end{enumerate}
 
-The main master list is accessible \href{\%22https://docs.google.com/spreadsheets/d/1fgdpfbVcn0ywUekA8AuXsnxYpDWGk2Safblyom0EWGo/edit\#gid=40684118\%22}{here}
+\hypertarget{organization-units-ous}{%
+\section{Organization Units (OUs)}\label{organization-units-ous}}
 
-They are structured in the form of a tree or through a hierarchy to allow entries, data processing, and drill downs/ups on the dashboard. They also define access levels in the data hub. We'll discuss access levels in chapter 5.
+Organization Units specify the location or where the IM data elements are collected, analyzed, or presented.
 
-IM Data Hub OUs are grouped into OU groups and group sets for disaggregation of IM indicators data. We discuss the groups in section @ref\{ougroup\}
+There are two main types of OUs in the IM Data Hub:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Test - a list of OUs for development and testing objects. This is where we have been doing our practices,
+\item
+  World - a list of OUs for production or real use in the IM Data Hub.
+\end{enumerate}
+
+The OUs in DHIS2 are structured in the form of a tree or through a hierarchy to allow entries, data processing, and drill downs/ups on the Analytics apps. They also define access levels in the IM Data Hub (have a look to the section `Access model' for further info on this)).
+
+The IM Data Hub OUs are grouped into OU groups and group sets for disaggregation of IM data elements and indicators. We discuss the groups in section @ref\{ougroup\}
 
 \hypertarget{ou-trees}{%
 \subsection{OU Trees}\label{ou-trees}}
 
-As we mentioned above, IM Data Hub OUs are organized in a tree-like structure that provides different levels for reporting, data processing, and presentation of IM data; in this section, we describe the OU structure by country (Fig X).
+As we mentioned above, the IM Data Hub OUs are organized in a tree-like structure that provides different levels for reporting, data processing, and presentation of IM data. In this section, we describe the OU structure by country.
 
 The structure is in the form hierarchy and begins with the country to subnational level 4.
 
@@ -3619,13 +3553,13 @@ Facility\strut
 \begin{minipage}[t]{0.07\columnwidth}\raggedright
 Niger\strut
 \end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
-\strut
+Province\strut
 \end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
-\strut
+District Sanitaire\strut
 \end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
-\strut
+Aire de santé\strut
 \end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
-\strut
+Facility\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.07\columnwidth}\raggedright
 Sierra Leone\strut
@@ -3653,13 +3587,14 @@ Facility\strut
 \end{longtable}
 
 The following is the Metadata endpoint for organization unit levels.
-\texttt{https://im-dev.psi-mis.org/api/organisationUnitLevels.json}
+\texttt{https://imdatahub.org/api/organisationUnitLevels.json}
 
 Next we'll talk about the OU groups and group sets.
 
-OU groups, OU group sets.
+\hypertarget{ou-groups-ou-group-sets}{%
+\subsection{OU Groups, OU Group sets}\label{ou-groups-ou-group-sets}}
 
-IM Data Hub OUs consists of the following groups and group sets by countries and the type of facility.
+The IM Data Hub OUs consist of the following OU groups and group sets by countries and the type or owenrship of facility:
 
 \label{tab:unnamed-chunk-13}A table showing OU groups and group set
 
@@ -3694,7 +3629,7 @@ NE Public
 \hypertarget{metadata}{%
 \section{Metadata}\label{metadata}}
 
-IM Data Hub implements the following Metadata types.
+The IM Data Hub implements the following metadata types:
 
 \label{tab:unnamed-chunk-14}A table showing metadata types implimented in the IM Data Hub
 
@@ -3769,22 +3704,20 @@ Similar to data elements groups, indicator groups - groups together IM indicator
 For instance: KE PMP is an indicator group with all PMP indicators for Kenya
 
 \hypertarget{core-metadata}{%
-\section{Core Metadata}\label{core-metadata}}
+\section{CORE Metadata}\label{core-metadata}}
 
-Core Metadata are reserved objects in the data hub. They are shared publicly for re-use in the data hub.
-
-There are two main types of \texttt{core\ metadata.}
+CORE Metadata are reserved objects in the data hub. They are shared publicly within the IM Data Hub for re-use in the IM Data Hub. There are two main types of \texttt{CORE\ metadata.}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  Category: a group of cat options for disaggregation/attributes.
+  Category: a group of cat options for disaggregation/attributes,
 \item
   Category Combination: a combination of classes used to apply disaggregation onto data elements/indicators.
 \end{enumerate}
 
-The following is a list of all IM data hub core metadata.
+The following is a list of all IM Data Hub CORE metadata.
 
 \hypertarget{category}{%
 \subsection{Category}\label{category}}
@@ -4352,39 +4285,11 @@ It offers the QAO an opportunity to track the return on their support visit effo
   \url{https://play.google.com/store/apps/details?id=org.eyeseetea.malariacare.hnqis_ng}
 \end{enumerate}
 
-\hypertarget{custom}{%
-\chapter{Customization in the IM Datahub}\label{custom}}
+\hypertarget{trouble}{%
+\chapter{Troubleshooting and Getting Help on the IM Data Hub}\label{trouble}}
 
 \hypertarget{introduction-5}{%
 \section{Introduction}\label{introduction-5}}
-
-As IM datahub continues to be rolled out or used actively in multiple countries, data requirements increase, and so does the need to customize and maintain objects in the datahub.
-
-Customization involves setting up new objects or components, while maintenance, this case refers to the process of taking care of the already existing objects or components in the datahub.
-
-Maintenance requires an assessment of the current set up to detect flaws or breakages. It is for the overall improvement of the system.
-
-In this chapter, we cover the process of adding new objects or maintaining existing objects in the data hub.
-
-\hypertarget{adding-new-objects-in-the-datahub.}{%
-\section{Adding new objects in the datahub.}\label{adding-new-objects-in-the-datahub.}}
-
-There are two ways you can add new objects in the data hub.
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\tightlist
-\item
-  From the user interface
-\item
-  Using blueprints
-\end{enumerate}
-
-\hypertarget{trouble}{%
-\chapter{Troubleshooting and Getting Help on IM Datahub}\label{trouble}}
-
-\hypertarget{introduction-6}{%
-\section{Introduction}\label{introduction-6}}
 
 The IM Datahub has various resources for getting help.
 
