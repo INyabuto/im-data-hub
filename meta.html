@@ -113,11 +113,12 @@
 </ul></li>
 <li class="chapter" data-level="4" data-path="meta.html"><a href="meta.html"><i class="fa fa-check"></i><b>4</b> Metadata Specification</a><ul>
 <li class="chapter" data-level="4.1" data-path="meta.html"><a href="meta.html#introduction-2"><i class="fa fa-check"></i><b>4.1</b> Introduction</a></li>
-<li class="chapter" data-level="4.2" data-path="meta.html"><a href="meta.html#organization-units-ou"><i class="fa fa-check"></i><b>4.2</b> Organization Units (OU)</a><ul>
+<li class="chapter" data-level="4.2" data-path="meta.html"><a href="meta.html#organization-units-ous"><i class="fa fa-check"></i><b>4.2</b> Organization Units (OUs)</a><ul>
 <li class="chapter" data-level="4.2.1" data-path="meta.html"><a href="meta.html#ou-trees"><i class="fa fa-check"></i><b>4.2.1</b> OU Trees</a></li>
+<li class="chapter" data-level="4.2.2" data-path="meta.html"><a href="meta.html#ou-groups-ou-group-sets"><i class="fa fa-check"></i><b>4.2.2</b> OU Groups, OU Group sets</a></li>
 </ul></li>
 <li class="chapter" data-level="4.3" data-path="meta.html"><a href="meta.html#metadata"><i class="fa fa-check"></i><b>4.3</b> Metadata</a></li>
-<li class="chapter" data-level="4.4" data-path="meta.html"><a href="meta.html#core-metadata"><i class="fa fa-check"></i><b>4.4</b> Core Metadata</a><ul>
+<li class="chapter" data-level="4.4" data-path="meta.html"><a href="meta.html#core-metadata"><i class="fa fa-check"></i><b>4.4</b> CORE Metadata</a><ul>
 <li class="chapter" data-level="4.4.1" data-path="meta.html"><a href="meta.html#category"><i class="fa fa-check"></i><b>4.4.1</b> Category</a></li>
 <li class="chapter" data-level="4.4.2" data-path="meta.html"><a href="meta.html#category-combination"><i class="fa fa-check"></i><b>4.4.2</b> Category Combination</a></li>
 </ul></li>
@@ -182,36 +183,34 @@
 <h1><span class="header-section-number">4</span> Metadata Specification</h1>
 <div id="introduction-2" class="section level2">
 <h2><span class="header-section-number">4.1</span> Introduction</h2>
-<p>In the previous chapter, we learned about the IM &amp; PMP indicators and how they are stored or constructed in the Data Hub. That is essential knowledge for you to start monitoring IM indicator data from the source to how they are presented in the IM Data Hub.</p>
-<p>In this chapter, we’ll dive deep to the bottom and explore what lies beneath the IM Data Hub, the metadata. Metadata is data about data.</p>
-<p>First, I’d say anything in the data hub contains metadata. Metadata defines what, why, where, and how parts are set up in the data hub. They provide references to different objects in the data hub.</p>
-<p>Already you are familiar with datasets, data elements, or you might have heard of sections in the other chapters. All these are essentially metadata themselves.</p>
-<p>IM Data Hub Metadata are specified in either CSV, JSON or XML formats are available at the metadata API endpoint:</p>
-<p><code>https://im-dev.psi-mis.org/api/metadata</code></p>
-<p>Metadata has a name, uid, code that uniquely identifies the object in the hub. It also has a sharing setting that defines the access group. We’ll talk about the access group in the following chapter.</p>
+<p>In the previous chapter, we learned about the IM PMP indicators and how they are stored or constructed in the IM Data Hub. That is essential knowledge for you to start monitoring IM PMP indicators from the source to how they are presented in the IM Data Hub.</p>
+<p>In this chapter, we’ll dive deep to the bottom and explore what lies beneath the IM Data Hub, the metadata. Metadata defines what, why, where, and how parts are set up in the IM Data Hub. They provide references to different objects in the IM Data Hub.</p>
+<p>Already you are familiar with data sets, data elements, indicators: all these are essentially metadata themselves.</p>
+<p>The IM Data Hub metadata are specified in either CSV, JSON or XML formats and are available at the metadata API endpoint:</p>
+<p><code>https://imdatahub.org/api/metadata</code></p>
+<p>Metadata has a name, uid, code that uniquely identifies the object in the IM Data Hub. It also has a sharing setting that defines the access group (have a look to the section ‘Access model’ for further info on this).</p>
 <p>All IM Data Hub metadata can be accessed individually by specifying their names or ids on the API endpoint. For example, the metadata for a data element with the short name <code>suspected malaria cases</code> is accessed at:</p>
-<p><code>https://im-dev.psi-mis.org/api/29/dataElements/eHWYhy8vO8q.json</code></p>
-<p>In the following sections we discuss IM Data Hub metadata in three main groups;</p>
+<p><code>https://imdatahub.org/api/29/dataElements/eHWYhy8vO8q.json</code></p>
+<p>In the following sections we discuss the IM Data Hub metadata in three main groups:</p>
 <ol style="list-style-type: decimal">
-<li>Organization Unit stores information about the location where IM indicator data is reported, analyzed, or presented.</li>
-<li>Metadata that specifies what, why, and how IM Data Hub components are set up. They include; datasets, data elements, sections, data elements groups &amp; group sets, organization unit groups &amp; group sets, indicators, indicator groups, categories, categories, combo, &amp; combinations. e.t.c</li>
-<li>Core Metadata - any metadata that is shared publicly for re-usability across the data hub.</li>
+<li>Organization Unit stores information about the location where IM indicator data is reported, analyzed, or presented,</li>
+<li>Metadata that specifies what, why, and how IM Data Hub components are set up. They include; datasets, data elements, sections, data elements groups and group sets, organization unit groups and group sets, indicators, indicator groups, categories, category options, categories, category combinations, and category option combinations,</li>
+<li>CORE metadata - any metadata that is shared publicly within the IM Data Hub for re-usability across the IM Data Hub.</li>
 </ol>
 </div>
-<div id="organization-units-ou" class="section level2">
-<h2><span class="header-section-number">4.2</span> Organization Units (OU)</h2>
-<p>Organization Units specifies the location or where IM indicators are collected, analyzed, or presented on a dashboard.</p>
-<p>There are two main types of OUs in the data hub.</p>
+<div id="organization-units-ous" class="section level2">
+<h2><span class="header-section-number">4.2</span> Organization Units (OUs)</h2>
+<p>Organization Units specify the location or where the IM data elements are collected, analyzed, or presented.</p>
+<p>There are two main types of OUs in the IM Data Hub:</p>
 <ol style="list-style-type: decimal">
-<li>Test - a list of OUs for development and testing objects in the data hub. This is where we have been doing our practices.</li>
-<li>World - a list of OUs for production or real use in the data hub.</li>
+<li>Test - a list of OUs for development and testing objects. This is where we have been doing our practices,</li>
+<li>World - a list of OUs for production or real use in the IM Data Hub.</li>
 </ol>
-<p>The main master list is accessible <a href="%22https://docs.google.com/spreadsheets/d/1fgdpfbVcn0ywUekA8AuXsnxYpDWGk2Safblyom0EWGo/edit#gid=40684118%22">here</a></p>
-<p>They are structured in the form of a tree or through a hierarchy to allow entries, data processing, and drill downs/ups on the dashboard. They also define access levels in the data hub. We’ll discuss access levels in chapter 5.</p>
-<p>IM Data Hub OUs are grouped into OU groups and group sets for disaggregation of IM indicators data. We discuss the groups in section @ref{ougroup}</p>
+<p>The OUs in DHIS2 are structured in the form of a tree or through a hierarchy to allow entries, data processing, and drill downs/ups on the Analytics apps. They also define access levels in the IM Data Hub (have a look to the section ‘Access model’ for further info on this)).</p>
+<p>The IM Data Hub OUs are grouped into OU groups and group sets for disaggregation of IM data elements and indicators. We discuss the groups in section @ref{ougroup}</p>
 <div id="ou-trees" class="section level3">
 <h3><span class="header-section-number">4.2.1</span> OU Trees</h3>
-<p>As we mentioned above, IM Data Hub OUs are organized in a tree-like structure that provides different levels for reporting, data processing, and presentation of IM data; in this section, we describe the OU structure by country (Fig X).</p>
+<p>As we mentioned above, the IM Data Hub OUs are organized in a tree-like structure that provides different levels for reporting, data processing, and presentation of IM data. In this section, we describe the OU structure by country.</p>
 <p>The structure is in the form hierarchy and begins with the country to subnational level 4.</p>
 <table>
 <colgroup>
@@ -275,10 +274,10 @@
 </tr>
 <tr class="odd">
 <td>Niger</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
+<td align="left">Province</td>
+<td align="left">District Sanitaire</td>
+<td align="left">Aire de santé</td>
+<td align="left">Facility</td>
 </tr>
 <tr class="even">
 <td>Sierra Leone</td>
@@ -296,10 +295,12 @@
 </tr>
 </tbody>
 </table>
-<p>The following is the Metadata endpoint for organization unit levels. <code>https://im-dev.psi-mis.org/api/organisationUnitLevels.json</code></p>
+<p>The following is the Metadata endpoint for organization unit levels. <code>https://imdatahub.org/api/organisationUnitLevels.json</code></p>
 <p>Next we’ll talk about the OU groups and group sets.</p>
-<p>OU groups, OU group sets.</p>
-<p>IM Data Hub OUs consists of the following groups and group sets by countries and the type of facility.</p>
+</div>
+<div id="ou-groups-ou-group-sets" class="section level3">
+<h3><span class="header-section-number">4.2.2</span> OU Groups, OU Group sets</h3>
+<p>The IM Data Hub OUs consist of the following OU groups and group sets by countries and the type or owenrship of facility:</p>
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <caption>
 <span id="tab:unnamed-chunk-13">Table 4.1: </span>A table showing OU groups and group set
@@ -369,7 +370,7 @@ NE Public
 </div>
 <div id="metadata" class="section level2">
 <h2><span class="header-section-number">4.3</span> Metadata</h2>
-<p>IM Data Hub implements the following Metadata types.</p>
+<p>The IM Data Hub implements the following metadata types:</p>
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <caption>
 <span id="tab:unnamed-chunk-14">Table 4.2: </span>A table showing metadata types implimented in the IM Data Hub
@@ -516,14 +517,13 @@ For instance: <em>KE PMP</em> is an indicator group with all PMP indicators for 
 </table>
 </div>
 <div id="core-metadata" class="section level2">
-<h2><span class="header-section-number">4.4</span> Core Metadata</h2>
-<p>Core Metadata are reserved objects in the data hub. They are shared publicly for re-use in the data hub.</p>
-<p>There are two main types of <code>core metadata.</code></p>
+<h2><span class="header-section-number">4.4</span> CORE Metadata</h2>
+<p>CORE Metadata are reserved objects in the data hub. They are shared publicly within the IM Data Hub for re-use in the IM Data Hub. There are two main types of <code>CORE metadata.</code></p>
 <ol style="list-style-type: decimal">
-<li>Category: a group of cat options for disaggregation/attributes.</li>
+<li>Category: a group of cat options for disaggregation/attributes,</li>
 <li>Category Combination: a combination of classes used to apply disaggregation onto data elements/indicators.</li>
 </ol>
-<p>The following is a list of all IM data hub core metadata.</p>
+<p>The following is a list of all IM Data Hub CORE metadata.</p>
 <div id="category" class="section level3">
 <h3><span class="header-section-number">4.4.1</span> Category</h3>
 <table class="table" style="margin-left: auto; margin-right: auto;">
