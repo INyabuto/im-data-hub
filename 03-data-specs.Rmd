@@ -1,4 +1,4 @@
-# Impact Malaria Data Specification {#data}
+# IM Data Specification {#data}
 <!-- SET UP -->
 ```{r setup, include=FALSE}
 load("./hub.RData")
