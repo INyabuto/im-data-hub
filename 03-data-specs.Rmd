@@ -26,7 +26,7 @@ pack <- function(x, pattern){
 
 ## Introduction 
 
-IM data is specified through the use indicators. Indicators consist of a numerator, denominator, and a count. The numerator and denominator are data elements, and the count specifies the applied operation. Counts can be a percentage, a number, or a ratio. 
+The IM data is specified through the use indicators. Indicators consist of a numerator, denominator, and a type of count. The numerator and denominator are data elements, and the count specifies the applied operation. Counts can be a percentage, a number, or a ratio. 
 
 In this chapter, we are going to explore the IM indicators and how they are constructed in the Data Hub. 
 
@@ -35,50 +35,48 @@ We’ll start by a short introduction to data elements and how they form the bas
 
 ## Data Elements
 
-Data elements form the base of IM indicators. As we mentioned in the previous chapter, they define how IM data are collected and stored in the Data Hub. 
+Data elements form the base of IM indicators. As we mentioned in the previous chapter, they define how IM data are collected and stored in the IM Data Hub. 
 
 IM Data hub consists of:
-Global data elements - are shared across a number of countries. 
-Country specific data elements - used by specified country data sets. 
+Global data elements - are shared across a number of countries,
+Country specific data elements - used by specific country data sets. 
 
-IM data elements are grouped by country and programs for easy access from the pivot table, data visualizer and maps app.
+IM data elements are grouped into data elements groups by country and programs for easy access from the Analytics apps in DHIS2 (Pivot Table, Data Visualizer and Maps).
 
-The data elements have the following key fields;
+The data elements have the following key fields:
 
-1. `uid, name, shortName, and code` for uniquely identifying the data element in the data hub. 
-2. `description` to document more information about the data point.
-3. `formName` that appears on the data entry form. 
-4. `domainType` that specifies the data model - aggregate or tracker.
-5. `aggregationType` defines how data is stored in the data hub.
+1. `uid, name, shortName, and code` for uniquely identifying the data element in the IM Data Hub,
+2. `description` to document more information about the data point,
+3. `formName` that appears on the data entry form (in our case, data sets),
+4. `domainType` that specifies the data model - aggregate or tracker (in our case, aggregate),
+5. `aggregationType` defines how data is stored in the IM Data Hub.
 
-You can refer to [dataElement schema](http://im-dev.psi-mis.org/api/schemas/dataElement.json) for more detailed specs.
-
-For now please note the `uid,name,shortName and formName` we discuss these in section \@ref(global-ind) and section \@ref(country-ind) below.
 
 ## Counts
 
-Counts define the operation applied to IM indicators calculations.
+Counts define the operation applied to the IM indicators calculations.
 
-There are four main types of operations;
+There are four main types of operations:
 
 1. `1 - Atomic (number)` - absolute numbers
 2. `1 - Ratio` - a fraction of the numerator and denominator
-3. `100 - percent` - a ratio multiplied by 100 percent.
+3. `100 - percent` - a ratio multiplied by 100 percent
 4. `1000 - per thousand` - a ratio multiplied by 1000
 
 
 ## Indicators {#ind}
 
-Remember that an indicator has a numerator, a denominator and a count. In this section, you will notice that similar to data elements, indicators also have the uid, short name and code to uniquely identifying them in the hub.
+Remember that an indicator has a numerator, a denominator and a count. In this section, you will notice that similar to data elements, indicators also have the uid, short name and code to uniquely identifying them in the IM Data Hub.
 
-IM Data Hub indicators are grouped into two; 
+The IM PMP indicators are grouped into two types:
 
-Global IM indicators - computes PMP data for global access.
-Country Specific (PMP) indicators - computes PMP data for country access.
+Global IM PMP indicators - computes PMP data for global access,
+Country Specific PMP indicators - computes PMP data for country access.
 
 We present to you a list of all the IM indicators in section \@ref(global-ind)
 
-### Global IM indicators {#global-ind}
+
+### Global IM PMP indicators {#global-ind}
 
 ```{r, echo=FALSE}
 
@@ -120,7 +118,7 @@ kable(im_ind_global, escape = F) %>%
 ```
 
 
-### Country IM indicators {#country-ind}
+### Country IM PMP indicators {#country-ind}
 
 #### Kenya
 
@@ -160,7 +158,7 @@ im_ind_ghana %>%
 
 ```
 
-#### Congo
+#### Demoncratic Republic of Congo
 
 ```{r, echo=FALSE}
 load("./hub.RData")
@@ -198,5 +196,3 @@ im_ind_mali %>%
   pack_rows("TX indicators", pack(im_ind_mali$shortName, "TX")[1], pack(im_ind_mali$shortName, "TX")[2], label_row_css = "background-color:#A7C6ED; color:#212721;")
 
 ```
-
-
