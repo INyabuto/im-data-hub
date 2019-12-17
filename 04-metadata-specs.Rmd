@@ -1,4 +1,4 @@
-#  Metadata Specification {#meta}
+#  IM Metadata Specification {#meta}
 
 ```{r set up, include=FALSE}
 load("./hub.RData")
