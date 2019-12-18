@@ -57,5 +57,18 @@ This module consists of a performance monitoring dashboard tailored to meet the 
 It offers the QAO an opportunity to track the return on their support visit efforts over time, so as to give them insight on where they need to apply a different approach. The system also allows to develop tailored interfaces to meet the need in terms of data of different users of HNQIS (i.e. project managers, medical detailers, etc.), and therefore enable mid-course correction e.g. conducting a refresher course in a particular low performing health area.
 
 ## Getting Started
-1. Download the app from the Google Play Store by clicking the link below (or by searching hnqis)
-https://play.google.com/store/apps/details?id=org.eyeseetea.malariacare.hnqis_ng
+1. Download the app from the Google Play Store by clicking the link below (or by searching **HNQIS**)
+    * [HNQIS on Google Play Store](https://play.google.com/store/apps/details?id=org.eyeseetea.malariacare.hnqis_ng)
+2. Login into the app using details provided by your country admin.
+3. The Plan module gives a comprehensive overview of status of facility assessments. Date of next visit is automatized according to productivity (High/Low) and Quality of Care (QoC) score.
+![HNQIS Plan](images/hnqis-plan.jpg)
+4. The Assess module has customized checklists to assess facility and work environment. Y/N answers allow for objectivity while assessing facilities' performance.
+![HNQIS Assess](images/hnqis-assess.jpg)
+5. The Improve module gives a quick identification of failed questions and critical gaps. The feedback scripts are in line with global guidelines. The standardized feedback reduces District Health Teams subjectivity.
+![HNQIS Assess](images/hnqis-improve.jpg)
+6. On the Monitor module, there is a quick overview of District Health Teams performance in terms of assessments and an overview of the QoC scores by health area and by org unit.
+![HNQIS Monitor](images/hnqis-monitor.jpg)
+
+To learn more about HNQIS, please visit the IM Data Hub help desk:
+    * [Getting Started on HNQIS (English)](https://imdatahub.freshdesk.com/en/support/solutions/articles/47001032548-getting-started-on-hnqis)
+    * [Getting Started on HNQIS (French)](https://imdatahub.freshdesk.com/fr/support/solutions/articles/47001032548-getting-started-on-hnqis)
