@@ -1,6 +1,6 @@
 --- 
 title: "Impact Malaria Data Hub Specifications"
-author: "Isaiah Nyabuto, Cristina Lussiana"
+author: "Isaiah Nyabuto, Eric Ejimba, Cristina Lussiana"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
