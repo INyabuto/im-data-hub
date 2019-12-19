@@ -73,13 +73,14 @@ The audiences will find this guide helpful in understanding the overall system s
 
 The guide is divided into seven chapters:
 
-1. Introduction - offers some background information, basic setup, and how to get started on the IM Data Hub quickly
-2. Understanding IM Data Hub Components - explores the basic set up to provide an understanding of the different components and how they function
-3. Data Specification - builds on the understanding of the IM Data Hub components and talks about the IM indicators and data reporting
-4. Metadata Specifications - dives into the data specification and the system components and talks about what lies at the bottom, the metadata
-5. Security and Access Model - Explains the security mechanisms and access model
-6. Customization & Troubleshooting - Guides the customization, troubleshooting, and how to get help on the IM Data Hub
-7. Appendix
+1. Introduction - offers some background information, primary setup, and how to get started on the IM Data Hub quickly.
+2. IM Data Hub Components - explores the basic set up to provide an understanding of the different components and how they function.
+3. Data Specification - builds on the IM Data Hub components and talks about the IM indicators and data reporting.
+4. Metadata Specifications - Explores the data specification and IM Data Hub components to talks about what lies at the bottom, the metadata.
+5. Security and Access Model - Explains the security mechanisms and access model implemented in the IM Data Hub.
+6. Health Network Quality Improvement System (HNQIS) - A brief overview of the HNQIS and how to get started. 
+7. Getting help - Some guidance on how to get help in the IM Data Hub.
+8. References
 
 
 ## What is not covered in this guide.
