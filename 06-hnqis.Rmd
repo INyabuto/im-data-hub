@@ -4,9 +4,14 @@
 
 ## Introduction
 
-Health Network Quality Improvement System (HNQIS) is an electronic tablet-based application used by health care networks to improve the quality of care and effectively manage and create health impact at scale. 
+Poor quality of health care results in poor health outcomes. Improving and monitoring quality of health care in LMICs presents unique constraints:
 
-[We can add a paragraph that explains the foundation, premise, or belief  that forms the HNQIS ]
+1. Increasing scale and scope of the health sector,
+2. Lack of enforced standards leading to a lack of continuity in scoring and benchmarks across health facilities over time,
+3. Delayed and subjective performance feedback
+4. Poor use of monitoring data and lack of course correction.
+
+The Health Network Quality Improvement System (HNQIS) is an electronic tablet-based application created by Population Services International (PSI) and used to improve quality of health services in health care networks and effectively manage and reach health impact at scale.
 
 The HNQIS allows healthcare supervisors to:
 
@@ -17,9 +22,9 @@ The HNQIS allows healthcare supervisors to:
 
 Providers use HNQIS in measuring their proficiencies in their own skills, and to highlight or identify the critical areas for monitoring and improvement.
 
-HNQIS version 4.1 is linked with IM Data Hub and is fully functional without internet connectivity. 
+HNQIS version 4.X is linked with the IM Data Hub and is fully functional without internet connectivity.
 
-As of the last count, HNQIS is active in 23 countries and PSI has conducted more than 18,000 assessments at 8,000 outlets across 13 health areas. 
+As of the last count in Dec 2019, HNQIS is active in 31 countries and more than 60,000 assessments have been conducted with HNQIS in 13 Health Areas at more than 8,000 outlets.
 
 ## Modules
 HNQIS consists of four modules:
