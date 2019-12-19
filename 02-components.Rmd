@@ -1,14 +1,14 @@
-# Understanding IM Data Hub {#comp}
+# IM Data Hub Components {#comp}
 
 ## Introduction
 
-Now that you're already started and you've got some essential background about the IM Data Hub, we are going to explore the details/components that form the IM Data Hub.
+Now that you're already started, and you've got some essential background about the IM Data Hub, we are going to explore the details/components that form the IM Data Hub.
  
-The IM Data Hub is not just a database: it's rather a project monitoring system and it's meant to monitor IM indicators and support decision-makers. 
+The IM Data Hub is not just a database: it's rather a project monitoring system, and it's meant to monitor IM indicators and support decision-makers. 
 
 Understanding the IM Data Hub components will allow you to report, analyse, and monitor IM indicators more effectively. We'll dive deeper into the components and understand how they are set up in the IM Data Hub. 
 
-This section shows the reporting component, mainly the data sets that the IM Data Hub uses to collect indicator data. We will then walk through the data mining piece, and how the different outputs are pulled together on a dashboard for the project use. 
+This section shows you the reporting component, mainly the data sets that the IM Data Hub uses to collect indicator data. We will then walk through the data mining piece, and how the different outputs are pulled together on a dashboard for the project use. 
 
 
 <!-- Reporting Component --->
