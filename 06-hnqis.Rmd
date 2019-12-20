@@ -102,5 +102,5 @@ To get started with HNQIS:
 
 To learn more about HNQIS, please visit the IM Data Hub help desk:
 
-* [Getting Started on HNQIS (English)](https://imdatahub.freshdesk.com/en/support/solutions/articles/47001032548-getting-started-on-hnqis)
-* [Getting Started on HNQIS (French)](https://imdatahub.freshdesk.com/fr/support/solutions/articles/47001032548-getting-started-on-hnqis)
+* [Getting Started on HNQIS (English)](https://imdatahub.freshdesk.com/en/support/solutions/articles/47001098330-getting-started-on-hnqis)
+* [Getting Started on HNQIS (French)](https://imdatahub.freshdesk.com/fr/support/solutions/articles/47001098330-getting-started-on-hnqis)
