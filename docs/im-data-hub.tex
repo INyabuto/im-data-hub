@@ -30,7 +30,7 @@
 \usepackage{hyperref}
 \hypersetup{
             pdftitle={Impact Malaria Data Hub Specifications},
-            pdfauthor={Isaiah Nyabuto, Cristina Lussiana},
+            pdfauthor={Isaiah Nyabuto, Eric Ejimba, Cristina Lussiana},
             pdfborder={0 0 0},
             breaklinks=true}
 \urlstyle{same}  % don't use monospace font for urls
@@ -99,8 +99,8 @@
 \bibliographystyle{apalike}
 
 \title{Impact Malaria Data Hub Specifications}
-\author{Isaiah Nyabuto, Cristina Lussiana}
-\date{2019-12-17}
+\author{Isaiah Nyabuto, Eric Ejimba, Cristina Lussiana}
+\date{2019-12-19}
 
 \begin{document}
 \maketitle
@@ -187,19 +187,21 @@ The guide is divided into seven chapters:
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  Introduction - offers some background information, basic setup, and how to get started on the IM Data Hub quickly
+  Introduction - offers some background information, primary setup, and how to get started on the IM Data Hub quickly.
 \item
-  Understanding IM Data Hub Components - explores the basic set up to provide an understanding of the different components and how they function
+  IM Data Hub Components - explores the basic set up to provide an understanding of the different components and how they function.
 \item
-  Data Specification - builds on the understanding of the IM Data Hub components and talks about the IM indicators and data reporting
+  Data Specification - builds on the IM Data Hub components and talks about the IM indicators and data reporting.
 \item
-  Metadata Specifications - dives into the data specification and the system components and talks about what lies at the bottom, the metadata
+  Metadata Specifications - Explores the data specification and IM Data Hub components to talks about what lies at the bottom, the metadata.
 \item
-  Security and Access Model - Explains the security mechanisms and access model
+  Security and Access Model - Explains the security mechanisms and access model implemented in the IM Data Hub.
 \item
-  Customization \& Troubleshooting - Guides the customization, troubleshooting, and how to get help on the IM Data Hub
+  Health Network Quality Improvement System (HNQIS) - A brief overview of the HNQIS and how to get started.
 \item
-  Appendix
+  Getting help - Some guidance on how to get help in the IM Data Hub.
+\item
+  References
 \end{enumerate}
 
 \hypertarget{what-is-not-covered-in-this-guide.}{%
@@ -353,18 +355,18 @@ Niger & \texttt{NEdemo}\tabularnewline
 \end{longtable}
 
 \hypertarget{comp}{%
-\chapter{Understanding IM Data Hub}\label{comp}}
+\chapter{IM Data Hub Components}\label{comp}}
 
 \hypertarget{introduction}{%
 \section{Introduction}\label{introduction}}
 
-Now that you're already started and you've got some essential background about the IM Data Hub, we are going to explore the details/components that form the IM Data Hub.
+Now that you're already started, and you've got some essential background about the IM Data Hub, we are going to explore the details/components that form the IM Data Hub.
 
-The IM Data Hub is not just a database: it's rather a project monitoring system and it's meant to monitor IM indicators and support decision-makers.
+The IM Data Hub is not just a database: it's rather a project monitoring system, and it's meant to monitor IM indicators and support decision-makers.
 
 Understanding the IM Data Hub components will allow you to report, analyse, and monitor IM indicators more effectively. We'll dive deeper into the components and understand how they are set up in the IM Data Hub.
 
-This section shows the reporting component, mainly the data sets that the IM Data Hub uses to collect indicator data. We will then walk through the data mining piece, and how the different outputs are pulled together on a dashboard for the project use.
+This section shows you the reporting component, mainly the data sets that the IM Data Hub uses to collect indicator data. We will then walk through the data mining piece, and how the different outputs are pulled together on a dashboard for the project use.
 
 \hypertarget{reporting-component}{%
 \section{Reporting Component}\label{reporting-component}}
@@ -3415,7 +3417,7 @@ Denid : 1
 
 In the previous chapter, we learned about the IM PMP indicators and how they are stored or constructed in the IM Data Hub. That is essential knowledge for you to start monitoring IM PMP indicators from the source to how they are presented in the IM Data Hub.
 
-In this chapter, we'll dive deep to the bottom and explore what lies beneath the IM Data Hub, the metadata. Metadata defines what, why, where, and how parts are set up in the IM Data Hub. They provide references to different objects in the IM Data Hub.
+In this chapter, we'll dive deep and explore what lies beneath the IM Data Hub, the metadata. Metadata defines what, why, where, and how parts are set up in the IM Data Hub. They provide references to different objects in the IM Data Hub.
 
 Already you are familiar with data sets, data elements, indicators: all these are essentially metadata themselves.
 
@@ -3435,11 +3437,11 @@ In the following sections we discuss the IM Data Hub metadata in three main grou
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  Organization Unit stores information about the location where IM indicator data is reported, analyzed, or presented,
+  \texttt{Organization\ Unit} that stores information about the location where IM indicator data is reported, analyzed, or presented,
 \item
-  Metadata that specifies what, why, and how IM Data Hub components are set up. They include; datasets, data elements, sections, data elements groups and group sets, organization unit groups and group sets, indicators, indicator groups, categories, category options, categories, category combinations, and category option combinations,
+  \texttt{Metadata} that specifies what, why, and how IM Data Hub components are set up. They include; datasets, data elements, sections, data elements groups and group sets, organization unit groups and group sets, indicators, indicator groups, categories, category options, categories, category combinations, and category option combinations,
 \item
-  CORE metadata - any metadata that is shared publicly within the IM Data Hub for re-usability across the IM Data Hub.
+  \texttt{CORE\ metadata} - any metadata that is shared publicly within the IM Data Hub for re-usability across the IM Data Hub.
 \end{enumerate}
 
 \hypertarget{organization-units-ous}{%
@@ -3460,7 +3462,7 @@ There are two main types of OUs in the IM Data Hub:
 
 The OUs in DHIS2 are structured in the form of a tree or through a hierarchy to allow entries, data processing, and drill downs/ups on the Analytics apps. They also define access levels in the IM Data Hub (have a look to the section `Access model' for further info on this)).
 
-The IM Data Hub OUs are grouped into OU groups and group sets for disaggregation of IM data elements and indicators. We discuss the groups in section @ref\{ougroup\}
+The IM Data Hub OUs are grouped into OU groups and group sets for disaggregation of IM data elements and indicators. We discuss the groups in section \ref{ougroup}
 
 \hypertarget{ou-trees}{%
 \subsection{OU Trees}\label{ou-trees}}
@@ -3591,8 +3593,8 @@ The following is the Metadata endpoint for organization unit levels.
 
 Next we'll talk about the OU groups and group sets.
 
-\hypertarget{ou-groups-ou-group-sets}{%
-\subsection{OU Groups, OU Group sets}\label{ou-groups-ou-group-sets}}
+\hypertarget{ougroup}{%
+\subsection{OU Groups, OU Group sets}\label{ougroup}}
 
 The IM Data Hub OUs consist of the following OU groups and group sets by countries and the type or owenrship of facility:
 
@@ -4185,51 +4187,69 @@ In case you want a global user to have access to country metadata and/or data, {
 \caption{HNQIS}
 \end{figure}
 
-\hypertarget{background-1}{%
-\section{Background}\label{background-1}}
+\hypertarget{introduction-4}{%
+\section{Introduction}\label{introduction-4}}
 
-Poor quality of care results in poor health outcomes. Improving and monitoring the quality of care in lower- and middle-income countries presents both unique challenges and opportunities to increase efficiencies in resource allocation based on standardized evaluations. Key constraints include the lack of enforced standards, delayed performance feedback, and poor use of monitoring data to allocate resources.
-
-\hypertarget{challenges}{%
-\subsection{Challenges}\label{challenges}}
+Poor quality of health care results in poor health outcomes. Improving and monitoring quality of health care in LMICs presents unique constraints:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  Growing scale and scope of the network.
+  Increasing scale and scope of the health sector,
 \item
-  Limited quality assessment tools.
+  Lack of enforced standards leading to a lack of continuity in scoring and benchmarks across health facilities over time,
 \item
-  Poor quality feedback and coaching.
+  Delayed and subjective performance feedback
 \item
-  Poor use of monitoring data.
+  Poor use of monitoring data and lack of course correction.
 \end{enumerate}
 
-\hypertarget{introduction-4}{%
-\section{Introduction}\label{introduction-4}}
+The Health Network Quality Improvement System (HNQIS) is an electronic tablet-based application created by Population Services International (PSI) and used to improve quality of health services in health care networks and effectively manage and reach health impact at scale.
 
-Health Network Quality Improvement System (HNQIS) is an electronic tablet-based application used to improve quality of health services in health care networks and effectively manage and reach health impact at scale.
+The HNQIS allows healthcare supervisors to:
 
-The HNQIS is composed of four modules that support healthcare supervisors to:
-1. Plan supervision visits using a prioritization matrix that presents facility-specific quality scores and patient volume.
-2. Assess providers' quality of care against clinical standards.
-3. Improve providers' quality of care through tailored feedback.
-4. Monitor quality improvements over time.
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Plan supervision visits using a prioritization matrix that presents facility-specific quality scores and patient volume.
+\item
+  Assess providers' quality of care against clinical standards.
+\item
+  Improve providers' quality of care through tailored feedback.
+\item
+  Monitor quality improvements over time.
+\end{enumerate}
 
-HNQIS is an Android application that is fully functional without internet connectivity. It is linked with the information management system Demographic Health Information Software 2 (DHIS2), an open source technology adopted by many ministries of health across the world. It assists teams to assess quality of care of providers' services to measure provider proficiencies in respective skills, and to highlight and monitor identified areas for improvement.
+Providers use HNQIS in measuring their proficiencies in their own skills, and to highlight or identify the critical areas for monitoring and improvement.
 
-HNQIS is now active in 23 countries and has conducted more than 18,000 assessments at 8,000 outlets across 13 health areas.
+HNQIS version 4.X is linked with the IM Data Hub and is fully functional without internet connectivity.
+
+As of the last count in Dec 2019, HNQIS is active in 31 countries and more than 60,000 assessments have been conducted with HNQIS in 13 Health Areas at more than 8,000 outlets.
 
 \hypertarget{modules}{%
 \section{Modules}\label{modules}}
 
-HNQIS has 4 modules discussed below:
+HNQIS consists of four modules:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Plan Module} for scheduling assessments based on quality scores.
+\item
+  \textbf{Assess Module} for assessing clinical procedures in the target health areas.\\
+\item
+  \textbf{Improve Module} for incorporating providers' feedback.
+\item
+  \textbf{Monitor Module} for monitoring quality improvement.
+\end{enumerate}
 
 \hypertarget{plan-module}{%
 \subsection{Plan Module}\label{plan-module}}
 
-This module automatically schedules future assessments based on where support is needed most (quality score), and where it will have most impact (client load). Furthermore, the planning module prioritizes planning of support visits by segmenting all outlets into the following categories:
+This module automatically schedules future assessments based on where support is needed most (quality score) and where it will have the most impact (client load). It allows supervisors to prioritize support visits by segmenting outlets in the following categories:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -4244,61 +4264,238 @@ This module automatically schedules future assessments based on where support is
   Scheduled to be assessed in future months.
 \end{enumerate}
 
-Each health area has independent planning variables (quality score/client load) but the planning report is integrated across all areas the Quality Assurance Officer (QAO) is responsible for supporting.
+Each health area consists of an independent planning variable (quality score/client load) that is integrated across all the areas the Quality Assurance Officers are responsible for.
 
 \hypertarget{assess-module}{%
 \subsection{Assess Module}\label{assess-module}}
 
-This module enables QAOs to assess clinical procedures in each health area catered for by network providers through case observation or simulation. The assessment checklist is aligned with national supervision checklists. An assessment score is automatically generated on-site and performance benchmarked (e.g.~Good/ Satisfactory/Poor). The module contains a consistent approach to scoring and benchmarking all health areas to allow comparability within and across network providers.
+This module enables QAOs to assess the clinical procedures in target areas catered for by network providers through a case observation or simulation.
+
+The assessment is done through a checklist that is aligned with the national supervision standards.
+
+After an assessment, scores are generated automatically on-site, and the performance is benchmarked on a standard scale for example; the perforamance can be ranked as \texttt{Good\ /Satisfactory/\ Poor}.
+
+This module contains a consistent approach to scoring and benchmarking all health areas to allow comparability within and across network providers.
 
 \hypertarget{improve-module}{%
 \subsection{Improve Module}\label{improve-module}}
 
-This module ensures that provider feedback following a quality assessment is undertaken in a robust and consistent manner, rather than based on the subjectivity of the QAO. The Improve Module:
+This module ensures that provider feedback following a quality assessment is undertaken robustly and consistently, rather than based on the subjectivity of the QAO.
+
+Improve Module:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  Highlights the key areas of weakness identified during the assessment.
+  Highlights the key areas and the weakness identified during an assessment.
 \item
-  Displays tailored feedback scripts that take into account both how the procedure should be undertaken (as per protocols), as well as why it is important to do so.
+  Displays tailored feedback scripts that take into account both how the procedure should be undertaken (as per protocols), as well as why it is vital to do so.
 \end{enumerate}
 
-This places all the relevant information required to improve the performance of the provider in one place. The module facilitates a consistent approach to provision of feedback, eliminating subjectivity regarding the areas of focus or the actual feedback provided.
+It places all the relevant information required to improve the performance of the provider in one place.
+
+The module facilitates a consistent approach to the provision of feedback, eliminating subjectivity regarding the areas of focus or the actual feedback provided.
 
 \hypertarget{monitor-module}{%
 \subsection{Monitor Module}\label{monitor-module}}
 
-This module consists of a performance monitoring dashboard tailored to meet the needs of the QAO. The dashboard contains a range of charts, graphs, maps and tables highlighting trends and overall performance of all the providers the QAO is responsible for supporting. Dashboards can also be used to visualize data collected through other channels that is relevant to quality improvement, such as availability and sales of health commodities. The main purpose of this module is to facilitate the use of data in decision-making at the QAO level.
+This module consists of a performance monitoring dashboard tailored to meet the needs of the QAO. The dashboard contains a range of charts, graphs, maps, and tables highlighting trends and overall performance of all the providers the QAO is responsible for supporting.
 
-It offers the QAO an opportunity to track the return on their support visit efforts over time, so as to give them insight on where they need to apply a different approach. The system also allows to develop tailored interfaces to meet the need in terms of data of different users of HNQIS (i.e.~project managers, medical detailers, etc.), and therefore enable mid-course correction e.g.~conducting a refresher course in a particular low performing health area.
+Dashboards are used to visualize data collected through other channels that are relevant to quality improvement, such as availability and sales of health commodities. The primary purpose of this module is to facilitate the use of data for decision-making at the QAO level.
+
+Monitor Module offers the QAO an opportunity to track the return on their support visit efforts over time and provide them with insight on where they need to apply a different approach.
 
 \hypertarget{getting-started-1}{%
 \section{Getting Started}\label{getting-started-1}}
+
+To get started with HNQIS:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  Download the app from the Google Play Store by clicking the link below (or by searching hnqis)
-  \url{https://play.google.com/store/apps/details?id=org.eyeseetea.malariacare.hnqis_ng}
+  Download the app from the Google Play Store by clicking the link below (or by searching \textbf{HNQIS})
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \href{https://play.google.com/store/apps/details?id=org.eyeseetea.malariacare.hnqis_ng}{HNQIS on Google Play Store}
+  \end{itemize}
+\item
+  Login into the app using details provided by your country admin.
+\item
+  The first page on the screen is the \texttt{Plan\ module} which gives a comprehensive overview of status of facility assessments.
 \end{enumerate}
 
+\includegraphics{images/hnqis-plan.jpg}
+\textgreater{}The Date of next visit is automatized according to productivity (High/Low) and Quality of Care (QoC) score.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  The second page is \texttt{Assess\ module} which has customized checklists for assessing the facility and work environment.
+\end{enumerate}
+
+\begin{figure}
+\centering
+\includegraphics{images/hnqis-assess.jpg}
+\caption{HNQIS Assess}
+\end{figure}
+
+\begin{quote}
+Y/N answers allow for objectivity while assessing facilities' performance.
+\end{quote}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  Next is the \texttt{Improve\ Module} that gives a quick identification of failed questions and critical gaps.
+  \includegraphics{images/hnqis-improve.jpg}
+\end{enumerate}
+
+\begin{quote}
+The feedback scripts are in line with global guidelines. The standardized feedback reduces District Health Teams subjectivity.
+\end{quote}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{5}
+\tightlist
+\item
+  Last is the \texttt{Monitor\ Module}, there is a quick overview of District Health Teams performance in terms of assessments and an overview of the QoC scores by health area and by org unit.
+\end{enumerate}
+
+\begin{figure}
+\centering
+\includegraphics{images/hnqis-monitor.jpg}
+\caption{HNQIS Monitor}
+\end{figure}
+
+To learn more about HNQIS, please visit the IM Data Hub help desk:
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://imdatahub.freshdesk.com/en/support/solutions/articles/47001032548-getting-started-on-hnqis}{Getting Started on HNQIS (English)}
+\item
+  \href{https://imdatahub.freshdesk.com/fr/support/solutions/articles/47001032548-getting-started-on-hnqis}{Getting Started on HNQIS (French)}
+\end{itemize}
+
 \hypertarget{trouble}{%
-\chapter{Troubleshooting and Getting Help on the IM Data Hub}\label{trouble}}
+\chapter{Getting Help on the IM Data Hub}\label{trouble}}
+
+\hypertarget{im-data-hub-help-desk}{%
+\section{IM Data Hub Help Desk}\label{im-data-hub-help-desk}}
 
 \hypertarget{introduction-5}{%
-\section{Introduction}\label{introduction-5}}
+\subsection{Introduction}\label{introduction-5}}
 
-The IM Datahub has various resources for getting help.
+IM Data Hub is linked to a help desk system, IM Data Hub Help Desk, a platform where end users can get information and support on a specific service.
+
+The Help Desk provides information, support and troubleshooting services to the IM Data Hub users. It helps the users and system admins communicate with system administrators more easily.
+
+\hypertarget{services-offered}{%
+\subsection{Services offered}\label{services-offered}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Submit a ticket for any issue you are experiencing on the IM Data Hub.
+\item
+  View the status of your submitted tickets to track progress on their resolution.\\
+\item
+  Learn how to handle tasks through the knowledge base articles from the solutions page.
+\item
+  Request for new features and functionality.
+\item
+  Search for answers for frequently asked questions (FAQs) on the IM Data Hub.
+\item
+  Keep up to date on the IM Data Hub by following announcements via the forum.
+\end{enumerate}
+
+\hypertarget{getting-started-with-im-data-hub-help-desk}{%
+\subsection{Getting started with IM Data Hub Help Desk}\label{getting-started-with-im-data-hub-help-desk}}
+
+To access the IM Data Hub Help Desk, please click any on the link below:
+
+\begin{itemize}
+\tightlist
+\item
+  English \url{https://imdatahub.freshdesk.com/en/support/home}
+\item
+  French \url{https://imdatahub.freshdesk.com/fr/support/home}
+\end{itemize}
+
+The help desk can also be accessed through the IM Data Hub as outlined below:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  IM Datahub Help Desk
+  Click on your initials.
+  \includegraphics{images/initials.png}
 \item
+  Click on the ``Help'' app.
+  \includegraphics{images/help-menu.png}
 \end{enumerate}
+
+\hypertarget{creating-a-ticket}{%
+\subsection{Creating a ticket}\label{creating-a-ticket}}
+
+If you have an issue or a request, please use the steps below to create a ticket
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Access the help desk by clicking on the link below:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \href{https://imdatahub.freshdesk.com/en/support/tickets/new}{Create a ticket (English)}
+  \item
+    \href{https://imdatahub.freshdesk.com/fr/support/tickets/new}{Create a ticket (French)}
+  \end{itemize}
+\item
+  Fill in the ticket details as per the form:
+  \includegraphics{images/ticket.png}
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Requester:} Enter your email address
+\item
+  \textbf{Subject:} Write the subject of your ticket
+\item
+  \textbf{Server:} choose the server on which you are experiencing the issue on
+  * dev.imdatahub.org for the development server
+  * imdatahub.org for the production server
+\item
+  \textbf{Group:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Generic} for IM Data Hub issues
+  \item
+    \textbf{HNQIS} for HNQIS specific issues
+  \end{itemize}
+\item
+  \textbf{Country:} specify your country or select NA if not applicable
+\item
+  \textbf{Ticket type:} choose \textbf{Configuration}, \textbf{Maintenance}, \textbf{Question}, \textbf{Bug} or \textbf{Other} depending on the ticket type
+\item
+  \textbf{Description:} Please describe your issue in detail
+\item
+  \textbf{Attach a file:} Please use this to upload relevant files or screenshots to assist in resolving the issue
+\end{itemize}
 
 \hypertarget{references}{%
 \chapter*{References}\label{references}}
@@ -4312,6 +4509,9 @@ The IM Datahub has various resources for getting help.
 \item
   DHIS2 Implementers guide
   \url{https://docs.dhis2.org/2.30/en/user/html/dhis2_user_manual_en_full.html}
+\item
+  IMPACT Malaria
+  \url{https://impactmalaria.org/}
 \end{enumerate}
 
 \bibliography{book.bib,packages.bib}

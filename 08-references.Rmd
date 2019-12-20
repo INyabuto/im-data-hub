@@ -6,3 +6,6 @@ https://docs.dhis2.org/master/en/developer/html/dhis2_developer_manual.html
 
 2. DHIS2 Implementers guide
 https://docs.dhis2.org/2.30/en/user/html/dhis2_user_manual_en_full.html
+
+3. IMPACT Malaria
+https://impactmalaria.org/

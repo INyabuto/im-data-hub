@@ -81,7 +81,7 @@ library(dplyr)
 
 In the previous chapter, we learned about the IM PMP indicators and how they are stored or constructed in the IM Data Hub. That is essential knowledge for you to start monitoring IM PMP indicators from the source to how they are presented in the IM Data Hub.
 
-In this chapter, we'll dive deep to the bottom and explore what lies beneath the IM Data Hub, the metadata. Metadata defines what, why, where, and how parts are set up in the IM Data Hub. They provide references to different objects in the IM Data Hub.
+In this chapter, we'll dive deep and explore what lies beneath the IM Data Hub, the metadata. Metadata defines what, why, where, and how parts are set up in the IM Data Hub. They provide references to different objects in the IM Data Hub.
 
 Already you are familiar with data sets, data elements, indicators: all these are essentially metadata themselves. 
 
@@ -97,9 +97,9 @@ All IM Data Hub metadata can be accessed individually by specifying their names 
 
 In the following sections we discuss the IM Data Hub metadata in three main groups:
 
-1. Organization Unit stores information about the location where IM indicator data is reported, analyzed, or presented, 
-2. Metadata that specifies what, why, and how IM Data Hub components are set up. They include; datasets, data elements, sections, data elements groups and group sets, organization unit groups and group sets, indicators, indicator groups, categories, category options, categories, category combinations, and category option combinations,
-3. CORE metadata - any metadata that is shared publicly within the IM Data Hub for re-usability across the IM Data Hub.
+1. `Organization Unit` that stores information about the location where IM indicator data is reported, analyzed, or presented, 
+2. `Metadata` that specifies what, why, and how IM Data Hub components are set up. They include; datasets, data elements, sections, data elements groups and group sets, organization unit groups and group sets, indicators, indicator groups, categories, category options, categories, category combinations, and category option combinations,
+3. `CORE metadata` - any metadata that is shared publicly within the IM Data Hub for re-usability across the IM Data Hub.
 
 
 ## Organization Units (OUs)
@@ -113,7 +113,7 @@ There are two main types of OUs in the IM Data Hub:
 
 The OUs in DHIS2 are structured in the form of a tree or through a hierarchy to allow entries, data processing, and drill downs/ups on the Analytics apps. They also define access levels in the IM Data Hub (have a look to the section 'Access model' for further info on this)).
 
-The IM Data Hub OUs are grouped into OU groups and group sets for disaggregation of IM data elements and indicators. We discuss the groups in section \@ref{ougroup}
+The IM Data Hub OUs are grouped into OU groups and group sets for disaggregation of IM data elements and indicators. We discuss the groups in section \@ref(ougroup)
 
 ### OU Trees
 
@@ -138,7 +138,7 @@ The following is the Metadata endpoint for organization unit levels.
 
 Next we’ll talk about the OU groups and group sets. 
 
-### OU Groups, OU Group sets
+### OU Groups, OU Group sets {#ougroup}
 
 The IM Data Hub OUs consist of the following OU groups and group sets by countries and the type or owenrship of facility: 
 

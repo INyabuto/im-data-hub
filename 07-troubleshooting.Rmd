@@ -1,9 +1,11 @@
-# Troubleshooting and Getting Help on the IM Data Hub {#trouble}
+# Getting Help on the IM Data Hub {#trouble}
 
 ## IM Data Hub Help Desk
 
 ### Introduction
-A help desk system is a platform where end users can get information and support on a specific service. The IM Data Hub Help Desk provides information, support and troubleshooting services to the IM Data Hub users. It helps IM Data Hub users and admins communicate with system administrators more easily.
+IM Data Hub is linked to a help desk system, IM Data Hub Help Desk, a platform where end users can get information and support on a specific service.
+
+The Help Desk provides information, support and troubleshooting services to the IM Data Hub users. It helps the users and system admins communicate with system administrators more easily.
 
 ### Services offered
 1.	Submit a ticket for any issue you are experiencing on the IM Data Hub.
@@ -13,12 +15,14 @@ A help desk system is a platform where end users can get information and support
 5.	Search for answers for frequently asked questions (FAQs) on the IM Data Hub.
 6.	Keep up to date on the IM Data Hub by following announcements via the forum.
 
-### Getting started
-To access the IM Data Hub Help Desk please click on the link below:
-    * English [https://imdatahub.freshdesk.com/en/support/home](https://imdatahub.freshdesk.com/en/support/home)
-    * French [https://imdatahub.freshdesk.com/fr/support/home](https://imdatahub.freshdesk.com/fr/support/home)
+### Getting started with IM Data Hub Help Desk
+To access the IM Data Hub Help Desk, please click any on the link below:
+
+* English [https://imdatahub.freshdesk.com/en/support/home](https://imdatahub.freshdesk.com/en/support/home)
+* French [https://imdatahub.freshdesk.com/fr/support/home](https://imdatahub.freshdesk.com/fr/support/home)
 
 The help desk can also be accessed through the IM Data Hub as outlined below:
+
 1. Click on your initials.
 ![IM Data Hub Initials](images/initials.png)
 
@@ -26,6 +30,7 @@ The help desk can also be accessed through the IM Data Hub as outlined below:
 ![IM Data Hub Help menu](images/help-menu.png)
 
 ### Creating a ticket
+
 If you have an issue or a request, please use the steps below to create a ticket
 
 1. Access the help desk by clicking on the link below:
@@ -33,15 +38,15 @@ If you have an issue or a request, please use the steps below to create a ticket
     * [Create a ticket (French)](https://imdatahub.freshdesk.com/fr/support/tickets/new)
 2. Fill in the ticket details as per the form:
 ![IM Data Hub Help Desk ticket](images/ticket.png)
-    * **Requester:** your email address
-    * **Subject:** the subject of your ticket
-    * **Server:** choose the server on which you are experiencing the issue on
+* **Requester:** Enter your email address
+* **Subject:** Write the subject of your ticket
+* **Server:** choose the server on which you are experiencing the issue on
         * dev.imdatahub.org for the development server
         * imdatahub.org for the production server
-    * **Group:**
-        * **Generic** for IM Data Hub issues
-        * **HNQIS** for HNQIS specific issues
-    * **Country:** specify your country or select NA if not applicable
-    * **Ticket type:** choose **Configuration**, **Maintenance**, **Question**, **Bug** or **Other** depending on the ticket type
-    * **Description:** Please describe your issue in detail
-    * **Attach a file:** Please use this to upload relevant files or screenshots to assist in resolving the issue
+* **Group:**
+    * **Generic** for IM Data Hub issues
+    * **HNQIS** for HNQIS specific issues
+* **Country:** specify your country or select NA if not applicable
+* **Ticket type:** choose **Configuration**, **Maintenance**, **Question**, **Bug** or **Other** depending on the ticket type
+* **Description:** Please describe your issue in detail
+* **Attach a file:** Please use this to upload relevant files or screenshots to assist in resolving the issue
